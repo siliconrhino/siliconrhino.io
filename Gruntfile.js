@@ -21,6 +21,10 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
     watch: {
+      bower: {
+        files: ['bower.json'],
+        tasks: ['wiredep']
+      },
       compass: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer:server']
@@ -110,10 +114,13 @@ module.exports = function (grunt) {
         sassDir: '<%= yeoman.app %>/_scss',
         cssDir: '.tmp/css',
         imagesDir: '<%= yeoman.app %>/img',
+        importPath: './<%= yeoman.app %>/_bower_components',
         javascriptsDir: '<%= yeoman.app %>/js',
+        fontsDir: '<%= yeoman.app %>/fonts',
         relativeAssets: false,
         httpImagesPath: '/img',
         httpGeneratedImagesPath: '/img/generated',
+        httpFontsPath: '/fonts',
         outputStyle: 'expanded',
         raw: 'extensions_dir = "<%= yeoman.app %>/_bower_components"\n'
       },
@@ -150,6 +157,19 @@ module.exports = function (grunt) {
         }]
       }
     },
+
+    // Automatically inject Bower components into the app
+    wiredep: {
+      app: {
+        src: ['<%= yeoman.app %>/_layouts/{,*/}*.html'],
+        ignorePath:  /\.\.\//
+      },
+      sass: {
+        src: ['<%= yeoman.app %>/_scss/{,*/}*.{scss,sass}'],
+        ignorePath: /(\.\.\/){1,2}_bower_components\//
+      }
+    },
+
     jekyll: {
       options: {
         bundleExec: true,
@@ -257,6 +277,11 @@ module.exports = function (grunt) {
             //'apple-touch*.png'
           ],
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>',
+          src: '_bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          dest: '<%= yeoman.dist %>'
         }]
       },
       // Copy CSS into .tmp directory for Autoprefixer processing
@@ -360,6 +385,7 @@ module.exports = function (grunt) {
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
+    'wiredep',
     'compass:server',
     'jshint:all',
     'csslint:check'
@@ -369,6 +395,7 @@ module.exports = function (grunt) {
     'clean',
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
+    'wiredep',
     'concurrent:dist',
     'useminPrepare',
     'concat',

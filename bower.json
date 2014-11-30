@@ -2,5 +2,6 @@
   "name": "siliconrhinoio",
   "version": "0.0.0",
   "dependencies": {
+    "bootstrap-sass-official": "~3.3.1"
   }
 }
