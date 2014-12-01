@@ -165,7 +165,15 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/_layouts/{,*/}*.html',
           '<%= yeoman.app %>/_includes/{,*/}*.html'
         ],
-        ignorePath:  /\.\.\//
+        ignorePath:  /\.\.\//,
+        fileTypes: {
+          html: {
+            replace: {
+              js: '<script src="/{{filePath}}"></script>',
+              css: '<link rel="stylesheet" href="/{{filePath}}" />'
+            }
+          }
+        }
       },
       sass: {
         src: ['<%= yeoman.app %>/_scss/{,*/}*.{scss,sass}'],
