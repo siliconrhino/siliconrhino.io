@@ -1,26 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-        <!-- build:css(app) css/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:css({app,.tmp}) /css/main.css -->
-        <!-- Syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-        <!-- endbuild -->
-
+      {% include head.html %}
     </head>
     <body>
-
+      {% include header.html %}
         <div class="site">
           <div class="header">
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>
@@ -44,26 +28,6 @@
             </div>
           </div>
         </div>
-    <!-- build:js(app) /js/vendor.js -->
-    <!-- bower:js -->
-    <script src="_bower_components/jquery/dist/jquery.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js(app) /js/scripts.js -->
-    <script src="/js/main.js"></script>
-    <!-- endbuild -->
+      {% include foot.html %}
     </body>
 </html>

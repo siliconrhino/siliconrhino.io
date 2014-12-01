@@ -2,6 +2,7 @@
   "name": "siliconrhinoio",
   "version": "0.0.0",
   "dependencies": {
-    "bootstrap-sass-official": "~3.3.1"
+    "bootstrap-sass-official": "~3.3.1",
+    "skrollr": "~0.6.29"
   }
 }

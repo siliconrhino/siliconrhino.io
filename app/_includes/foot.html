@@ -1,0 +1,47 @@
+<div class="footer">
+  <div class="nav-left">
+    <img src="/img/logo_w.png" class="logo">
+    <ul class="footerlinks">
+    {% for page in site.pages %}
+         {% if page.title %}
+         <li>
+          <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+         </li>
+         {% endif %}
+       {% endfor %}
+    </ul>
+  </div>
+
+  <div class="circles">
+    <div><a href="mailto:hi@siliconrhino.io" target="_blank"><img src="/img/email_w.png" alt="Email us" title="Email us"> </a> </div>
+    <div><a href="https://twitter.com/siliconrhino" target="_blank"><img src="/img/twitter_w.png" alt="Follow us on Twitter" title="Follow us on Twitter"> </a> </div>
+    <div><a href="skype:roger.planes1?chat" target="_blank"><img src="/img/skype_w.png" alt="Chat to us" title="Chat to us"> </a> </div>
+    <div><a href="https://twitter.com/siliconrhino" target="_blank"><img class="linkedin" src="/img/linkedin_w.png" alt="Follow us on Linkedin" title="Follow us on Linkedin"> </a> </div>
+    <div><a href="https://github.com/SiliconRhino" target="_blank"><img class="github" src="/img/github_w.png" alt="Follow us on Github" title="Follow us on Github"> </a> </div>
+  </div>
+</div>
+  <!-- build:js(app) /js/vendor.js -->
+  <!-- bower:js -->
+  <script src="_bower_components/jquery/dist/jquery.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+  <script src="_bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+  <script src="_bower_components/skrollr/src/skrollr.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js(app) /js/scripts.js -->
+  <script src="/js/main.js"></script>
+  <script type="text/javascript">
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){var s = skrollr.init({forceHeight: false});}
+  </script>
+  <!-- endbuild -->
