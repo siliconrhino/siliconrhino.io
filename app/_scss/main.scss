@@ -144,7 +144,7 @@ body {
 }
 
 .backg {
-    background: url("/wp-content/themes/siliconrhino/images/whiteboard.png") no-repeat center center fixed;
+    background: url("/img/whiteboard.png") no-repeat center center fixed;
     @include background-cover();
     min-height:400px;
     position: relative;
@@ -555,7 +555,7 @@ div.latest-tweets {
             text-align: left;
             display: inline-block;
             margin-bottom: 10px;
-            background: url("/wp-content/themes/siliconrhino/images/favicon.png") no-repeat center left;
+            background: url("/img/ryan_icon.png") no-repeat center left;
             background-size: 24px 24px;
             padding-left: 42px;
         }

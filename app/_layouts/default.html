@@ -5,29 +5,7 @@
     </head>
     <body>
       {% include header.html %}
-        <div class="site">
-          <div class="">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="">
-            <div class="contact">
-              <p>
-                Silicon Rhino<br />
-                <a href="mailto:mail@siliconrhino.io">mail@siliconrhino.io</a>
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
+      {{ content }}
       {% include foot.html %}
     </body>
 </html>
