@@ -25,6 +25,7 @@ cd siliconrhino.io
 ```bash
 npm install
 gem install bundler
+gem install scss-lint
 bundle install
 bower install
 ```

@@ -349,10 +349,14 @@ module.exports = function (grunt) {
       },
       check: {
         src: [
-          '<%= yeoman.app %>/css/**/*.css',
-          '<%= yeoman.app %>/_scss/**/*.scss'
+          '<%= yeoman.app %>/css/**/*.css'
         ]
       }
+    },
+    scsslint : {
+      allFiles: [
+        '<%= yeoman.app %>/_scss/**/*.scss'
+      ]
     },
     concurrent: {
       server: [
@@ -400,7 +404,8 @@ module.exports = function (grunt) {
     'wiredep',
     'compass:server',
     'jshint:all',
-    'csslint:check'
+    'csslint:check',
+    'scsslint'
   ]);
 
   grunt.registerTask('build', [
