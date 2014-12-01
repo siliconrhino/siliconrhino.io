@@ -4,10 +4,12 @@
 # 3. config.yml
 
 name: siliconrhino.io
-description:
+description: "Silicon Rhino site"
 author:
   name: Silicon Rhino
   email: mail@siliconrhino.io
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://siliconrhino.io" # the base hostname & protocol for your site
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
