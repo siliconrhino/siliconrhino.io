@@ -450,16 +450,18 @@ div img {
 
 /* TWITTER */
 
-div.latest-tweets {
-    p.tweet-text {
-        background: url("/wp-content/themes/siliconrhino/images/tweet.png") no-repeat left center;
+div#tweecool {
+    div.tweets_txt {
+        background: url("/img/tweet.png") no-repeat left center;
         padding-left: 90px;
         text-align: left;
         min-height: 63px;
         font-size: 25px;
+        line-height: 30px;
 
         a {
             color: $blue;
+            font-weight: bold;
         }
     }
 
