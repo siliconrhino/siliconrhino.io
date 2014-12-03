@@ -17,7 +17,7 @@
 				profile_image : true,
 				show_time : true,
 				show_media : false,
-                                show_media_size: 'thumb'  //values: small, large, thumb, medium
+        show_media_size: 'thumb'  //values: small, large, thumb, medium
 
 			};
 
@@ -64,10 +64,9 @@
 						return false;
 					}
 
+					var pIMG = '';
 					if (o.profile_image) {
-						var pIMG = '<a href="https://twitter.com/' + o.username + '" target="_blank"><img src="' + data.user.profile_image_url + '" alt="' + o.username + '" /></a>';
-					} else {
-						pIMG = '';
+						 pIMG = '<a href="https://twitter.com/' + o.username + '" target="_blank"><img src="' + data.user.profile_image_url + '" alt="' + o.username + '" /></a>';
 					}
 
 					$.each(data.tweets, function(i, field) {
@@ -96,4 +95,4 @@
 		}
 	});
 
-})(jQuery);
+})(window.jQuery);
