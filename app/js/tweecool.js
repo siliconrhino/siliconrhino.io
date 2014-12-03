@@ -1,6 +1,6 @@
 /* This is shit, not on bower, bullshit, crap, ewww, throwing up just thinking about. Happy James?   */
 /*Name : TweeCool
- *version: 1.2 
+ *version: 1.2
  *Description: get the latest tweets from twitter.
  *Website: www.tweecool.com
  *Licence: no licence, feel free to do whatever you want.
@@ -17,11 +17,11 @@
 				profile_image : true,
 				show_time : true,
 				show_media : false,
-                                show_media_size: 'thumb'  //values: small, large, thumb, medium 
+                                show_media_size: 'thumb'  //values: small, large, thumb, medium
 
-			}
+			};
 
-			var options = $.extend(defaults, options);
+			options = $.extend(defaults, options);
 
 			function xTimeAgo(time) {
 				var nd = new Date();
@@ -33,17 +33,17 @@
 				var second = 1, minute = 60, hour = 60 * 60, day = 60 * 60 * 24, week = 60 * 60 * 24 * 7, month = 60 * 60 * 24 * 30, year = 60 * 60 * 24 * 365;
 
 				if (timeDiff > second && timeDiff < minute) {
-					return Math.round(timeDiff / second) + " seconds ago";
+					return Math.round(timeDiff / second) + ' seconds ago';
 				} else if (timeDiff >= minute && timeDiff < hour) {
-					return Math.round(timeDiff / minute) + " minutes ago";
+					return Math.round(timeDiff / minute) + ' minutes ago';
 				} else if (timeDiff >= hour && timeDiff < day) {
-					return Math.round(timeDiff / hour) + " hours ago";
+					return Math.round(timeDiff / hour) + ' hours ago';
 				} else if (timeDiff >= day && timeDiff < week) {
-					return Math.round(timeDiff / day) + " days ago";
+					return Math.round(timeDiff / day) + ' days ago';
 				} else if (timeDiff >= week && timeDiff < month) {
-					return Math.round(timeDiff / week) + " weeks ago";
+					return Math.round(timeDiff / week) + ' weeks ago';
 				} else if (timeDiff >= month && timeDiff < year) {
-					return Math.round(timeDiff / month) + " months ago";
+					return Math.round(timeDiff / month) + ' months ago';
 				} else {
 					return 'over a year ago';
 				}
@@ -57,7 +57,7 @@
 				var urlpattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
                                 var media = '';
 
-				$.getJSON("http://api.tweecool.com/?screenname=" + o.username + "&count=" + o.limit, function(data) {
+				$.getJSON('http://api.tweecool.com/?screenname=' + o.username + '&count=' + o.limit, function(data) {
 
 					if (data.errors || data == null) {
 						wrapper.html('No tweets available.');
@@ -71,13 +71,14 @@
 					}
 
 					$.each(data.tweets, function(i, field) {
+            var timestamp = '';
 
 						if (o.show_time) {
-							var timestamp = xTimeAgo(field.created_at);
+							timestamp = xTimeAgo(field.created_at);
 						} else {
-							var timestamp = '';
+							timestamp = '';
 						}
-                                                
+
                                                 if(o.show_media && field.media_url){
                                                     media =  '<a href="https://twitter.com/' + o.username + '" target="_blank"><img src="' + field.media_url + ':'+o.show_media_size+'" alt="' + o.username + '" class="media" /></a>';
                                                 }
@@ -95,4 +96,4 @@
 		}
 	});
 
-})(jQuery); 
+})(jQuery);
