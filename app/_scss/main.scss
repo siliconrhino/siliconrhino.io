@@ -754,8 +754,44 @@ div.error {
 
 
 /* TESTING CONTACT FORM STYLES */
-.ss-form-container {
-  box-shadow: none !important;
+.ss-q-short, .ss-q-long {
+  text-align: left;
+  margin: 0;
+  width: 99%;
+  max-width: 550px;
+  border: 1px solid #0e8795;
+  height: 30px;
+  display: block;
+}
+
+.ss-q-long {
+  height: 120px;
+}
+
+.ss-q-item-label {
+  text-align: left;
+  font-weight: 300;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+#ss-submit{
+  cursor: pointer;
+  margin: 0;
+  background-color: #0e8795;
+  padding: 10px 15px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#ss-form {
+  width: 99%;
+  max-width: 555px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 
