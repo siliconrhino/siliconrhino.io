@@ -8,5 +8,9 @@
 	show_media : false,
 	show_media_size: 'thumb'  //values: small, large, thumb, medium
 	});
+
+   $('.modalbutton').click(function() {
+    $('.modal').modal('hide');
+});
 });
 })(window.$);
