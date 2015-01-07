@@ -2,13 +2,10 @@
   <div class="nav-left">
     <img src="/img/logo_w.png" class="logo">
     <ul class="footerlinks">
-    {% for page in site.pages %}
-         {% if page.title %}
-         <li>
-          <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-         </li>
-         {% endif %}
-       {% endfor %}
+      <li><a href="/">Home</a> </li>
+      <li><a href="/services">Services</a> </li>
+      <li><a href="/about">About</a> </li>
+      <li><a href="/contact">Contact</a> </li>
     </ul>
   </div>
 
