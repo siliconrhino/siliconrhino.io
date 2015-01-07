@@ -56,6 +56,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # View the documentation for the provider you're using for more
   # information on available options.
 
+  # Enable provision via shell
+  config.vm.provision "shell" do |s|
+    s.path = "provisioning/jekyll-requirements.sh"
+    s.privileged = true
+  end
+
   # Enable provisioning with CFEngine. CFEngine Community packages are
   # automatically installed. For example, configure the host as a
   # policy server and optionally a policy file to run:
