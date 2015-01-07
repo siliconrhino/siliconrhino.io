@@ -23,12 +23,12 @@ cd siliconrhino.io
 **2\.** Install all modules and needed tools
 
 ```bash
-npm install
 npm install grunt -g
 npm install grunt-cli -g
 npm install bower -g
 gem install bundler
 gem install scss-lint
+npm install
 bundle install
 bower install
 ```
