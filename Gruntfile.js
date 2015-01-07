@@ -330,6 +330,16 @@ module.exports = function (grunt) {
           commit: true,
           push: true
         }
+      },
+      travis: {
+        options: {
+          remote: 'git@github.com:SiliconRhino/siliconrhino.io.git',
+          branch: 'gh-pages',
+          login: 'jamestoyer',
+          token: 'process.env.GH_TOKEN',
+          commit: true,
+          push: true
+        }
       }
     },
     jshint: {
