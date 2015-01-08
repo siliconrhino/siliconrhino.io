@@ -13,3 +13,7 @@ script: npm run-script deploy
 env:
   global:
     secure: BN4AztLAKLayd7ZOXNco0ubS5imSzMVt1hvSQixVAdCN5zWykJ3ouomzLMjGQ+8aKlc4f1QXUFq1myMqipJsSz+s+X0FZ50nKzeNGyOMjt9H/GQuCWFizrQssU84PZoC0LwbUuRnESGoDP2MJxMEml6xhZ1Z2HslP3yQDxvc56w=
+notifications:
+  slack:
+    rooms:
+      secure: NSeTEOOekRwqWq8Z3LDU4kmdHBpnjMRQcz4XNuPB767oHk4k24EJoTpb4s7Y+R3xKbX/HKZljbloGS35oX+jZT56cAzfB4AiDAsgcqnMX195C/eGiFe4GUr0mRo9Qb2uuiHinlaPPgg0lS7LFxfSt7yJ7L/rxE8LN4TV80Z2e2Q=
