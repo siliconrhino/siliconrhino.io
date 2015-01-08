@@ -443,6 +443,13 @@ module.exports = function (grunt) {
     'buildcontrol'
     ]);
 
+  grunt.registerTask('deploy-travis', [
+    'check',
+    'test',
+    'build',
+    'buildcontrol:travis'
+  ]);
+
   grunt.registerTask('default', [
     'check',
     'test',
