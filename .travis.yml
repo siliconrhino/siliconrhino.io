@@ -15,7 +15,7 @@ before_script:
 script: npm run-script deploy
 env:
   global:
-    secure: BN4AztLAKLayd7ZOXNco0ubS5imSzMVt1hvSQixVAdCN5zWykJ3ouomzLMjGQ+8aKlc4f1QXUFq1myMqipJsSz+s+X0FZ50nKzeNGyOMjt9H/GQuCWFizrQssU84PZoC0LwbUuRnESGoDP2MJxMEml6xhZ1Z2HslP3yQDxvc56w=
+  - secure: BXZpvQgzBXFnelIhWgjMNV3wR2GRo2vB7xHilVNi8mbVXMcI4E79gERRo0zGQIdEXb+paGm0sJv1s2svn85ALvdnNDUFsJ3fQjGXioXHN0FEyNll21s7EJLnJkN+tkxzBBtw+qdSAO8cdjey8dpvlPCDqSie17P8cfn2Lb6c5+Y=
 notifications:
   slack:
     rooms:
