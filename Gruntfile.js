@@ -336,7 +336,7 @@ module.exports = function (grunt) {
           remote: 'git@github.com:SiliconRhino/siliconrhino.io.git',
           branch: 'gh-pages',
           login: 'jamestoyer',
-          token: 'process.env.GH_TOKEN',
+          token: process.env.GH_TOKEN,
           commit: true,
           push: true
         }
