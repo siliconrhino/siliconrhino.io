@@ -446,8 +446,7 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy-travis', [
     'check',
     'test',
-    'build',
-    'buildcontrol:travis'
+    'build'
   ]);
 
   grunt.registerTask('default', [

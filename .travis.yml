@@ -7,8 +7,12 @@ branches:
 before_script:
 - git config --global user.name "Travis CI"
 - git config --global user.email "travis@siliconrhino.io"
+- npm install -g grunt-cli
+- npm install -g bower
 - gem install bundler
+- gem install scss-lint
 - bundle install
+- bower install
 script: npm run-script deploy
 env:
   global:
