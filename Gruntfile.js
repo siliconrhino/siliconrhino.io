@@ -366,7 +366,11 @@ module.exports = function (grunt) {
     scsslint : {
       allFiles: [
         '<%= yeoman.app %>/_scss/**/*.scss'
-      ]
+      ],
+      options: {
+        bundleExec: true,
+        force: true
+      }
     },
     concurrent: {
       server: [
@@ -414,8 +418,8 @@ module.exports = function (grunt) {
     'wiredep',
     'compass:server',
     'jshint:all',
-    'csslint:check',
-    'scsslint'
+    'scsslint',
+    'csslint:check'
   ]);
 
   grunt.registerTask('build', [
@@ -446,7 +450,8 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy-travis', [
     'check',
     'test',
-    'build'
+    'build',
+    'buildcontrol:travis'
   ]);
 
   grunt.registerTask('default', [

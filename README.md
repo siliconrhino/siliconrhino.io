@@ -26,7 +26,6 @@ cd siliconrhino.io
 npm install grunt-cli -g
 npm install bower -g
 gem install bundler
-gem install scss-lint
 npm install
 bundle install
 bower install

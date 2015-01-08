@@ -10,7 +10,6 @@ before_script:
 - npm install -g grunt-cli
 - npm install -g bower
 - gem install bundler
-- gem install scss-lint
 - bundle install
 - bower install
 script: npm run-script deploy
