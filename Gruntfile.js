@@ -325,7 +325,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: 'https://github.com/SiliconRhino/siliconrhino.io.git',
+          remote: 'git@github.com:SiliconRhino/siliconrhino.io.git',
           branch: 'gh-pages',
           commit: true,
           push: true
