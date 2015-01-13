@@ -364,14 +364,14 @@ module.exports = function (grunt) {
       }
     },
     scsslint : {
-      exclude: [
-        '<%= yeoman.app %>/_scss/syntax.scss'
-      ],
       allFiles: [
-        '<%= yeoman.app %>/_scss/main.scss'
+        '<%= yeoman.app %>/_scss/**/*.scss'
       ],
       options: {
         bundleExec: true,
+        exclude: [
+        '<%= yeoman.app %>/_scss/syntax.scss'
+        ],
         force: true
       }
     },
