@@ -1,6 +1,8 @@
 # Silicon Rhino
 
-This is the *[Silicon Rhino](http://yeoman.io)* site
+[![Build Status](https://travis-ci.org/SiliconRhino/siliconrhino.io.svg?branch=master)](https://travis-ci.org/SiliconRhino/siliconrhino.io)
+
+This is the *[Silicon Rhino](http://siliconrhino.io)* site
 
 ## I've spotted an issue!
 
