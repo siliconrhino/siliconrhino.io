@@ -1,6 +1,6 @@
 # Silicon Rhino
 
-This is the *[Silicon Rhino](http://yeoman.io)* site
+This is the *[Silicon Rhino](http://siliconrhino.io)* site
 
 ## I've spotted an issue!
 
