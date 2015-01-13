@@ -121,8 +121,8 @@ body {
 
   .overlay {
     background-color: rgba(225, 225, 225, .5);
-    width: 100%;
     min-height: 400px;
+    width: 100%;
   }
 
   h1 {
@@ -144,11 +144,10 @@ body {
 }
 
 .jumbotron.backg.services {
-  background: url("/img/devices.png") no-repeat fixed;
+  background: url('/img/devices.png') no-repeat fixed;
   background-color: $lightgrey;
   background-size: contain;
 }
-
 
 h1,
 h2 {
@@ -156,32 +155,25 @@ h2 {
   font-family: $title-font;
 }
 
-h1.title {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-
 // SECTION STYLINGS
-
 section {
   margin: 0;
-}
 
-section.jumbotron:nth-child(odd) {
-  background: $lightgrey;
-}
+  &.jumbotron:nth-child(odd) {
+    background: $lightgrey;
+  }
 
-section.jumbotron.i:nth-child(odd) {
-  background: #fff !important;
-}
+  &.jumbotron.i:nth-child(odd) {
+    background: #fff !important;
+  }
 
-section.jumbotron.i:nth-child(even) {
-  background: $lightgrey;
-}
+  &.jumbotron.i:nth-child(even) {
+    background: $lightgrey;
+  }
 
-section.jumbotron.w {
-  background-color: #fff !important;
+  &.jumbotron.w {
+    background-color: #fff !important;
+  }
 }
 
 .quote {
@@ -198,16 +190,10 @@ section.jumbotron.w {
 }
 
 blockquote {
-  border-left: none;
+  border-left: 0;
   font-size: inherit;
   margin: 0;
   padding: 0;
-}
-
-a {
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 ul.feat {
@@ -218,8 +204,8 @@ ul.feat {
 }
 
 .navbar-inverse .navbar-toggle {
-  border: 0;
   background-color: $blue;
+  border: 0;
   margin-top: 13px;
 
   &:hover {
@@ -234,16 +220,16 @@ ul.feat {
   li {
     display: inline-block;
 
+    + li {
+      margin-left: 20px;
+    }
+
     a {
       color: $blue !important;
       font-family: $title-font;
       font-size: 1.5em;
       font-weight: 300;
     }
-  }
-
-  li + li {
-    margin-left: 20px;
   }
 }
 
@@ -330,7 +316,7 @@ div img {
     height: 25px;
     margin: 0 0 20px;
 
-    &+h3 {
+    + h3 {
       display: inline;
     }
   }
@@ -373,7 +359,7 @@ div img {
       text-align: center;
       width: 64px;
 
-      & + div {
+      + div {
         margin-left: 10px;
       }
 
@@ -427,7 +413,6 @@ div#tweecool {
     display: none;
   }
 }
-
 
 // TEAM
 .team {
@@ -544,7 +529,7 @@ div#tweecool {
       text-align: center;
       width: 128px;
 
-      & + div {
+      + div {
         margin-left: 10%;
       }
 
@@ -599,7 +584,7 @@ div#tweecool {
       }
     }
 
-    &+.fluid_service {
+    + .fluid_service {
       margin-top: 30px;
     }
   }

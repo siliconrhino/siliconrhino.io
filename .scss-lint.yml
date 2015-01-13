@@ -46,6 +46,9 @@ linters:
   IdWithExtraneousSelector:
     enabled: true
 
+  ImportPath:
+    enabled: false
+
   Indentation:
     enabled: true
     width: 2
