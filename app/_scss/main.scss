@@ -591,7 +591,7 @@ div#tweecool {
 }
 
 // SLIDER ANIMATION
-@keyframes slider {
+/*@keyframes slider {
   0% { @include transform(translateX(0)); }
   20% { @include transform(translateX(0)); }
   25% { @include transform(translateX(-299px)); }
@@ -601,7 +601,7 @@ div#tweecool {
   75% { @include transform(translateX(-897px)); }
   95% { @include transform(translateX(-897px)); }
   100% { @include transform(translateX(-1196px)); }
-}
+}*/
 
 div#screen {
   text-align: center;
