@@ -138,14 +138,14 @@ module.exports = function (grunt) {
     },
     autoprefixer: {
       options: {
-        browsers: ['last 2 versions']
+        browsers: ['last 5 versions']
       },
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.dist %>/css',
+          cwd: '.tmp/concat/css',
           src: '**/*.css',
-          dest: '<%= yeoman.dist %>/css'
+          dest: '.tmp/concat/css'
         }]
       },
       server: {
@@ -369,6 +369,9 @@ module.exports = function (grunt) {
       ],
       options: {
         bundleExec: true,
+        exclude: [
+        '<%= yeoman.app %>/_scss/syntax.scss'
+        ],
         force: true
       }
     },
