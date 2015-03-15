@@ -149,7 +149,7 @@ body {
 .jumbotron.backg.services {
   background: url('/img/devices.png') no-repeat fixed;
   background-color: $lightgrey;
-  background-size: contain;
+  background-size: contain !important;
 }
 
 h1,
@@ -769,6 +769,13 @@ div.error {
     padding: 30px 10px;
   }
 
+  .jumbotron.backg.services {
+    background: url("/img/devices.png") no-repeat;
+    background-color: $lightgrey;
+    min-height: 200px;
+
+  }
+
   .jumbotron ul.details {
       font-size: 14px;
        width: 90%;
@@ -788,10 +795,11 @@ div.error {
 
   .jumbotron > .techs {
     max-width: 100%;
+    margin-bottom: 20px;
   }
 
   .footer {
-    padding: 0 10px;
+    padding: 10px;
 
     .circles {
       display: block;
