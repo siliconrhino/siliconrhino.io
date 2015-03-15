@@ -121,13 +121,11 @@ body {
   min-height: 400px;
   padding: 0;
   position: relative;
-  height:90vh;
 
   .overlay {
     background-color: rgba(225, 225, 225, .5);
     min-height: 400px;
     width: 100%;
-    height:90vh;
   }
 
   h1 {
@@ -290,9 +288,10 @@ div img {
     position: absolute;
     top: 15px;
     vertical-align: bottom;
+    max-width: 50%;
 
     img {
-      height: 25px;
+        width: 230px;
     }
   }
 
@@ -750,10 +749,30 @@ div.error {
   }
 }
 
-@media (max-width: 1200px)
+@media (max-width: 1024px)
 {
   .backg {
-    background: url('/img/whiteboard_sm.png') no-repeat center center fixed;
+    background: url('/img/whiteboard_sm.png') no-repeat center center;
+  }
+
+  .quote {
+      font-size:1.5em;
+  }
+
+  .jumbotron ul.details {
+      font-size: 14px;
+       width: 100%;
+  }
+
+  .jumbotron p {
+    font-size: 17px;
+  }
+
+  div#tweecool div.tweets_txt {
+    font-size: 18px;
+    min-height: 32px;
+    padding-left: 40px;
+    background-size: 32px;
   }
 }
 
