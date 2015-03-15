@@ -216,6 +216,10 @@ ul.feat {
   }
 }
 
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: $blue;
+}
+
 
 .navbar-right {
   margin: 15px 0 0;
@@ -512,7 +516,7 @@ div#tweecool {
     img {
       @include border-radius(50%);
       width: 64px;
-      max-width: 10%;
+      max-width: 15%;
 
     }
 
@@ -761,9 +765,13 @@ div.error {
       font-size:1.5em;
   }
 
+  .jumbotron {
+    padding: 30px 10px;
+  }
+
   .jumbotron ul.details {
       font-size: 14px;
-       width: 100%;
+       width: 90%;
   }
 
   .jumbotron p {
@@ -779,10 +787,12 @@ div.error {
   }
 
   .jumbotron > .techs {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .footer {
+    padding: 0 10px;
+
     .circles {
       display: block;
       clear:both;
