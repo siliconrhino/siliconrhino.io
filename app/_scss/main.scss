@@ -823,13 +823,17 @@ div.error {
     background-size: 32px;
   }
 
-  .jumbotron > .techs {
+  .jumbotron .techs {
     max-width: 100%;
     margin-bottom: 20px;
+
+    img {
+      margin-bottom: 10px;
+    }
   }
 
   .footer {
-    padding: 10px;
+    padding: 30px 10px;
 
     .circles {
       display: block;
