@@ -512,6 +512,8 @@ div#tweecool {
     img {
       @include border-radius(50%);
       width: 64px;
+      max-width: 10%;
+
     }
 
     img + img {
@@ -766,6 +768,7 @@ div.error {
 
   .jumbotron p {
     font-size: 17px;
+      margin: 25px 0;
   }
 
   div#tweecool div.tweets_txt {
@@ -774,6 +777,38 @@ div.error {
     padding-left: 40px;
     background-size: 32px;
   }
+
+  .jumbotron > .techs {
+    max-width: 80%;
+  }
+
+  .footer {
+    .circles {
+      display: block;
+      clear:both;
+      padding-top: 20px;
+
+      > div {
+        height: 32px;
+        width: 32px;
+
+        img {
+          width: 16px;
+          margin-top: 8px;
+
+
+          &.linkedin {
+            width: 13px;
+          }
+        }
+
+        a {
+          height: 32px;
+        }
+      }
+    }
+  }
+
 }
 
 // RETINA DISPLAYS
