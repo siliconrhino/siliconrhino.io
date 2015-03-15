@@ -790,6 +790,10 @@ div.error {
           display: block;
           height: 64px;
         }
+
+        + div {
+          margin-left: 3%;
+        }
       }
     }
   }
