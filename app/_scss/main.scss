@@ -767,6 +767,31 @@ div.error {
 
   .jumbotron {
     padding: 30px 10px;
+
+    &.circles {
+      > div {
+        height: 64px;
+        width: 64px;
+
+        + div {
+          margin-left: 10%;
+        }
+
+        img {
+          margin-top: 15px;
+          width: 32px;
+
+          &.linkedin {
+            width: 26px;
+          }
+        }
+
+        a {
+          display: block;
+          height: 64px;
+        }
+      }
+    }
   }
 
   .jumbotron.backg.services {
