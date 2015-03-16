@@ -1,15 +1,22 @@
 $icon-font-path: '../_bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
 // bower:scss
 @import 'bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
 // endbower
 
 //VARIABLES
 
-$black: #000;
-$lightgrey: #e3e3e3;
-$blue: #0e8795;
-$gray: #303030;
-$title-font: 'Raleway';
+$black: #343434;
+$white: #FCFCFC;
+$blue: #008190;
+$gray: #D7D7D7;
+$pink: #E2077C;
+$green: #8FC243;
+
+$lightgrey: #FCFCFC;
+
+$title-font: 'Roboto';
+$text-font: 'Roboto';
 
 //MIXINS
 
@@ -50,7 +57,7 @@ $title-font: 'Raleway';
 
 .browsehappy {
   background: #ccc;
-  color: #000;
+  color: $black;
   margin: .2em 0;
   padding: .2em 0;
 }
@@ -61,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #fff;
+  color: $white;
   font-family: $title-font;
   font-weight: 400;
   text-shadow: none;
@@ -81,7 +88,7 @@ a {
 }
 
 .lato {
-  font-family: Lato !important;
+  font-family: $text-font !important;
   font-weight: 300 !important;
 }
 
@@ -111,32 +118,38 @@ ol {
 
 // Space out content a bit
 body {
-  font-family: 'Lato', sans-serif;
-  padding-top: 40px;
+  font-family: $text-font, sans-serif;
 }
 
 .backg {
   @include background-cover();
-  background: url('/img/whiteboard.png') no-repeat center center fixed;
-  min-height: 400px;
+  background: url('/img/whiteboard.png') no-repeat center center;
+  min-height: 600px;
   padding: 0;
   position: relative;
+  width: 100%;
+  max-width:80%;
+  margin-left: auto;
+  margin-right: auto;
 
   .overlay {
-    background-color: rgba(225, 225, 225, .5);
+    background-color: rgba(225, 225, 225, 0);
     min-height: 400px;
     width: 100%;
   }
 
   h1 {
-    background-color: rgba(14, 135, 149, .7);
-    bottom: 0;
-    color: #fff;
+    background-color: rgba(14, 135, 149, .9);
+    font-family: $title-font;
+    letter-spacing: 1px;
+    bottom: 200px;
+    color: $white;
     margin: 0;
     padding: 15px 0;
     position: absolute;
     text-align: center;
-    width: 100%;
+    width: 125%;
+    left: -12.5%;
 
     img {
       height: 50px;
@@ -156,26 +169,33 @@ h1,
 h2 {
   color: $black;
   font-family: $title-font;
+  text-transform: uppercase;
 }
 
 // SECTION STYLINGS
 section {
   margin: 0;
 
-  &.jumbotron:nth-child(odd) {
-    background: $lightgrey;
+  &.jumbotron.i.first p {
+      font-size: 26px;
+  }
+
+  &.jumbotron.i.split {
+    background: $gray !important;
   }
 
   &.jumbotron.i:nth-child(odd) {
-    background: #fff !important;
+    border-bottom: 1px dotted $blue;
+    border-top: 1px dotted $blue;
+    background: $white;
   }
 
   &.jumbotron.i:nth-child(even) {
-    background: $lightgrey;
+    background: $white;
   }
 
   &.jumbotron.w {
-    background-color: #fff !important;
+    background-color: $white !important;
   }
 }
 
@@ -186,7 +206,7 @@ section {
   text-align: center;
 
   span {
-    color: $blue;
+    color: $pink;
     font-size: 2em;
     vertical-align: middle;
   }
@@ -243,10 +263,10 @@ ul.feat {
 .btn-primary {
   background-color: $blue;
   border: 1px solid $blue;
-  color: #fff;
+  color: $white;
 
   &:hover {
-    background-color: #fff;
+    background-color: $white;
     border: 1px solid $blue;
     color: $blue;
   }
@@ -266,9 +286,9 @@ div img {
 
 // Custom page header
 .header {
-  background-color: #fff;
+  background-color: $white;
   border: 0;
-  border-bottom: 1px solid $blue;
+  border-bottom: 1px dotted $blue;
   color: $blue;
   min-height: 60px;
   opacity: .95;
@@ -309,7 +329,7 @@ div img {
 .footer {
   background-color: $blue;
   border-top: 1px solid $blue;
-  color: #fff;
+  color: $white;
   font-family: $title-font;
   font-weight: 300;
   overflow: auto;
@@ -317,7 +337,7 @@ div img {
   padding-top: 30px;
 
   a {
-    color: #fff;
+    color: $white;
   }
 
   img.logo {
@@ -360,7 +380,7 @@ div img {
 
     > div {
       @include border-radius(50%);
-      border: 1px solid #fff;
+      border: 1px solid $white;
       display: inline;
       float: left;
       height: 64px;
@@ -397,7 +417,7 @@ div img {
 // COOKIES
 #catapult-cookie-bar {
   button + a {
-    color: #fff !important;
+    color: $white !important;
   }
 }
 
@@ -406,7 +426,7 @@ div#tweecool {
   div.tweets_txt {
     background: url('/img/tweet.png') no-repeat left center;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 100px;
     min-height: 63px;
     padding-left: 90px;
     text-align: left;
@@ -453,7 +473,7 @@ div#tweecool {
 
 // Main marketing message and sign up button
 .jumbotron {
-  background-color: #fff;
+  background-color: $white;
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -481,7 +501,7 @@ div#tweecool {
   }
 
   p {
-    color: #000;
+    color: $black;
     margin: 50px 0;
 
     a {
@@ -596,6 +616,7 @@ div#tweecool {
 
     + .fluid_service {
       margin-top: 30px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -725,7 +746,7 @@ div.error {
 #ss-submit {
   background-color: #0e8795;
   border: 0;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   font-size: 16px;
   margin: 0;
@@ -759,6 +780,13 @@ div.error {
 {
   .backg {
     background: url('/img/whiteboard_sm.png') no-repeat center center;
+    width: 100%;
+    max-width: 100%;
+
+    h1 {
+      width: 100%;
+      left: initial;
+    }
   }
 
   .quote {
