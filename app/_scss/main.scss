@@ -18,7 +18,10 @@ $title-font: 'Raleway';
 }
 
 @mixin background-cover() {
-  background-size: cover;
+    -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
 }
 
 @mixin transition($transition-definition) {
@@ -146,7 +149,7 @@ body {
 .jumbotron.backg.services {
   background: url('/img/devices.png') no-repeat fixed;
   background-color: $lightgrey;
-  background-size: contain;
+  background-size: contain !important;
 }
 
 h1,
@@ -211,6 +214,10 @@ ul.feat {
   &:hover {
     background-color: $blue;
   }
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: $blue;
 }
 
 
@@ -285,9 +292,10 @@ div img {
     position: absolute;
     top: 15px;
     vertical-align: bottom;
+    max-width: 50%;
 
     img {
-      height: 25px;
+        width: 230px;
     }
   }
 
@@ -508,6 +516,8 @@ div#tweecool {
     img {
       @include border-radius(50%);
       width: 64px;
+      max-width: 15%;
+
     }
 
     img + img {
@@ -743,6 +753,119 @@ div.error {
   .container {
     width: 1170px;
   }
+}
+
+@media (max-width: 1024px)
+{
+  .backg {
+    background: url('/img/whiteboard_sm.png') no-repeat center center;
+  }
+
+  .quote {
+      font-size:1.5em;
+  }
+
+  .jumbotron {
+    padding: 30px 10px;
+
+    &.circles {
+      > div {
+        height: 64px;
+        width: 64px;
+
+        + div {
+          margin-left: 10%;
+        }
+
+        img {
+          margin-top: 15px;
+          width: 32px;
+
+          &.linkedin {
+            width: 26px;
+          }
+        }
+
+        a {
+          display: block;
+          height: 64px;
+        }
+
+        + div {
+          margin-left: 3%;
+        }
+      }
+    }
+  }
+
+  .jumbotron.backg.services {
+    background: url("/img/devices.png") no-repeat;
+    background-color: $lightgrey;
+    min-height: 200px;
+    background-position: center center !important;
+
+  }
+
+  .jumbotron ul.details {
+      font-size: 14px;
+       width: 90%;
+
+       li {
+          background-size: 16px 16px;
+          padding-left: 25px;
+       }
+  }
+
+  .jumbotron p {
+    font-size: 17px;
+      margin: 25px 0;
+  }
+
+  div#tweecool div.tweets_txt {
+    font-size: 18px;
+    min-height: 32px;
+    padding-left: 40px;
+    background-size: 32px;
+  }
+
+  .jumbotron .techs {
+    max-width: 100%;
+    margin-bottom: 20px;
+
+    img {
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer {
+    padding: 30px 10px;
+
+    .circles {
+      display: block;
+      clear:both;
+      padding-top: 20px;
+
+      > div {
+        height: 32px;
+        width: 32px;
+
+        img {
+          width: 16px;
+          margin-top: 8px;
+
+
+          &.linkedin {
+            width: 13px;
+          }
+        }
+
+        a {
+          height: 32px;
+        }
+      }
+    }
+  }
+
 }
 
 // RETINA DISPLAYS
