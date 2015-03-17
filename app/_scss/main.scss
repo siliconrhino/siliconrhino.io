@@ -69,17 +69,22 @@ ol {
 
 // Space out content a bit
 body {
+  padding-top: 40px;
   font-family: $text-font, sans-serif;
+}
+
+.home-backg {
+  max-width:80%;
+  min-height: 600px !important;
 }
 
 .backg {
   @include background-cover();
   background: url('/img/whiteboard.png') no-repeat center center;
-  min-height: 600px;
+  min-height: 400px;
   padding: 0;
   position: relative;
   width: 100%;
-  max-width:80%;
   margin-left: auto;
   margin-right: auto;
 
@@ -112,7 +117,7 @@ body {
 
 .jumbotron.backg.services {
   background: url('/img/devices.png') no-repeat fixed;
-  background-color: $lightgrey;
+  background-color: $gray;
   background-size: contain !important;
 }
 
@@ -127,18 +132,20 @@ h2 {
 section {
   margin: 0;
 
-  &.jumbotron.i.first p {
-      font-size: 26px;
+  &.jumbotron:nth-child(even) {
+    background: $white;
   }
 
-  &.jumbotron.i.split {
-    background: $gray !important;
+  &.jumbotron:nth-child(odd) {
+    background: $gray;
+  }
+
+  &.jumbotron.i.first p {
+    font-size: 26px;
   }
 
   &.jumbotron.i:nth-child(odd) {
-    border-bottom: 1px dotted $blue;
-    border-top: 1px dotted $blue;
-    background: $white;
+    background: $gray;
   }
 
   &.jumbotron.i:nth-child(even) {
@@ -204,7 +211,7 @@ ul.feat {
 
     a {
       color: $blue !important;
-      font-family: $title-font;
+      font-family: $text-font;
       font-size: 1.5em;
       font-weight: 300;
     }
@@ -239,7 +246,7 @@ div img {
 .header {
   background-color: $white;
   border: 0;
-  border-bottom: 1px dotted $blue;
+  border-bottom: 1px solid $blue;
   color: $blue;
   min-height: 60px;
   opacity: .95;
@@ -377,9 +384,9 @@ div#tweecool {
   div.tweets_txt {
     background: url('/img/tweet.png') no-repeat left center;
     font-size: 25px;
-    line-height: 100px;
+    line-height: 50px;
     min-height: 63px;
-    padding-left: 90px;
+    padding-left: 125px;
     text-align: left;
 
     a {
@@ -712,7 +719,6 @@ div.error {
   width: 99%;
 }
 
-
 @media (min-width: 1200px)
 {
   .container {
@@ -729,10 +735,13 @@ div.error {
 
 @media (max-width: 1024px)
 {
+  .home-backg {
+    max-width: 100%;
+    min-height: 400px !important;
+  }
+
   .backg {
     background: url('/img/whiteboard_sm.png') no-repeat center center;
-    width: 100%;
-    max-width: 100%;
 
     h1 {
       width: 100%;
@@ -779,7 +788,7 @@ div.error {
 
   .jumbotron.backg.services {
     background: url("/img/devices.png") no-repeat;
-    background-color: $lightgrey;
+    background-color: $gray;
     min-height: 200px;
     background-position: center center !important;
 
@@ -797,13 +806,17 @@ div.error {
 
   .jumbotron p {
     font-size: 17px;
-      margin: 25px 0;
+    margin: 25px 0;
+  }
+
+  .jumbotron.i.first p {
+    font-size: 17px !important;
   }
 
   div#tweecool div.tweets_txt {
     font-size: 18px;
     min-height: 32px;
-    padding-left: 40px;
+    padding-left: 70px;
     background-size: 32px;
   }
 
