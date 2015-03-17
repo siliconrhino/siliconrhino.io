@@ -1,59 +1,10 @@
-$icon-font-path: '../_bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
+@import 'variables.scss';
+@import 'mixins.scss';
+
 @import url(http://fonts.googleapis.com/css?family=Roboto:300);
 // bower:scss
 @import 'bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
 // endbower
-
-//VARIABLES
-
-$black: #343434;
-$white: #FCFCFC;
-$blue: #008190;
-$gray: #D7D7D7;
-$pink: #E2077C;
-$green: #8FC243;
-
-$lightgrey: #FCFCFC;
-
-$title-font: 'Roboto';
-$text-font: 'Roboto';
-
-//MIXINS
-
-@mixin border-radius($radius) {
-  border-radius: $radius;
-}
-
-@mixin background-cover() {
-    -webkit-background-size: cover !important;
-        -moz-background-size: cover !important;
-        -o-background-size: cover !important;
-        background-size: cover !important;
-}
-
-@mixin transition($transition-definition) {
-  transition: $transition-definition;
-}
-
-@mixin transform($transform-definition) {
-  transform: $transform-definition;
-}
-
-@mixin animation-name($animation-definition) {
-  animation-name: $animation-definition;
-}
-
-@mixin animation-duration($animation-duration) {
-  animation-duration: $animation-duration;
-}
-
-@mixin animation-timing-function($animation-timing-funtion) {
-  animation-timing-function: $animation-timing-funtion;
-}
-
-@mixin animation-iteration-count($animation-iteration-count) {
-  animation-iteration-count: $animation-iteration-count;
-}
 
 .browsehappy {
   background: #ccc;
