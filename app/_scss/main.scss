@@ -77,6 +77,11 @@ body {
   min-height: 600px !important;
 }
 
+.ryan {
+    background: url("/img/ryanhead.png") no-repeat right 90% !important;
+    background-size: 24% !important;
+}
+
 .backg {
   @include background-cover();
   background: url('/img/whiteboard.png') no-repeat center center;
