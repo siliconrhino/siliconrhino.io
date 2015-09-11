@@ -33,7 +33,7 @@ bundle install
 bower install
 ```
 
-You're now all set!
+You're now all set! ```grunt serve``` to run the site locally.
 
 
 ## I want to deploy my changes
