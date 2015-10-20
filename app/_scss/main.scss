@@ -433,6 +433,20 @@ div#tweecool {
   }
 }
 
+// PORTFOLIO
+.portfolio {
+  .portfolio-image-container {
+    height: 160px;
+    overflow: hidden;
+    
+    img.portfolio-image {
+      @include border-radius(1%);
+      max-width: 250px;
+      width: 100%;
+    }
+  }
+}
+
 // Main marketing message and sign up button
 .jumbotron {
   background-color: $white;
