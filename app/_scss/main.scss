@@ -191,36 +191,101 @@ ul.feat {
   text-align: left;
 }
 
-.navbar-inverse .navbar-toggle {
-  background-color: $blue;
-  border: 0;
-  margin-top: 13px;
-
-  &:hover {
-    background-color: $blue;
+.header {
+  height: 40px;
+  @include transition(background-color 300ms);
+  .logo.blue {
+    display:none;
+  }
+  
+  #menu {
+    float: right;
+    margin: 4px 10px 0 0; 
+    color: $blue;
+    font-family: $text-font;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  &.blue {
+     background-color: rgba(0, 129, 144, 0.95);
+     border-bottom: none;
+     
+     .logo.blue {
+       display: inline; 
+     }
+     
+     #menu {
+      color: white; 
+     }
   }
 }
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-  border-color: $blue;
+.menu { display:block;
+    $menu-width: 250px;
+    > div { background-color: rgba(0, 129, 144, 0.95); position: fixed; z-index:1000000; top:40px; width:$menu-width !important; height: calc(100% - 40px); @include transition(-webkit-transform ease-in 300ms); @include transition(transform ease-in 300ms);
+        &.left { left:$menu-width*-1; }
+        &.show.left {
+          @include transform(translate3d($menu-width, 0, 0)); 
+          overflow: auto;
+        }
+
+        &.right { right:$menu-width*-1; }
+        &.show.right { @include transform(translate3d($menu-width*-1, 0, 0));}
+    }
 }
 
-
-.navbar-right {
-  margin: 15px 0 0;
-
+.menu {
   li {
-    display: inline-block;
-
-    + li {
-      margin-left: 20px;
-    }
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    
 
     a {
-      color: $blue !important;
+      color: white !important;
       font-family: $text-font;
       font-size: 1.5em;
       font-weight: 300;
+    }
+  }
+  .circles {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+
+    > div {
+      @include border-radius(50%);
+      border: 1px solid $white;
+      display: inline-block;
+      height: 32px;
+      text-align: center;
+      width: 32px;
+
+      + div {
+        margin-left: 10px;
+      }
+
+      img {
+        margin-top: 8px;
+        vertical-align: top;
+        width: 16px;
+
+        &.linkedin {
+          width: 13px;
+        }
+      }
+
+      a {
+        display: block;
+        height: 32px;
+      }
     }
   }
 }
@@ -251,12 +316,15 @@ div img {
 
 // Custom page header
 .header {
-  background-color: $white;
+  background-color: rgba(255, 255, 255, 0.95);
   border: 0;
-  border-bottom: 1px solid $blue;
+  border-bottom: 1px solid rgba(0, 129, 144, 0.95);
   color: $blue;
-  min-height: 60px;
-  opacity: .95;
+  min-height: 40px;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index:100000;
 
 
   // Make the masthead heading the same height as the navigation
@@ -276,7 +344,7 @@ div img {
     line-height: 24px;
     max-width: 50%;
     position: absolute;
-    top: 15px;
+    top: 3px;
     vertical-align: bottom;
 
     img {
@@ -288,6 +356,8 @@ div img {
     margin-left: 20px;
     width: 198px;
   }
+  
+  
 }
 
 // Custom page footer
