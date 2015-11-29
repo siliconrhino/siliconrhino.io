@@ -22,6 +22,7 @@ h6 {
   font-family: $title-font;
   font-weight: 400;
   text-shadow: none;
+  letter-spacing: 0.04em;
 }
 
 h2 {
@@ -191,6 +192,38 @@ ul.feat {
   text-align: left;
 }
 
+.jumbotron.choice {
+  height: 400px; 
+  padding: 0;
+  
+  > div {
+    height: 400px; 
+    transform: scale(1);
+    @include transition(all .2s ease-in-out);
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(center);
+    
+    &:hover {
+      transform: scale(.85);
+      cursor: pointer;
+    }
+  }
+  
+  .gray {
+    background-color: $darkgray;
+    h2 {
+      color: $yellow;
+    }
+  }
+  .yellow {
+    background-color: $yellow;
+    h2 {
+      color: $darkgray;
+    }
+  }
+}
+
 .header {
   height: 40px;
   @include transition(background-color 300ms);
@@ -294,6 +327,7 @@ ul.feat {
   background-color: $blue;
   border: 1px solid $blue;
   color: $white;
+  border-radius: 0;
 
   &:hover {
     background-color: $white;
@@ -744,13 +778,40 @@ div.error {
 }
 
 //PROJECTS
+.backg-projects {
+  @include background-cover();
+  min-width: 100% !important;
+  background: url('/img/backgrounds/office.jpg') no-repeat center center;
+  background-color: rgba(58,46,57,0.6);
+  height: 600px;
+  
+  .overlay {
+    background-color: rgba(58,46,57,0.6);
+    padding: 40px;
+    height: 100%;
+    
+    h2 {
+      color: $yellow;
+    }
+  }
+}
+
 .projects {
+  padding: 0;
+  
   h2, h3 {
     text-transform: none;
   }
 
   .project {
-
+    padding: 0;
+    height: 280px;
+    overflow: hidden;
+    
+    &:hover .project-image-container {
+      @include transform(scale(0.9));
+    }
+    
     .project-image-container {
         width: 100%;
         height: 280px;
@@ -759,43 +820,69 @@ div.error {
 
         img.project-image {
           width: 100%;
-        }
-
-        &:hover {
-          @include transform(scale(0.9));
+          
+          &.polimapper {
+            margin-top: -32px;
+          }
         }
     }
-
-    h2 {
-      margin-bottom: 10px;
-    }
-
-    h4 {
-      font-size: 11px;
-
-      a {
-        color: $blue;
-        font-weight: bold;
+    
+    &:hover {
+      .project-details {
+        top: 0;
       }
     }
-
-    > p {
-      text-align: left;
-    }
-
-    .techs {
+    .project-details {
+      position: absolute; 
+      padding: 15px;
+      top: 100%; 
+      width: 100%;
+      height: 100%;
+      @include transition(all 0.2s ease-in);
+      background-color: rgba(58,46,57,0.6);
       text-align: center;
-
-      img {
-        width: 32px;
-        @include transition(all .2s ease-in-out);
-
-        &:hover {
-          @include transform(scale(1.1));
+      
+      h2 {
+        margin-bottom: 10px;
+        font-weight: 100;
+        font-size: 40px;
+        
+        a {
+          color: white;
+        }
+      }
+  
+      h4 {
+        font-size: 11px;
+        color: white;
+  
+        a {
+          color: $blue;
+          font-weight: bold;
+        }
+      }
+  
+      > p {
+        font-size: 13px;
+        line-height: 17px;
+        color: white;
+      }
+  
+      .techs {
+        text-align: center;
+        margin: 30px 0;
+  
+        img {
+          width: 32px;
+          @include transition(all .2s ease-in-out);
+          @include border-radius(50%);
+  
+          &:hover {
+            @include transform(scale(1.1));
+          }
         }
       }
     }
-
   }
 }
 
@@ -1013,6 +1100,6 @@ div.error {
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
   body {
-    padding-top: 50px;
+    padding-top: 40px;
   }
 }

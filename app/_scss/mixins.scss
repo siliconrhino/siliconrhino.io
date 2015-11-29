@@ -9,14 +9,6 @@
         background-size: cover !important;
 }
 
-@mixin transition($transition-definition) {
-  transition: $transition-definition;
-}
-
-@mixin transform($transform-definition) {
-  transform: $transform-definition;
-}
-
 @mixin animation-name($animation-definition) {
   animation-name: $animation-definition;
 }
@@ -32,3 +24,23 @@
 @mixin animation-iteration-count($animation-iteration-count) {
   animation-iteration-count: $animation-iteration-count;
 }
+
+@mixin transition ($args...) { -webkit-transition: $args; -moz-transition: $args; -ms-transition: $args; -o-transition: $args; transition: $args; }
+
+@mixin transform ($args...) { transform:$args; -ms-transform:$args; -webkit-transform:$args; -o-transform:$args; -moz-transform:$args; }
+
+@mixin transform-origin ($args...) { transform-origin:$args; -ms-transform-origin:$args; -webkit-transform-origin:$args; -o-transform-origin:$args; -moz-transform-origin:$args; }
+
+@mixin display-flex { display: flex; display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; }
+
+@mixin flex-direction ($args...) { flex-direction:$args; -ms-flex-direction:$args; -webkit-flex-direction:$args; -o-flex-direction:$args; -moz-flex-direction:$args; }
+
+@mixin align-items ($args...) { align-items:$args; -ms-align-items:$args; -webkit-align-items:$args; -o-align-items:$args; -moz-align-items:$args; }
+
+@mixin justify-content ($args...) { justify-content:$args; -ms-justify-content:$args; -webkit-justify-content:$args; -o-justify-content:$args; -moz-justify-content:$args; }
+
+@mixin border-box { box-sizing:border-box; -moz-box-sizing:border-box; }
+
+@mixin calc($property, $expression) { #{$property}: -moz-calc(#{$expression}); #{$property}: -webkit-calc(#{$expression});#{$property}: calc(#{$expression}); } 
+
+
