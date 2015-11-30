@@ -993,10 +993,6 @@ $button-transistion-duration: 0.3s;     // The transition duration
   bottom: -$bar-thickness - $button-bar-space;
 }
 
-#menu {
-  background-color: $white;
-}
-
 #menu span {
   transition: transform $button-transistion-duration;
 }
