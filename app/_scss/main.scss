@@ -300,7 +300,7 @@ ul.feat {
   }
   
   &.blue {
-     background-color: rgba(0, 129, 144, 0.95) !important;
+     background-color: rgba(0, 129, 144, 1) !important;
      border-bottom: none;
      
      .logo.blue {
@@ -339,7 +339,7 @@ ul.feat {
 
 .menu { display:block;
     $menu-width: 250px;
-    > div { background-color: rgba(0, 129, 144, 0.95); position: fixed; z-index:1000000; top:40px; width:$menu-width !important; height: calc(100% - 40px); @include transition(-webkit-transform ease-in 300ms 20ms); @include transition(transform ease-in 300ms 20ms);
+    > div { background-color: rgba(0, 129, 144, 1); position: fixed; z-index:1000000; top:40px; width:$menu-width !important; height: calc(100% - 40px); @include transition(-webkit-transform ease-in 300ms 20ms); @include transition(transform ease-in 300ms 20ms);
         &.left { left:$menu-width*-1; }
         &.show.left {
           @include transform(translate3d($menu-width, 0, 0)); 
