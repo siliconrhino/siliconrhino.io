@@ -280,7 +280,7 @@ ul.feat {
      }
      
      #menu {
-      color: white; 
+      color: $white; 
      }
   }
 }
@@ -307,7 +307,7 @@ ul.feat {
     
 
     a {
-      color: white !important;
+      color: $white !important;
       font-family: $text-font;
       font-size: 1.5em;
       font-weight: 300;
@@ -605,6 +605,7 @@ div#tweecool {
 
   .btn {
     font-size: 17px;
+    color: $darkgray;
     margin: 20px 0;
     padding: 13px 20px;
   }
@@ -887,13 +888,13 @@ div.error {
         font-size: 40px;
         
         a {
-          color: white;
+          color: $white;
         }
       }
   
       h4 {
         font-size: 11px;
-        color: white;
+        color: $white;
   
         a {
           color: $pink;
@@ -904,7 +905,7 @@ div.error {
       > p {
         font-size: 13px;
         line-height: 17px;
-        color: white;
+        color: $white;
       }
   
       .techs {
@@ -989,7 +990,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
 }
 
 #menu {
-  background-color: white;
+  background-color: $white;
 }
 
 #menu span {
@@ -1005,19 +1006,19 @@ $button-transistion-duration: 0.3s;     // The transition duration
 
 #menu.is-active span {
   transform: rotate(90deg);
-  background-color: white;
+  background-color: $white;
 }
 
 #menu.is-active span::before,
 #menu.is-active span::after {
-  background-color: white;
+  background-color: $white;
 }
 
 /* Bounce To Left */
 .hvr-bounce-to-left {
   display: inline-block;
   vertical-align: middle;
-  background-color: white;
+  background-color: $white;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
@@ -1053,7 +1054,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
   transition-timing-function: ease-out;
 }
 .hvr-bounce-to-left:hover, .hvr-bounce-to-left:focus, .hvr-bounce-to-left:active {
-  color: white;
+  color: $white;
 }
 .hvr-bounce-to-left:hover:after, .hvr-bounce-to-left:focus:after, .hvr-bounce-to-left:active:after {
   -webkit-transform: scaleX(1);
@@ -1120,7 +1121,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
 // TESTING CONTACT FORM STYLES
 .ss-q-short,
 .ss-q-long {
-  border: 1px solid #0e8795;
+  border: 1px solid $blue;
   display: block;
   height: 30px;
   margin: 0;
@@ -1142,7 +1143,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
 }
 
 #ss-submit {
-  background-color: #0e8795;
+  background-color: $blue;
   border: 0;
   color: $white;
   cursor: pointer;
