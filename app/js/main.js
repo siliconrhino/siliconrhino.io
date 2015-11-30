@@ -19,5 +19,15 @@
 			$(".header").toggleClass("blue");
 			
 		});
+		window.onscroll = function() {barBackground()};
+
+		function barBackground() {
+				if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+					$(".header").addClass("white");
+				}
+				else {
+					$(".header").removeClass("white");
+				}
+		}
 	});
 })(window.$);

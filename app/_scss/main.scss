@@ -71,7 +71,6 @@ ol {
 body {
   font-family: $text-font, sans-serif;
   letter-spacing: 0.04em;
-  padding-top: 40px;
   @include transition(width ease-in 300ms);
   width: 100%;
    
@@ -93,7 +92,7 @@ body {
   padding: 0;
   position: relative;
   width: 100%;
-  @include calc(height, "100vh - 40px");
+  height: 100vh; 
 
   .overlay {
     background-color: rgba(58,46,57,0.6);
@@ -250,11 +249,27 @@ ul.feat {
   }
 }
 
+// Custom page header
+
 .header {
   height: 40px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 129, 144, 0.95);
+  color: $blue;
+  min-height: 40px;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index:100000;
+
   @include transition(background-color 300ms);
   .logo.blue {
     display:none;
+  }
+  
+  &.white {
+    background-color: rgba(252, 252, 252, 0.80);
   }
   
   #menu {
@@ -272,7 +287,7 @@ ul.feat {
   }
   
   &.blue {
-     background-color: rgba(0, 129, 144, 0.95);
+     background-color: rgba(0, 129, 144, 0.95) !important;
      border-bottom: none;
      
      .logo.blue {
@@ -282,6 +297,28 @@ ul.feat {
      #menu {
       color: $white; 
      }
+  }
+  
+  .logo {
+    color: $blue;
+    font-family: $title-font;
+    font-size: 30px;
+    font-weight: 300;
+    left: 15px;
+    line-height: 24px;
+    max-width: 50%;
+    position: absolute;
+    top: 3px;
+    vertical-align: bottom;
+
+    img {
+      width: 230px;
+    }
+  }
+
+  .icon {
+    margin-left: 20px;
+    width: 198px;
   }
 }
 
@@ -374,51 +411,7 @@ div img {
   padding-right: 15px;
 }
 
-// Custom page header
-.header {
-  background-color: rgba(255, 255, 255, 0.95);
-  border: 0;
-  border-bottom: 1px solid rgba(0, 129, 144, 0.95);
-  color: $blue;
-  min-height: 40px;
-  position: fixed; 
-  top: 0;
-  width: 100%;
-  z-index:100000;
 
-
-  // Make the masthead heading the same height as the navigation
-  h3 {
-    line-height: 40px;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-bottom: 19px;
-  }
-
-  .logo {
-    color: $blue;
-    font-family: $title-font;
-    font-size: 30px;
-    font-weight: 300;
-    left: 15px;
-    line-height: 24px;
-    max-width: 50%;
-    position: absolute;
-    top: 3px;
-    vertical-align: bottom;
-
-    img {
-      width: 230px;
-    }
-  }
-
-  .icon {
-    margin-left: 20px;
-    width: 198px;
-  }
-  
-  
-}
 
 // Custom page footer
 .footer {
@@ -814,7 +807,7 @@ div.error {
   min-width: 100% !important;
   background: url('/img/backgrounds/office.jpg') no-repeat center center;
   background-color: rgba(58,46,57,0.6);
-  @include calc(height, "100vh - 40px");
+  height: 100vh;
   
   .overlay {
     background-color: rgba(58,46,57,0.6);
