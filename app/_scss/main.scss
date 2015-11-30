@@ -952,7 +952,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
   border-radius: none;
   border: none;
   cursor: pointer;
-  transition: background $button-transistion-duration;
+  transition: background $button-transistion-duration, transform $button-transistion-duration;
 }
 
 #menu:focus {
@@ -999,7 +999,8 @@ $button-transistion-duration: 0.3s;     // The transition duration
 /* active state, i.e. menu open */
 
 #menu.is-active {
-  background-color: $blue;
+  background-color: rgba(0, 129, 144, 0.95);
+  transform: translateX(-82px);
 }
 
 #menu.is-active span {
