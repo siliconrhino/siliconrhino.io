@@ -1128,10 +1128,6 @@ $button-transistion-duration: 0.3s;     // The transition duration
   .container {
     max-width: 730px;
   }
-  
-  body.shrink {
-    @include calc(width, "100vw");
-  }
 
   // Remove the padding we set earlier
   .header,
