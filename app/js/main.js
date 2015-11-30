@@ -19,6 +19,10 @@
 			$('.header').toggleClass('blue');
 			
 		});
+		if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+					$('.header').addClass('white');
+				}
+				
 		window.onscroll = function() {barBackground();};
 
 		function barBackground() {
