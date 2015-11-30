@@ -192,7 +192,7 @@ section.jumbotron {
 
  
   span {
-    color: $pink;
+    color: $yellow;
     font-size: 2em;
     vertical-align: middle;
   }
@@ -217,6 +217,10 @@ section.jumbotron {
     
     h3 {
       margin-top: 5px;
+    }
+    
+    span {
+      color: $blue;
     }
   }
 }
