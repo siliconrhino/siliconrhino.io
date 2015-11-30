@@ -71,10 +71,16 @@ ol {
 body {
   font-family: $text-font, sans-serif;
   padding-top: 40px;
+  @include transition(width ease-in 300ms);
+  width: 100%;
+   
+  &.shrink {
+    @include calc(width, "100vw - 250px");
+  }
 }
 
 .home-backg {
-  max-width: 80%;
+  max-width: 90%;
   min-height: 600px !important;
 }
 
@@ -110,7 +116,7 @@ body {
     padding: 15px 0;
     position: absolute;
     text-align: center;
-    width: 125%;
+    width: 118.1%;
 
     img {
       height: 50px;
@@ -261,7 +267,7 @@ ul.feat {
 
 .menu { display:block;
     $menu-width: 250px;
-    > div { background-color: rgba(0, 129, 144, 0.95); position: fixed; z-index:1000000; top:40px; width:$menu-width !important; height: calc(100% - 40px); @include transition(-webkit-transform ease-in 300ms); @include transition(transform ease-in 300ms);
+    > div { background-color: rgba(0, 129, 144, 0.95); position: fixed; z-index:1000000; top:40px; width:$menu-width !important; height: calc(100% - 40px); @include transition(-webkit-transform ease-in 300ms 20ms); @include transition(transform ease-in 300ms 20ms);
         &.left { left:$menu-width*-1; }
         &.show.left {
           @include transform(translate3d($menu-width, 0, 0)); 
@@ -857,7 +863,7 @@ div.error {
         color: white;
   
         a {
-          color: $blue;
+          color: $pink;
           font-weight: bold;
         }
       }

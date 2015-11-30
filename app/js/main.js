@@ -13,8 +13,10 @@
 			$('.modal').modal('hide');
 		});
 		$("#menu").click(function(){
+			$("body").toggleClass("shrink");
 			$(".menu > .right").toggleClass("show");
 			$(".header").toggleClass("blue");
+			
 		});
 	});
 })(window.$);
