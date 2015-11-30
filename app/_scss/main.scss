@@ -1309,12 +1309,3 @@ $button-transistion-duration: 0.3s;     // The transition duration
   }
 
 }
-
-// RETINA DISPLAYS
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-  body {
-    padding-top: 40px;
-  }
-}
