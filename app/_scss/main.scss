@@ -220,19 +220,23 @@ ul.feat {
 .jumbotron.choice {
   height: 400px; 
   padding: 0;
-  
-  > div a {
-    height: 400px; 
+  > div {
     transform: scale(1);
     @include transition(all .2s ease-in-out);
-    @include display-flex();
-    @include flex-direction(column);
-    @include justify-content(center);
     
     &:hover {
       transform: scale(.85);
       cursor: pointer;
     }
+  }
+  > div a {
+    height: 400px; 
+    
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(center);
+    
+    
   }
   
   .gray {
