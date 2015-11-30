@@ -255,7 +255,6 @@ ul.feat {
   height: 40px;
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid rgba(0, 129, 144, 0.95);
   color: $blue;
   min-height: 40px;
   position: fixed; 
@@ -265,17 +264,28 @@ ul.feat {
 
   @include transition(background-color 300ms);
   .logo.blue {
-    display:none;
+    display: inline; 
   }
   
   &.white {
     background-color: rgba(252, 252, 252, 0.80);
+    
+    .logo.blue {
+      display:none;
+    }
+    
+    #menu {
+      span, span:before, span:after {
+        background: $blue;
+      }
+    }
+    
   }
   
   #menu {
     float: right;
     margin: 4px 10px 0 0; 
-    color: $blue;
+    color: $white;
     font-family: $text-font;
     font-size: 1.5em;
     font-weight: 300;
@@ -283,6 +293,9 @@ ul.feat {
     
     &:hover {
       cursor: pointer;
+    }
+    span, span:before, span:after {
+      background: $white;
     }
   }
   
@@ -295,8 +308,10 @@ ul.feat {
      }
      
      #menu {
-      color: $white; 
-     }
+      span, span:before, span:after {
+        background: $white !important;
+      }
+    }
   }
   
   .logo {
