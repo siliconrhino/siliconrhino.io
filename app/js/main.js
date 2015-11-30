@@ -12,21 +12,21 @@
 		$('.modalbutton').click(function() {
 			$('.modal').modal('hide');
 		});
-		$("#menu").click(function(){
-			$("body").toggleClass("shrink");
-			$("#menu").toggleClass("is-active");
-			$(".menu > .right").toggleClass("show");
-			$(".header").toggleClass("blue");
+		$('#menu').click(function(){
+			$('body').toggleClass('shrink');
+			$('#menu').toggleClass('is-active');
+			$('.menu > .right').toggleClass('show');
+			$('.header').toggleClass('blue');
 			
 		});
-		window.onscroll = function() {barBackground()};
+		window.onscroll = function() {barBackground();};
 
 		function barBackground() {
 				if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-					$(".header").addClass("white");
+					$('.header').addClass('white');
 				}
 				else {
-					$(".header").removeClass("white");
+					$('.header').removeClass('white');
 				}
 		}
 	});
