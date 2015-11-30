@@ -1068,8 +1068,8 @@ $button-transistion-duration: 0.3s;     // The transition duration
   z-index: -1;
   content: '';
   border-style: solid;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
+  -webkit-transition-duration: 0.02s;
+  transition-duration: 0.02s;
   -webkit-transition-delay: 0;
   transition-delay: 0;
   -webkit-transition-property: transform, opacity;
