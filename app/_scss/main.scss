@@ -1030,6 +1030,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
   transition-duration: 0.5s;
   border: none;
   z-index: 1;
+  border-radius: 0 !important;
 }
 .hvr-bounce-to-left:after {
   content: "";
@@ -1067,10 +1068,10 @@ $button-transistion-duration: 0.3s;     // The transition duration
   z-index: -1;
   content: '';
   border-style: solid;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
   -webkit-transition-property: transform, opacity;
   transition-property: transform, opacity;
   -webkit-transition-timing-function: ease-out;
@@ -1084,8 +1085,10 @@ $button-transistion-duration: 0.3s;     // The transition duration
   opacity: 1;
   -webkit-transform: translateX(-10px);
   transform: translateX(-10px);
-   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 
