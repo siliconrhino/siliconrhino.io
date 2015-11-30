@@ -834,6 +834,9 @@ div.error {
   &.backg-services {
     background: url('/img/backgrounds/services.jpg') no-repeat center center;
   }
+  &.backg-about {
+    background: url('/img/backgrounds/macbookwankers.jpg') no-repeat center center;
+  }
 }
 
 .projects {
@@ -954,6 +957,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
   border: none;
   cursor: pointer;
   transition: background $button-transistion-duration, transform $button-transistion-duration;
+  background-color: transparent;
 }
 
 #menu:focus {
@@ -1000,7 +1004,6 @@ $button-transistion-duration: 0.3s;     // The transition duration
 /* active state, i.e. menu open */
 
 #menu.is-active {
-  background-color: rgba(0, 129, 144, 0.95);
   transform: translateX(-82px);
 }
 
