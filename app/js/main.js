@@ -14,6 +14,7 @@
 		});
 		$("#menu").click(function(){
 			$("body").toggleClass("shrink");
+			$("#menu").toggleClass("is-active");
 			$(".menu > .right").toggleClass("show");
 			$(".header").toggleClass("blue");
 			
