@@ -626,6 +626,7 @@ div#tweecool {
       padding-left: 42px;
       text-align: left;
       width: 49%;
+      vertical-align: middle;
     }
   }
 
@@ -634,18 +635,21 @@ div#tweecool {
     text-align: left;
 
     img {
-      @include border-radius(50%);
       max-width: 15%;
       width: 48px;
       margin-right: 10px;
-    }
+      @include transition(all .2s ease-in-out);
+      @include border-radius(50%);
 
-    
+      &:hover {
+        @include transform(scale(1.1));
+      }
+    }
   }
 
   > .techs {
     margin: 0 auto;
-    max-width: 80%;
+    text-align: center;
   }
 
   &.circles {
@@ -1055,13 +1059,13 @@ div.error {
   }
 
   .jumbotron ul.details {
-      font-size: 14px;
-       width: 90%;
+    font-size: 14px;
+    width: 90%;
 
-       li {
-          background-size: 16px 16px;
-          padding-left: 25px;
-       }
+    li {
+      background-size: 16px 16px;
+      padding-left: 25px;
+    }
   }
 
   .jumbotron p {
