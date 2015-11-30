@@ -70,6 +70,7 @@ ol {
 // Space out content a bit
 body {
   font-family: $text-font, sans-serif;
+  letter-spacing: 0.04em;
   padding-top: 40px;
   @include transition(width ease-in 300ms);
   width: 100%;
@@ -171,6 +172,16 @@ section {
 
   &.jumbotron.w {
     background-color: $white !important;
+  }
+}
+
+section.jumbotron {
+  p {
+    font-size: 18px;
+  }
+  
+  p.lead {
+    font-size: 21px;
   }
 }
 
@@ -611,7 +622,7 @@ div#tweecool {
   }
 
   ul.details {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 300;
     margin: 0 auto;
     margin-bottom: 40px;
@@ -619,11 +630,11 @@ div#tweecool {
     width: 80%;
 
     li {
-      background: url('/img/ryan_icon.png') no-repeat center left;
-      background-size: 24px 24px;
+      background: url("/img/ryanhead.png") no-repeat center left;
+      background-size: 19px 19px;
       display: inline-block;
       margin-bottom: 10px;
-      padding-left: 42px;
+      padding-left: 24px;
       text-align: left;
       width: 49%;
       vertical-align: middle;
