@@ -196,6 +196,29 @@ section.jumbotron {
     font-size: 2em;
     vertical-align: middle;
   }
+  
+  &.testimonial {
+    font-size: 1.2em;
+    background-color: $white !important;
+    color: $black;
+    padding: 0 10% 50px; 
+    
+    img {
+      border-radius: 50%;
+      width: 64px;
+      float: right;
+      margin-left: 10px;
+    }
+    
+    h3, h4 {
+      text-align: right;
+      color: $black;
+    }
+    
+    h3 {
+      margin-top: 5px;
+    }
+  }
 }
 
 blockquote {
