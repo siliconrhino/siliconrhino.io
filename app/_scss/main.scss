@@ -221,7 +221,7 @@ ul.feat {
   height: 400px; 
   padding: 0;
   
-  > div {
+  > div a {
     height: 400px; 
     transform: scale(1);
     @include transition(all .2s ease-in-out);
