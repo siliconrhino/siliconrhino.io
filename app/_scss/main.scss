@@ -401,19 +401,6 @@ ul.feat {
   }
 }
 
-.btn-primary {
-  background-color: $blue;
-  border: 1px solid $blue;
-  color: $white;
-  border-radius: 0;
-
-  &:hover {
-    background-color: $white;
-    border: 1px solid $blue;
-    color: $blue;
-  }
-}
-
 div img {
   max-width: 100%;
 }
@@ -609,14 +596,6 @@ div#tweecool {
 
   h2 {
     color: $blue;
-  }
-
-  .btn {
-    font-size: 17px;
-    font-weight: 300;
-    color: $darkgray;
-    margin: 20px 0;
-    padding: 13px 20px;
   }
 
   p {
@@ -1031,7 +1010,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
 }
 
 /* Bounce To Left */
-.hvr-bounce-to-left {
+.btn {
   display: inline-block;
   vertical-align: middle;
   background-color: $white;
@@ -1048,8 +1027,19 @@ $button-transistion-duration: 0.3s;     // The transition duration
   border: none;
   z-index: 1;
   border-radius: 0 !important;
+  font-size: 17px;
+  font-weight: 300;
+  color: $darkgray;
+  margin: 20px 0;
+  padding: 13px 20px;
+  border: 1px solid $blue;
+  
+  &:hover {
+    background-color: white;
+    border: 1px solid $blue;
+  }
 }
-.hvr-bounce-to-left:after {
+.btn:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1069,16 +1059,16 @@ $button-transistion-duration: 0.3s;     // The transition duration
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-bounce-to-left:hover, .hvr-bounce-to-left:focus, .hvr-bounce-to-left:active {
+.btn:hover, .btn:focus, .btn:active {
   color: $white;
 }
-.hvr-bounce-to-left:hover:after, .hvr-bounce-to-left:focus:after, .hvr-bounce-to-left:active:after {
+.btn:hover:after, .btn:focus:after, .btn:active:after {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
-.hvr-bounce-to-left:before {
+.btn:before {
   opacity: 0;
   pointer-events: none;
   position: absolute;
@@ -1098,7 +1088,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
   border-width: 10px 10px 10px 0;
   border-color: transparent $blue transparent transparent;
 }
-.hvr-bounce-to-left:hover:before, .hvr-bounce-to-left:focus:before, .hvr-bounce-to-left:active:before {
+.btn:hover:before, .btn:focus:before, .btn:active:before {
   opacity: 1;
   -webkit-transform: translateX(-10px);
   transform: translateX(-10px);
