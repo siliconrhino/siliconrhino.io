@@ -20,7 +20,7 @@ h5,
 h6 {
   color: $white;
   font-family: $title-font;
-  font-weight: 400;
+  font-weight: 300;
   text-shadow: none;
   letter-spacing: 0.04em;
 }
@@ -79,11 +79,6 @@ body {
   }
 }
 
-.home-backg {
-  max-width: 90%;
-  min-height: 600px !important;
-}
-
 .ryan {
     background: url("/img/ryanhead.png") no-repeat right 90% !important;
     background-size: 24% !important;
@@ -94,15 +89,25 @@ body {
   background: url('/img/whiteboard.png') no-repeat center center;
   margin-left: auto;
   margin-right: auto;
-  min-height: 400px;
   padding: 0;
   position: relative;
   width: 100%;
+  @include calc(height, "100vh - 40px");
 
   .overlay {
-    background-color: rgba(225, 225, 225, 0);
-    min-height: 400px;
-    width: 100%;
+    background-color: rgba(58,46,57,0.6);
+    padding: 40px;
+    height: 100%;
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(flex-end);
+    
+    h2 {
+      color: $yellow;
+      margin-bottom: 0;
+      font-weight: 100;
+      font-size: 40px;
+    }
   }
 
   h1 {
@@ -144,7 +149,7 @@ section {
   margin: 0;
 
   &.jumbotron:nth-child(even) {
-    background: $white;
+    background: $darkgray;
   }
 
   &.jumbotron:nth-child(odd) {
@@ -161,7 +166,7 @@ section {
   }
 
   &.jumbotron.i:nth-child(even) {
-    background: $white;
+    background: $darkgray;
   }
 
   &.jumbotron.w {
@@ -174,7 +179,12 @@ section {
   font-size: 3em;
   padding: 50px 0;
   text-align: center;
+  color: $white; 
+  letter-spacing: .04em;
+  line-height: 1.5em;
+  background-color: $darkgray !important;
 
+ 
   span {
     color: $pink;
     font-size: 2em;
@@ -186,9 +196,8 @@ blockquote {
   border-left: 0;
   font-size: inherit;
   margin: 0;
-  padding: 0;
+  padding: 30px 0; 
   font-weight: 300;
-  letter-spacing: .03em;
 }
 
 ul.feat {
@@ -627,12 +636,11 @@ div#tweecool {
     img {
       @include border-radius(50%);
       max-width: 15%;
-      width: 64px;
+      width: 48px;
+      margin-right: 10px;
     }
 
-    img + img {
-      margin-left: 10px;
-    }
+    
   }
 
   > .techs {
@@ -789,16 +797,26 @@ div.error {
   min-width: 100% !important;
   background: url('/img/backgrounds/office.jpg') no-repeat center center;
   background-color: rgba(58,46,57,0.6);
-  height: 600px;
+  @include calc(height, "100vh - 40px");
   
   .overlay {
     background-color: rgba(58,46,57,0.6);
     padding: 40px;
     height: 100%;
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(flex-end);
     
     h2 {
       color: $yellow;
+      margin-bottom: 0;
+      font-weight: 100;
+      font-size: 40px;
     }
+  }
+  
+  &.backg-services {
+    background: url('/img/backgrounds/services.jpg') no-repeat center center;
   }
 }
 
@@ -880,6 +898,7 @@ div.error {
   
         img {
           width: 32px;
+          margin: 0 5px;
           @include transition(all .2s ease-in-out);
           @include border-radius(50%);
   
