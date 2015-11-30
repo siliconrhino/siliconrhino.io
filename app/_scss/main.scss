@@ -833,6 +833,20 @@ div.error {
   &.backg-founder {
     background: url('/img/backgrounds/founder.jpg') no-repeat center center;
   }
+  
+  &.backg-small {
+    height: 400px;
+    background: url('/img/backgrounds/projects.jpg') no-repeat center center;
+    
+    .overlay {
+      @include justify-content(center);
+      text-align: center;
+      
+      a, a:hover {
+        color: $yellow;
+      }
+    }
+  }
 }
 
 .projects {
