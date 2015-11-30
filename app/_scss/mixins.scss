@@ -41,7 +41,7 @@
 
 @mixin border-box { box-sizing:border-box; -moz-box-sizing:border-box; }
 
-@mixin calc($property, $expression) { #{$property}: -moz-calc(#{$expression}); #{$property}: -webkit-calc(#{$expression});#{$property}: calc(#{$expression}); } 
+@mixin calc($property, $expression) { #{$property}: -moz-calc(#{$expression}) !important; #{$property}: -webkit-calc(#{$expression}) !important;#{$property}: calc(#{$expression}) !important; } 
 
 @mixin filter ($args...) { filter:$args; -webkit-filter:$args;}
 

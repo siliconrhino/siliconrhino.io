@@ -1101,6 +1101,11 @@ $button-transistion-duration: 0.3s;     // The transition duration
   transition-duration: 0.3s;
 }
 
+//TYPEFORMS
+#typeform-overlay, #typeform-wrapper {
+  top: 40px !important;
+  @include calc(height, "100vh - 40px");
+}
 
 // Responsive: Portrait tablets and up
 @media screen and (max-width: 768px) {
