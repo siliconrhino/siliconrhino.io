@@ -85,6 +85,3 @@ DEPENDENCIES
   jekyll (~> 2.0.0)
   redcarpet
   scss-lint (~> 0.31.0)
-
-BUNDLED WITH
-   1.10.6
