@@ -851,6 +851,10 @@ div.error {
       font-weight: 100;
       font-size: 40px;
     }
+    
+    a {
+      color: $yellow;
+    }
   }
   
   &.backg-services {
@@ -862,6 +866,9 @@ div.error {
   }
   &.backg-founder {
     background: url('/img/backgrounds/founder.jpg') no-repeat center center;
+  }
+  &.backg-404 {
+    background: url('/img/backgrounds/404.jpg') no-repeat center center;
   }
   
   &.backg-small {
