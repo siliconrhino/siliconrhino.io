@@ -1,12 +1,28 @@
 
 
 .post-container {
-	max-width: 1100px;
+	max-width: 700px;
 	width: 95%;
 	margin: 50px auto;
 	
 	h1 {
 		text-align: center;
+	}
+	
+	p {
+		margin: 0 0 20px;
+		font-size: 16px;
+		line-height: 1.5em;
+		letter-spacing: 0.05em;
+		
+		a {
+			color: $blue;
+			font-weight: bold;
+		}
+	}
+	
+	img {
+		margin: 30px 0;
 	}
 }
 
