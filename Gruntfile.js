@@ -284,6 +284,7 @@ module.exports = function (grunt) {
             '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here.
             //'_bower_components/jquery/jquery.js',
+            'favicons/*',
             'favicon.ico',
             'apple-touch*.png'
           ],
@@ -385,6 +386,47 @@ module.exports = function (grunt) {
         'compass:dist',
         'copy:dist'
       ]
+    },
+    realFavicon: {
+      favicons: {
+        src: '<%= yeoman.app %>/img/rhino_big.png',
+        dest: '<%= yeoman.app %>/favicons/',
+        options: {
+          iconsPath: '/favicons/',
+          html: [ ],
+          design: {
+            ios: {
+              pictureAspect: 'backgroundAndMargin',
+              backgroundColor: '#ffffff',
+              margin: '32%'
+            },
+            desktopBrowser: {},
+            windows: {
+              pictureAspect: 'whiteSilhouette',
+              backgroundColor: '#008190',
+              onConflict: 'override'
+            },
+            androidChrome: {
+              pictureAspect: 'noChange',
+              themeColor: '#008190',
+              manifest: {
+                name: 'silicon rhino',
+                display: 'browser',
+                orientation: 'notSet',
+                onConflict: 'override'
+              }
+            },
+            safariPinnedTab: {
+              pictureAspect: 'silhouette',
+              themeColor: '#008190'
+            }
+          },
+          settings: {
+            scalingAlgorithm: 'Mitchell',
+            errorOnImageTooSmall: true
+          }
+        }
+      }
     }
   });
 
