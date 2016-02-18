@@ -862,6 +862,11 @@ div.error {
   }
   &.backg-about {
     background: url('/img/backgrounds/macbookwankers.jpg') no-repeat center center;
+    @include filter(contrast(1.2) brightness(0.7));
+    
+  }
+  &.backg-blog {
+    background: url('/img/backgrounds/blog.jpg') no-repeat center center;
     @include filter(contrast(1.2) brightness(1.3));
   }
   &.backg-founder {

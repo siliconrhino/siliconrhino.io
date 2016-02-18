@@ -1,5 +1,16 @@
 @import 'variables.scss';
 
+.backg-projects .overlay {
+  span.meta {
+    text-align: right;
+    color: $gray;
+    font-family: $title-font;
+    font-weight: 100;
+    font-size: 20px;
+  }
+}
+
+
 .post-container {
 	max-width: 700px;
 	width: 95%;

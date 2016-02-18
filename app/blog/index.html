@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+---
+<section class="home-backg backg-projects backg-blog">
+  <div class="overlay">
+  <h2>Blog</h2>
+  <h3>Various ramblings on startups</h3>
+  </div>
+</section>
+<section class="jumbotron w">
+  <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+  
+</section>

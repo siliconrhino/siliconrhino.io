@@ -5,10 +5,10 @@ layout: default
   <div class="overlay">
     <h2>{{ page.title }}</h2>
     <h3>{{ page.subTitle }}</h3>
+    <span class="meta">{{ page.date | date_to_string }}</span>
   </div>
 </section>
 <div class="post-container">
-	<p class="meta">{{ page.date | date_to_string }}</p>
 	
 	<div class="post">
 	{{ content }}
