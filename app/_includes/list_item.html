@@ -1,0 +1,15 @@
+<div class="col-sm-6 list-item">
+  <a href="{{ post.url }}">
+    <div class="list-item-image-container" style="background-image:url({{ post.imageUrl }});">
+      
+    </div>
+    <div class="list-item-details">
+      <h2>{{ post.title }}</h2>
+      <div class="techs">
+        {% for tag in post.tags %}
+          <img src="/img/tech/{{tag}}.png" alt="{{tag}}" title="{{tag}}">
+        {% endfor %}
+      </div>
+    </div>
+  </a>
+</div>
