@@ -151,6 +151,10 @@ section {
 
   &.jumbotron:nth-child(odd) {
     background: $gray;
+    
+    a.btn {
+      background: $gray;
+    }
   }
 
   &.jumbotron.i.first p {
@@ -168,6 +172,10 @@ section {
 
   &.jumbotron.w {
     background-color: $white !important;
+    
+    a.btn {
+      background-color: $white !important;
+    }
   }
 }
 
@@ -380,17 +388,29 @@ ul.feat {
 }
 
 .menu {
+  
+  ul {
+    margin-top: 30px;
+  }
   li {
     display: block;
     text-align: center;
-    padding: 20px 0;
     
-
     a {
       color: $white !important;
-      font-family: $text-font;
+      font-family: $title-font;
       font-size: 1.5em;
-      font-weight: 300;
+      font-weight: 100;
+      display: block;
+      padding: 10px 0;
+    }
+    
+    &:hover {
+      background-color: rgba(255,255,255,.8) !important;
+      
+      a {
+        color: $darkgray !important;
+      }
     }
   }
   .circles {
@@ -862,6 +882,11 @@ div.error {
   }
   &.backg-about {
     background: url('/img/backgrounds/macbookwankers.jpg') no-repeat center center;
+    @include filter(contrast(1.2) brightness(0.7));
+    
+  }
+  &.backg-blog {
+    background: url('/img/backgrounds/blog.jpg') no-repeat center center;
     @include filter(contrast(1.2) brightness(1.3));
   }
   &.backg-founder {
@@ -910,12 +935,9 @@ div.error {
         height: 280px;
         overflow: hidden;
         @include transition(all .2s ease-in-out);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        text-align: center;
 
         img.project-image {
-          width: 100%;
           max-height: 100%;
         }
     }
@@ -939,6 +961,109 @@ div.error {
         margin-bottom: 10px;
         font-weight: 100;
         font-size: 40px;
+        
+        a {
+          color: $white;
+        }
+      }
+  
+      h4 {
+        font-size: 11px;
+        color: $white;
+  
+        a {
+          color: $yellow;
+          font-weight: bold;
+        }
+      }
+  
+      > p {
+        font-size: 13px;
+        line-height: 17px;
+        color: $white;
+      }
+  
+      .techs {
+        text-align: center;
+        margin: 30px 0;
+  
+        img {
+          width: 32px;
+          margin: 0 5px;
+          @include transition(all .2s ease-in-out);
+          @include border-radius(50%);
+  
+          &:hover {
+            @include transform(scale(1.1));
+          }
+        }
+      }
+    }
+  }
+}
+
+.listing {
+  padding: 0;
+  
+  h2, h3 {
+    text-transform: none;
+  }
+  
+  > h2 {
+    clear: both;
+    margin: 0;
+    text-align: left;
+    display: block;
+    padding: 80px 30px;
+    color: $black;
+    text-transform: uppercase;
+    font-size: 50px;
+  }
+
+  .list-item {
+    padding: 0;
+    height: 380px;
+    overflow: hidden;
+    @include transition(all .2s ease-in-out);
+    
+    &:hover .list-item-image-container {
+      @include transform(scale(0.9));
+      
+    }
+    
+    .list-item-image-container {
+        width: 100%;
+        height: 100%;
+        @include background-cover();
+        @include transition(all .2s ease-in-out);
+        @include filter(blur(2px));
+    }
+    
+    &:hover {
+      .list-item-details {
+        
+        @include transform(scale(0.9));
+      }
+    }
+    .list-item-details {
+      position: absolute; 
+      padding: 15px;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      @include transition(all 0.2s ease-in);
+      background-color: rgba(58,46,57,0.6);
+      text-align: center;
+      @include display-flex();
+      @include flex-direction(column);
+      @include justify-content(flex-end);
+      
+      
+      h2 {
+        margin-bottom: 10px;
+        font-weight: 100;
+        font-size: 40px;
+        color: $white;
         
         a {
           color: $white;
