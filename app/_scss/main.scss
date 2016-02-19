@@ -1023,7 +1023,7 @@ div.error {
     
     &:hover .list-item-image-container {
       @include transform(scale(0.9));
-      @include filter(blur(2px));
+      
     }
     
     .list-item-image-container {
@@ -1031,18 +1031,19 @@ div.error {
         height: 100%;
         @include background-cover();
         @include transition(all .2s ease-in-out);
+        @include filter(blur(2px));
     }
     
     &:hover {
       .list-item-details {
-        top: 0;
+        
         @include transform(scale(0.9));
       }
     }
     .list-item-details {
       position: absolute; 
       padding: 15px;
-      top: 100%; 
+      top: 0;
       width: 100%;
       height: 100%;
       @include transition(all 0.2s ease-in);
