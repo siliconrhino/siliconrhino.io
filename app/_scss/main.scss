@@ -151,6 +151,10 @@ section {
 
   &.jumbotron:nth-child(odd) {
     background: $gray;
+    
+    a.btn {
+      background: $gray;
+    }
   }
 
   &.jumbotron.i.first p {
@@ -168,6 +172,10 @@ section {
 
   &.jumbotron.w {
     background-color: $white !important;
+    
+    a.btn {
+      background-color: $white !important;
+    }
   }
 }
 
