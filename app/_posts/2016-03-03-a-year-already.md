@@ -5,7 +5,7 @@ subTitle: It feels like yesterday but we have been doing this for 12 months.
 tags: ["startups", "silicon rhino"]
 categories : []
 imageUrl: '/img/backgrounds/404.jpg'
-published: false
+published: true
 ---
 
 We sat down the other day (actually slacked) to decide when we would celebrate Ryan’s (our mascot) first birthday. Should it be when we first talked about it? Or the day we started working on the first project? Maybe when we finally agreed to call ourselves silicon rhino? We ended up settling for the not-so romantic ‘Company Incorporation Date’, March 27th. 
