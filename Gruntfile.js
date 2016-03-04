@@ -49,7 +49,8 @@ module.exports = function (grunt) {
           '.tmp/css/**/*.css',
           '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
           '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
-        ]
+        ],
+        tasks: 'jshint'
       }
     },
     connect: {
