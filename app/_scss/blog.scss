@@ -19,6 +19,10 @@
 	h1 {
 		text-align: center;
 	}
+  
+  iframe {
+    margin: 30px auto !important;
+  }
 	
 	p {
 		margin: 0 0 20px;
@@ -30,6 +34,17 @@
 			color: $blue;
 			font-weight: bold;
 		}
+    
+    .join-waitlist {
+      margin: 40px auto 40px;
+      display: block;
+      color: $blue;
+			font-weight: bold;
+      
+      &:hover {
+        color: $white;
+      }
+    }
 	}
 	
 	p.meta {
@@ -38,7 +53,9 @@
 	}
 	
 	img {
-		margin: 30px 0;
+		margin: 30px auto;
+    display: block;
+    width: 100%;
 	}
   
   .post {

@@ -23,6 +23,8 @@
 				}
 				
 		window.onscroll = function() {barBackground();};
+    
+    window.waitlisted.start({domain: "silicon-rhino-drinks-app.app.waitlisted.co"});
 
 		function barBackground() {
 				if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {

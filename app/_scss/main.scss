@@ -1063,7 +1063,7 @@ div.error {
         margin-bottom: 10px;
         font-weight: 100;
         font-size: 40px;
-        color: $white;
+        color: $yellow;
         
         a {
           color: $white;
@@ -1189,7 +1189,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
 }
 
 /* Bounce To Left */
-.btn {
+.btn, .join-waitlist {
   display: inline-block;
   vertical-align: middle;
   background-color: $white;
@@ -1218,7 +1218,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
     border: 1px solid $blue;
   }
 }
-.btn:after {
+.btn:after, .join-waitlist:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1238,16 +1238,16 @@ $button-transistion-duration: 0.3s;     // The transition duration
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.btn:hover, .btn:focus, .btn:active {
+.btn:hover, .btn:focus, .btn:active, .join-waitlist:hover, .join-waitlist:focus, .join-waitlist:active {
   color: $white;
 }
-.btn:hover:after, .btn:focus:after, .btn:active:after {
+.btn:hover:after, .btn:focus:after, .btn:active:after, .join-waitlist:hover:after, .join-waitlist:focus:after, .join-waitlist:active:after {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
-.btn:before {
+.btn:before, .join-waitlist:before {
   opacity: 0;
   pointer-events: none;
   position: absolute;
@@ -1267,7 +1267,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
   border-width: 10px 10px 10px 0;
   border-color: transparent $blue transparent transparent;
 }
-.btn:hover:before, .btn:focus:before, .btn:active:before {
+.btn:hover:before, .btn:focus:before, .btn:active:before, .join-waitlist:hover:before, .join-waitlist:focus:before, .join-waitlist:active:before {
   opacity: 1;
   -webkit-transform: translateX(-10px);
   transform: translateX(-10px);
