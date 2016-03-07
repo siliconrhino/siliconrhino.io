@@ -30,18 +30,18 @@
   <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
 {% if page.url %}
-  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+  <meta content="http://www.siliconrhino.io{{ page.url }}" property="og:url">
 {% endif %}
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-  <meta content="{{ site.url }}/about/" property="article:author">
+  <meta content="http://www.siliconrhino.io/about/" property="article:author">
 {% endif %}
 {% if page.image %}
   <meta content="{{ page.imageUrl }}" property="og:image">
   <meta name="twitter:image" content="{{ page.imageUrl }}">
 {% else %}
-  <meta content="/img/whiteboard.png" property="og:image">
-  <meta name="twitter:image" content="/img/whiteboard.png">
+  <meta content="http://www.siliconrhino.io/img/whiteboard.b571.png" property="og:image">
+  <meta name="twitter:image" content="http://www.siliconrhino.io/img/whiteboard.b571.png">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
@@ -78,7 +78,6 @@
 
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="http://www.siliconrhino.io"/>
-<meta property="og:image" content="http://www.siliconrhino.io/img/whiteboard.b571.png"/>
 
 <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
