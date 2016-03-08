@@ -51,11 +51,12 @@ description: Outsourcing your development doesn't need to be a hassle.
     <h2><a href="/projects">See some of the projects we've worked on</a></h2>
   </div>
 </section>
-<section class="jumbotron i w">
-  <div class="container">
-    
-  </div>
-</section>
+<section class="jumbotron  home listing w">
+  <h2>Or read some of our ramblings on startups & technology</h2>
+  {% for post in site.posts %}
+    {% include /list_item.html %}
+  {% endfor %}
+ </section>
 
 <section class="jumbotron quote i">
   <div class="container twitter">
