@@ -4,7 +4,7 @@ title: A year already?
 subTitle: It feels like yesterday but we have been doing this for 12 months.
 tags: ["startups", "silicon rhino"]
 categories : []
-imageUrl: '/img/backgrounds/404.jpg'
+imageUrl: '/img/backgrounds/404.77e3.jpg'
 published: true
 ---
 
