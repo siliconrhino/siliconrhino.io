@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A year already?
-subTitle: It feels like yesterday but we have been doing this for 12 months.
+description: It feels like yesterday but we have been doing this for 12 months.
 tags: ["startups", "silicon rhino"]
 categories : []
 imageUrl: '/img/backgrounds/404.77e3.jpg'
@@ -24,7 +24,7 @@ It’s true we haven’t blogged much (at all) to explain what we’ve been up t
 
 We’ve met great entrepreneurs with even greater visions, and we are proud to have helped them achieve their goals through technology. Each one of them has taught us something, and hopefully we’ll be able to pass all this knowledge to all the founders we still have to work with. Last but not least are the people who decided to carry on working with us in this adventure, and we’ve embarked on some great projects together this last year.
 
-###Check some of the projects we've worked on
+###Take a look at some of the projects we've worked on
 
 <section class="projects">
   <div class="col-sm-6 col-md-6 project">

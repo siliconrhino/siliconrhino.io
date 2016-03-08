@@ -36,7 +36,7 @@
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
   <meta content="http://www.siliconrhino.io/about/" property="article:author">
 {% endif %}
-{% if page.image %}
+{% if page.imageUrl %}
   <meta content="{{ page.imageUrl }}" property="og:image">
   <meta name="twitter:image" content="{{ page.imageUrl }}">
 {% else %}
