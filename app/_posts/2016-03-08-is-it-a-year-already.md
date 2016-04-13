@@ -32,8 +32,8 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
       <img class="project-image" src="/img/acre.png" alt="ACRE" title="ACRE">
     </div>
     <div class="project-details">
-      <h2><a href="" target="_blank">ACRE</a></h2>
-      <h4><a href="" target="_blank">Launching Soon</a></h4>
+      <h2><a href="https://www.acrepictures.com" target="_blank">ACRE</a></h2>
+      <h4><a href="https://www.acrepictures.com" target="_blank">www.acrepictures.com</a></h4>
       <div class="techs">
         <img src="/img/tech/html.png" alt="HTML 5" title="HTML 5">
         <img src="/img/tech/sass.png" alt="SASS" title="SASS">
