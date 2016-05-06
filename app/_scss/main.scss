@@ -134,6 +134,19 @@ body {
   background-size: contain !important;
 }
 
+.jumbotron.backg.serverless {
+  background: url('/img/backgrounds/serverless.jpg') no-repeat fixed;
+  background-size: cover;
+  height: 500px;
+  padding: 0;
+  
+  .overlay {
+    @include justify-content(center);
+    text-align: left;
+    padding-left: 10%;
+  }
+}
+
 h1,
 h2 {
   color: $black;
@@ -172,6 +185,18 @@ section {
 
   &.jumbotron.w {
     background-color: $white !important;
+    
+    a.btn {
+      background-color: $white !important;
+    }
+  }
+  &.jumbotron.b {
+    background-color: $blue !important;
+    color: $white;
+    
+    h2 {
+      color: $white;
+    }
     
     a.btn {
       background-color: $white !important;
@@ -484,7 +509,35 @@ div img {
   padding-right: 15px;
 }
 
-
+// Newsletter Sign Up
+#mc_embed_signup {
+  
+  padding-bottom: 75px;
+  
+  input.email {
+    height: 52px !important;
+    display: inline-block !important;
+    margin-right: 10px !important;
+    color: $blue !important;
+    border-radius: 0 !important;
+    font-family: $title-font !important;
+    font-size: 20px !important;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  
+  input[type="submit"] {
+    margin: 0 !important;
+    
+    &:hover, &:focus, &:active {
+      color: $blue !important;
+    }
+  }
+  
+  ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+   color: $blue !important;
+  }
+}
 
 // Custom page footer
 .footer {
