@@ -133,6 +133,7 @@ body {
   background: url('/img/devices.png') no-repeat fixed;
   background-color: $gray;
   background-size: contain !important;
+  background-position: center center;
 }
 
 .jumbotron.backg.serverless {
@@ -253,7 +254,7 @@ section.jumbotron {
     blockquote {
       line-height: 1.7em;
       font-size: 1.5em;
-      margin-top: 150px;
+      margin-top: 75px;
     }
     
     
