@@ -244,6 +244,11 @@ section.jumbotron {
     color: $black;
     padding: 30px 10% 50px; 
     
+    a {
+      color: $blue;
+      font-weight: bold;
+    }
+    
     blockquote {
       line-height: 1.7em;
       font-size: 1.5em;
