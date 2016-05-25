@@ -237,12 +237,18 @@ section.jumbotron {
     font-size: 2em;
     vertical-align: middle;
   }
-  
+
   &.testimonial {
     font-size: 1.2em;
     background-color: $gray !important;
     color: $black;
     padding: 30px 10% 50px; 
+    
+    blockquote {
+      line-height: 1.7em;
+      font-size: 1.5em;
+      margin-top: 150px;
+    }
     
     blockquote.long {
       -webkit-column-count: 2;
@@ -251,9 +257,70 @@ section.jumbotron {
       -webkit-column-gap: 40px;
       -moz-column-gap: 40px;
       column-gap: 40px;
-      
+      font-size: 1em;
+      margin-top: 0;
     }
     
+    blockquote::before {
+      color: $blue;
+      content: "\201C";
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.45em;
+      font-weight: 700;
+    }
+    blockquote::after {
+      color: $blue;
+      content: "\201D";
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-left: 0.25em;
+      vertical-align: -0.45em;
+      font-weight: 700;
+    }
+    
+    .slick-prev, .slick-next {
+      font-size: 0;
+      line-height: 0;
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      cursor: pointer;
+      color: transparent;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+    
+    .slick-prev {
+      left: -60px;
+      
+      &:before {
+        content: '<';
+        color: $blue;
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+    
+    .slick-next {
+      right: -60px;
+      
+      &:before {
+        content: '>';
+        color: $blue;
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+
     img {
       border-radius: 50%;
       width: 64px;

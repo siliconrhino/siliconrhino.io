@@ -8,6 +8,8 @@
 			show_media : false,
 			show_media_size: 'thumb'  //values: small, large, thumb, medium
 		});
+		
+		$('.quote_carousel').slick();
 	
 		$('.modalbutton').click(function() {
 			$('.modal').modal('hide');
