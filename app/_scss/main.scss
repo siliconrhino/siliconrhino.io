@@ -1156,6 +1156,25 @@ div.error {
           }
         }
       }
+
+      ul.cat {
+        padding: 0;
+        margin: 0;
+
+        li {
+          padding: 2px;
+          font-size: 0.7em;
+          border: 1px solid white;
+          display: inline-block;
+          margin: 0;
+          color: white;
+
+          &+li {
+            margin-left: 5px;
+          }
+
+        }
+      }
     }
   }
 }
