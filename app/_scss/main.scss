@@ -129,10 +129,10 @@ body {
   }
 }
 
+
 .jumbotron.backg.services {
-  background: url('/img/devices.png') no-repeat fixed;
+  background: url('/img/backgrounds/acre.png') no-repeat fixed;
   background-color: $gray;
-  background-size: contain !important;
   background-position: center center;
 }
 
@@ -1607,7 +1607,8 @@ $button-transistion-duration: 0.3s;     // The transition duration
   }
 
   .jumbotron.backg.services {
-    background: url('/img/devices.png') no-repeat;
+    background: url('/img/backgrounds/acre.png') no-repeat;
+
     background-color: $gray;
     background-position: center center !important;
     min-height: 200px;
