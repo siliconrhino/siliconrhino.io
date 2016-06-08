@@ -221,6 +221,14 @@ section.jumbotron {
   p.lead {
     font-size: 21px;
   }
+
+  p.title {
+    color: $blue;
+    font-weight: lighter;
+    font-size: 32px;
+    line-height: 1.5em;
+    margin-top: 100px;
+  }
 }
 
 .quote {
