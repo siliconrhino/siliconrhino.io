@@ -1071,6 +1071,13 @@ div.error {
   &.backg-business {
     background: url('/img/backgrounds/business.jpg') no-repeat center center;
   }
+  &.backg-drinks {
+    background: url('/img/backgrounds/drinks.png') no-repeat center center;
+
+    .overlay {
+      background: transparent;
+    }
+  }
 }
 
 .projects {
