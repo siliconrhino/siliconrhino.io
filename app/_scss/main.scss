@@ -1509,6 +1509,14 @@ $button-transistion-duration: 0.3s;     // The transition duration
   // Remove the bottom border on the jumbotron for visual effect
   .jumbotron {
     border-bottom: 0;
+
+    &.image-and-caption {
+      .caption {
+        p.title {
+          margin-top: 0;
+        }
+      }
+    }
   }
 }
 
@@ -1552,6 +1560,26 @@ $button-transistion-duration: 0.3s;     // The transition duration
   max-width: 555px;
   text-align: left;
   width: 99%;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    border-bottom: 0;
+
+    &.image-and-caption {
+      display: flex;
+      
+      .caption {
+        display: flex;
+        align-items: center;
+        padding-bottom: 75px;
+
+        p.title {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1200px)
