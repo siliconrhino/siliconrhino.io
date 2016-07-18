@@ -441,15 +441,23 @@ ul.feat {
   z-index:100000;
 
   @include transition(background-color 300ms);
-  .logo.blue {
+  .logo.white {
     display: inline; 
+  }
+
+  .logo.blue {
+    display: none;
   }
   
   &.white {
     background-color: rgba(252, 252, 252, 0.80);
     
-    .logo.blue {
+    .logo.white {
       display:none;
+    }
+
+    .logo.blue {
+      display: inline;
     }
     
     #menu {
