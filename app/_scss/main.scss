@@ -78,8 +78,13 @@ body {
 }
 
 .ryan {
-    background: url("/img/ryanhead.png") no-repeat right 90% !important;
-    background-size: 24% !important;
+  background: url("/img/ryanhead.png") no-repeat right 90% !important;
+  background-size: 24% !important;
+}
+
+.siliconrhino-brand {
+  color: $blue;
+  font-weight: bold;
 }
 
 .backg {
@@ -228,6 +233,12 @@ section.jumbotron {
     font-size: 32px;
     line-height: 1.5em;
     margin-top: 100px;
+  }
+
+  .faqs {
+    p {
+      text-align: left;
+    }
   }
 }
 
