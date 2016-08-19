@@ -1,12 +1,22 @@
-@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700,300);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
 $icon-font-path: '../_bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
 
-$blue: #008190;
-$yellow: #F9D43A;
+$darkblue: #0E1A35;
+$yellow: #F39237;
 $darkgray: #50514F;
 $black: #343434;
 $white: #fcfcfc;
-$gray: #d7d7d7;
+$blue: #008190;
 
-$title-font: 'Raleway';
-$text-font: 'Raleway';
+$title-font: 'Roboto Condensed';
+$text-font: 'Roboto Condensed';
+$primary-font: 'Roboto Condensed';
+
+// colors for parallax scroll 
+
+$color-1: #2b334f; // Pickled Bluewood
+$color-2: #2e5367; // San Juan
+$color-3: #267481; // Lochinvar
+$color-4: #fcb052; // Texas Rose
+$color-5: #f06a59; // Burnt Sienna
+$color-6: #ffffff; // White
