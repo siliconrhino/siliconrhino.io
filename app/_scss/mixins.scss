@@ -1,116 +1,162 @@
 @mixin border-radius($radius) {
-  border-radius: $radius;
+    border-radius: $radius;
 }
 
 @mixin background-cover() {
     -webkit-background-size: cover !important;
-        -moz-background-size: cover !important;
-        -o-background-size: cover !important;
-        background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
 }
 
 @mixin animation-name($animation-definition) {
-  animation-name: $animation-definition;
+    animation-name: $animation-definition;
 }
 
 @mixin animation-duration($animation-duration) {
-  animation-duration: $animation-duration;
+    animation-duration: $animation-duration;
 }
 
 @mixin animation-timing-function($animation-timing-funtion) {
-  animation-timing-function: $animation-timing-funtion;
+    animation-timing-function: $animation-timing-funtion;
 }
 
 @mixin animation-iteration-count($animation-iteration-count) {
-  animation-iteration-count: $animation-iteration-count;
+    animation-iteration-count: $animation-iteration-count;
 }
 
-@mixin transition ($args...) { -webkit-transition: $args; -moz-transition: $args; -ms-transition: $args; -o-transition: $args; transition: $args; }
+@mixin transition ($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
 
-@mixin transform ($args...) { transform:$args; -ms-transform:$args; -webkit-transform:$args; -o-transform:$args; -moz-transform:$args; }
+@mixin transform ($args...) {
+    transform: $args;
+    -ms-transform: $args;
+    -webkit-transform: $args;
+    -o-transform: $args;
+    -moz-transform: $args;
+}
 
-@mixin transform-origin ($args...) { transform-origin:$args; -ms-transform-origin:$args; -webkit-transform-origin:$args; -o-transform-origin:$args; -moz-transform-origin:$args; }
+@mixin transform-origin ($args...) {
+    transform-origin: $args;
+    -ms-transform-origin: $args;
+    -webkit-transform-origin: $args;
+    -o-transform-origin: $args;
+    -moz-transform-origin: $args;
+}
 
-@mixin display-flex { display: flex; display: -webkit-flexbox; display: -ms-flexbox; display: -webkit-flex; }
+@mixin display-flex {
+    display: flex;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
 
-@mixin flex-direction ($args...) { flex-direction:$args; -ms-flex-direction:$args; -webkit-flex-direction:$args; -o-flex-direction:$args; -moz-flex-direction:$args; }
+@mixin flex-direction ($args...) {
+    flex-direction: $args;
+    -ms-flex-direction: $args;
+    -webkit-flex-direction: $args;
+    -o-flex-direction: $args;
+    -moz-flex-direction: $args;
+}
 
-@mixin align-items ($args...) { align-items:$args; -ms-align-items:$args; -webkit-align-items:$args; -o-align-items:$args; -moz-align-items:$args; }
+@mixin align-items ($args...) {
+    align-items: $args;
+    -ms-align-items: $args;
+    -webkit-align-items: $args;
+    -o-align-items: $args;
+    -moz-align-items: $args;
+}
 
-@mixin justify-content ($args...) { justify-content:$args; -ms-justify-content:$args; -webkit-justify-content:$args; -o-justify-content:$args; -moz-justify-content:$args; }
+@mixin justify-content ($args...) {
+    justify-content: $args;
+    -ms-justify-content: $args;
+    -webkit-justify-content: $args;
+    -o-justify-content: $args;
+    -moz-justify-content: $args;
+}
 
-@mixin border-box { box-sizing:border-box; -moz-box-sizing:border-box; }
+@mixin border-box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
 
-@mixin calc($property, $expression) { #{$property}: -moz-calc(#{$expression}) !important; #{$property}: -webkit-calc(#{$expression}) !important;#{$property}: calc(#{$expression}) !important; } 
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression}) !important;
+    #{$property}: -webkit-calc(#{$expression}) !important;
+    #{$property}: calc(#{$expression}) !important;
+}
 
-@mixin filter ($args...) { filter:$args; -webkit-filter:$args;}
+@mixin filter ($args...) {
+    filter: $args;
+    -webkit-filter: $args;
+}
 
 // center vertically and/or horizontally an absolute positioned element
-
 @mixin center($xy:xy) {
-  @if $xy == xy {
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    @include transform(translateX(-50%) translateY(-50%));
-  }
-  @else if $xy == x {
-    left: 50%;
-    right: auto;
-    @include transform(translateX(-50%));
-  }
-  @else if $xy == y {
-    top: 50%;
-    bottom: auto;
-    @include transform(translateY(-50%));
-  }
+    @if $xy==xy {
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+    @else if $xy==x {
+        left: 50%;
+        right: auto;
+        @include transform(translateX(-50%));
+    }
+    @else if $xy==y {
+        top: 50%;
+        bottom: auto;
+        @include transform(translateY(-50%));
+    }
 }
 
 // antialiasing mode font rendering
 @mixin font-smoothing {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // VERTICAL MENU
 // rem fallback - credits: http://zerosixthree.se/
-
 @function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
 }
 
 @mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
+    font-size: $size;
+    font-size: calculateRem($size);
 }
 
 // center vertically and/or horizontally an absolute positioned element
-
 @mixin center($xy:xy) {
-  @if $xy == xy {
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    @include transform(translateX(-50%) translateY(-50%));
-  }
-  @else if $xy == x {
-    left: 50%;
-    right: auto;
-    @include transform(translateX(-50%));
-  }
-  @else if $xy == y {
-    top: 50%;
-    bottom: auto;
-    @include transform(translateY(-50%));
-  }
+    @if $xy==xy {
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+    @else if $xy==x {
+        left: 50%;
+        right: auto;
+        @include transform(translateX(-50%));
+    }
+    @else if $xy==y {
+        top: 50%;
+        bottom: auto;
+        @include transform(translateY(-50%));
+    }
 }
 
 // border radius
-
 @mixin border-radius($radius:.25em) {
-  border-radius: $radius;
+    border-radius: $radius;
 }
-
