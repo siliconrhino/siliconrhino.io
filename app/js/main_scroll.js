@@ -29,6 +29,8 @@ jQuery(document).ready(function ($) {
         if (MQ == 'desktop') bindToggle = false;
     });
 
+    $('.goto').on('click', goToSection);
+
     function bindEvents(MQ, bool) {
 
         if (MQ == 'desktop' && bool) {
@@ -43,13 +45,6 @@ jQuery(document).ready(function ($) {
             prevArrow.on('click', prevSection);
             nextArrow.on('click', nextSection);
             
-            
-            $('.goto1').on('click', goToSection(0));
-            $('.goto2').on('click', goToSection(1));
-            $('.goto3').on('click', goToSection(2));
-            $('.goto4').on('click', goToSection(3));
-            $('.goto5').on('click', goToSection(4));
-            $('.goto6').on('click', goToSection(5));
 
             $(document).on('keydown', function (event) {
                 if (event.which == '40' && !nextArrow.hasClass('inactive')) {
@@ -189,6 +184,31 @@ jQuery(document).ready(function ($) {
         resetScroll();
     }
 
+    function goToSection(event){
+        
+        typeof event !== 'undefined' && event.preventDefault();
+
+        var visibleSection = sectionsAvailable.filter('.visible'),
+            currentId = visibleSection.attr('id'),
+            currentSection = visibleSection[0].dataset.section,
+            goTo = event.target.dataset.goto;
+            
+            steps = (goTo - currentSection);
+
+            var i = 0;
+            var interval = setInterval(function() { 
+                          
+                if(steps > 0) {
+                    nextSection(event);
+                }
+                else {
+                    prevSection(event);
+                }
+                i++; 
+                if(i >=  Math.abs(steps)) clearInterval(interval);
+        }, 500);
+    }
+
     
     function unbindScroll(section, time) {
         //if clicking on navigation - unbind scroll and animate using custom velocity animation
@@ -198,49 +218,7 @@ jQuery(document).ready(function ($) {
                 duration: time
             });
         }
-    }
-    
-    
-    function goToSection(goTo){
-        
-        var visibleSection = sectionsAvailable.filter('.visible'),
-            currentId = $(this).attr('id'),
-            currentSection = null;
-            
-            switch(currentId) {
-                case 'section1':
-                    currentSection = 0;
-                    break;
-                case 'section2':
-                    currentSection = 1;
-                    break;
-                case 'section3':
-                    currentSection = 2;
-                    break;
-                case 'section4':
-                    currentSection = 3;
-                    break;
-                case 'section5':
-                    currentSection = 4;
-                    break;
-                case 'section6':
-                    currentSection = 5;
-                    break;
-            }
-            steps = (goTo - currentSection);
-        
-            for (i = 0; i < Math.abs(steps); i++){
-                if(steps > 0) {
-                    nextSection();
-                    
-                }
-                else {
-                    prevSection();
-                }
-            }
-        resetScroll();
-    }
-                  
+    }              
     
 
     function resetScroll() {
