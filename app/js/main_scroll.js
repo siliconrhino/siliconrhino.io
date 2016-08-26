@@ -154,7 +154,12 @@ jQuery(document).ready(function ($) {
                     animating = false;
                     if (hijacking == 'off') $(window).on('scroll', scrollAnimation);
                 });
-
+            var goto =
+                visibleSection.prev('.cd-section')[0].dataset.section;
+            var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
+            
+            highlite(current);
+            
             actual = actual - 1;
         }
         
@@ -179,6 +184,12 @@ jQuery(document).ready(function ($) {
                     animating = false;
                     if (hijacking == 'off') $(window).on('scroll', scrollAnimation);
                 });
+            
+            var goto =
+                visibleSection.next('.cd-section')[0].dataset.section;
+            var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
+            
+            highlite(current);
 
             actual = actual + 1;
         }
