@@ -7,9 +7,6 @@
 @import 'layout.scss';
 @import 'vertical_menu.scss';
 
-
-
-
 /* -------------------------------- 
 
 Primary style
@@ -198,7 +195,6 @@ a {
             padding: 10px 0;
         }
         &:hover {
-
             a {
                 color: $yellow !important;
                 text-decoration: none;
@@ -373,87 +369,82 @@ body[data-hijacking="on"] {
 
 .cd-vertical-nav {
     //lateral navigation 
-    	position: fixed;
-	right: 40px;
-	@include center(y); // see partials > _mixins.scss
-	z-index: 1;
-
-	li {
-		text-align: right;
+    position: fixed;
+    right: 40px;
+    @include center(y); // see partials > _mixins.scss
+    z-index: 1;
+    li {
+        text-align: right;
         list-style: none;
-	}
+    }
+    
     a {
-        
         @include backface-visibility(hidden);
-        
-     
         //image replace 
         overflow: hidden;
         text-indent: 100%;
         white-space: nowrap;
-        
-        
+        position: relative;
+        z-index: 1111;
         span {
-			display: inline-block;
+            display: inline-block;
             @include transform(scale(.6));
-		}
-        
-       
-        
-        &:hover span {
-			@include transform(scale(1)); 
-		}
-        
-        &:hover .cd-label {
-			opacity: 1;
-		}
-
-        &.highlite{
-            background-color: $white; 
         }
-
-     
+        &:hover span {
+            @include transform(scale(1));
+        }
+        &:hover .cd-label {
+            opacity: 1;
+        }
+        &.highlite:after {
+            content: "";
+            background-color: $white;
+            position: absolute;
+            top: 3.5px;
+            left: 3.5px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
     }
-    
     .cd-dot {
         display: block;
-		top: 9px;
-		height: 15px;
-		width: 15px;
-        border: solid 2px white;
-		border-radius: 50%;
-		-webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
-		-moz-transition: -moz-transform 0.2s, background-color 0.5s;
-		transition: transform 0.2s, background-color 0.5s;
-		@include transform-origin(50% 50%);	
-        
-            &:hover {
-		
-            background-color: $white;
-                                
-		} 
-        
-	}
-
-	.cd-label {
-		position: relative;
-		margin-right: 5px;
-		padding: .4em .5em;
-		color: $yellow;
-		@include font-size(30px);
-
-		-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-		-moz-transition: -moz-transform 0.2s, opacity 0.2s;
-		transition: transform 0.2s, opacity 0.2s;
-		opacity: 0;
-		@include transform-origin(100% 50%);
-	}
-    
+        top: 9px;
+        height: 15px;
+        width: 15px;
+        border: solid 1.5px $blue;
+        border-radius: 50%;
+        -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+        -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+        transition: transform 0.2s, background-color 0.5s;
+        @include transform-origin(50% 50%);
+        &:hover:after {
+            content: "";
+            background-color: $blue;
+            position: absolute;
+            top: 3.5px;
+            left: 3.5px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+    }
+    .cd-label {
+        position: relative;
+        margin-right: 5px;
+        padding: .4em .5em;
+        color: $yellow;
+        @include font-size(30px);
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+        transition: transform 0.2s, opacity 0.2s;
+        opacity: 0;
+        @include transform-origin(100% 50%);
+    }
     @include MQ(L) {
         display: block;
     }
 }
-
 
 
 /* .......................
