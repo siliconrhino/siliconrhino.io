@@ -376,6 +376,7 @@ body[data-hijacking="on"] {
     li {
         text-align: right;
         list-style: none;
+        clear: both;
     }
     
     a {
@@ -386,21 +387,23 @@ body[data-hijacking="on"] {
         white-space: nowrap;
         position: relative;
         z-index: 1111;
+        float: right;
         span {
-            display: inline-block;
+            display: block;
             @include transform(scale(.6));
+            
         }
-        &:hover span {
+        &:hover + span {
             @include transform(scale(1));
         }
-        &:hover .cd-label {
+        &:hover + .cd-label {
             opacity: 1;
         }
         &.highlite:after {
             content: "";
             background-color: $white;
             position: absolute;
-            top: 3.5px;
+            top: 4.5px;
             left: 3.5px;
             width: 5px;
             height: 5px;
@@ -434,6 +437,7 @@ body[data-hijacking="on"] {
         margin-right: 5px;
         padding: .4em .5em;
         color: $yellow;
+        float: left;
         @include font-size(30px);
         -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
         -moz-transition: -moz-transform 0.2s, opacity 0.2s;
