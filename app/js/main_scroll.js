@@ -6,6 +6,7 @@ jQuery(document).ready(function ($) {
         scrollThreshold = 6,
         actual = 1,
         animating = false;
+
     
 
     //DOM elements
@@ -183,6 +184,30 @@ jQuery(document).ready(function ($) {
         }
         resetScroll();
     }
+    
+    function scrollToSection(event, goTo) {
+        //go to next section
+        typeof event !== 'undefined' && event.preventDefault();
+
+        var visibleSection = sectionsAvailable.filter('.visible'),
+            middleScroll = (hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false;
+        var goToSection = $(".cd-section[data-section='" + goTo + "']");
+
+        var animationParams = selectAnimation(animationType, middleScroll, 'next');
+        unbindScroll(goToSection, animationParams[3]);
+
+        if (!animating) {
+            animating = true;
+            visibleSection.removeClass('visible').children('div').velocity(animationParams[1], animationParams[3], animationParams[4]);
+            
+            
+            goToSection.addClass('visible').children('div').velocity(animationParams[0], animationParams[3], animationParams[4], function () {
+                animating = false;
+                if (hijacking == 'off') $(window).on('scroll', scrollAnimation);
+            });
+        }
+        resetScroll();
+    }
 
     function goToSection(event){
         
@@ -192,21 +217,24 @@ jQuery(document).ready(function ($) {
             currentId = visibleSection.attr('id'),
             currentSection = visibleSection[0].dataset.section,
             goTo = event.target.dataset.goto;
+        
+            scrollToSection(event, goTo);
             
-            steps = (goTo - currentSection);
+            /*steps = (goTo - currentSection);
 
             var i = 0;
             var interval = setInterval(function() { 
                           
                 if(steps > 0) {
-                    nextSection(event);
+                    nextSection(event, true);
                 }
+                
                 else {
-                    prevSection(event);
+                    prevSection(event, true);
                 }
                 i++; 
                 if(i >=  Math.abs(steps)) clearInterval(interval);
-        }, 500);
+        }, 101);*/
     }
 
     
@@ -282,7 +310,7 @@ jQuery(document).ready(function ($) {
             switch (animationName) {
             case 'opacity':
                 translateY = 0;
-                scale = (sectionOffset + 6 * windowHeight) * 0.2 / windowHeight;
+                scale = (sectionOffset + 7 * windowHeight) * 0.2 / windowHeight;
                 opacity = (sectionOffset + windowHeight) / windowHeight;
                 break;
             }
@@ -294,7 +322,7 @@ jQuery(document).ready(function ($) {
             switch (animationName) {
             case 'opacity':
                 translateY = 0;
-                scale = (sectionOffset + 6 * windowHeight) * 0.2 / windowHeight;
+                scale = (sectionOffset + 7 * windowHeight) * 0.2 / windowHeight;
                 opacity = (windowHeight - sectionOffset) / windowHeight;
                 break;
             case 'parallax':
@@ -334,9 +362,7 @@ jQuery(document).ready(function ($) {
         return [translateY, scale, rotateX, opacity, boxShadowBlur];
     }
     
-    
-    
-    
+      
 });
 
 /* Custom effects registration - feature available in the Velocity UI pack */
@@ -409,4 +435,20 @@ $.Velocity
 
 // Vertical menu 
 
-   
+var current = document.getElementById('default');
+
+  function highlite(verticalLink)
+  {
+     if (current != null)
+     {
+         current.className = "cd-dot";
+     }
+     verticalLink.className += " highlite";
+     current = verticalLink;
+  }
+
+
+
+
+
+
