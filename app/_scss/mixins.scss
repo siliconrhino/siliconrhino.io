@@ -25,6 +25,33 @@
     animation-iteration-count: $animation-iteration-count;
 }
 
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
 @mixin transition ($args...) {
     -webkit-transition: $args;
     -moz-transition: $args;
@@ -62,6 +89,14 @@
     -webkit-flex-direction: $args;
     -o-flex-direction: $args;
     -moz-flex-direction: $args;
+}
+
+@mixin flex-flow ($args...) {
+    flex-flow: $args;
+    -ms-flex-flow: $args;
+    -webkit-flex-flow: $args;
+    -o-flex-flow: $args;
+    -moz-flex-flow: $args;
 }
 
 @mixin align-items ($args...) {
@@ -135,26 +170,6 @@
     font-size: calculateRem($size);
 }
 
-// center vertically and/or horizontally an absolute positioned element
-@mixin center($xy:xy) {
-    @if $xy==xy {
-        left: 50%;
-        top: 50%;
-        bottom: auto;
-        right: auto;
-        @include transform(translateX(-50%) translateY(-50%));
-    }
-    @else if $xy==x {
-        left: 50%;
-        right: auto;
-        @include transform(translateX(-50%));
-    }
-    @else if $xy==y {
-        top: 50%;
-        bottom: auto;
-        @include transform(translateY(-50%));
-    }
-}
 
 // border radius
 @mixin border-radius($radius:.25em) {

@@ -31,6 +31,24 @@ jQuery(document).ready(function ($) {
     });
 
     $('.goto').on('click', goToSection);
+    
+    removeScrollIcon(); 
+    
+    function removeScrollIcon(){
+        
+        var currentSection = sectionsAvailable.filter('.visible');
+        var visibleSection = currentSection[0].dataset.section;
+        var scrollIconClass = document.getElementsByClassName("scrollIconClass");
+        
+        if(visibleSection != '6'){
+            scrollIconClass[0].classList.add("scrollIcon");
+        }else{
+            scrollIconClass[0].classList.remove("scrollIcon");
+        }
+    }
+    
+     
+   
 
     function bindEvents(MQ, bool) {
 
@@ -159,6 +177,8 @@ jQuery(document).ready(function ($) {
             var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
             
             highlite(current);
+            removeScrollIcon(); 
+            
             
             actual = actual - 1;
         }
@@ -190,10 +210,13 @@ jQuery(document).ready(function ($) {
             var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
             
             highlite(current);
+            removeScrollIcon(); 
+            
 
             actual = actual + 1;
         }
         resetScroll();
+        
     }
     
     function scrollToSection(event, goTo) {
@@ -230,24 +253,10 @@ jQuery(document).ready(function ($) {
             goTo = event.target.dataset.goto;
         
             scrollToSection(event, goTo);
-            
-            /*steps = (goTo - currentSection);
-
-            var i = 0;
-            var interval = setInterval(function() { 
-                          
-                if(steps > 0) {
-                    nextSection(event, true);
-                }
-                
-                else {
-                    prevSection(event, true);
-                }
-                i++; 
-                if(i >=  Math.abs(steps)) clearInterval(interval);
-        }, 101);*/
+        
+        
     }
-
+    
     
     function unbindScroll(section, time) {
         //if clicking on navigation - unbind scroll and animate using custom velocity animation
@@ -446,18 +455,23 @@ $.Velocity
 
 // Vertical menu 
 
-var current = document.getElementById('default');
 
-  function highlite(verticalLink)
-  {
-     if (current != null)
-     {
-         current.className = "cd-dot";
-     }
-     verticalLink.className += " highlite";
-     current = verticalLink;
-  }
+   var current = document.getElementById('default');
+ 
+        function highlite(verticalLink)
+      {
+         if (current != null)
+         {
+             current.className = "cd-dot";
+         }
+         verticalLink.className += " highlite";
+        current = verticalLink;
+                
+      }
 
+
+
+  
 
 
 

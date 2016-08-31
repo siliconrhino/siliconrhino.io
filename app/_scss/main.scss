@@ -41,10 +41,12 @@ body {
     }
     div {
         .frontpage-text {
-            padding-top: 17%;
+            padding-top: 12%;
             padding-right: 20%;
         }
+
     }
+
     color: $white;
     background-color:$darkblue;
     @include font-smoothing;
@@ -58,6 +60,47 @@ body {
             /* never visible - this is used in jQuery to check the current MQ */
             content: 'desktop';
         }
+    }
+}
+    
+.col-sm-12{
+    h2{
+        margin-top: 80px;
+        text-align: center;
+    }
+}
+
+.wcd-section{
+    @include display-flex;
+    @include justify-content(space-around);
+    width: 80vw;
+    margin: 100px auto;
+    
+    
+    > div {
+        text-align: center; 
+     
+    }
+
+    
+    img{
+        height: 10%;
+        width: 10vw;
+    }
+    
+    span{
+        display: block;
+        text-align: center;
+
+    }
+    
+    a:hover{
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+        transition: transform 0.2s, opacity 0.2s;
+        opacity: 0;
+        @include transform-origin(100% 50%);
+        
     }
 }
 
@@ -370,7 +413,7 @@ body[data-hijacking="on"] {
 .cd-vertical-nav {
     //lateral navigation 
     position: fixed;
-    right: 40px;
+    right: 18px;
     @include center(y); // see partials > _mixins.scss
     z-index: 1;
     li {
@@ -401,9 +444,9 @@ body[data-hijacking="on"] {
         }
         &.highlite:after {
             content: "";
-            background-color: $white;
+            background-color: $blue;
             position: absolute;
-            top: 4.5px;
+            top: 3.5px;
             left: 3.5px;
             width: 5px;
             height: 5px;
@@ -650,3 +693,42 @@ $button-transistion-duration: 0.3s; // The transition duration
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
+
+.scrollIcon{
+        display: block;
+        z-index: 100;
+        position: absolute;
+        left: calc(50vw - 7.5px);
+        bottom: 9px;
+        height: 35px;
+        width: 20px;
+        border: solid 1.5px $blue;
+        border-radius: 48%;
+    }
+
+.scrollIcon:after{
+            content: "";
+            background-color: $blue;
+            position: absolute;
+            top: 3.5px;
+            left: 5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            @include animation(scrollSlide 3s infinite);
+}
+
+@include keyframes(scrollSlide){
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(8px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+
+
