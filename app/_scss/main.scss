@@ -420,6 +420,37 @@ body[data-hijacking="on"] {
         text-align: right;
         list-style: none;
         clear: both;
+        position: relative;
+        overflow: auto;
+
+
+        &:first-of-type:before {
+            content: none;
+        }
+
+        &:last-of-type:after {
+            content: none;
+        }
+
+        &:after {
+            width: 1px;
+            height: 108%;
+            background-color: $blue;
+            content: '';
+            position: absolute;
+            right: 7.5px;
+            top: 24px;
+        }
+
+        &:before {
+            content: '';
+            width: 1px;
+            right: 7.5px;
+            position: absolute;
+            top: 0;
+            height: 10px;
+            background-color: $blue;
+        }
     }
     
     a {
