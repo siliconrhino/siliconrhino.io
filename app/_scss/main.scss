@@ -349,8 +349,13 @@ body[data-hijacking="on"] {
             line-height: 100vh;
             font-size: 2.5rem;
             font-weight: 300;
-            &.house-pic {
+            &.space-shuttle-pic {
                 padding-top: 0px;
+                
+                img{
+                    padding-top: 50px;
+                    width: 55%;
+                }
             }
         }
         [data-hijacking="on"] & {
