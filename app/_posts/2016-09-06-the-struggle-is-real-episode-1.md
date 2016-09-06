@@ -4,7 +4,7 @@ title: "The Struggle is Real: Episode 1"
 description: How I ended up here 
 tags: ["startups", "silicon rhino"]
 categories : []
-imageUrl: '/img/backgrounds/fie_blog.png'
+imageUrl: 'http://www.siliconrhino.io/img/backgrounds/fie_blog.0909.png'
 published: true
 ---
 
