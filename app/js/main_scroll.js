@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
         actual = 1,
         animating = false;
 
-    
+
 
     //DOM elements
     var sectionsAvailable = $('.cd-section'),
@@ -26,35 +26,32 @@ jQuery(document).ready(function ($) {
     $(window).on('resize', function () {
         MQ = deviceType();
         bindEvents(MQ, bindToggle);
-        if (MQ == 'mobile') bindToggle = true;
-        if (MQ == 'desktop') bindToggle = false;
+        if (MQ === 'mobile') bindToggle = true;
+        if (MQ === 'desktop') bindToggle = false;
     });
 
     $('.goto').on('click', goToSection);
-    
-    removeScrollIcon(); 
-    
-    function removeScrollIcon(){
-        
-        var currentSection = sectionsAvailable.filter('.visible');
-        var visibleSection = currentSection[0].dataset.section;
-        var scrollIconClass = document.getElementsByClassName("scrollIconClass");
-        
-        if(visibleSection != '6'){
-            scrollIconClass[0].classList.add("scrollIcon");
-        }else{
-            scrollIconClass[0].classList.remove("scrollIcon");
-        }
+
+
+
+    function removeScrollIcon() {
+      var currentSection = sectionsAvailable.filter('.visible');
+      var visibleSection = currentSection[0].dataset.section;
+      var scrollIconClass = document.getElementsByClassName('scrollIconClass');
+
+      if (visibleSection !== '6') {
+        scrollIconClass[0].classList.add('scrollIcon');
+      } else {
+        scrollIconClass[0].classList.remove('scrollIcon');
+      }
     }
-    
-     
-   
+
+    removeScrollIcon();
 
     function bindEvents(MQ, bool) {
-
-        if (MQ == 'desktop' && bool) {
+        if (MQ === 'desktop' && bool) {
             //bind the animation to the window scroll event, arrows click and keyboard
-            if (hijacking == 'on') {
+            if (hijacking === 'on') {
                 initHijacking();
                 $(window).on('DOMMouseScroll mousewheel', scrollHijacking);
             } else {
@@ -63,20 +60,20 @@ jQuery(document).ready(function ($) {
             }
             prevArrow.on('click', prevSection);
             nextArrow.on('click', nextSection);
-            
+
 
             $(document).on('keydown', function (event) {
-                if (event.which == '40' && !nextArrow.hasClass('inactive')) {
+                if (event.which === '40' && !nextArrow.hasClass('inactive')) {
                     event.preventDefault();
                     nextSection();
-                } else if (event.which == '38' && (!prevArrow.hasClass('inactive') || (prevArrow.hasClass('inactive') && $(window).scrollTop() != sectionsAvailable.eq(0).offset().top))) {
+                } else if (event.which === '38' && (!prevArrow.hasClass('inactive') || (prevArrow.hasClass('inactive') && $(window).scrollTop() !== sectionsAvailable.eq(0).offset().top))) {
                     event.preventDefault();
                     prevSection();
                 }
             });
             //set navigation arrows visibility
             checkNavigation();
-        } else if (MQ == 'mobile') {
+        } else if (MQ === 'mobile') {
             //reset and unbind
             resetSectionStyle();
             $(window).off('DOMMouseScroll mousewheel', scrollHijacking);
@@ -159,30 +156,30 @@ jQuery(document).ready(function ($) {
         typeof event !== 'undefined' && event.preventDefault();
 
         var visibleSection = sectionsAvailable.filter('.visible'),
-            middleScroll = (hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false;
+            middleScroll = (hijacking === 'off' && $(window).scrollTop() !== visibleSection.offset().top) ? true : false;
         visibleSection = middleScroll ? visibleSection.next('.cd-section') : visibleSection;
 
         var animationParams = selectAnimation(animationType, middleScroll, 'prev');
         unbindScroll(visibleSection.prev('.cd-section'), animationParams[3]);
 
-        if (!animating && !visibleSection.is(":first-child")) {
+        if (!animating && !visibleSection.is(':first-child')) {
             animating = true;
             visibleSection.removeClass('visible').children('div').velocity(animationParams[2], animationParams[3], animationParams[4])
                 .end().prev('.cd-section').addClass('visible').children('div').velocity(animationParams[0], animationParams[3], animationParams[4], function () {
                     animating = false;
-                    if (hijacking == 'off') $(window).on('scroll', scrollAnimation);
+                    if (hijacking === 'off') $(window).on('scroll', scrollAnimation);
                 });
             var goto =
                 visibleSection.prev('.cd-section')[0].dataset.section;
             var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
-            
+
             highlite(current);
-            removeScrollIcon(); 
-            
-            
+            removeScrollIcon();
+
+
             actual = actual - 1;
         }
-        
+
 
         resetScroll();
     }
@@ -192,7 +189,7 @@ jQuery(document).ready(function ($) {
         typeof event !== 'undefined' && event.preventDefault();
 
         var visibleSection = sectionsAvailable.filter('.visible'),
-            middleScroll = (hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false;
+            middleScroll = (hijacking === 'off' && $(window).scrollTop() !== visibleSection.offset().top) ? true : false;
 
         var animationParams = selectAnimation(animationType, middleScroll, 'next');
         unbindScroll(visibleSection.next('.cd-section'), animationParams[3]);
@@ -204,21 +201,21 @@ jQuery(document).ready(function ($) {
                     animating = false;
                     if (hijacking == 'off') $(window).on('scroll', scrollAnimation);
                 });
-            
+
             var goto =
                 visibleSection.next('.cd-section')[0].dataset.section;
             var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
-            
+
             highlite(current);
-            removeScrollIcon(); 
-            
+            removeScrollIcon();
+
 
             actual = actual + 1;
         }
         resetScroll();
-        
+
     }
-    
+
     function scrollToSection(event, goTo) {
         //go to next section
         typeof event !== 'undefined' && event.preventDefault();
@@ -233,8 +230,8 @@ jQuery(document).ready(function ($) {
         if (!animating) {
             animating = true;
             visibleSection.removeClass('visible').children('div').velocity(animationParams[1], animationParams[3], animationParams[4]);
-            
-            
+
+
             goToSection.addClass('visible').children('div').velocity(animationParams[0], animationParams[3], animationParams[4], function () {
                 animating = false;
                 if (hijacking == 'off') $(window).on('scroll', scrollAnimation);
@@ -244,20 +241,21 @@ jQuery(document).ready(function ($) {
     }
 
     function goToSection(event){
-        
+
         typeof event !== 'undefined' && event.preventDefault();
 
         var visibleSection = sectionsAvailable.filter('.visible'),
             currentId = visibleSection.attr('id'),
             currentSection = visibleSection[0].dataset.section,
             goTo = event.target.dataset.goto;
-        
+
             scrollToSection(event, goTo);
-        
-        
+            removeScrollIcon();
+
+
     }
-    
-    
+
+
     function unbindScroll(section, time) {
         //if clicking on navigation - unbind scroll and animate using custom velocity animation
         if (hijacking == 'off') {
@@ -266,8 +264,8 @@ jQuery(document).ready(function ($) {
                 duration: time
             });
         }
-    }              
-    
+    }
+
 
     function resetScroll() {
         delta = 0;
@@ -381,8 +379,8 @@ jQuery(document).ready(function ($) {
 
         return [translateY, scale, rotateX, opacity, boxShadowBlur];
     }
-    
-      
+
+
 });
 
 /* Custom effects registration - feature available in the Velocity UI pack */
@@ -453,25 +451,25 @@ $.Velocity
     });
 
 
-// Vertical menu 
+// Vertical menu
 
 
    var current = document.getElementById('default');
- 
+
         function highlite(verticalLink)
       {
-         if (current != null)
+         if (current !== null)
          {
              current.className = "cd-dot";
          }
          verticalLink.className += " highlite";
         current = verticalLink;
-                
+
       }
 
 
 
-  
+
 
 
 
