@@ -86,6 +86,7 @@ body {
     img{
         height: 10%;
         width: 10vw;
+      transition: all 1s;
     }
 
     span{
@@ -94,11 +95,8 @@ body {
 
     }
 
-    a:hover{
-        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
-        transition: transform 0.2s, opacity 0.2s;
-        opacity: 0;
+    img:hover{
+        transform: scale(1.1);
         @include transform-origin(100% 50%);
 
     }
@@ -405,20 +403,20 @@ body[data-hijacking="on"] {
 
                 img{
                     padding-top: 50px;
-                    width: 55%;
+
                 }
 
                 .shuttle-sprite{
-                    display: block;
-                    background-image: url("../img/backgrounds/space_shuttle_sprite.png");
-                    width: 446px;
-                    height: 699px;
-                    animation: play .4s steps(5) infinite;
+                    margin-top: 100px;
+                    margin-left: 60px;
+                    background-image: url("../img/backgrounds/space_shuttle_sprite_bluewings.png");
+                    width: 381px;
+                    height: 433px;
+                    animation: play .8s steps(5) infinite;
                 }
 
                 @keyframes play {
-
-                    100% {background-position: -2232x;}
+                    100% {background-position: -1905px;}
 
 
                     }
