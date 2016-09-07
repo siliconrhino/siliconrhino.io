@@ -428,6 +428,30 @@ module.exports = function (grunt) {
           }
         }
       }
+    },
+
+    // Upload to the test s3 bucket
+    aws_s3: {
+      options: {
+        region: 'eu-west-1',
+        params: {
+          // 10 minute
+          CacheControl: 'public, max-age=60',
+          Expires: new Date(Date.now())
+        }
+      },
+      test: {
+        options: {
+          bucket: 'siliconrhino-test-website',
+          awsProfile: 'siliconrhino-test',
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.dist %>',
+          src: ['**/*'],
+          dest: ''
+        }]
+      },
     }
   });
 
@@ -491,7 +515,14 @@ module.exports = function (grunt) {
     'test',
     'build',
     'buildcontrol'
-    ]);
+  ]);
+
+  grunt.registerTask('deploy-test', [
+    'check',
+    'test',
+    'build',
+    'aws_s3:test'
+  ]);
 
   grunt.registerTask('deploy-travis', [
     'check',
