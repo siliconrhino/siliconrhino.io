@@ -418,10 +418,10 @@ body[data-hijacking="on"] {
         .shuttle-sprite {
           margin-top: 100px;
           margin-left: 60px;
-          background-image: url("../img/backgrounds/space_shuttle_sprite_bluewings.png");
+          background-image: url("../img/backgrounds/space_shuttle_sprite_bluewings.38fd.png");
           width: 381px;
           height: 433px;
-          //animation: play .8s steps(5) infinite;
+          animation: play .8s steps(5) infinite;
         }
         @keyframes play {
           100% {
