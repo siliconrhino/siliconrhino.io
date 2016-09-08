@@ -860,15 +860,42 @@ $button-transistion-duration: 0.3s; // The transition duration
   .row {
     margin: 0;
   } 
+
+  .cd-vertical-nav, .scrollIconClass {
+    display: none;
+  }
+
+  .cd-section:first-of-type {
+    height: 100vh !important;
+    .space-shuttle-pic {
+      padding-top: 30%;
+      height: 50vh;
+      img {
+        max-height: 100%;
+      }
+    }
+  }
+
+  .cd-section {
+    height: auto !important;
+    margin-bottom: 50px;
+
+    .twinkling {
+      display: none;
+    }
+  }
   .cd-section .col-sm-6 {
-    height: 50vh;
+    height: 30vh;
     text-align: center;
     font-size: 1.5rem;
 
     &.space-shuttle-pic {
-      padding-top: 30%;
       img {
         max-height: 100%;
+      }
+
+      .shuttle-sprite {
+        height: 100%;
       }
 
     }
