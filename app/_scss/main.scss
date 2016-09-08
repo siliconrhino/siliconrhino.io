@@ -41,8 +41,13 @@ body {
   }
   div {
     .frontpage-text {
-      padding-top: 12%;
-      padding-right: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2, h3 {
+        max-width: 500px;
+      }
     }
   }
   color: $white;
@@ -411,6 +416,9 @@ body[data-hijacking="on"] {
       font-weight: 300;
       &.space-shuttle-pic {
         padding-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img {
           padding-top: 50px;
           -webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.80));
