@@ -379,6 +379,9 @@ body[data-hijacking="on"] {
   &:nth-of-type(6) > div {
     background: $darkblue url(/img/stars.png) repeat top center;
   }
+  &:nth-of-type(7) > div {
+    background: $darkblue url(/img/stars.png) repeat top center;
+  }
   [data-animation="parallax"] & > div,
   [data-animation="fixed"] & > div,
   [data-animation="opacity"] & > div {}
