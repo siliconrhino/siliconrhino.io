@@ -79,17 +79,21 @@ body {
   img {
     height: 10%;
     width: 10vw;
-    transition: all 1s;
+     -webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.80));
+          -webkit-transition: all 0.5s linear;
+          -o-transition: all 0.5s linear;
+          transition: all 0.5s linear;
   }
   span {
     display: block;
     text-align: center;
   }
   img:hover {
-    transform: scale(1.1);
-    @include transform-origin(100% 50%);
+  -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
   }
 }
+
+
 
 a {
   color: $white;
