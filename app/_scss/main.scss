@@ -501,7 +501,7 @@ body[data-hijacking="on"] {
     list-style: none;
     clear: both;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     &:first-of-type:before {
       content: none;
     }
