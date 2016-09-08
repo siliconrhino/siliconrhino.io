@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
     var hijacking = $('body').data('hijacking'),
         animationType = $('body').data('animation'),
         delta = 0,
-        scrollThreshold = 6,
+        scrollThreshold = 1,
         actual = 1,
         animating = false;
 
@@ -53,7 +53,32 @@ jQuery(document).ready(function ($) {
             //bind the animation to the window scroll event, arrows click and keyboard
             if (hijacking === 'on') {
                 initHijacking();
-                $(window).on('DOMMouseScroll mousewheel', scrollHijacking);
+                var lastSuccessfulScrollTime,
+                  scrollMaxThrottle = 1000,
+                  scrollMinThrottle = 50,
+                  wheelDeltaThreshold = 100;
+
+                $(window).on('DOMMouseScroll mousewheel', function(event) {
+                  var now = new Date().getTime();
+
+                  // if scrolled more than once within a time period
+                  if (now - lastSuccessfulScrollTime < scrollMaxThrottle) {
+                    // don't process scroll more than once within a time period
+                    if (now - lastSuccessfulScrollTime < scrollMinThrottle) {
+                      return;
+                    }
+
+                    // don't fire again within the throttle time unless
+                    // the scroll delta reaches a certain peak
+                    if (Math.abs(event.originalEvent.wheelDelta) < wheelDeltaThreshold) {
+                      return;
+                    }
+                  }
+
+                  lastSuccessfulScrollTime = new Date().getTime();
+
+                  return scrollHijacking(event);
+                });
             } else {
                 scrollAnimation();
                 $(window).on('scroll', scrollAnimation);
