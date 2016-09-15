@@ -6,6 +6,7 @@
 @import '_mixins.scss';
 @import '_layout.scss';
 @import '_vertical_menu.scss';
+@import '_xl_grid.css';
 
 /* --------------------------------
 
@@ -34,6 +35,11 @@ body {
     text-align: left;
     .orangeText {
       color: $yellow;
+    }
+    &.subpage-topHeading{
+      background-color: $blue;
+      text-align: center;
+
     }
   }
   h3 {
@@ -65,7 +71,6 @@ body {
     }
   }
 }
-
 .col-sm-12 {
   h2 {
     margin-top: 80px;
@@ -119,6 +124,10 @@ a {
   .logo.white {
     display: inline;
   }
+  &.blueBg{
+    background-color: $blue;
+  }
+
   .logo.blue {
     display: none;
   }
