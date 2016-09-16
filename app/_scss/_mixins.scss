@@ -32,13 +32,13 @@
     }
     @-moz-keyframes #{$animation-name} {
         @content;
-    }  
+    }
     @-ms-keyframes #{$animation-name} {
         @content;
     }
     @-o-keyframes #{$animation-name} {
         @content;
-    }  
+    }
     @keyframes #{$animation-name} {
         @content;
     }
@@ -49,7 +49,7 @@
   -moz-animation: #{$str};
   -ms-animation: #{$str};
   -o-animation: #{$str};
-  animation: #{$str};      
+  animation: #{$str};
 }
 
 @mixin transition ($args...) {
@@ -174,4 +174,11 @@
 // border radius
 @mixin border-radius($radius:.25em) {
     border-radius: $radius;
+}
+
+// border for images and labels
+
+@mixin image-border{
+border: 3px solid;
+padding: 4px;
 }

@@ -37,6 +37,8 @@ body {
       color: $yellow;
     }
     &.subpage-topHeading{
+      padding-top: 60px;
+      padding-bottom: 20px;
       background-color: $blue;
       text-align: center;
 
@@ -92,7 +94,10 @@ body {
           -webkit-transition: all 0.5s linear;
           -o-transition: all 0.5s linear;
           transition: all 0.5s linear;
+
+
   }
+
   span {
     display: block;
     text-align: center;
@@ -314,6 +319,79 @@ a {
     background-position: -10000px 5000px;
   }
 }
+
+.about-intro{
+text-align: center;
+  max-width: 100vw;
+  margin-bottom: 100px;
+  p.lead, h3{
+    text-align: center;
+    font-size: 4rem;
+  }
+  p.lead:nth-child(3){
+    padding-bottom: 50px;
+    border-bottom: 2px solid $blue;
+  }
+}
+
+.profile{
+  @include image-border;
+  width: 50vh;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+}
+
+// images and labels border colors
+
+.yellow-border{
+  border-color: $yellow;
+}
+
+.blue-border{
+  border-color: $blue;
+}
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+  @include image-border;
+  position: absolute;
+  width: 50vh;
+  text-transform: uppercase;
+
+  &.yellow-border{
+  background-color: $yellow;}
+
+  &.blue-border{
+  background-color: $blue;}
+
+}
+
+.row{
+  margin-bottom: 100px;
+  .profile-description{
+    text-align: center;
+    font-size: 2.5rem;
+    &.col-sm-pull-6{
+      //text-align: right;
+    }
+  }
+}
+
+// SoMe icons profile page
+
+.connect img{
+  width: 5vh;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+
+
 
 
 /* --------------------------------
@@ -855,7 +933,7 @@ $button-transistion-duration: 0.3s; // The transition duration
 
 
 @media only screen and (max-width: 1049px) {
-   
+
   [data-hijacking="on"] .cd-section {
       visibility: visible;
       position: relative;
@@ -868,7 +946,7 @@ $button-transistion-duration: 0.3s; // The transition duration
 @media only screen and (max-width: 768px) {
   .row {
     margin: 0;
-  } 
+  }
 
   .cd-vertical-nav, .scrollIconClass {
     display: none;
