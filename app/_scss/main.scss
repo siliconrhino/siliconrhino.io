@@ -671,8 +671,8 @@ body[data-hijacking="on"] {
       content: "";
       background-color: $blue;
       position: absolute;
-      top: 3.5px;
-      left: 3.5px;
+      top: calc(50% - 2.5px);
+      left: calc(50% - 2.5px);
       width: 5px;
       height: 5px;
       border-radius: 50%;
@@ -693,8 +693,8 @@ body[data-hijacking="on"] {
       content: "";
       background-color: $blue;
       position: absolute;
-      top: 3.5px;
-      left: 3.5px;
+      top: calc(50% - 2.5px);
+      left: calc(50% - 2.5px);
       width: 5px;
       height: 5px;
       border-radius: 50%;
