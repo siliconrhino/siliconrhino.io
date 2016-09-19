@@ -8,7 +8,6 @@ jQuery(document).ready(function ($) {
         animating = false;
 
 
-
     //DOM elements
     var sectionsAvailable = $('.cd-section'),
         navigationItems = $('#cd-vertical-nav a'),
@@ -31,6 +30,10 @@ jQuery(document).ready(function ($) {
     });
 
     $('.goto').on('click', goToSection);
+
+    $(".btn1").click(function(){
+        $("p.lead").fadeOut()
+    });
 
 
 
@@ -491,7 +494,6 @@ $.Velocity
         current = verticalLink;
 
       }
-
 
 
 

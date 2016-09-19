@@ -12,11 +12,13 @@ $title-font: 'Roboto Condensed', sans-serif;
 $text-font: 'Roboto Condensed', sans-serif;
 $primary-font: 'Roboto Condensed', sans-serif;
 
-// colors for parallax scroll 
 
-$color-1: #2b334f; // Pickled Bluewood
-$color-2: #2e5367; // San Juan
-$color-3: #267481; // Lochinvar
-$color-4: #fcb052; // Texas Rose
-$color-5: #f06a59; // Burnt Sienna
-$color-6: #ffffff; // White
+//breakpoints
+
+$breakpoints: (
+    'x-small': '(max-width: 480px)',
+    'small': '(max-width: 768px)',
+    'medium': '(max-width: 1024px)',
+    'large': '(min-width: 1025px)',
+    'xlarge': '(min-width: 1600px)',
+);

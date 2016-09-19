@@ -29,7 +29,7 @@
 
 		/* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
 		@include backface-visibility(hidden);
-		
+
 		span {
 			float: right;
 			display: inline-block;
@@ -37,7 +37,7 @@
 		}
 
 		&:hover span {
-			@include transform(scale(1)); 
+			@include transform(scale(1));
 		}
 
 		&:hover .cd-label {
@@ -47,7 +47,7 @@
 		&.is-selected .cd-dot {
 			background-color: $yellow;
 		}
-	} 
+	}
 
 	.cd-dot {
 		position: relative;
@@ -59,7 +59,7 @@
 		-webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
 		-moz-transition: -moz-transform 0.2s, background-color 0.5s;
 		transition: transform 0.2s, background-color 0.5s;
-		@include transform-origin(50% 50%);	
+		@include transform-origin(50% 50%);
 	}
 
 	.cd-label {
@@ -88,13 +88,12 @@
 	height: 44px;
 	width: 44px;
 	@include border-radius;
-	background: rgba($color-4, .9);
+
 
 	span {
 		position: absolute;
 		height: 4px;
 		width: 4px;
-		background-color: $color-1;
 		border-radius: 50%;
 		@include center;
 
@@ -133,35 +132,32 @@
 	@include transition-property(transform);
 	@include transition-duration(.2s);
 	@include border-radius;
-	background-color: rgba($color-4, .9);
+
 
 	a {
 		display: block;
 		padding: 1em;
-		border-bottom: 1px solid rgba($color-1, .1);
 
 		span:first-child {
 			display: none;
 		}
 
 		&.is-selected span:last-child {
-			color: $color-3;
+
 		}
 	}
-	
+
 	&.open {
 		@include transform(scale(1));
 	}
 
 	&.open + .cd-nav-trigger {
 		background-color: transparent;
-		
-		span {
-			background-color: rgba($color-1, 0);	
-		}
+
+
 
 		span::before, span::after {
-			background-color: rgba($color-1, 1);
+
 			height: 3px;
 			width: 20px;
 			border-radius: 0;

@@ -8,9 +8,9 @@
 			show_media : false,
 			show_media_size: 'thumb'  //values: small, large, thumb, medium
 		});
-		
+
 		$('.quote_carousel').slick();
-	
+
 		$('.modalbutton').click(function() {
 			$('.modal').modal('hide');
 		});
@@ -22,9 +22,9 @@
 		if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
       $('.header').addClass('white');
     }
-				
+
 		window.onscroll = function() {barBackground();};
-    
+
     window.waitlisted.start({domain: 'silicon-rhino-drinks-app.app.waitlisted.co'});
 
 		function barBackground() {
@@ -37,3 +37,4 @@
 		}
 	});
 })(window.$);
+
