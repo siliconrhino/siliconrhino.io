@@ -432,9 +432,8 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto 1em;
-  max-height: 350px;
-  max-width: 350px;
-  margin-top: 30px;
+  height: auto;
+  width: 350px;
   margin-bottom: 20px;
 }
 
@@ -474,10 +473,10 @@ a {
 
 label{
   font-size: 2.5rem;
-  top: -10px;
   @include image-border;
   position: absolute;
   text-transform: uppercase;
+
 
   &.yellow-border{
   background-color: $yellow;}
@@ -492,9 +491,25 @@ label{
   .profile-description{
     text-align: center;
     font-size: 2.5rem;
+      }
 
+    /*&:nth-child(even){
+      label{
+    bottom: 6vh;
+    left: 10vw;
+    }
   }
+
+    &:nth-child(odd){
+    label{
+    bottom: 6vh;
+    left:70px;
+   }
+  }*/
 }
+
+
+
 
 
 .blog-section{
@@ -522,7 +537,7 @@ label{
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto 1em;
-  height: 30vh;
+  height: 45vh;
   width: 80vw;
   margin-bottom: 100px;
   &.blue-border{
@@ -538,7 +553,7 @@ label{
 // SoMe icons profile page
 
 .connect img{
-  width: 5vh;
+  width: 35px;
   padding: 5px;
   margin-bottom: 35px;
 }
@@ -1192,14 +1207,23 @@ MEDIA QUERIES
     padding-right: 100px;
   }
 
-  .profile-description:nth-child(2) {
+  .profile-description{
     p{
-    margin-right: 60px;
+    margin: 0 40px 0 40px;
     }
+  }
+
+   .blog-img{
+     width: 40vw;
+
+  }
+
+  .profile{
+    width: 550px;
   }
 }
 
-/* MEDIUM screens */
+/* Tablet portrait screens */
 @media screen and (min-width: 600px) and (max-width: 767px) {
 
 .profile-description{
@@ -1207,6 +1231,19 @@ MEDIA QUERIES
   margin-right: 50px;
   }
 
+  .profile{
+    width: 450px;
+  }
 }
 
+/* Tablet landscape screens */
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+  .blog-img{
+
+    width: 45vw;
+  }
+
+
+}
 
