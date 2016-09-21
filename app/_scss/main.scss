@@ -170,6 +170,51 @@ a {
       }
     }
   }
+
+  &.homepage {
+    padding: 30px 10px 0 0;
+
+    .logo {
+      position: relative;
+    }
+  }
+  .main-links {
+    float: right;
+    margin-right: 30px;
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 6px 10px 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+
+      &:after {
+        display:block;
+        content: '';
+        border-bottom: solid 2px #fff;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+
+      }
+
+      &:hover:after { 
+        transform: scaleX(1); 
+      }
+
+      a {
+        color: #fff;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      
+    }
+  }
   #menu {
     float: right;
     margin: 4px 10px 0 0;
@@ -395,6 +440,8 @@ a {
 
 .space-shuttle-outline{
 
+  z-index: 111111;
+
   &.blue{
   top: 50px;
   left: 78vw;
@@ -541,10 +588,15 @@ body[data-hijacking="on"] {
 }
 
 .cd-section {
-  .col-sm-6 {
+  .col-sm-6, .col-sm-12 {
     height: 100vh;
     text-align: center;
     font-size: 2.5rem;
+  }
+  .col-sm-12 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   &:first-of-type > div {
     background: $darkblue url(/img/stars.png) repeat top center;
