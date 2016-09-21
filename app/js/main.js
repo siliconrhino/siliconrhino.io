@@ -19,11 +19,11 @@
 			$('.menu > .right').toggleClass('show');
 			$('.header').toggleClass('blue');
 		});
-		if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-      $('.header').addClass('white');
-    }
+		//if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+    //  $('.header').addClass('white');
+    //}
 
-		window.onscroll = function() {barBackground();};
+		//window.onscroll = function() {barBackground();};
 
     window.waitlisted.start({domain: 'silicon-rhino-drinks-app.app.waitlisted.co'});
 
