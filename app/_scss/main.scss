@@ -42,7 +42,15 @@ body {
       background-color: $blue;
       text-align: center;
 
+      &.yellow{
+        background-color: $yellow;
+      }
+
+      &.blue{
+        background-color: $blue;
+      }
     }
+
   }
   h3 {
     text-align: left;
@@ -124,7 +132,6 @@ a {
 
 .header {
   height: 40px;
-  background-color: transparent;
   border: 0;
   color: $blue;
   min-height: 40px;
@@ -138,6 +145,10 @@ a {
   }
   &.blueBg{
     background-color: $blue;
+  }
+
+  &.yellowBg{
+    background-color: $yellow;
   }
 
   .logo.blue {
@@ -327,20 +338,30 @@ a {
   }
 }
 
-.about-intro{
-text-align: center;
+.page-intro{
+  text-align: center;
   max-width: 100vw;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+
 
  h3{
    margin-bottom: 25px;
     @include animation('fadeIn 2s');
     text-align: center;
-   font-size: 5rem;
+   font-size: 4.5rem;
+
+   &.intro-border{
+     border-bottom: 2px solid $blue;
+     padding-bottom: 50px;
+     margin-left: 10vw;
+     margin-right: 10vw;
+   }
+
   }
 
   p.lead{
-    font-size: 3.5rem;
+
+    font-size: 2.5rem;
   }
 
    p.lead:nth-child(2){
@@ -362,21 +383,34 @@ text-align: center;
 
 .profile{
   @include image-border;
-  width: 50vh;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto 1em;
+  max-height: 350px;
+  max-width: 350px;
   margin-top: 30px;
   margin-bottom: 20px;
-
 }
 
 .space-shuttle-outline{
-  top: 45px;
-  left: 80vw;
+
+  &.blue{
+  top: 50px;
+  left: 78vw;
   position: absolute;
-  width: 80px;
+  width: 70px;
+  }
+
+  &.yellow{
+  top: 120px;
+  left: 68vw;
+  position: absolute;
+  width: 120px;
+  }
 }
 
 // images and labels border colors
-
 .yellow-border{
   border-color: $yellow;
 }
@@ -384,6 +418,7 @@ text-align: center;
 .blue-border{
   border-color: $blue;
 }
+
 .team{
     display: flex;
     flex-direction: column;
@@ -391,9 +426,10 @@ text-align: center;
 }
 
 label{
+  font-size: 2.5rem;
+  top: -10px;
   @include image-border;
   position: absolute;
-  width: 50vh;
   text-transform: uppercase;
 
   &.yellow-border{
@@ -409,10 +445,47 @@ label{
   .profile-description{
     text-align: center;
     font-size: 2.5rem;
-    &.col-sm-pull-6{
-      //text-align: right;
+
+  }
+}
+
+
+.blog-section{
+
+  h3{
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    label{
+      top: 30vh;
+
     }
   }
+}
+
+.blog-img{
+  @include image-border;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto 1em;
+  height: 30vh;
+  width: 80vw;
+  margin-bottom: 100px;
+  &.blue-border{
+    border-color: $blue;
+  }
+
+  &.yellow-border{
+    border-color: $yellow;
+  }
+
 }
 
 // SoMe icons profile page
@@ -420,7 +493,7 @@ label{
 .connect img{
   width: 5vh;
   padding: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 
@@ -1035,4 +1108,53 @@ $button-transistion-duration: 0.3s; // The transition duration
     }
   }
 }
+
+/* .......................
+
+MEDIA QUERIES
+
+.......................... */
+
+
+/* XL screens */
+@media screen and (min-width: 1600px) {
+
+}
+
+/* LARGE screens */
+@media screen and (min-width: 1025px) {
+   .space-shuttle-outline{
+     &.blue{
+      top: 38px;
+      left: 78vw;
+      width: 85px;
+     }
+  &.yellow{
+  top: 111px;
+  width: 146px;
+  }
+}
+
+  p.lead{
+    padding-left: 50px;
+    padding-right: 100px;
+  }
+
+  .profile-description:nth-child(2) {
+    p{
+    margin-right: 60px;
+    }
+  }
+}
+
+/* MEDIUM screens */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+
+.profile-description{
+  margin-left:50px;
+  margin-right: 50px;
+  }
+
+}
+
 

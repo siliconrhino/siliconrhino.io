@@ -11,14 +11,3 @@ $blue: #008190;
 $title-font: 'Roboto Condensed', sans-serif;
 $text-font: 'Roboto Condensed', sans-serif;
 $primary-font: 'Roboto Condensed', sans-serif;
-
-
-//breakpoints
-
-$breakpoints: (
-    'x-small': '(max-width: 480px)',
-    'small': '(max-width: 768px)',
-    'medium': '(max-width: 1024px)',
-    'large': '(min-width: 1025px)',
-    'xlarge': '(min-width: 1600px)',
-);

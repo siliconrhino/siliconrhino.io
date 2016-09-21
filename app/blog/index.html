@@ -1,20 +1,24 @@
 ---
-layout: default
+layout: subpage
 title: Blog
+headBackground: yellowBg
 ---
-<section class="home-backg backg-projects backg-blog">
+<section class="home-backg backg-projects">
   <div class="overlay">
-  <h2>Blog</h2>
-  <h3>Various ramblings on startups</h3>
+  <h2 class="subpage-topHeading yellow">Blog</h2>
+     <img class="space-shuttle-outline yellow" src="/img/backgrounds/space_shuttle_outlineYellow.png" alt="space shuttle outline" />
+    <div class="col-sm-12 page-intro intro-border">
+  <h3 class="intro-border">Various ramblings on startups..</h3>
+    </div>
   </div>
 </section>
-<section class="jumbotron listing w">
-  
-  <h2>Latest Posts</h2>
+
+  <section class="blog-section">
+  <h3 class="col-sm-12">Latest Posts</h3>
   {% for post in site.posts %}
     {% include /list_item.html %}
   {% endfor %}
-  
+
   <!--<h2>Interviews</h2>
   {% for post in site.categories.foo %}
     {% include /list_item.html %}
@@ -24,4 +28,5 @@ title: Blog
   {% for post in site.categories.foo %}
     {% include /list_item.html %}
   {% endfor %}-->
+
 </section>
