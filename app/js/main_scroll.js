@@ -35,6 +35,21 @@ jQuery(document).ready(function ($) {
         $("p.lead").fadeOut()
     });
 
+    document.onkeydown = checkKey;
+
+    function checkKey(e) {
+
+        e = e || window.event;
+
+        if (e.keyCode == '38') {
+           prevSection(e);
+        }
+        else if (e.keyCode == '40') {
+            // down arrow
+            nextSection(e);
+        }
+    }
+
 
 
     function removeScrollIcon() {

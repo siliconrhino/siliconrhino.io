@@ -92,7 +92,7 @@ body {
   @include display-flex;
   @include justify-content(space-around);
   width: 80vw;
-  margin: 100px auto;
+  margin: 50px auto 100px;
   > div {
     text-align: center;
     display: flex;
@@ -176,6 +176,13 @@ a {
 
     .logo {
       position: relative;
+      top: 17px;
+      left: 30px;
+  
+    }
+
+    #menu {
+      margin: 12px 10px 0 0;
     }
   }
   .main-links {
@@ -185,7 +192,7 @@ a {
     li {
       list-style-type: none;
       display: inline-block;
-      font-size: 20px;
+      font-size: 15px;
       margin: 6px 10px 0;
       font-weight: 700;
       text-transform: uppercase;
@@ -198,6 +205,10 @@ a {
         transform: scaleX(0);  
         transition: transform 250ms ease-in-out;
 
+      }
+
+      &.no:after {
+        display: none;
       }
 
       &:hover:after { 
@@ -951,6 +962,25 @@ $button-transistion-duration: 0.3s; // The transition duration
 #menu.is-active span::before,
 #menu.is-active span::after {
   background-color: $white;
+}
+
+
+// CTA button
+
+a.cta {
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  display: inline-block;
+  font-weight: bold;
+  transition: all 1s ease-out;
+
+  &:hover {
+    text-decoration: none;
+    color: $yellow;
+    border: 2px solid $yellow;
+  }
 }
 
 
