@@ -625,7 +625,7 @@ body[data-hijacking="on"] {
     flex-direction: column;
   }
   &:first-of-type > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
     &::before {
       /* alert -> all scrolling effects are not visible on small devices */
       content: 'Effects not visible on mobile!';
@@ -640,22 +640,22 @@ body[data-hijacking="on"] {
     }
   }
   &:nth-of-type(2) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(3) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(4) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(5) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(6) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(7) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   [data-animation="parallax"] & > div,
   [data-animation="fixed"] & > div,
