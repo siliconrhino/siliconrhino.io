@@ -1,5 +1,7 @@
 ---
 layout: post
+headBackground: yellowBg
+topHeadingBg: subpage-topHeading yellow
 title: A year already?
 description: It feels like yesterday but we have been doing this for 12 months.
 tags: ["startups", "silicon rhino"]
@@ -29,10 +31,10 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
 <section class="projects">
   <div class="col-sm-6 col-md-6 project">
     <div class="project-image-container">
-      <img class="project-image" src="/img/acre.png" alt="ACRE" title="ACRE">
+      <img class="project-image blue-border" src="/img/acre.png" alt="ACRE" title="ACRE">
     </div>
     <div class="project-details">
-      <h2><a href="https://www.acrepictures.com" target="_blank">ACRE</a></h2>
+      <label class="blue-border"><a href="https://www.acrepictures.com" target="_blank">ACRE</a></label>
       <h4><a href="https://www.acrepictures.com" target="_blank">www.acrepictures.com</a></h4>
       <div class="techs">
         <img src="/img/tech/html.png" alt="HTML 5" title="HTML 5">
@@ -48,11 +50,11 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
   <div class="col-sm-6 col-md-6 project">
     <div class="project-image-container">
       <a href="http://www.polimapper.co.uk/" target="_blank">
-        <img class="project-image polimapper" src="/img/projects/polimapper.png" alt="PoliMapper App" title="PoliMapper App">
+        <img class="project-image polimapper yellow-border" src="/img/projects/polimapper.png" alt="PoliMapper App" title="PoliMapper App">
       </a>
     </div>
     <div class="project-details">
-      <h2><a href="http://www.polimapper.co.uk/" target="_blank">PoliMapper</a></h2>
+      <label class="yellow-border"><a href="http://www.polimapper.co.uk/" target="_blank">PoliMapper</a></label>
       <h4><a href="http://www.polimapper.co.uk/" target="_blank">www.polimapper.co.uk</a></h4>
       <div class="techs">
         <img src="/img/tech/html.png" alt="HTML 5" title="HTML 5">
@@ -76,7 +78,7 @@ The team is growing soon and we couldn’t be more excited. We are lucky to have
 
 We have also been working on our very first internal project, codename ‘Drinks’. It’s going slowly but surely, and we hope to have a beta for you as soon as possible!
 
-<button type="btn" class="join-waitlist">Join the waitlist</button>
+<button type="btn" class="join-waitlist">Download it now!</button>
 
 To all of you who have helped and supported us, we wouldn’t have made it here if it wasn’t for you. Thank you!
 
