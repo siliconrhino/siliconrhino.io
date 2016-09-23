@@ -201,9 +201,11 @@ a {
       &:after {
         display:block;
         content: '';
+
         border-bottom: solid 2px #fff;
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
+
         border-bottom: solid 2px #fff;
         transform: scaleX(0);
         transition: transform .5s ease-in-out, border 1s ease-out;
@@ -220,11 +222,11 @@ a {
       }
 
       &:hover:after {
-        transform: scaleX(1);
 
       &:hover:after {
         transform: scaleX(1);
         border-bottom: solid 2px $yellow;
+
       }
 
       a {
@@ -1341,10 +1343,6 @@ MEDIA QUERIES
     width: 550px;
   }
 
-  .single-blog-img{
-
-
-  }
 }
 
 /* Tablet portrait screens */
@@ -1362,14 +1360,9 @@ MEDIA QUERIES
 
 /* Tablet landscape screens */
 @media only screen and (min-width: 768px) and (max-width: 1023px){
-
   .blog-img{
     width: 45vw;
+    }
   }
-
-  .single-blog-img{
-
-  }
-
 }
 
