@@ -92,7 +92,7 @@ body {
   @include display-flex;
   @include justify-content(space-around);
   width: 80vw;
-  margin: 100px auto;
+  margin: 50px auto 100px;
   > div {
     text-align: center;
     display: flex;
@@ -176,6 +176,13 @@ a {
 
     .logo {
       position: relative;
+      top: 17px;
+      left: 30px;
+
+    }
+
+    #menu {
+      margin: 12px 10px 0 0;
     }
   }
   .main-links {
@@ -185,7 +192,7 @@ a {
     li {
       list-style-type: none;
       display: inline-block;
-      font-size: 20px;
+      font-size: 15px;
       margin: 6px 10px 0;
       font-weight: 700;
       text-transform: uppercase;
@@ -197,18 +204,36 @@ a {
         border-bottom: solid 2px #fff;
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
+        border-bottom: solid 2px #fff;
+        transform: scaleX(0);
+        transition: transform .5s ease-in-out, border 1s ease-out;
 
+      }
+
+
+      &.no:after {
+        display: none;
+      }
+
+      &.no a:hover {
+        color: $yellow;
       }
 
       &:hover:after {
         transform: scaleX(1);
+
+      &:hover:after {
+        transform: scaleX(1);
+        border-bottom: solid 2px $yellow;
       }
 
       a {
         color: #fff;
+        transition: all 1s ease-out;
 
         &:hover {
           text-decoration: none;
+          color: $yellow;
         }
       }
 
@@ -681,7 +706,7 @@ body[data-hijacking="on"] {
     flex-direction: column;
   }
   &:first-of-type > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
     &::before {
       /* alert -> all scrolling effects are not visible on small devices */
       content: 'Effects not visible on mobile!';
@@ -696,22 +721,22 @@ body[data-hijacking="on"] {
     }
   }
   &:nth-of-type(2) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(3) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(4) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(5) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(6) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   &:nth-of-type(7) > div {
-    background: $darkblue url(/img/stars.png) repeat top center;
+    background: $darkblue url(/img/stars.png) repeat top left;
   }
   [data-animation="parallax"] & > div,
   [data-animation="fixed"] & > div,
@@ -762,12 +787,22 @@ body[data-hijacking="on"] {
           width: 381px;
           height: 433px;
           animation: play .8s steps(5) infinite;
+          //, move 2s ease-in 0.8s infinite
+          position: relative;
         }
         @keyframes play {
           100% {
             background-position: -1905px;
           }
         }
+        /*@keyframes move {
+          0% {
+            top: 1000px;
+          }
+          100% {
+            top: -1000px;
+          }
+        }*/
       }
     }
   }
@@ -1018,6 +1053,25 @@ $button-transistion-duration: 0.3s; // The transition duration
 #menu.is-active span::before,
 #menu.is-active span::after {
   background-color: $white;
+}
+
+
+// CTA button
+
+a.cta {
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  display: inline-block;
+  font-weight: bold;
+  transition: all 1s ease-out;
+
+  &:hover {
+    text-decoration: none;
+    color: $yellow;
+    border: 2px solid $yellow;
+  }
 }
 
 
@@ -1316,7 +1370,6 @@ MEDIA QUERIES
   .single-blog-img{
 
   }
-
 
 }
 
