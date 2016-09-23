@@ -706,12 +706,22 @@ body[data-hijacking="on"] {
           width: 381px;
           height: 433px;
           animation: play .8s steps(5) infinite;
+          //, move 2s ease-in 0.8s infinite
+          position: relative;
         }
         @keyframes play {
           100% {
             background-position: -1905px;
           }
         }
+        /*@keyframes move {
+          0% {
+            top: 1000px;
+          }
+          100% {
+            top: -1000px;
+          }
+        }*/
       }
     }
   }
