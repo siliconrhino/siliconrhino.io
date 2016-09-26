@@ -1211,11 +1211,12 @@ a.cta {
   z-index: 100;
   position: absolute;
   left: calc(50vw - 7.5px);
-  bottom: 9px;
+  bottom: 25px;
   height: 35px;
   width: 20px;
   border: solid 1.5px $blue;
   border-radius: 48%;
+
 }
 
 .scrollIcon:after {
@@ -1228,6 +1229,21 @@ a.cta {
   height: 8px;
   border-radius: 50%;
   @include animation(scrollSlide 3s infinite);
+}
+
+.scrollIcon:before {
+  content: "Scroll Down";
+  bottom: -20px;
+  display: block;
+  width: 100px;
+  text-align: center;
+  left: -40px;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  color: #008190;
+  letter-spacing: 0.03em;
 }
 
 @include keyframes(scrollSlide) {

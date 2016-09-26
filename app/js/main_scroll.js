@@ -205,7 +205,7 @@ jQuery(document).ready(function ($) {
         var animationParams = selectAnimation(animationType, middleScroll, 'prev');
         unbindScroll(visibleSection.prev('.cd-section'), animationParams[3]);
 
-        if (!animating && !visibleSection.is(':first-child')) {
+        if (!animating && !visibleSection.is(':first-of-type')) {
             animating = true;
             visibleSection.removeClass('visible').children('div').velocity(animationParams[2], animationParams[3], animationParams[4])
                 .end().prev('.cd-section').addClass('visible').children('div').velocity(animationParams[0], animationParams[3], animationParams[4], function () {
