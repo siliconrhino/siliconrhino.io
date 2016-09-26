@@ -644,11 +644,6 @@ label{
 
 // project SVGs
 
-@font-face{
-  font-family: "techSvg";
-  src: url('/img/tech/net.svg') format('svg');
-}
-
 .project-image-container{
 
   img{
@@ -665,11 +660,21 @@ label{
 
 svg {
     display: inline-block;
-    fill: #ffffff!important;
     height: auto;
     width: 30%;
     vertical-align: middle;
+
+
 }
+
+use.cls-1{
+  fill: #ffffff;
+}
+
+svg path {
+    fill: inherit;
+}
+
 
 
 
