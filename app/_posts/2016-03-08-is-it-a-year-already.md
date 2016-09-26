@@ -37,11 +37,11 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
       <label class="blue-border"><a href="https://www.acrepictures.com" target="_blank">ACRE</a></label>
       <h4><a href="https://www.acrepictures.com" target="_blank">www.acrepictures.com</a></h4>
       <div class="techs">
-        <img src="/img/tech/html.png" alt="HTML 5" title="HTML 5">
-        <img src="/img/tech/sass.png" alt="SASS" title="SASS">
-        <img src="/img/tech/angular.png" alt="AngularJS" title="Angular JS">
-        <img src="/img/tech/aws.png" alt="AWS" title="AWS">
-        <img src="/img/tech/stripe.png" alt="Stripe" title="Stripe">
+        <svg><use xlink:href="/img/tech/net.svg#svg-html"></use></svg>
+        <svg><use xlink:href="/img/tech/net.svg#svg-sass"></use></svg>
+        <svg><use xlink:href="/img/tech/net.svg#svg-angular"></use></svg>
+        <svg><use xlink:href="/img/tech/net.svg#svg-aws"></use></svg>
+        <svg><use xlink:href="/img/tech/net.svg#svg-stripe"></use></svg>
       </div>
        <p>Digital printing and framing like you have never seen it before</p>
     </div>
@@ -57,9 +57,8 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
       <label class="yellow-border"><a href="http://www.polimapper.co.uk/" target="_blank">PoliMapper</a></label>
       <h4><a href="http://www.polimapper.co.uk/" target="_blank">www.polimapper.co.uk</a></h4>
       <div class="techs">
-        <img src="/img/tech/html.png" alt="HTML 5" title="HTML 5">
-        <img src="/img/tech/sass.png" alt="SASS" title="SASS">
-        <img src="/img/tech/net.png" alt="Microsoft .NET" title="Microsoft .NET">
+      
+       <svg><use xlink:href="/img/tech/net.svg#svg-net"></use></svg>
         <img src="/img/tech/angular.png" alt="Angular JS" title="Angular JS">
         <img src="/img/tech/aws.png" alt="AWS" title="AWS">
         <img src="/img/tech/oauth.png" alt="Oauth 2.0" title="Oauth 2.0">

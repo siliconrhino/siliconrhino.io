@@ -118,7 +118,7 @@ body {
     bottom: -30px;
   }
   img:hover {
-  -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
+    -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
   }
 }
 
@@ -222,6 +222,10 @@ a {
       }
 
       &:hover:after {
+
+        transform: scaleX(1);
+      }
+
 
       &:hover:after {
         transform: scaleX(1);
@@ -609,8 +613,8 @@ label{
   }
 
   .blog-date{
-  top: 30vh;
-}
+    top: 30vh;
+  }
 
 }
 
@@ -638,7 +642,12 @@ label{
 }
 
 
-// project icons
+// project SVGs
+
+@font-face{
+  font-family: "techSvg";
+  src: url('/img/tech/net.svg') format('svg');
+}
 
 .project-image-container{
 
@@ -646,13 +655,22 @@ label{
     width: 350px;
     height: auto;
   }
+
+  .tech{
+    font-family: techSvg;
+    fill: #ffffff;
+  }
+
 }
 
- .techs{
-   img{
-    width: 50px;
-   }
-  }
+svg {
+    display: inline-block;
+    fill: #ffffff!important;
+    height: auto;
+    width: 30%;
+    vertical-align: middle;
+}
+
 
 
 
@@ -1364,5 +1382,5 @@ MEDIA QUERIES
     width: 45vw;
     }
   }
-}
+
 
