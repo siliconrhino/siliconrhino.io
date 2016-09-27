@@ -31,34 +31,38 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
 <section class="projects">
   <div class="col-sm-6 col-md-6 project">
     <div class="project-image-container">
+      <div class="overlay blue">
       <img class="project-image blue-border" src="/img/acre.png" alt="ACRE" title="ACRE">
+      <span class="text-content"><span>Digital printing and framing like you have never seen it before</span></span>
+      </div>
     </div>
     <div class="project-details">
       <label class="blue-border"><a href="https://www.acrepictures.com" target="_blank">ACRE</a></label>
       <h4><a href="https://www.acrepictures.com" target="_blank">www.acrepictures.com</a></h4>
       <div class="techs">
-        <svg><use xlink:href="/img/tech/techSvg.svg#svg-html"></use></svg>
-        <svg><use xlink:href="/img/tech/techSvg.svg#svg-sass"></use></svg>
-        <svg><use xlink:href="/img/tech/techSvg.svg#svg-angular"></use></svg>
-        <svg><use xlink:href="/img/tech/techSvg.svg#svg-aws"></use></svg>
-        <svg><use xlink:href="/img/tech/techSvg.svg#svg-stripe"></use></svg>
+        <img src="/img/tech/html.png" alt="html" title="html">
+        <img src="/img/tech/sass.png" alt="Sass" title="Sass">
+        <img src="/img/tech/angular.png" alt="Angular JS" title="Angular JS">
+        <img src="/img/tech/aws.png" alt="AWS" title="AWS">
+        <img src="/img/tech/stripe.png" alt="Stripe" title="Stripe">
       </div>
-       <p>Digital printing and framing like you have never seen it before</p>
+     
     </div>
    
   </div>
   <div class="col-sm-6 col-md-6 project">
     <div class="project-image-container">
+    <div class="overlay yellow">
       <a href="http://www.polimapper.co.uk/" target="_blank">
         <img class="project-image polimapper yellow-border" src="/img/projects/polimapper.png" alt="PoliMapper App" title="PoliMapper App">
       </a>
+      </div>
     </div>
     <div class="project-details">
       <label class="yellow-border"><a href="http://www.polimapper.co.uk/" target="_blank">PoliMapper</a></label>
       <h4><a href="http://www.polimapper.co.uk/" target="_blank">www.polimapper.co.uk</a></h4>
       <div class="techs">
-      
-       <svg><use xlink:href="/img/tech/techSvg.svg#svg-net"></use></svg>
+        <img src="/img/tech/net.png" alt=".NET" title=".NET">
         <img src="/img/tech/angular.png" alt="Angular JS" title="Angular JS">
         <img src="/img/tech/aws.png" alt="AWS" title="AWS">
         <img src="/img/tech/oauth.png" alt="Oauth 2.0" title="Oauth 2.0">
