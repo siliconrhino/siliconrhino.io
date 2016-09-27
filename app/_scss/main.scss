@@ -520,9 +520,20 @@ label{
 .row{
   margin-bottom: 100px;
   .profile-description {
-    text-align: center;
+    text-align: left;
     font-size: 2.5rem;
-    padding-top: 70px;
+    padding-top: 50px;
+    line-height: 1.6em;
+    letter-spacing: 0.03em;
+
+    div.connect {
+      text-align: right;
+
+      img {
+        width: 28px;
+      }
+    }
+
   }
 
     /*&:nth-child(even){
@@ -1410,10 +1421,62 @@ MEDIA QUERIES
 .images-carousel {
   height: 400px;
   overflow: hidden;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 
   img {
     height: 400px;
   }
+
+  &:hover {
+    .slick-next, .slick-prev {
+      opacity: 1;
+    }
+  }
+
+  .slick-next, .slick-prev {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+    z-index: 1;
+    opacity: .5;
+    transition: all 0.5 linear;
+
+  }
+
+  .slick-prev {
+    left: 20px; 
+    &:before {
+      content: '<';
+      color: #fff;
+      font-size: 80px;
+      font-weight: 700;
+    }
+  }
+
+  .slick-next {
+    right: 20px;
+
+    &:before {
+      content: '>';
+      color: #fff;
+      font-size: 80px;
+      font-weight: 700;
+    }
+  }
+
+
 }
 

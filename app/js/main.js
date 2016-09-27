@@ -19,9 +19,10 @@
 			centerMode: true,
 			variableWidth: true,
 			autoplay: true,
-			autoplaySpeed: 2000
+			autoplaySpeed: 3000,
+			cssEase: 'ease-in-out'
 		});
-		
+
 
 		$('.modalbutton').click(function() {
 			$('.modal').modal('hide');
