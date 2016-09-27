@@ -30,10 +30,10 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
 
 <section class="projects">
   <div class="col-sm-6 col-md-6 project">
-    <div class="project-image-container">
-      <div class="overlay blue">
+    <div class="box">
       <img class="project-image blue-border" src="/img/acre.png" alt="ACRE" title="ACRE">
-      <span class="text-content"><span>Digital printing and framing like you have never seen it before</span></span>
+      <div class="overbox blue">
+      <div class="tagline overtext">Digital printing and framing like you have never seen it before</div>
       </div>
     </div>
     <div class="project-details">
@@ -45,17 +45,16 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
         <img src="/img/tech/angular.png" alt="Angular JS" title="Angular JS">
         <img src="/img/tech/aws.png" alt="AWS" title="AWS">
         <img src="/img/tech/stripe.png" alt="Stripe" title="Stripe">
-      </div>
-     
-    </div>
-   
+      </div> 
+    </div> 
   </div>
   <div class="col-sm-6 col-md-6 project">
-    <div class="project-image-container">
-    <div class="overlay yellow">
+    <div class="box">
       <a href="http://www.polimapper.co.uk/" target="_blank">
         <img class="project-image polimapper yellow-border" src="/img/projects/polimapper.png" alt="PoliMapper App" title="PoliMapper App">
       </a>
+        <div class="overbox yellow">
+      <div class="tagline overtext">From idea to MVP, this data visualisation framework includes CMS, offline mode and just a bit of cutting edge front-end work.</div>
       </div>
     </div>
     <div class="project-details">
@@ -67,7 +66,6 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
         <img src="/img/tech/aws.png" alt="AWS" title="AWS">
         <img src="/img/tech/oauth.png" alt="Oauth 2.0" title="Oauth 2.0">
       </div>
-      <p>From idea to MVP, this data visualisation framework includes CMS, offline mode and just a bit of cutting edge front-end work.</p>
     </div>
   </div>
  </section>
