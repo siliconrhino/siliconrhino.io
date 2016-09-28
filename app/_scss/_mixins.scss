@@ -182,3 +182,8 @@
 border: 3px solid;
 padding: 4px;
 }
+
+@mixin label-border{
+  border: 3px solid;
+  padding: 5px 15px 5px 15px;
+}

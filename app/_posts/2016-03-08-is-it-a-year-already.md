@@ -3,7 +3,7 @@ layout: post
 headBackground: yellowBg
 topHeadingBg: subpage-topHeading yellow
 title: A year already?
-description: It feels like yesterday but we have been doing this for 12 months.
+description: It feels like yesterday but we have been doing this for 12 months..
 tags: ["startups", "silicon rhino"]
 categories : []
 imageUrl: 'http://www.siliconrhino.io/img/backgrounds/404.77e3.jpg'
@@ -26,7 +26,7 @@ It’s true we haven’t blogged much (at all) to explain what we’ve been up t
 
 We’ve met great entrepreneurs with even greater visions, and we are proud to have helped them achieve their goals through technology. Each one of them has taught us something, and hopefully we’ll be able to pass all this knowledge to all the founders we still have to work with. Last but not least are the people who decided to carry on working with us in this adventure, and we’ve embarked on some great projects together this last year.
 
-###Take a look at some of the projects we've worked on
+###Some of the projects we've worked on
 
 <section class="projects">
   <div class="col-sm-6 col-md-6 project">
@@ -50,9 +50,9 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
   </div>
   <div class="col-sm-6 col-md-6 project">
     <div class="box">
-      <a href="http://www.polimapper.co.uk/" target="_blank">
+   
         <img class="project-image polimapper yellow-border" src="/img/projects/polimapper.png" alt="PoliMapper App" title="PoliMapper App">
-      </a>
+
         <div class="overbox yellow">
       <div class="tagline overtext">From idea to MVP, this data visualisation framework includes CMS, offline mode and just a bit of cutting edge front-end work.</div>
       </div>
@@ -79,7 +79,7 @@ The team is growing soon and we couldn’t be more excited. We are lucky to have
 
 We have also been working on our very first internal project, codename ‘Drinks’. It’s going slowly but surely, and we hope to have a beta for you as soon as possible!
 
-<button type="btn" class="join-waitlist">Download it now!</button>
+<div class="button-wrap"><button type="btn" class="join-waitlist">Download it now!</button></div>
 
 To all of you who have helped and supported us, we wouldn’t have made it here if it wasn’t for you. Thank you!
 
@@ -87,6 +87,8 @@ Here’s to the next 12 months.
 
 Roger & Phil
 
-![Cheers](http://media0.giphy.com/media/GCLlQnV7wzKLu/giphy.gif)
+
+<img class="cheers-gif" src="http://media0.giphy.com/media/GCLlQnV7wzKLu/giphy.gif"/>
+
 
 <!-- [get the PDF]({{ site.url }}/assets/mydoc.pdf). -->
