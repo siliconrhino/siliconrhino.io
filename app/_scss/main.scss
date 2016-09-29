@@ -6,7 +6,7 @@
 @import '_mixins.scss';
 @import '_layout.scss';
 @import '_vertical_menu.scss';
-@import '_xl_grid.css';
+@import '_xl_grid.scss';
 
 /* --------------------------------
 
@@ -498,7 +498,6 @@ label {
 }
 
 .row {
-  margin-bottom: 100px;
   .profile-description {
     text-align: left;
     font-size: 2.5rem;
@@ -547,15 +546,6 @@ label {
   margin-bottom: 100px;
 }
 
-.project-image {
-  @include image-border;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-height: 220px;
-  width: 80vw;
-}
-
 .blue-border {
   border-color: $blue;
 }
@@ -588,7 +578,7 @@ label {
     flex-direction: column;
     align-items: center;
   h3{
-    margin: 20px 0 40px 0;
+    margin: 0 0 40px 0;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -610,6 +600,7 @@ label {
   }
   .twitter-tweet {
     margin: auto;
+    padding-bottom: 40px;
   }
 }
 
@@ -634,21 +625,80 @@ ul.rrssb-buttons{
 
 
 // project imgs
+
+.projects{
+  .box{
+    height: 220px;
+    }
+   .project-image{
+    width: 340px;
+    height: 220px;
+    position: absolute;
+    @include transition (all 300ms ease-out);
+    }
+  .overbox{
+    width: 500px;
+    height: 350px;
+    }
+
+  .techs{
+
+  }
+  label{
+    margin-bottom: 25px !important;
+  }
+
+}
+
+.projects-blog{
+  .box{
+    height: 220px;
+  }
+  .overbox{
+    top: 6px;
+    width: 328px;
+    height: 208px;
+    }
+
+  img{
+    width: 340px;
+    height: 250px;
+  }
+    .project-image{
+      max-height: 220px;
+    }
+
+  }
+
 .box {
     @include display-flex;
     @include flex-direction(column);
     @include align-items(center);
     cursor: pointer;
-    height: 220px;
     position: relative;
     overflow: hidden;
-  img {
-    width: 340px;
-    height: 250px;
+  .project-image {
     position: absolute;
     @include transition (all 300ms ease-out);
+  }
+
 }
 
+
+.project-image {
+  @include image-border;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80vw;
+
+  &.blue-border{
+    border-color: $blue;
+  }
+
+  &.yellow-border{
+    border-color: $yellow;
+  }
 }
 
 
@@ -658,9 +708,6 @@ ul.rrssb-buttons{
     z-index: 100;
     @include transition (all 300ms ease-out);
     opacity: 0;
-    top: 6px;
-    width: 338px;
-    height: 208px;
 
   &.blue{
     background-color: $blue;
@@ -683,7 +730,7 @@ ul.rrssb-buttons{
 
 .box .tagline {
     margin: 25px;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	opacity: 0;
 	transition-delay: 0.2s;
     transition-duration: 0.2s;
@@ -700,10 +747,9 @@ ul.rrssb-buttons{
     @include display-flex;
     @include flex-direction(row);
     @include justify-content(center);
-
   img {
     width: 12%;
-    height: 1%;
+    height: 15%;
     margin: 10px;
     margin-bottom: 50px;
   }
@@ -712,8 +758,6 @@ ul.rrssb-buttons{
 .cheers-gif{
   width: 100%;
 }
-
-
 
 
 /*svg {
@@ -1330,8 +1374,46 @@ MEDIA QUERIES
      max-width: 90%;
   }
 }
-}
 
+  .projects{
+    .row{
+      &.reverse{
+
+      }
+    }
+
+  .box{
+    height: 350px;
+      &.tall{
+        height: 769px;
+      }
+      &.wide{
+        width: 1070px;
+      }
+    .project-image {
+    width: 500px;
+    height: 350px;
+      &.tall{
+        height: 769px;
+      }
+      &.wide{
+        width: 1070px;
+      }
+    }
+  }
+  .overbox{
+    width: 500px;
+    height: 350px;
+      &.tall{
+        height: 769px;
+      }
+    &.wide{
+        width: 1070px;
+      }
+
+    }
+  }
+}
 
 
 /* Tablet portrait screens */

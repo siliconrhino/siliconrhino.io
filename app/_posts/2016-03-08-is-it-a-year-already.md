@@ -28,7 +28,7 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
 
 ###Some of the projects we've worked on
 
-<section class="projects">
+<section class="projects-blog">
   <div class="col-sm-6 col-md-6 project">
     <div class="box">
       <img class="project-image blue-border" src="/img/acre.png" alt="ACRE" title="ACRE">
@@ -50,9 +50,7 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
   </div>
   <div class="col-sm-6 col-md-6 project">
     <div class="box">
-   
         <img class="project-image polimapper yellow-border" src="/img/projects/polimapper.png" alt="PoliMapper App" title="PoliMapper App">
-
         <div class="overbox yellow">
       <div class="tagline overtext">From idea to MVP, this data visualisation framework includes CMS, offline mode and just a bit of cutting edge front-end work.</div>
       </div>
