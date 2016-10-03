@@ -629,6 +629,7 @@ ul.rrssb-buttons{
 .projects{
   .box{
     height: 220px;
+    font-size: 2rem;
     }
    .project-image{
     width: 340px;
@@ -637,17 +638,80 @@ ul.rrssb-buttons{
     @include transition (all 300ms ease-out);
     }
   .overbox{
-    width: 500px;
-    height: 350px;
+    width: 478px;
+    height: 338px;
     }
 
-  .techs{
-
-  }
   label{
     margin-bottom: 25px !important;
+    }
+
+  .tagline{
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    p{
+      text-align: center;
+    }
   }
 
+  .techs{
+    img {
+    width: 15%;
+    height: 15%;
+    }
+  }
+
+  .quote-wrapper{
+    &.yellow{
+      background-color: $yellow;
+    }
+    &.blue{
+      background-color: $blue;
+    }
+  }
+
+     blockquote {
+      line-height: 1.7em;
+      font-size: 1.5em;
+      margin-top: 75px;
+      border-left: 0;
+      font-size: inherit;
+      margin: 0;
+      padding: 30px 0;
+      font-weight: 300;
+    }
+
+
+    blockquote.long {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+      -webkit-column-gap: 40px;
+      -moz-column-gap: 40px;
+      column-gap: 40px;
+      font-size: 1em;
+      margin-top: 0;
+    }
+
+    blockquote::before {
+      color: $blue;
+      content: "\201C";
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.45em;
+      font-weight: 700;
+    }
+    blockquote::after {
+      color: $blue;
+      content: "\201D";
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-left: 0.25em;
+      vertical-align: -0.45em;
+      font-weight: 700;
+    }
 }
 
 .projects-blog{
@@ -667,8 +731,15 @@ ul.rrssb-buttons{
     .project-image{
       max-height: 220px;
     }
-
+  .techs{
+    img {
+    width: 12%;
+    height: 12%;
+    margin: 10px;
+    margin-bottom: 50px;
+    }
   }
+}
 
 .box {
     @include display-flex;
@@ -681,7 +752,6 @@ ul.rrssb-buttons{
     position: absolute;
     @include transition (all 300ms ease-out);
   }
-
 }
 
 
@@ -702,7 +772,8 @@ ul.rrssb-buttons{
 }
 
 
-.box .overbox {
+.box {
+  .overbox {
     position: absolute;
     color: #fff;
     z-index: 100;
@@ -715,6 +786,7 @@ ul.rrssb-buttons{
 
   &.yellow{
     background-color: $yellow;
+  }
   }
 }
 
@@ -747,12 +819,6 @@ ul.rrssb-buttons{
     @include display-flex;
     @include flex-direction(row);
     @include justify-content(center);
-  img {
-    width: 12%;
-    height: 15%;
-    margin: 10px;
-    margin-bottom: 50px;
-  }
 }
 
 .cheers-gif{
@@ -1402,13 +1468,16 @@ MEDIA QUERIES
     }
   }
   .overbox{
-    width: 500px;
-    height: 350px;
+    top: 6px;
+    width: 488px;
+    height: 338px;
       &.tall{
-        height: 769px;
+        top: 6px;
+        height: 757px;
       }
     &.wide{
-        width: 1070px;
+        top: 6px;
+        width: 1058px;
       }
 
     }
