@@ -636,7 +636,13 @@ ul.rrssb-buttons{
     height: 220px;
     position: absolute;
     @include transition (all 300ms ease-out);
+
+    &.polimapper{
+    display: none;
     }
+  }
+
+
   .overbox{
     width: 478px;
     height: 338px;
@@ -1403,12 +1409,28 @@ MEDIA QUERIES
 
 /* XL screens */
 
-@media screen and (min-width: 1600px) {}
+@media screen and (min-width: 1600px) {
+
+  .polimapper{
+    display: block;
+  }
+  .polimapper2{
+    display: none !important;
+  }
+}
 
 
 /* LARGE screens */
 
 @media screen and (min-width: 1025px) {
+
+  .polimapper{
+    display: block;
+  }
+  .polimapper2{
+    display: none !important;
+  }
+
   .space-shuttle-outline {
     &.blue {
       top: 38px;
@@ -1483,6 +1505,13 @@ MEDIA QUERIES
 
     }
   }
+
+  .polimapper{
+    display: block !important;
+    .polimapper2{
+      display: none;
+    }
+  }
 }
 
 
@@ -1496,14 +1525,27 @@ MEDIA QUERIES
   .profile {
     width: 450px;
   }
-}
 
+    .polimapper{
+    display: none;
+    .polimapper2{
+      display: block;
+    }
+  }
+}
 
 /* Tablet landscape screens */
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .blog-img {
     width: 45vw;
+  }
+
+    .polimapper{
+    display: block;
+    .polimapper2{
+      display: none;
+    }
   }
 }
 
