@@ -465,13 +465,43 @@ a {
   margin-bottom: 20px;
 }
 
+.services{
+  label{
+    margin-top:20px;
+  }
+  .profile{
+    margin-bottom: 0 !important;
+    max-width: 350px;
+  }
+  h3{
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 3px solid $darkblue;
+  }
+  .service-description{
+    margin-left: 15px;
+    width: 350px;
+    &.blue{
+      @include image-border;
+      border-color: $blue;
+      background-color: $blue;
+      }
+    &.yellow{
+      @include image-border;
+      border-color: $yellow;
+      background-color: $yellow;
+    }
+  }
+}
 
 // image and label borders color
 .yellow-border {
+  @include image-border;
   border-color: $yellow;
 }
 
 .blue-border {
+  @include image-border;
   border-color: $blue;
 }
 
@@ -1520,6 +1550,7 @@ MEDIA QUERIES
       }
 
     }
+
   }
 
   .polimapper{
@@ -1528,6 +1559,13 @@ MEDIA QUERIES
       display: none;
     }
   }
+
+    .services{
+    .service-description{
+    margin-top: 65px;
+    }
+
+    }
 
 }
 
