@@ -469,18 +469,16 @@ a {
   label{
     margin-top:20px;
   }
-  .profile{
-    margin-bottom: 0 !important;
-    max-width: 350px;
-  }
   h3{
     text-transform: uppercase;
     padding-bottom: 5px;
     border-bottom: 3px solid $darkblue;
   }
+
+  img{
+    width: 100%;
+  }
   .service-description{
-    margin-left: 15px;
-    width: 350px;
     &.blue{
       @include image-border;
       border-color: $blue;
@@ -505,9 +503,7 @@ a {
   border-color: $blue;
 }
 
-.team,
-.project-details,
-.project-image-container {
+.team{
   @include display-flex;
   @include flex-direction(column);
   @include align-items(center);
@@ -658,24 +654,30 @@ ul.rrssb-buttons{
 
 .projects{
   .box{
-    height: 220px;
+    width: 100%;
+    height: 267px;
     font-size: 2rem;
     }
    .project-image{
-    width: 340px;
-    height: 220px;
+    width: 100%;
+    height: 267px;
     position: absolute;
     @include transition (all 300ms ease-out);
 
     &.polimapper{
     display: none;
     }
+
+    &.politics{
+    display: none;
+    }
   }
 
-
   .overbox{
-    width: 478px;
-    height: 338px;
+   top: 2%;
+    width: 97%;
+    height: 96%;
+    left: 1.5%;
     }
 
   label{
@@ -767,9 +769,10 @@ ul.rrssb-buttons{
     height: 220px;
   }
   .overbox{
-    top: 6px;
-    width: 328px;
-    height: 208px;
+    top: 1%;
+    width: 97%;
+    height: 98%;
+    left: 1.5%;
     }
 
   img{
@@ -790,9 +793,6 @@ ul.rrssb-buttons{
 }
 
 .box {
-    @include display-flex;
-    @include flex-direction(column);
-    @include align-items(center);
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -1463,6 +1463,13 @@ MEDIA QUERIES
   .polimapper2{
     display: none !important;
   }
+
+  .politics{
+    display: block;
+  }
+  .politics2{
+    display: none !important;
+  }
 }
 
 
@@ -1474,6 +1481,13 @@ MEDIA QUERIES
     display: block;
   }
   .polimapper2{
+    display: none !important;
+  }
+
+  .politics{
+    display: block;
+  }
+  .politics2{
     display: none !important;
   }
 
@@ -1512,9 +1526,6 @@ MEDIA QUERIES
 
   .projects{
     .row{
-      &.reverse{
-
-      }
     }
 
   .box{
@@ -1523,35 +1534,27 @@ MEDIA QUERIES
         height: 769px;
       }
       &.wide{
-        width: 1070px;
+        width: 100%;
       }
     .project-image {
-    width: 500px;
     height: 350px;
       &.tall{
         height: 769px;
       }
       &.wide{
-        width: 1070px;
+        width: 100%;
       }
     }
   }
-  .overbox{
-    top: 6px;
-    width: 488px;
-    height: 338px;
+    .overbox{
       &.tall{
-        top: 6px;
-        height: 757px;
+    top: 1%;
+    width: 97%;
+    height: 98%;
+    left: 1.5%;
       }
-    &.wide{
-        top: 6px;
-        width: 1058px;
-      }
-
     }
-
-  }
+}
 
   .polimapper{
     display: block !important;
@@ -1560,9 +1563,17 @@ MEDIA QUERIES
     }
   }
 
+  .politics{
+    display: block !important;
+    .politics2{
+      display: none;
+    }
+  }
+
     .services{
     .service-description{
-    margin-top: 65px;
+    margin-top: 62px;
+    height: 441px;
     }
 
     }
@@ -1587,12 +1598,35 @@ MEDIA QUERIES
     .polimapper2{
       display: block;
     }
+
+      .politics{
+    display: none;
+    .politics2{
+      display: block;
+    }
   }
+
+ .projects{
+  .box{
+    height: 356px;
+    font-size: 2rem;
+    }
+   .project-image{
+    height: 356px;
+    }
+  .overbox{
+    top: 1.5%;
+    width: 97%;
+    height: 97%;
+    left: 1.5%;
+    }
+  }
+
 }
 
 /* Tablet landscape screens */
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .blog-img {
     width: 45vw;
   }
@@ -1603,7 +1637,16 @@ MEDIA QUERIES
       display: none;
     }
   }
+
+    .politics{
+    display: block;
+    .politics2{
+      display: none;
+    }
+  }
 }
+
+/* END OF MEDIA QUERIES */
 
 .images-carousel {
   height: 400px;
@@ -1656,6 +1699,7 @@ MEDIA QUERIES
       color: #fff;
       font-size: 80px;
       font-weight: 700;
+      }
     }
   }
 }
