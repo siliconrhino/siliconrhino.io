@@ -29,6 +29,7 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
 ###Some of the projects we've worked on
 
 <section class="projects-blog">
+  <div class="container">
   <div class="col-sm-6 col-md-6 project">
     <div class="box">
       <img class="project-image blue-border" src="/img/projects/acre-gray.png" alt="ACRE" title="ACRE">
@@ -40,11 +41,11 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
       <label class="blue-border"><a href="https://www.acrepictures.com" target="_blank">ACRE</a></label>
       <h4><a href="https://www.acrepictures.com" target="_blank">www.acrepictures.com</a></h4>
       <div class="techs">
-        <img src="/img/tech/html.png" alt="html" title="html">
-        <img src="/img/tech/sass.png" alt="Sass" title="Sass">
-        <img src="/img/tech/angular.png" alt="Angular JS" title="Angular JS">
-        <img src="/img/tech/aws.png" alt="AWS" title="AWS">
-        <img src="/img/tech/stripe.png" alt="Stripe" title="Stripe">
+        <img src="/img/tech/html.svg" alt="html" title="html">
+        <img src="/img/tech/sass.svg" alt="Sass" title="Sass">
+        <img src="/img/tech/angular.svg" alt="Angular JS" title="Angular JS">
+        <img src="/img/tech/aws.svg" alt="AWS" title="AWS">
+        <img src="/img/tech/stripe.svg" alt="Stripe" title="Stripe">
       </div> 
     </div> 
   </div>
@@ -59,14 +60,15 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
       <label class="yellow-border"><a href="http://www.polimapper.co.uk/" target="_blank">PoliMapper</a></label>
       <h4><a href="http://www.polimapper.co.uk/" target="_blank">www.polimapper.co.uk</a></h4>
       <div class="techs">
-        <img src="/img/tech/net.png" alt=".NET" title=".NET">
-        <img src="/img/tech/angular.png" alt="Angular JS" title="Angular JS">
-        <img src="/img/tech/aws.png" alt="AWS" title="AWS">
-        <img src="/img/tech/oauth.png" alt="Oauth 2.0" title="Oauth 2.0">
+        <img src="/img/tech/net.svg" alt=".NET" title=".NET">
+        <img src="/img/tech/angular.svg" alt="Angular JS" title="Angular JS">
+        <img src="/img/tech/aws.svg" alt="AWS" title="AWS">
+        <img src="/img/tech/oauth.svg" alt="Oauth 2.0" title="Oauth 2.0">
       </div>
     </div>
   </div>
- </section>
+</div>
+</section>
 
 We started silicon rhino because we felt founders without technical skills deserved a good team which cared about their projects as their own, and we feel we have achieved that. We will make sure this continues to be our number 1  focus in the future.
 

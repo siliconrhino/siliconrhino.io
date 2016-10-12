@@ -479,6 +479,10 @@ a {
     width: 100%;
   }
   .service-description{
+    p{
+      font-size: 3.5rem;
+    }
+
     &.blue{
       @include image-border;
       border-color: $blue;
@@ -546,9 +550,6 @@ label {
 
   }
   .row {
-    @include display-flex;
-    @include flex-direction(column-reverse);
-    @include align-items(center);
     label {
       &.blog-title {
         top: 35vh;
@@ -695,8 +696,9 @@ ul.rrssb-buttons{
 
   .techs{
     img {
-    width: 15%;
-    height: 15%;
+    max-width: 110px;
+    height: 40px;
+    padding-left: 10px;
     }
   }
 
@@ -767,25 +769,22 @@ ul.rrssb-buttons{
 .projects-blog{
   .box{
     height: 220px;
-  }
   .overbox{
-    top: 1%;
-    width: 97%;
-    height: 98%;
-    left: 1.5%;
+    top: 3%;
+    width: 330px;
+    height: 94%;
+    left: 2%;
     }
-
-  img{
-    width: 340px;
-    height: 250px;
   }
+
     .project-image{
       max-height: 220px;
+      width: 340px;
     }
   .techs{
     img {
-    width: 12%;
-    height: 12%;
+    width: auto;
+    height: 40px;
     margin: 10px;
     margin-bottom: 50px;
     }
@@ -805,10 +804,6 @@ ul.rrssb-buttons{
 
 .project-image {
   @include image-border;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 80vw;
 
   &.blue-border{
     border-color: $blue;
@@ -850,7 +845,7 @@ ul.rrssb-buttons{
 
 .box .tagline {
     margin: 25px;
-	font-size: 1.3em;
+	font-size: 1em;
 	opacity: 0;
 	transition-delay: 0.2s;
     transition-duration: 0.2s;
@@ -863,11 +858,6 @@ ul.rrssb-buttons{
 }
 
 
-.techs {
-    @include display-flex;
-    @include flex-direction(row);
-    @include justify-content(center);
-}
 
 .cheers-gif{
   width: 100%;
@@ -1525,8 +1515,6 @@ MEDIA QUERIES
 }
 
   .projects{
-    .row{
-    }
 
   .box{
     height: 350px;
@@ -1545,6 +1533,14 @@ MEDIA QUERIES
         width: 100%;
       }
     }
+
+    .tagline{
+      font-size: 1.4em;
+      &.wide{
+        margin-left: 150px;
+        margin-right: 150px;
+      }
+    }
   }
     .overbox{
       &.tall{
@@ -1553,6 +1549,14 @@ MEDIA QUERIES
     height: 98%;
     left: 1.5%;
       }
+    &.wide{
+    width: 98.5%;
+    left: 0.75%;
+      }
+    }
+
+    .techs{
+      margin-top: 20px;
     }
 }
 
