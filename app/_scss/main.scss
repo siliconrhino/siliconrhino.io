@@ -679,6 +679,10 @@ ul.rrssb-buttons{
     width: 97%;
     height: 96%;
     left: 1.5%;
+
+    li{
+      display:none;
+      }
     }
 
   label{
@@ -703,6 +707,8 @@ ul.rrssb-buttons{
   }
 
   .quote-wrapper{
+    width: 100vw;
+    margin-left: -30px;
     margin-bottom: 40px;
     &.yellow{
       background-color: $yellow;
@@ -713,22 +719,27 @@ ul.rrssb-buttons{
     h3,
     h4{
       padding: 0 100px 0 20px;
-      font-size: 1.2em;
+      font-size: 1.3em;
 
     }
     h4{
       padding-bottom: 20px;
     }
+    .cta{
+    float: right;
+    margin-top: -70px;
+    margin-right: 20px;
+    }
   }
 
      blockquote {
-      line-height: 1.7em;
-      font-size: 2em !important;
+      line-height: 1.5em;
+      font-size: 2.3em !important;
       margin-top: 75px;
       border-left: 0;
       font-size: inherit;
       margin: 0;
-      padding: 30px 0 0 20px;
+      padding: 10px 0 0 20px;
       font-weight: 300;
     }
 
@@ -1445,23 +1456,13 @@ MEDIA QUERIES
 
 /* XL screens */
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1199px) {
 
-  .polimapper{
-    display: block;
-  }
-  .polimapper2{
-    display: none !important;
-  }
-
-  .politics{
-    display: block;
-  }
-  .politics2{
-    display: none !important;
+  .quote-wrapper {
+    width: 100% !important;
+    margin-left: 0 !important;
   }
 }
-
 
 /* LARGE screens */
 
@@ -1582,7 +1583,25 @@ MEDIA QUERIES
 
     }
 
-}
+
+    blockquote {
+      &.left-paragraph{
+      margin-right: 450px;
+      margin-left: 50px;
+      text-align: right;
+      }
+    }
+
+  .projects .quote-wrapper {
+    width: 100vw;
+    margin-left: -43px;
+      h3,
+      h4{
+        margin-left: 85px;
+      }
+    }
+  }
+
 
 
 
@@ -1595,19 +1614,6 @@ MEDIA QUERIES
   }
   .profile {
     width: 450px;
-  }
-
-    .polimapper{
-    display: none;
-    .polimapper2{
-      display: block;
-    }
-
-      .politics{
-    display: none;
-    .politics2{
-      display: block;
-    }
   }
 
  .projects{
@@ -1626,7 +1632,21 @@ MEDIA QUERIES
     }
   }
 
-}
+      .cta{
+    float: right;
+    margin-top: -70px;
+    margin-right: 20px;
+    }
+
+
+     blockquote {
+       &.left-paragraph{
+         margin-right: 200px;
+       }
+    }
+  }
+
+
 
 /* Tablet landscape screens */
 
@@ -1635,19 +1655,24 @@ MEDIA QUERIES
     width: 45vw;
   }
 
-    .polimapper{
-    display: block;
-    .polimapper2{
-      display: none;
+}
+
+@media screen and (min-width:1024px) and (max-width:1199px) {
+    .project{
+    &.politics{
+      width: 100%;
     }
   }
 
-    .politics{
-    display: block;
-    .politics2{
-      display: none;
+  .quote-wrapper {
+     margin-left: -128px;
+      h3,
+      h4{
+        margin-left: 120px;
+      }
     }
-  }
+
+
 }
 
 /* END OF MEDIA QUERIES */
@@ -1706,4 +1731,4 @@ MEDIA QUERIES
       }
     }
   }
-}
+
