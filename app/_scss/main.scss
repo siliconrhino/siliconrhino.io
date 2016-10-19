@@ -882,12 +882,14 @@ ul.rrssb-buttons{
 
 /* Workflow SVG */
 
-#workflow{
-  width: 100%;
-
+.workflow{
+  .desktop{
+    display: none;
   }
-
-
+  .mobile{
+    display: block;
+  }
+}
 
 /* --------------------------------
 
@@ -1623,6 +1625,18 @@ MEDIA QUERIES
     .cta{
     margin-top: -80px;
     margin-right: 180px;
+    }
+  }
+
+  .workflow{
+    .st88{
+    @font-face: $primary-font;
+      }
+  .desktop{
+    display: block;
+  }
+  .mobile{
+    display: none;
     }
   }
 }
