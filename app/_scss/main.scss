@@ -140,7 +140,6 @@ a {
 }
 
 .header {
-  height: 40px;
   border: 0;
   color: $blue;
   min-height: 40px;
@@ -158,26 +157,9 @@ a {
   &.yellowBg {
     background-color: $yellow;
   }
-  .logo.blue {
-    display: none;
-  }
-  &.white {
-    background-color: rgba(252, 252, 252, 0.80);
-    .logo.white {
-      display: none;
-    }
-    .logo.blue {
-      display: inline;
-    }
-    #menu {
-      span,
-      span:before,
-      span:after {
-        background: $blue;
-      }
-    }
-  }
+
   &.homepage {
+
     padding: 30px 10px 0 0;
     .logo {
       position: relative;
@@ -190,7 +172,7 @@ a {
   }
   .main-links {
     float: right;
-    margin-right: 30px;
+    margin-right: 50px;
     li {
       list-style-type: none;
       display: inline-block;
@@ -236,7 +218,7 @@ a {
     float: right;
     margin: 4px 10px 0 0;
     color: $white;
-    font-family: $text-font;
+    font-family: $primary-font;
     font-size: 1.5em;
     font-weight: 300;
     letter-spacing: 0.02em;
@@ -249,12 +231,10 @@ a {
       background: $white;
     }
   }
+
   &.blue {
-    background-color: rgba(0, 129, 144, 0.80) !important;
+    background-color: rgba(0, 129, 144, 0.80);
     border-bottom: none;
-    .logo.blue {
-      display: inline;
-    }
     #menu {
       span,
       span:before,
@@ -294,9 +274,9 @@ a {
   }
   &.yellow {
     top: 120px;
-    left: 68vw;
+    left: 60vw;
     position: absolute;
-    width: 120px;
+    width: 110px;
   }
 }
 
@@ -312,6 +292,7 @@ a {
     height: calc(100% - 40px);
     @include transition(-webkit-transform ease-in 300ms 20ms);
     @include transition(transform ease-in 300ms 20ms);
+
     &.left {
       left: $menu-width*-1;
     }
@@ -465,7 +446,7 @@ a {
   margin-bottom: 20px;
 }
 
-.services{
+.services-wrap{
   label{
     margin-top:20px;
   }
@@ -479,8 +460,11 @@ a {
     width: 100%;
   }
   .service-description{
+    h3{
+      text-align: center;
+    }
     p{
-      font-size: 3.5rem;
+      font-size: 2.5rem;
     }
 
     &.blue{
@@ -1433,8 +1417,8 @@ a.cta,
     }
     &.frontpage-text {
       padding: 10px;
-      justify-content: flex-start;
-      align-items: center;
+      @include justify-content(flex-start);
+      @include align-items(center);
       h2 {
         font-size: 30px;
       }
@@ -1445,6 +1429,58 @@ a.cta,
     }
   }
 }
+
+footer{
+  @include display-flex;
+  @include justify-content(center);
+  @include align-items(center);
+  margin-top: 50px;
+  padding: .8em;
+  text-align: center;
+  background-color: $blue;
+    a {
+      color: $white;
+      text-decoration: none;
+      list-style: none;
+      font-size: 15px;
+      margin: 6px 10px 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fff;
+      transition: all 1s ease-out;
+      &:hover {
+      text-decoration: none;
+      list-style: none;
+      color: $darkblue;
+        }
+
+      &:after {
+        display: block;
+        content: '';
+        border-bottom: solid 2px #fff;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+        border-bottom: solid 2px #fff;
+        transform: scaleX(0);
+        transition: transform .5s ease-in-out, border 1s ease-out;
+      }
+      &.no:after {
+        display: none;
+      }
+      &.no a:hover {
+        text-decoration: none;
+        color: $darkblue;
+      }
+      &:hover:after {
+        transform: scaleX(1);
+      }
+      &:hover:after {
+        transform: scaleX(1);
+        border-bottom: solid 2px $darkblue;
+      }
+    }
+  }
 
 
 /* .......................
@@ -1598,14 +1634,15 @@ MEDIA QUERIES
     }
   }
 
-    .services{
-    .service-description{
-    margin-top: 62px;
-    height: 441px;
+    .services-wrap{
+      display: flex;
+      &:nth-child(even){
+        flex-direction: row-reverse;
+      }
+      .service-description{
+      margin-top: 62px;
+      }
     }
-
-    }
-
 
     blockquote {
       &.left-paragraph{
@@ -1647,6 +1684,11 @@ MEDIA QUERIES
 /* Tablet portrait screens */
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
+
+  .space-shuttle-outline.yellow {
+    left: 70vw;
+  }
+
   .profile-description {
     margin-left: 50px;
     margin-right: 50px;
