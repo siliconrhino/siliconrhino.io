@@ -187,3 +187,45 @@ padding: 4px;
   border: 3px solid;
   padding: 5px 15px 5px 15px;
 }
+
+// link animation
+
+
+@mixin link-hover{
+      text-decoration: none;
+      list-style: none;
+      font-size: 15px;
+      margin: 6px 10px 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 1s ease-out;
+      &:hover {
+      text-decoration: none;
+      list-style: none;
+        }
+
+      &:after {
+        display: block;
+        content: '';
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+        border-bottom: solid 2px;
+        transform: scaleX(0);
+        transition: transform .5s ease-in-out, border 1s ease-out;
+      }
+      &.no:after {
+        display: none;
+      }
+      &.no a:hover {
+        text-decoration: none;
+        color: $darkblue;
+      }
+      &:hover:after {
+        transform: scaleX(1);
+      }
+      &:hover:after {
+        transform: scaleX(1);
+      }
+    }
+

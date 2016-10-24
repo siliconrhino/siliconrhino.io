@@ -6,7 +6,7 @@
 @import '_mixins.scss';
 @import '_layout.scss';
 @import '_vertical_menu.scss';
-@import '_xl_grid.scss';
+@import '_custom_grid.scss';
 
 /* --------------------------------
 
@@ -30,17 +30,17 @@ body {
     family: $primary-font;
   }
   h2 {
+    margin-top: 0 !important;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 30px;
     text-align: left;
     .orangeText {
       color: $yellow;
     }
     &.subpage-topHeading {
-
       padding:{
         top:60px;
-        bottom:20px;
+        bottom:40px;
       }
       background-color: $blue;
       text-align: center;
@@ -88,7 +88,7 @@ body {
 
 .col-sm-12 {
   h2 {
-    margin-top: 80px;
+    margin-top: 120px;
     text-align: center;
   }
 }
@@ -141,7 +141,6 @@ a {
 
 .header {
   border: 0;
-  color: $blue;
   min-height: 40px;
   position: fixed;
   top: 0;
@@ -158,12 +157,11 @@ a {
     background-color: $yellow;
   }
 
-  &.homepage {
-
-    padding: 30px 10px 0 0;
+  .homepage {
+    padding: 20px 10px 0 0;
     .logo {
       position: relative;
-      top: 17px;
+      top: 10px;
       left: 30px;
     }
     #menu {
@@ -172,7 +170,7 @@ a {
   }
   .main-links {
     float: right;
-    margin-right: 50px;
+    margin-right: 80px;
     li {
       list-style-type: none;
       display: inline-block;
@@ -255,7 +253,7 @@ a {
     top: 3px;
     vertical-align: bottom;
     img {
-      width: 200px;
+      width: 150px;
     }
   }
   .icon {
@@ -293,6 +291,11 @@ a {
     @include transition(-webkit-transform ease-in 300ms 20ms);
     @include transition(transform ease-in 300ms 20ms);
 
+    &.homepage{
+    top: 81px !important;
+    height: calc(100% - 81px);
+    }
+
     &.left {
       left: $menu-width*-1;
     }
@@ -315,18 +318,26 @@ a {
   }
   li {
     display: block;
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+    padding: .8em;
     text-align: center;
-    a {
-      color: $white !important;
-      font-size: 1.7em;
-      font-weight: 700;
-      display: block;
-      padding: 10px 0;
-    }
-    &:hover {
-      a {
-        color: $yellow !important;
-        text-decoration: none;
+     a {
+      @include link-hover;
+      color: $white;
+      &:hover {
+      color: $darkblue;
+        }
+      &:after {
+        border-bottom-color: #fff;
+      }
+      &.no a:hover {
+        color: $darkblue;
+      }
+      &:hover:after {
+        border-bottom-color: $darkblue;
+
       }
     }
   }
@@ -454,18 +465,23 @@ a {
     text-transform: uppercase;
     padding-bottom: 5px;
     border-bottom: 3px solid $darkblue;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0 !important;
   }
+
+  .col-sm-6{
+          padding-right: 0 !important;
+         padding-left: 0 !important;
+        }
 
   img{
     width: 100%;
   }
   .service-description{
-    h3{
-      text-align: center;
-    }
-    p{
-      font-size: 2.5rem;
-    }
+        p{
+          margin: 0 25px 10px 25px;
+        }
 
     &.blue{
       @include image-border;
@@ -476,6 +492,12 @@ a {
       @include image-border;
       border-color: $yellow;
       background-color: $yellow;
+    }
+  }
+  .help-list{
+    display: flex;
+    ul:first-child{
+      margin-left: 12.5%;
     }
   }
 }
@@ -1175,7 +1197,7 @@ body[data-hijacking="on"] {
     margin-right: 5px;
     padding: .4em .5em;
     color: $yellow;
-    float: left;
+    float: right;
     @include font-size(30px);
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -1378,7 +1400,7 @@ a.cta,
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 376px) {
   .row {
     margin: 0;
   }
@@ -1439,45 +1461,21 @@ footer{
   text-align: center;
   background-color: $blue;
     a {
+      @include link-hover;
       color: $white;
-      text-decoration: none;
-      list-style: none;
-      font-size: 15px;
-      margin: 6px 10px 0;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #fff;
-      transition: all 1s ease-out;
       &:hover {
-      text-decoration: none;
-      list-style: none;
       color: $darkblue;
         }
-
       &:after {
-        display: block;
-        content: '';
-        border-bottom: solid 2px #fff;
-        transform: scaleX(0);
-        transition: transform 250ms ease-in-out;
-        border-bottom: solid 2px #fff;
-        transform: scaleX(0);
-        transition: transform .5s ease-in-out, border 1s ease-out;
-      }
-      &.no:after {
-        display: none;
+        border-bottom-color: #fff;
       }
       &.no a:hover {
-        text-decoration: none;
+
         color: $darkblue;
       }
       &:hover:after {
-        transform: scaleX(1);
-      }
-      &:hover:after {
-        transform: scaleX(1);
-        border-bottom: solid 2px $darkblue;
+
+        border-bottom-color: $darkblue;
       }
     }
   }
@@ -1519,6 +1517,11 @@ MEDIA QUERIES
 /* LARGE screens */
 
 @media screen and (min-width: 1025px) {
+  body{
+    h2{
+      font-size: 50px;
+    }
+  }
 
   .polimapper{
     display: block;
@@ -1641,7 +1644,16 @@ MEDIA QUERIES
       }
       .service-description{
       margin-top: 62px;
+        p{
+          font-size: 2.5rem;
+        }
+        ul{
+         font-size: 2rem;
+          line-height: 35px;
+          margin-top: 15px;
+        }
       }
+
     }
 
     blockquote {
@@ -1731,6 +1743,23 @@ MEDIA QUERIES
     margin-right: 50px;
     }
   }
+
+      .services-wrap{
+      display: flex;
+      &:nth-child(even){
+        flex-direction: row-reverse;
+      }
+        h3{
+          font-size: 13px;
+        }
+
+      .service-description{
+      margin-top: 62px;
+        p{
+          margin: 0 5px 10px 5px;
+        }
+      }
+  }
 }
 
 
@@ -1763,7 +1792,19 @@ MEDIA QUERIES
     margin-right: 60px;
     }
   }
+    .services-wrap{
+      display: flex;
+      &:nth-child(even){
+        flex-direction: row-reverse;
+      }
+
+      .service-description{
+      margin-top: 62px;
+      }
+  }
 }
+
+
 
 @media screen and (min-width:1024px) and (max-width:1199px) {
     .project{
@@ -1779,8 +1820,16 @@ MEDIA QUERIES
         margin-left: 120px;
       }
     }
+   .services-wrap{
+      display: flex;
+      &:nth-child(even){
+        flex-direction: row-reverse;
+      }
 
-
+      .service-description{
+      margin-top: 62px;
+      }
+  }
 }
 
 /* END OF MEDIA QUERIES */
