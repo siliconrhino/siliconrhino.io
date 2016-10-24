@@ -237,7 +237,7 @@ a {
       span,
       span:before,
       span:after {
-        background: $white !important;
+        background: $white;
       }
     }
   }
@@ -1282,16 +1282,20 @@ $button-transistion-duration: 0.3s; // The transition duration
   left: 0;
   width: 100%;
   height: $bar-thickness;
-  background-color: $blue;
+  background-color: #fff;
   content: "";
+  transition-duration: $button-transistion-duration, $button-transistion-duration;
+  transition-delay: $button-transistion-duration, 0s;
 }
 
 #menu span::before {
   top: -$bar-thickness - $button-bar-space;
+  transition-property: top, transform;
 }
 
 #menu span::after {
   bottom: -$bar-thickness - $button-bar-space;
+  transition-property: bottom, transform;
 }
 
 #menu span {
@@ -1302,17 +1306,26 @@ $button-transistion-duration: 0.3s; // The transition duration
 /* active state, i.e. menu open */
 
 #menu.is-active {
-  transform: translateX(-82px);
+  
 }
 
 #menu.is-active span {
-  transform: rotate(90deg);
-  background-color: $white;
+  background: none !important;
+}
+
+#menu.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+#menu.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
 }
 
 #menu.is-active span::before,
 #menu.is-active span::after {
-  background-color: $white;
+  transition-delay: 0s, $button-transistion-duration;
 }
 
 // CTA button
