@@ -164,7 +164,7 @@ a {
         &.no a:hover {
           color: $darkblue;
         }
-        &:hover:after {
+        &:hover:after, &.active:after {
           transform: scaleX(1);
           border-bottom: solid 2px $darkblue;
         }
@@ -172,6 +172,9 @@ a {
           &:hover {
             color: $darkblue;
           }
+        }
+        &.active a {
+          color: $darkblue;
         }
       }
     }
@@ -1780,7 +1783,7 @@ MEDIA QUERIES
       &:hover:after {
         transform: scaleX(1);
       }
-      &:hover:after {
+      &:hover:after, &.active:after {
         transform: scaleX(1);
         border-bottom: solid 2px $yellow;
       }
@@ -1791,6 +1794,9 @@ MEDIA QUERIES
           text-decoration: none;
           color: $yellow;
         }
+      }
+      &.active a {
+        color: $yellow;
       }
     }
   }

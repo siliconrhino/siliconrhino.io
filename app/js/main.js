@@ -24,6 +24,9 @@
 		});
 
 
+		var url = window.location.pathname;
+		$('a[href="'+url+'"]').parent('li').addClass('active');
+
 		$('.modalbutton').click(function() {
 			$('.modal').modal('hide');
 		});
