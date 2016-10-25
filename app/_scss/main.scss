@@ -158,6 +158,23 @@ a {
   }
   &.yellowBg {
     background-color: $yellow;
+
+    .main-links {
+      li {
+        &.no a:hover {
+          color: $darkblue;
+        }
+        &:hover:after {
+          transform: scaleX(1);
+          border-bottom: solid 2px $darkblue;
+        }
+        a {
+          &:hover {
+            color: $darkblue;
+          }
+        }
+      }
+    }
   }
   &.homepage {
     .no {
@@ -166,13 +183,16 @@ a {
     .logo img {
       width: 250px;
     }
+    .main-links {
+      margin-right: 80px;
+    }
   }
 
   .homepage {
     padding: 10px 10px 0 0;
     .logo {
       position: relative;
-      top: 10px;
+      top: 3px;
       left: 30px;
     }
     #menu {
@@ -224,7 +244,7 @@ a {
     top: 3px;
     vertical-align: bottom;
     img {
-      width: 150px;
+      width: 200px;
     }
   }
   .icon {
@@ -1730,7 +1750,6 @@ MEDIA QUERIES
     .main-links {
     display: inline-block !important;
     float: right;
-    margin-right: 80px;
     li {
       list-style-type: none;
       display: inline-block;
