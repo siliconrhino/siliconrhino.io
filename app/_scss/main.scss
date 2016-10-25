@@ -30,6 +30,17 @@ body {
     family: $primary-font;
   }
 
+  .frontpage-text{
+    h2 {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 42px;
+    .orangeText {
+      color: $yellow;
+      }
+    }
+  }
+
   .subpage-topHeading {
        margin-top: 0 !important;
       background-color: $blue;
