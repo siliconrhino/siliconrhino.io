@@ -48,11 +48,10 @@ body {
         bottom:10px;
         }
     h2 {
-    z-index: 1;
     color: $white;
     text-align: center;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 40px;
     .orangeText {
       color: $yellow;
       }
@@ -144,7 +143,7 @@ a {
 
 .header {
   border: 0;
-  min-height: 40px;
+  min-height: 65px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -236,7 +235,6 @@ a {
     }
   }
   .logo {
-    color: $blue;
     font-family: $title-font;
     font-size: 30px;
     font-weight: 300;
@@ -258,22 +256,10 @@ a {
 
 .space-shuttle-outline {
   z-index: 111111;
-  &.blue {
-    top: 30px;
-    left: 78vw;
-    position: absolute;
-    width: 25px;
-   -ms-transform: rotate(270deg); /* IE 9 */
-    -webkit-transform: rotate(2700deg); /* Chrome, Safari, Opera */
-    transform: rotate(270deg);
-
-  }
-  &.yellow {
-    top: 122px;
+    top: 39px;
     left: 60vw;
     position: absolute;
-    width: 110px;
-  }
+    width: 95px;
 }
 
 .menu {
@@ -370,34 +356,7 @@ a {
   }
 }
 
-@keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@-webkit-keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@-moz-keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@-ms-keyframes move-twink-back {
+@include keyframes(move-twink-back) {
   from {
     background-position: 0 0;
   }
@@ -414,7 +373,12 @@ a {
   .bottom-border{
     width: 50px;
     height: 3px;
+    &.blue{
     background: $blue;
+    }
+    &.yellow{
+    background: $yellow;
+    }
   }
 }
 
@@ -452,7 +416,12 @@ a {
     @include animation('fadeIn 5s');
     width:100px;
     height: 3px;
+    &.blue{
     background: $blue;
+    }
+    &.yellow{
+    background: $yellow;
+    }
   }
 }
 
@@ -1596,17 +1565,25 @@ MEDIA QUERIES
   }
 
   .space-shuttle-outline {
-    &.blue {
-      top: 70px;
-      left: 78vw;
-      width: 85px;
+      top: 35px;
+      width: 104px;
+      left: 87vw;
+      &:hover{
+      @include animation(shuttleMove 3s ease-out forwards);
+      }
     }
-    &.yellow {
-      top: 129px;
-      width: 146px;
-      left: 75vw;
+      @include keyframes(shuttleMove){
+      0% {
+      transform: translateX(0);
+      }
+      50%{transform: translateX(-200px);
+      }
+      100% {
+    transform: translateX(0);
+      }
     }
-  }
+
+
   .profile-description {
     p {
       margin: 0 40px 0 40px;
@@ -1819,7 +1796,7 @@ MEDIA QUERIES
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
 
-  .space-shuttle-outline.yellow {
+  .space-shuttle-outline{
     left: 70vw;
   }
 
