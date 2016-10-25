@@ -42,19 +42,14 @@ body {
   }
 
   .subpage-topHeading {
-       margin-top: 0 !important;
-      background-color: $blue;
+        margin-top: 0 !important;
         padding:{
         top:100px;
         bottom:10px;
         }
-      &.yellow {
-        background-color: $yellow;
-      }
-      &.blue {
-        background-color: $blue;
-      }
     h2 {
+    z-index: 1;
+    color: $white;
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
@@ -241,13 +236,17 @@ a {
 .space-shuttle-outline {
   z-index: 111111;
   &.blue {
-    top: 70px;
+    top: 30px;
     left: 78vw;
     position: absolute;
-    width: 70px;
+    width: 25px;
+   -ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(2700deg); /* Chrome, Safari, Opera */
+    transform: rotate(270deg);
+
   }
   &.yellow {
-    top: 100px;
+    top: 122px;
     left: 60vw;
     position: absolute;
     width: 110px;
@@ -384,10 +383,23 @@ a {
   }
 }
 
+.page-title{
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
+
+  .bottom-border{
+    width: 50px;
+    height: 3px;
+    background: $blue;
+  }
+}
+
 .page-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 45px;
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
   text-align: center;
   max-width: 100vw;
   margin-bottom: 70px;
@@ -1536,7 +1548,10 @@ MEDIA QUERIES
 /* LARGE screens */
 
 @media screen and (min-width: 1025px) {
-  body{
+  .page-intro{
+    p{
+      max-width: 70%;
+    }
   }
 
   #menu{
@@ -1564,7 +1579,7 @@ MEDIA QUERIES
       width: 85px;
     }
     &.yellow {
-      top: 153px;
+      top: 129px;
       width: 146px;
       left: 75vw;
     }
