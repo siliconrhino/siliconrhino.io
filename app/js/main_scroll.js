@@ -64,7 +64,8 @@ jQuery(document).ready(function ($) {
       }
     }
 
-    removeScrollIcon();
+   removeScrollIcon();
+
 
     function bindEvents(MQ, bool) {
         if (MQ === 'desktop' && bool) {
@@ -218,6 +219,8 @@ jQuery(document).ready(function ($) {
 
             highlite(current);
             removeScrollIcon();
+           var newCurrentSection = sectionsAvailable.filter('.visible');
+            shuttleAnimation(newCurrentSection);
 
 
             actual = actual - 1;
@@ -251,6 +254,8 @@ jQuery(document).ready(function ($) {
 
             highlite(current);
             removeScrollIcon();
+          var newCurrentSection = sectionsAvailable.filter('.visible');
+            shuttleAnimation(newCurrentSection);
 
 
             actual = actual + 1;
@@ -294,6 +299,8 @@ jQuery(document).ready(function ($) {
 
             scrollToSection(event, goTo);
             removeScrollIcon();
+       var newCurrentSection = sectionsAvailable.filter('.visible');
+            shuttleAnimation(newCurrentSection);
 
 
     }
@@ -510,7 +517,18 @@ $.Velocity
 
       }
 
+// shuttle animation
 
+ // var sectionToAnimateOn = document.getElementById('section5');
+
+      // function shuttleAnimation(current)
+      // {
+         // if (sectionToAnimateOn === current[0])
+         //{
+             // current[0].className = "space-shuttle-pic rhino";
+        // }
+
+      //}
 
 
 

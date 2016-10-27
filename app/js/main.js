@@ -51,6 +51,14 @@
 					$('.header').removeClass('white');
 				}
 		}
-	});
+
+// header space shuttle toggle animation
+
+		$( '.space-shuttle-outline' ).click(function() {
+			$( this ).toggleClass( 'headerShuttleMove' );
+		  });
+
+
+    });
 })(window.$);
 

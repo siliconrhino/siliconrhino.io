@@ -32,12 +32,16 @@ body {
 
   .frontpage-text{
     h2 {
+    max-width: 495px;
     text-align: left;
     text-transform: uppercase;
     font-size: 42px;
     .orangeText {
       color: $yellow;
       }
+    }
+    h3{
+      font-size: 30px;
     }
   }
 
@@ -71,7 +75,7 @@ body {
       @include justify-content(center);
       h2,
       h3 {
-        max-width: 500px;
+        max-width: 450px;
       }
     }
   }
@@ -456,6 +460,12 @@ a {
   img {
     max-width: 90%;
     margin: 0 auto 20px;
+  }
+}
+
+.services{
+  .container{
+    max-width: 1000px !important;
   }
 }
 
@@ -943,6 +953,24 @@ body[data-hijacking="on"] {
   }
 }
 
+    .space-shuttle-pic{
+          &.rhino{
+            @include animation(spaceShuttleFront-out 10s ease infinite);
+        }
+  }
+  @include keyframes(spaceShuttleFront-out) {
+           0% {
+            transform: translateY(0);
+            }
+          50% {
+          transform: translateY(-600px) rotate(5deg);
+          }
+          100% {
+          transform: translateY(0);
+          }
+        }
+
+
 .cd-section {
   .col-sm-6,
   .col-sm-12 {
@@ -1031,31 +1059,10 @@ body[data-hijacking="on"] {
         img:hover {
           -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
         }
-        .shuttle-sprite {
-          margin-top: 100px;
-          margin-left: 60px;
-          width: 381px;
-          height: 433px;
-          animation: play .8s steps(5) infinite;
-          //, move 2s ease-in 0.8s infinite
-          position: relative;
-        }
-        @keyframes play {
-          100% {
-            background-position: -1905px;
-          }
-        }
-        /*@keyframes move {
-          0% {
-            top: 1000px;
-          }
-          100% {
-            top: -1000px;
-          }
-        }*/
       }
     }
   }
+
   [data-hijacking="on"] & {
     opacity: 0;
     visibility: hidden;
@@ -1366,13 +1373,13 @@ a.cta,
   bottom: 25px;
   height: 35px;
   width: 20px;
-  border: solid 1.5px $blue;
+  border: solid 1.5px white;
   border-radius: 48%;
 }
 
 .scrollIcon:after {
   content: "";
-  background-color: $blue;
+  background-color: white;
   position: absolute;
   top: 3.5px;
   left: 5px;
@@ -1393,7 +1400,7 @@ a.cta,
   text-transform: uppercase;
   font-weight: bold;
   font-size: 10px;
-  color: #008190;
+  color: white;
   letter-spacing: 0.03em;
 }
 
@@ -1531,10 +1538,6 @@ MEDIA QUERIES
       margin-left: 110px !important;
       }
     }
-  .service-wrap{
-    margin-right: 50px;
-    margin-left: 50px;
-  }
 }
 
 /* LARGE screens */
@@ -1568,20 +1571,20 @@ MEDIA QUERIES
       top: 35px;
       width: 104px;
       left: 87vw;
-      &:hover{
-      @include animation(shuttleMove 3s ease-out forwards);
+}
+
+.headerShuttleMove{
+      @include animation(headerShuttleMove 3s ease forwards);
       }
-    }
-      @include keyframes(shuttleMove){
+
+      @include keyframes(headerShuttleMove){
       0% {
-      transform: translateX(0);
-      }
-      50%{transform: translateX(-200px);
-      }
+      transform: translateX(0);}
+      50%{
+      transform: translateX(-200px);}
       100% {
-    transform: translateX(0);
+      transform: translateX(0);}
       }
-    }
 
 
   .profile-description {
@@ -1675,6 +1678,10 @@ MEDIA QUERIES
       &:nth-child(even){
         flex-direction: row-reverse;
       }
+      img{
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
       .service-description{
       margin-top: 56px;
         p{
@@ -1730,6 +1737,7 @@ MEDIA QUERIES
     .main-links {
     display: inline-block !important;
     float: right;
+    margin-right: 75px;
     li {
       list-style-type: none;
       display: inline-block;
