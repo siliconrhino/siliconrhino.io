@@ -475,16 +475,33 @@ a {
 }
 
 .services-wrap{
+  margin-bottom: 30px;
+
   label{
     margin-top:20px;
+    padding: 4px 40px;
   }
   h3{
     text-transform: uppercase;
-    padding-bottom: 5px;
+    padding: 20px;
     border-bottom: 3px solid $darkblue;
     font-size: 20px;
     text-align: center;
     margin-top: 0 !important;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .services-wrap-image-box {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 56px);
+  }
+
+  .services-wrap-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
 
   .col-sm-5{
@@ -515,7 +532,7 @@ a {
   .help-list{
     display: flex;
     ul:first-child{
-      margin-left: 12.5%;
+      margin-left: 5%;
     }
   }
 }
