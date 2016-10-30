@@ -193,12 +193,17 @@ a {
       margin-right: 80px;
     }
   }
+  &:not(.homepage) {
+    .main-links {
+      margin-top: 8px;
+    }
+  }
 
   .homepage {
     padding: 10px 10px 0 0;
     .logo {
       position: relative;
-      top: 3px;
+      top: 10px;
       left: 30px;
     }
     #menu {
@@ -378,10 +383,10 @@ a {
     width: 50px;
     height: 3px;
     &.blue{
-    background: $blue;
+      background: $blue;
     }
     &.yellow{
-    background: $yellow;
+      background: $yellow;
     }
   }
 }
@@ -470,16 +475,33 @@ a {
 }
 
 .services-wrap{
+  margin-bottom: 30px;
+
   label{
     margin-top:20px;
+    padding: 4px 40px;
   }
   h3{
     text-transform: uppercase;
-    padding-bottom: 5px;
+    padding: 20px;
     border-bottom: 3px solid $darkblue;
     font-size: 20px;
     text-align: center;
     margin-top: 0 !important;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .services-wrap-image-box {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 56px);
+  }
+
+  .services-wrap-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
 
   .col-sm-5{
@@ -510,7 +532,7 @@ a {
   .help-list{
     display: flex;
     ul:first-child{
-      margin-left: 12.5%;
+      margin-left: 5%;
     }
   }
 }
@@ -705,10 +727,10 @@ ul.rrssb-buttons{
   }
 
   .overbox{
-   top: 2%;
-    width: 97%;
-    height: 96%;
-    left: 1.5%;
+    top: 6px;
+    left: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
 
     li{
       display:none;
@@ -905,11 +927,43 @@ ul.rrssb-buttons{
 /* Workflow SVG */
 
 .workflow{
+  h3 {
+    text-align: center;
+  }
   .desktop{
     display: none;
   }
   .mobile{
     display: block;
+  }
+
+  text-align: center;
+
+  ul {
+    text-align: left;
+  }
+
+  .how-we-work-point {
+    width: 40%;
+    display: inline-block;
+    margin: 0 4%;
+
+    h3 {
+      text-align: left;
+    }
+  }
+
+  .bottom-border{
+    width: 100px;
+    height: 3px;
+    display: inline-block;
+
+    &.blue {
+      background: $blue;
+    }
+    &.yellow {
+      background: $yellow;
+    }
   }
 }
 
@@ -970,6 +1024,12 @@ body[data-hijacking="on"] {
           }
         }
 
+.stars {
+  background: $darkblue url(/img/stars.png) repeat top left;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 
 .cd-section {
   .col-sm-6,
@@ -983,62 +1043,6 @@ body[data-hijacking="on"] {
     @include flex-direction(column);
     @include align-items(center);
   }
-  &:first-of-type > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-    &::before {
-      /* alert -> all scrolling effects are not visible on small devices */
-      content: 'Effects not visible on mobile!';
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      top: 20px;
-      z-index: 2;
-      font-weight: bold;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-    }
-  }
-  &:nth-of-type(2) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(3) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(4) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(5) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(6) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(7) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  [data-animation="parallax"] & > div,
-  [data-animation="fixed"] & > div,
-  [data-animation="opacity"] & > div {}
-  [data-animation="parallax"] &:first-of-type > div,
-  [data-animation="fixed"] &:first-of-type > div,
-  [data-animation="opacity"] &:first-of-type > div {}
-  [data-animation="parallax"] &:nth-of-type(2) > div,
-  [data-animation="fixed"] &:nth-of-type(2) > div,
-  [data-animation="opacity"] &:nth-of-type(2) > div {}
-  [data-animation="parallax"] &:nth-of-type(3) > div,
-  [data-animation="fixed"] &:nth-of-type(3) > div,
-  [data-animation="opacity"] &:nth-of-type(3) > div {}
-  [data-animation="parallax"] &:nth-of-type(4) > div,
-  [data-animation="fixed"] &:nth-of-type(4) > div,
-  [data-animation="opacity"] &:nth-of-type(4) > div {}
-  [data-animation="parallax"] &:nth-of-type(5) > div,
-  [data-animation="fixed"] &:nth-of-type(5) > div,
-  [data-animation="opacity"] &:nth-of-type(5) > div {}
-  [data-animation="parallax"] &:nth-of-type(6) > div,
-  [data-animation="fixed"] &:nth-of-type(6) > div,
-  [data-animation="opacity"] &:nth-of-type(6) > div {}
-  [data-animation="fixed"] &:nth-of-type(7) > div,
-  [data-animation="opacity"] &:nth-of-type(7) > div {}
   @include MQ(L) {
     .col-sm-6 {
       line-height: 100vh;
@@ -1052,9 +1056,7 @@ body[data-hijacking="on"] {
         img {
           padding-top: 50px;
           -webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.80));
-          -webkit-transition: all 0.5s linear;
-          -o-transition: all 0.5s linear;
-          transition: all 0.5s linear;
+          @include transition(all 0.5s linear);
         }
         img:hover {
           -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
@@ -1063,32 +1065,34 @@ body[data-hijacking="on"] {
     }
   }
 
-  [data-hijacking="on"] & {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    > div {
-      visibility: visible;
+  @include transition(opacity 500ms ease);
+
+  .row {
+    @include transition(transform 500ms ease);
+  }
+
+  &.visible {
+    opacity: 1;
+
+    .row {
+      transform: scale(1);
     }
   }
-  [data-hijacking="off"] & > div {
+
+  &:not(.visible) {
     opacity: 0;
-  }
-  [data-animation="rotate"] & {
-    /* enable a 3D-space for children elements */
-    @include perspective(1800px);
-  }
-  [data-hijacking="on"][data-animation="rotate"] &:not(:first-of-type) {
-    @include perspective-origin(center 0);
-  }
-  [data-animation="scaleDown"] & > div,
-  [data-animation="gallery"] & > div,
-  [data-animation="catch"] & > div {}
-  [data-animation="opacity"] &.visible > div {
-    z-index: 1;
+
+    &.up {
+      .row {
+        transform: scale(1.2);
+      }
+    }
+
+    &.down {
+      .row {
+        transform: scale(0.8);
+      }
+    }
   }
 }
 
@@ -1636,10 +1640,10 @@ MEDIA QUERIES
   }
     .overbox{
       &.tall{
-    top: 1%;
-    width: 97%;
-    height: 98%;
-    left: 1.5%;
+        top: 6px;
+        left: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
       }
     &.wide{
     width: 98.5%;
@@ -1824,11 +1828,11 @@ MEDIA QUERIES
    .project-image{
     height: 356px;
     }
-  .overbox{
-    top: 1.5%;
-    width: 97%;
-    height: 97%;
-    left: 1.5%;
+    .overbox{
+      top: 6px;
+      left: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
     }
   }
 
