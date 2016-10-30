@@ -895,7 +895,9 @@ ul.rrssb-buttons{
 }
 
 .box:hover .overbox {
-    opacity: 1;
+  opacity: 1;
+  display: flex;
+  align-items: center;
 }
 
 .box .overtext {
