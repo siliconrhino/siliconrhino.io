@@ -173,7 +173,6 @@ jQuery(document).ready(function ($) {
       var newCurrentSection = sectionsAvailable.filter('.visible');
       shuttleAnimation(newCurrentSection);
 
-
       actual = actual + 1;
 
       transitionBetweenSections(visibleSection, visibleSection.next('.cd-section'), true);
@@ -192,7 +191,6 @@ jQuery(document).ready(function ($) {
     removeScrollIcon();
     var newCurrentSection = sectionsAvailable.filter('.visible');
     shuttleAnimation(newCurrentSection);
-
 
     var visibleSection = sectionsAvailable.filter('.visible'),
       middleScroll = (hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false;
@@ -259,8 +257,9 @@ jQuery(document).ready(function ($) {
     }
     verticalLink.className += " highlite";
     current = verticalLink;
-
   }
+
+  window.highlite = highlite;
 
   // shuttle animation
 
