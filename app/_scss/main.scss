@@ -1091,10 +1091,10 @@ body[data-hijacking="on"] {
     z-index: 1;
   }
 
-  @include transition(opacity 700ms ease);
+  @include transition(opacity 500ms ease);
 
   .row {
-    @include transition(transform 700ms ease);
+    @include transition(transform 500ms ease);
   }
 
   &.visible {

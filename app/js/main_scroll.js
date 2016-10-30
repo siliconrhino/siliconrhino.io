@@ -3,8 +3,7 @@ jQuery(document).ready(function ($) {
   var hijacking = $('body').data('hijacking'),
     delta = 0,
     scrollThreshold = 1,
-    actual = 1,
-    animating = false;
+    actual = 1;
 
 
   // DOM elements
@@ -60,36 +59,39 @@ jQuery(document).ready(function ($) {
   }
 
   function bindEvents(MQ, bool) {
+    var lastSuccessfulScrollTime,
+      scrollMaxThrottle = 1200,
+      scrollMinThrottle = 600,
+      wheelDeltaThreshold = 150;
+
+    function onMouseWheel(event) {
+      var now = new Date().getTime();
+
+      // if scrolled more than once within a time period
+      if (now - lastSuccessfulScrollTime < scrollMaxThrottle) {
+        // don't process scroll more than once within a time period
+        if (now - lastSuccessfulScrollTime < scrollMinThrottle) {
+          return;
+        }
+
+        // don't fire again within the throttle time unless
+        // the scroll delta reaches a certain peak
+        if (Math.abs(event.originalEvent.wheelDelta) < wheelDeltaThreshold) {
+          return;
+        }
+      }
+
+      console.log('firing mouse wheel. time since last scroll: ' + (now - lastSuccessfulScrollTime) + '. wheel delta: ' + Math.abs(event.originalEvent.wheelDelta));
+
+      lastSuccessfulScrollTime = new Date().getTime();
+
+      return scrollHijacking(event);
+    }
+
     if (MQ === 'desktop' && bool) {
       //bind the animation to the window scroll event, arrows click and keyboard
       if (hijacking === 'on') {
-        var lastSuccessfulScrollTime,
-          scrollMaxThrottle = 1000,
-          scrollMinThrottle = 50,
-          wheelDeltaThreshold = 100;
-
-        $(window).on('DOMMouseScroll mousewheel', function (event) {
-          var now = new Date().getTime();
-
-          // if scrolled more than once within a time period
-          if (now - lastSuccessfulScrollTime < scrollMaxThrottle) {
-            // don't process scroll more than once within a time period
-            if (now - lastSuccessfulScrollTime < scrollMinThrottle) {
-              return;
-            }
-
-            // don't fire again within the throttle time unless
-            // the scroll delta reaches a certain peak
-            if (Math.abs(event.originalEvent.wheelDelta) < wheelDeltaThreshold) {
-              return;
-            }
-          }
-
-          lastSuccessfulScrollTime = new Date().getTime();
-
-          return scrollHijacking(event);
-        });
-      } else {
+        $(window).on('DOMMouseScroll mousewheel', onMouseWheel);
       }
       prevArrow.on('click', prevSection);
       nextArrow.on('click', nextSection);
@@ -109,7 +111,7 @@ jQuery(document).ready(function ($) {
     } else if (MQ === 'mobile') {
       //reset and unbind
       resetSectionStyle();
-      $(window).off('DOMMouseScroll mousewheel', scrollHijacking);
+      $(window).off('DOMMouseScroll mousewheel', onMouseWheel);
       prevArrow.off('click', prevSection);
       nextArrow.off('click', nextSection);
       $(document).off('keydown');
@@ -138,9 +140,7 @@ jQuery(document).ready(function ($) {
 
     resetScroll();
 
-    if (!animating && !visibleSection.is(':first-of-type')) {
-      animating = true;
-
+    if (!visibleSection.is(':first-of-type')) {
       var goto =
         visibleSection.prev('.cd-section')[0].dataset.section;
       var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
@@ -165,9 +165,7 @@ jQuery(document).ready(function ($) {
 
     resetScroll();
 
-    if (!animating && !visibleSection.is(":last-of-type")) {
-      animating = true;
-
+    if (!visibleSection.is(":last-of-type")) {
       var goto =
         visibleSection.next('.cd-section')[0].dataset.section;
       var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
@@ -204,10 +202,7 @@ jQuery(document).ready(function ($) {
 
     resetScroll();
 
-    if (!animating) {
-      animating = true;
-      transitionBetweenSections(visibleSection, goToSection, true);
-    }
+    transitionBetweenSections(visibleSection, goToSection, true);
   }
 
   function resetScroll() {
@@ -237,6 +232,9 @@ jQuery(document).ready(function ($) {
     var newPrevious = newCurrent.prev('.cd-section');
     var newNext = newCurrent.next('.cd-section');
 
+    // timeout so the animations are started as soon as this
+    // javascript thread of execution completes; the animations
+    // will run more smoothly if no javascript is executing
     setTimeout(function () {
       oldCurrent.removeClass('visible');
 
@@ -251,10 +249,6 @@ jQuery(document).ready(function ($) {
 
       newCurrent.addClass('visible');
     }, 0);
-
-    setTimeout(function () {
-      animating = false;
-    }, 700);
   }
 
   // vertical menu
