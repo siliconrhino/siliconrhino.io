@@ -705,10 +705,10 @@ ul.rrssb-buttons{
   }
 
   .overbox{
-   top: 2%;
-    width: 97%;
-    height: 96%;
-    left: 1.5%;
+    top: 6px;
+    left: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
 
     li{
       display:none;
@@ -1586,10 +1586,10 @@ MEDIA QUERIES
   }
     .overbox{
       &.tall{
-    top: 1%;
-    width: 97%;
-    height: 98%;
-    left: 1.5%;
+        top: 6px;
+        left: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
       }
     &.wide{
     width: 98.5%;
@@ -1774,11 +1774,11 @@ MEDIA QUERIES
    .project-image{
     height: 356px;
     }
-  .overbox{
-    top: 1.5%;
-    width: 97%;
-    height: 97%;
-    left: 1.5%;
+    .overbox{
+      top: 6px;
+      left: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
     }
   }
 
