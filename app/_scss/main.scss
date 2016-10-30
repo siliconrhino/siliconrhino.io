@@ -383,10 +383,10 @@ a {
     width: 50px;
     height: 3px;
     &.blue{
-    background: $blue;
+      background: $blue;
     }
     &.yellow{
-    background: $yellow;
+      background: $yellow;
     }
   }
 }
@@ -910,11 +910,43 @@ ul.rrssb-buttons{
 /* Workflow SVG */
 
 .workflow{
+  h3 {
+    text-align: center;
+  }
   .desktop{
     display: none;
   }
   .mobile{
     display: block;
+  }
+
+  text-align: center;
+
+  ul {
+    text-align: left;
+  }
+
+  .how-we-work-point {
+    width: 40%;
+    display: inline-block;
+    margin: 0 4%;
+
+    h3 {
+      text-align: left;
+    }
+  }
+
+  .bottom-border{
+    width: 100px;
+    height: 3px;
+    display: inline-block;
+
+    &.blue {
+      background: $blue;
+    }
+    &.yellow {
+      background: $yellow;
+    }
   }
 }
 
