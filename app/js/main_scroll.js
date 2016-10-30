@@ -208,11 +208,9 @@ jQuery(document).ready(function ($) {
 
         if (!animating && !visibleSection.is(':first-of-type')) {
             animating = true;
-            visibleSection.removeClass('visible').children('div').velocity(animationParams[2], animationParams[3], animationParams[4])
-                .end().prev('.cd-section').addClass('visible').children('div').velocity(animationParams[0], animationParams[3], animationParams[4], function () {
-                    animating = false;
-                    if (hijacking === 'off') $(window).on('scroll', scrollAnimation);
-                });
+
+            transitionBetweenSections(visibleSection, visibleSection.prev('.cd-section'), false, animationParams);
+
             var goto =
                 visibleSection.prev('.cd-section')[0].dataset.section;
             var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
@@ -242,11 +240,8 @@ jQuery(document).ready(function ($) {
 
         if (!animating && !visibleSection.is(":last-of-type")) {
             animating = true;
-            visibleSection.removeClass('visible').children('div').velocity(animationParams[1], animationParams[3], animationParams[4])
-                .end().next('.cd-section').addClass('visible').children('div').velocity(animationParams[0], animationParams[3], animationParams[4], function () {
-                    animating = false;
-                    if (hijacking == 'off') $(window).on('scroll', scrollAnimation);
-                });
+
+            transitionBetweenSections(visibleSection, visibleSection.next('.cd-section'), true, animationParams);
 
             var goto =
                 visibleSection.next('.cd-section')[0].dataset.section;
@@ -277,13 +272,7 @@ jQuery(document).ready(function ($) {
 
         if (!animating) {
             animating = true;
-            visibleSection.removeClass('visible').children('div').velocity(animationParams[1], animationParams[3], animationParams[4]);
-
-
-            goToSection.addClass('visible').children('div').velocity(animationParams[0], animationParams[3], animationParams[4], function () {
-                animating = false;
-                if (hijacking == 'off') $(window).on('scroll', scrollAnimation);
-            });
+            transitionBetweenSections(visibleSection, goToSection, true, animationParams);
         }
         resetScroll();
     }
@@ -361,6 +350,21 @@ jQuery(document).ready(function ($) {
         }
 
         return [animationVisible, animationTop, animationBottom, animDuration, easing];
+    }
+
+    function transitionBetweenSections(previous, next, translateUp, animationParams) {
+      previous
+        .removeClass('visible')
+        .children('div')
+          .velocity(translateUp ? animationParams[1] : animationParams[2], animationParams[3], animationParams[4]);
+
+      next
+        .addClass('visible')
+        .children('div')
+          .velocity(animationParams[0], animationParams[3], animationParams[4], function () {
+            animating = false;
+            if (hijacking == 'off') $(window).on('scroll', scrollAnimation);
+          });
     }
 
     function setSectionAnimation(sectionOffset, windowHeight, animationName) {
