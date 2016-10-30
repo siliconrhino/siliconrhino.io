@@ -81,8 +81,6 @@ jQuery(document).ready(function ($) {
         }
       }
 
-      console.log('firing mouse wheel. time since last scroll: ' + (now - lastSuccessfulScrollTime) + '. wheel delta: ' + Math.abs(event.originalEvent.wheelDelta));
-
       lastSuccessfulScrollTime = new Date().getTime();
 
       return scrollHijacking(event);
