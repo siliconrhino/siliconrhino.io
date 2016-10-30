@@ -98,8 +98,6 @@ jQuery(document).ready(function ($) {
                   return scrollHijacking(event);
                 });
             } else {
-                scrollAnimation();
-                $(window).on('scroll', scrollAnimation);
             }
             prevArrow.on('click', prevSection);
             nextArrow.on('click', nextSection);
@@ -120,7 +118,6 @@ jQuery(document).ready(function ($) {
             //reset and unbind
             resetSectionStyle();
             $(window).off('DOMMouseScroll mousewheel', scrollHijacking);
-            $(window).off('scroll', scrollAnimation);
             prevArrow.off('click', prevSection);
             nextArrow.off('click', nextSection);
             $(document).off('keydown');
@@ -147,10 +144,10 @@ jQuery(document).ready(function ($) {
             middleScroll = (hijacking === 'off' && $(window).scrollTop() !== visibleSection.offset().top) ? true : false;
         visibleSection = middleScroll ? visibleSection.next('.cd-section') : visibleSection;
 
+        resetScroll();
+
         if (!animating && !visibleSection.is(':first-of-type')) {
             animating = true;
-
-            transitionBetweenSections(visibleSection, visibleSection.prev('.cd-section'), false);
 
             var goto =
                 visibleSection.prev('.cd-section')[0].dataset.section;
@@ -158,13 +155,13 @@ jQuery(document).ready(function ($) {
 
             highlite(current);
             removeScrollIcon();
-           var newCurrentSection = sectionsAvailable.filter('.visible');
+            var newCurrentSection = sectionsAvailable.filter('.visible');
             shuttleAnimation(newCurrentSection);
 
             actual = actual - 1;
-        }
 
-        resetScroll();
+            transitionBetweenSections(visibleSection, visibleSection.prev('.cd-section'), false);
+        }
     }
 
     function nextSection(event) {
@@ -174,10 +171,10 @@ jQuery(document).ready(function ($) {
         var visibleSection = sectionsAvailable.filter('.visible'),
             middleScroll = (hijacking === 'off' && $(window).scrollTop() !== visibleSection.offset().top) ? true : false;
 
+        resetScroll();
+
         if (!animating && !visibleSection.is(":last-of-type")) {
             animating = true;
-
-            transitionBetweenSections(visibleSection, visibleSection.next('.cd-section'), true);
 
             var goto =
                 visibleSection.next('.cd-section')[0].dataset.section;
@@ -190,8 +187,9 @@ jQuery(document).ready(function ($) {
 
 
             actual = actual + 1;
+
+            transitionBetweenSections(visibleSection, visibleSection.next('.cd-section'), true);
         }
-        resetScroll();
 
     }
 
@@ -203,11 +201,12 @@ jQuery(document).ready(function ($) {
             middleScroll = (hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false;
         var goToSection = $(".cd-section[data-section='" + goTo + "']");
 
+        resetScroll();
+
         if (!animating) {
             animating = true;
             transitionBetweenSections(visibleSection, goToSection, true);
         }
-        resetScroll();
     }
 
     function goToSection(event){
@@ -218,13 +217,11 @@ jQuery(document).ready(function ($) {
             currentId = visibleSection.attr('id'),
             currentSection = visibleSection[0].dataset.section,
             goTo = event.target.dataset.goto;
-
-            scrollToSection(event, goTo);
             removeScrollIcon();
        var newCurrentSection = sectionsAvailable.filter('.visible');
             shuttleAnimation(newCurrentSection);
 
-
+            scrollToSection(event, goTo);
     }
 
     function resetScroll() {
@@ -254,18 +251,20 @@ jQuery(document).ready(function ($) {
       var newPrevious = newCurrent.prev('.cd-section');
       var newNext = newCurrent.next('.cd-section');
 
-      oldCurrent.removeClass('visible');
+      setTimeout(function() {
+        oldCurrent.removeClass('visible');
 
-      if (oldCurrent[0] === newPrevious[0] || oldCurrent[0] === newNext[0]) {
-        newPrevious.removeClass('up').addClass('down');
-        newNext.removeClass('down').addClass('up');
-      } else {
-        newPrevious.removeClass('up').addClass('down');
-        newNext.removeClass('down').addClass('up');
-        oldCurrent.removeClass('up').addClass('down');
-      }
+        if (oldCurrent[0] === newPrevious[0] || oldCurrent[0] === newNext[0]) {
+          newPrevious.removeClass('up').addClass('down');
+          newNext.removeClass('down').addClass('up');
+        } else {
+          newPrevious.removeClass('up').addClass('down');
+          newNext.removeClass('down').addClass('up');
+          oldCurrent.removeClass('up').addClass('down');
+        }
 
-      newCurrent.addClass('visible');
+        newCurrent.addClass('visible');
+      }, 0);
 
       setTimeout(function() {
         animating = false;
