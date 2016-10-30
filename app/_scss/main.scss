@@ -193,12 +193,17 @@ a {
       margin-right: 80px;
     }
   }
+  &:not(.homepage) {
+    .main-links {
+      margin-top: 8px;
+    }
+  }
 
   .homepage {
     padding: 10px 10px 0 0;
     .logo {
       position: relative;
-      top: 3px;
+      top: 10px;
       left: 30px;
     }
     #menu {
