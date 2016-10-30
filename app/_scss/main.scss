@@ -970,6 +970,12 @@ body[data-hijacking="on"] {
           }
         }
 
+.stars {
+  background: $darkblue url(/img/stars.png) repeat top left;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 
 .cd-section {
   .col-sm-6,
@@ -983,62 +989,6 @@ body[data-hijacking="on"] {
     @include flex-direction(column);
     @include align-items(center);
   }
-  &:first-of-type > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-    &::before {
-      /* alert -> all scrolling effects are not visible on small devices */
-      content: 'Effects not visible on mobile!';
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      top: 20px;
-      z-index: 2;
-      font-weight: bold;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-    }
-  }
-  &:nth-of-type(2) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(3) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(4) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(5) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(6) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  &:nth-of-type(7) > div {
-    background: $darkblue url(/img/stars.png) repeat top left;
-  }
-  [data-animation="parallax"] & > div,
-  [data-animation="fixed"] & > div,
-  [data-animation="opacity"] & > div {}
-  [data-animation="parallax"] &:first-of-type > div,
-  [data-animation="fixed"] &:first-of-type > div,
-  [data-animation="opacity"] &:first-of-type > div {}
-  [data-animation="parallax"] &:nth-of-type(2) > div,
-  [data-animation="fixed"] &:nth-of-type(2) > div,
-  [data-animation="opacity"] &:nth-of-type(2) > div {}
-  [data-animation="parallax"] &:nth-of-type(3) > div,
-  [data-animation="fixed"] &:nth-of-type(3) > div,
-  [data-animation="opacity"] &:nth-of-type(3) > div {}
-  [data-animation="parallax"] &:nth-of-type(4) > div,
-  [data-animation="fixed"] &:nth-of-type(4) > div,
-  [data-animation="opacity"] &:nth-of-type(4) > div {}
-  [data-animation="parallax"] &:nth-of-type(5) > div,
-  [data-animation="fixed"] &:nth-of-type(5) > div,
-  [data-animation="opacity"] &:nth-of-type(5) > div {}
-  [data-animation="parallax"] &:nth-of-type(6) > div,
-  [data-animation="fixed"] &:nth-of-type(6) > div,
-  [data-animation="opacity"] &:nth-of-type(6) > div {}
-  [data-animation="fixed"] &:nth-of-type(7) > div,
-  [data-animation="opacity"] &:nth-of-type(7) > div {}
   @include MQ(L) {
     .col-sm-6 {
       line-height: 100vh;
@@ -1052,43 +1002,13 @@ body[data-hijacking="on"] {
         img {
           padding-top: 50px;
           -webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.80));
-          -webkit-transition: all 0.5s linear;
-          -o-transition: all 0.5s linear;
-          transition: all 0.5s linear;
+          @include transition(all 0.5s linear);
         }
         img:hover {
           -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
         }
       }
     }
-  }
-
-  [data-hijacking="on"] & {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    > div {
-      visibility: visible;
-    }
-  }
-  [data-hijacking="off"] & > div {
-    opacity: 0;
-  }
-  [data-animation="rotate"] & {
-    /* enable a 3D-space for children elements */
-    @include perspective(1800px);
-  }
-  [data-hijacking="on"][data-animation="rotate"] &:not(:first-of-type) {
-    @include perspective-origin(center 0);
-  }
-  [data-animation="scaleDown"] & > div,
-  [data-animation="gallery"] & > div,
-  [data-animation="catch"] & > div {}
-  [data-animation="opacity"] &.visible > div {
-    z-index: 1;
   }
 
   @include transition(opacity 500ms ease);
