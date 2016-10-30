@@ -1090,6 +1090,29 @@ body[data-hijacking="on"] {
   [data-animation="opacity"] &.visible > div {
     z-index: 1;
   }
+
+  @include transition(transform 700ms ease, opacity 700ms ease);
+
+  div {
+    @include transition(transform 700ms ease, opacity 700ms ease);
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &:not(.visible) {
+    opacity: 0;
+
+    &.up {
+      transform: scale(1.2);
+    }
+
+    &.down {
+      transform: scale(0.8);
+    }
+  }
 }
 
 @include MQ(L) {
