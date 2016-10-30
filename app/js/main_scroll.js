@@ -42,8 +42,7 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  function removeScrollIcon() {
-    var currentSection = sectionsAvailable.filter('.visible');
+  function removeScrollIcon(currentSection) {
     var visibleSection = currentSection[0].dataset.section;
     var scrollIconClass = document.getElementsByClassName('scrollIconClass');
 
@@ -52,10 +51,6 @@ jQuery(document).ready(function ($) {
     } else {
       scrollIconClass[0].classList.remove('scrollIcon');
     }
-  }
-
-  if (hijacking === 'on') {
-    removeScrollIcon();
   }
 
   function bindEvents(MQ, bool) {
@@ -144,11 +139,12 @@ jQuery(document).ready(function ($) {
       var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
 
       highlite(current);
-      removeScrollIcon();
       var newCurrentSection = sectionsAvailable.filter('.visible');
       shuttleAnimation(newCurrentSection);
 
       actual = actual - 1;
+
+      removeScrollIcon(visibleSection.prev('.cd-section'));
 
       transitionBetweenSections(visibleSection, visibleSection.prev('.cd-section'), false);
     }
@@ -169,11 +165,12 @@ jQuery(document).ready(function ($) {
       var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
 
       highlite(current);
-      removeScrollIcon();
       var newCurrentSection = sectionsAvailable.filter('.visible');
       shuttleAnimation(newCurrentSection);
 
       actual = actual + 1;
+
+      removeScrollIcon(visibleSection.next('.cd-section'));
 
       transitionBetweenSections(visibleSection, visibleSection.next('.cd-section'), true);
     }
@@ -188,7 +185,6 @@ jQuery(document).ready(function ($) {
       currentSection = visibleSection[0].dataset.section,
       goTo = event.target.dataset.goto;
 
-    removeScrollIcon();
     var newCurrentSection = sectionsAvailable.filter('.visible');
     shuttleAnimation(newCurrentSection);
 
@@ -197,6 +193,8 @@ jQuery(document).ready(function ($) {
     var goToSection = $(".cd-section[data-section='" + goTo + "']");
 
     resetScroll();
+
+    removeScrollIcon(goToSection);
 
     transitionBetweenSections(visibleSection, goToSection, true);
   }
