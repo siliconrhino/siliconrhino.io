@@ -137,7 +137,7 @@ a {
 
 .header {
   border: 0;
-  min-height: 65px;
+  min-height: 70px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -252,11 +252,14 @@ a {
 
 .space-shuttle-outline {
   z-index: 111111;
-  top: 39px;
-  left: 60vw;
+  top: 48px;
+  left: 2vw;
   position: fixed;
-  width: 95px;
+  width: 80px;
+  transform: rotateY(180deg);
 }
+
+
 
 .menu {
   display: block;
@@ -265,15 +268,11 @@ a {
     background-color: rgba(0, 129, 144, 0.8);
     position: fixed;
     z-index: 1000000;
-    top: 40px;
+    top: 70px !important;
     width: $menu-width !important;
-    height: calc(100% - 40px);
+    height: calc(100% - 70px);
     @include transition(-webkit-transform ease-in 300ms 20ms);
     @include transition(transform ease-in 300ms 20ms);
-    &.homepage {
-      top: 64px !important;
-      height: calc(100% - 64px);
-    }
     &.left {
       left: $menu-width * -1;
     }
@@ -292,7 +291,7 @@ a {
 
 .menu {
   ul {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   li {
     display: block;
@@ -315,35 +314,6 @@ a {
       }
       &:hover:after {
         border-bottom-color: $darkblue;
-      }
-    }
-  }
-  .circles {
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-    width: 100%;
-    > div {
-      @include border-radius(50%);
-      border: 1px solid $white;
-      display: inline-block;
-      height: 32px;
-      text-align: center;
-      width: 32px;
-      + div {
-        margin-left: 10px;
-      }
-      img {
-        margin-top: 8px;
-        vertical-align: top;
-        width: 16px;
-        &.linkedin {
-          width: 13px;
-        }
-      }
-      a {
-        display: block;
-        height: 32px;
       }
     }
   }
@@ -1434,13 +1404,18 @@ a.cta,
 
 footer {
   @include display-flex;
+  @include flex-direction(column);
   @include justify-content(center);
   @include align-items(center);
   margin-top: 50px;
   padding: .8em;
   text-align: center;
   background-color: $blue;
+
   a {
+    &.getInTouch {
+    font-size: 18px !important;
+    padding-bottom: 14px;
     @include link-hover;
     color: $white;
     &:hover {
@@ -1454,6 +1429,41 @@ footer {
     }
     &:hover:after {
       border-bottom-color: $darkblue;
+    }
+  }
+}
+    .circles {
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    > div {
+      @include border-radius(50%);
+      border: 1px solid $white;
+      display: inline-block;
+      height: 32px;
+      text-align: center;
+      width: 32px;
+      transition: all 1s ease-out;
+      &:hover {
+      text-decoration: none;
+      color: $darkblue;
+      border: 1px solid $darkblue;
+      }
+      + div {
+        margin-left: 10px;
+      }
+      img {
+        margin-top: 8px;
+        vertical-align: top;
+        width: 16px;
+        &.linkedin {
+          width: 13px;
+        }
+      }
+      a {
+        display: block;
+        height: 32px;
+      }
     }
   }
 }
@@ -1514,9 +1524,10 @@ MEDIA QUERIES
     display: none !important;
   }
   .space-shuttle-outline {
-    top: 35px;
+    top: 40px;
     width: 104px;
     left: 87vw;
+    transform: none !important;
   }
   .headerShuttleMove {
     @include animation(headerShuttleMove 3s ease forwards);
@@ -1627,8 +1638,16 @@ MEDIA QUERIES
       }
       ul {
         font-size: 2rem;
-        line-height: 35px;
-        margin-top: 15px;
+        line-height: 25px;
+        list-style-type: none;
+        li{
+        background: url(/img/ryan_horn_darkblue.png) no-repeat top left;
+        background-size: 19px 19px;
+        padding-left: 30px;
+        margin-top: 10px;
+        text-align: left;
+        vertical-align: middle;
+        }
       }
     }
   }
@@ -1718,10 +1737,8 @@ MEDIA QUERIES
   }
   .menu {
     > div {
-      &.homepage {
         top: 81px !important;
         height: calc(100% - 81px);
-      }
     }
   }
 }
@@ -1731,7 +1748,8 @@ MEDIA QUERIES
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
   .space-shuttle-outline {
-    left: 70vw;
+    left: 45vw;
+    transform: rotateY(180deg);
   }
   .profile-description {
     margin-left: 50px;
