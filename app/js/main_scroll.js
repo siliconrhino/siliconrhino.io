@@ -134,8 +134,9 @@ jQuery(document).ready(function ($) {
     resetScroll();
 
     if (!visibleSection.is(':first-of-type')) {
+      var newCurrentSection = visibleSection.prev('.cd-section');
       var goto =
-        visibleSection.prev('.cd-section')[0].dataset.section;
+        newCurrentSection[0].dataset.section;
       var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
 
       highlite(current);
@@ -144,9 +145,9 @@ jQuery(document).ready(function ($) {
 
       actual = actual - 1;
 
-      removeScrollIcon(visibleSection.prev('.cd-section'));
+      removeScrollIcon(newCurrentSection);
 
-      transitionBetweenSections(visibleSection, visibleSection.prev('.cd-section'), false);
+      transitionBetweenSections(visibleSection, newCurrentSection, false);
     }
   }
 
@@ -160,19 +161,21 @@ jQuery(document).ready(function ($) {
     resetScroll();
 
     if (!visibleSection.is(":last-of-type")) {
+      var newCurrentSection = visibleSection.next('.cd-section');
+
       var goto =
-        visibleSection.next('.cd-section')[0].dataset.section;
+        newCurrentSection[0].dataset.section;
       var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
 
       highlite(current);
-      var newCurrentSection = sectionsAvailable.filter('.visible');
+
       shuttleAnimation(newCurrentSection);
 
       actual = actual + 1;
 
-      removeScrollIcon(visibleSection.next('.cd-section'));
+      removeScrollIcon(newCurrentSection);
 
-      transitionBetweenSections(visibleSection, visibleSection.next('.cd-section'), true);
+      transitionBetweenSections(visibleSection, newCurrentSection, true);
     }
 
   }
@@ -185,9 +188,6 @@ jQuery(document).ready(function ($) {
       currentSection = visibleSection[0].dataset.section,
       goTo = event.target.dataset.goto;
 
-    var newCurrentSection = sectionsAvailable.filter('.visible');
-    shuttleAnimation(newCurrentSection);
-
     var visibleSection = sectionsAvailable.filter('.visible'),
       middleScroll = (hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false;
     var goToSection = $(".cd-section[data-section='" + goTo + "']");
@@ -195,6 +195,8 @@ jQuery(document).ready(function ($) {
     resetScroll();
 
     removeScrollIcon(goToSection);
+
+    shuttleAnimation(goToSection);
 
     transitionBetweenSections(visibleSection, goToSection, true);
   }
@@ -261,7 +263,13 @@ jQuery(document).ready(function ($) {
 
   // shuttle animation
 
-  function shuttleAnimation(current) {
+  var sectionToAnimateOn = document.getElementById('section5');
 
+  function shuttleAnimation(current) {
+    if (sectionToAnimateOn === current[0]) {
+      $('.space-shuttle-pic', current).addClass('rhino');
+    } else {
+      $('.space-shuttle-pic').removeClass('rhino');
+    }
   }
 });
