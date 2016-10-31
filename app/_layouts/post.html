@@ -2,19 +2,29 @@
 layout: subpage
 ---
 
-    <h2 class="{{page.topHeadingBg}}">{{ page.title }}</h2>
+  <div class="subpage-topHeading"></div>
+   <div class="page-title">
+    <h2>{{ page.title }}</h2>
+    <div class="bottom-border blue"></div>
+    </div>
+
+<div class="bottom-border blue"></div>
  <img class="space-shuttle-outline yellow" src="/img/backgrounds/space_shuttle_outlineYellow.png" alt="space shuttle outline" />
 
   <section class="blog-section">
 
     <div class="row">
-<div class="container post">
-<div class="page-intro"><h3>{{ page.description }}</h3></div>
-    <div class="single-blog-img blue-border" style="background-image: url({{ page.imageUrl }});">
-
-
-    <label class="blue-border blog-date"><span class="meta">{{ page.date | date_to_string }}</span></label>
+<div class="post">
+<div class="page-intro"><p>{{ page.description }}</p>
+  <div class="bottom-border blue"></div>
   </div>
+
+    <div class="blue-border">
+    <div class="single-blog-img" style="background-image: url({{ page.imageUrl }});">
+      </div>
+      </div>
+    <label class="blue-border blog-date"><span class="meta">{{ page.date | date_to_string }}</span></label>
+
 
 
 
@@ -65,9 +75,9 @@ layout: subpage
       </div>
 
 
-<section class="latest-posts">
+<section class="">
 
-  <h3 class="col-sm-12">Latest Posts</h3>
+  <h3 class="col-sm-12 latest-posts">Latest posts</h3>
 
   {% for post in site.posts limit:2 %}
     {% include /list_item.html %}

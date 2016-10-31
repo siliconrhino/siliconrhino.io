@@ -30,15 +30,16 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
 
 <section class="projects-blog">
   <div class="container">
-  <div class="col-sm-6 col-md-6 project">
-    <div class="box">
-      <img class="project-image blue-border" src="/img/projects/acre-gray.png" alt="ACRE" title="ACRE">
+  <div class="col-sm-4 col-md-4 project">
+  <div class="box blue-border">
+      <img class="project-image" src="/img/projects/acre-gray.png" alt="ACRE" title="ACRE">
       <div class="overbox blue">
       <div class="tagline overtext">Digital printing and framing like you have never seen it before</div>
       </div>
     </div>
+    <label class="blue-border"><a href="https://www.acrepictures.com" target="_blank">ACRE</a></label>
+    
     <div class="project-details">
-      <label class="blue-border"><a href="https://www.acrepictures.com" target="_blank">ACRE</a></label>
       <h4><a href="https://www.acrepictures.com" target="_blank">www.acrepictures.com</a></h4>
       <div class="techs">
         <img src="/img/tech/html.svg" alt="html" title="html">
@@ -49,15 +50,15 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
       </div> 
     </div> 
   </div>
-  <div class="col-sm-6 col-md-6 project">
-    <div class="box">
-        <img class="project-image polimapper yellow-border" src="/img/projects/polimapper-gray-s.png" alt="PoliMapper App" title="PoliMapper App">
+  <div class="col-sm-4 col-md-4 project">
+    <div class="box yellow-border">
+        <img class="project-image polimapper" src="/img/projects/polimapper-gray-s.png" alt="PoliMapper App" title="PoliMapper App">
         <div class="overbox yellow">
       <div class="tagline overtext">From idea to MVP, this data visualisation framework includes CMS, offline mode and just a bit of cutting edge front-end work.</div>
       </div>
     </div>
+     <label class="yellow-border"><a href="http://www.polimapper.co.uk/" target="_blank">PoliMapper</a></label>
     <div class="project-details">
-      <label class="yellow-border"><a href="http://www.polimapper.co.uk/" target="_blank">PoliMapper</a></label>
       <h4><a href="http://www.polimapper.co.uk/" target="_blank">www.polimapper.co.uk</a></h4>
       <div class="techs">
         <img src="/img/tech/net.svg" alt=".NET" title=".NET">

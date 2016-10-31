@@ -4,7 +4,7 @@ title: Blog
 headBackground: yellowBg
 ---
 <section class="home-backg backg-projects">
-  <div class="subpage-topHeading yellow">
+  <div class="subpage-topHeading">
    <div class="page-title">
     <h2>Blog</h2>
     <div class="bottom-border yellow"></div>
@@ -15,13 +15,18 @@ headBackground: yellowBg
       <div class="bottom-border yellow"></div>
     </div>
   </div>
+
 </section>
 
-  <section class="blog-section">
-  <h3 class="col-sm-12">Latest Posts</h3>
-  {% for post in site.posts %}
+<section class="blog-section">
+   <p class="col-sm-12 latest-posts">Latest posts</p>
+  <div class="row">
+{% for post in site.posts %}
     {% include /list_item.html %}
-  {% endfor %}
+      {% endfor %}
+    </div>
+
+
 
   <!--<h2>Interviews</h2>
   {% for post in site.categories.foo %}
