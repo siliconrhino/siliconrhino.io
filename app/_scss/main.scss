@@ -703,7 +703,7 @@ ul.rrssb-buttons {
       display:none;
       }
     }
-  }
+
   label {
     margin-bottom: 25px !important;
   }
@@ -722,6 +722,7 @@ ul.rrssb-buttons {
       padding-left: 10px;
     }
   }
+
   .quote-wrapper {
     margin-bottom: 40px;
     &.yellow {
@@ -785,7 +786,6 @@ ul.rrssb-buttons {
     font-weight: 700;
   }
 }
-
 .projects-blog {
   .project{
     display: flex;
@@ -1610,7 +1610,6 @@ MEDIA QUERIES
           display: list-item !important;
         }
       }
-    }
     .techs {
       margin-top: 20px;
     }
