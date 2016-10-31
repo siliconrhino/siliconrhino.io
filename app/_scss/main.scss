@@ -1,7 +1,6 @@
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "slick-carousel/slick/slick.scss";
-
 // endbower
 @import "_variables.scss";
 @import "_mixins.scss";
@@ -29,67 +28,54 @@ body {
   font: {
     size: 1.6rem;
     family: $primary-font;
-  };
-
+  }
+  ;
   .frontpage-text {
     h2 {
       max-width: 495px;
       text-align: left;
       text-transform: uppercase;
       font-size: 42px;
-
       .orangeText {
         color: $yellow;
       }
     }
-
     h3 {
       font-size: 30px;
     }
   }
-
   .subpage-topHeading {
     margin-top: 0 !important;
     padding-top: 100px;
     padding-bottom: 10px;
     text-align: center;
   }
-
   h3 {
     text-align: left;
   }
-
   p {
     line-height: 1.6em;
     letter-spacing: 0.03em;
   }
-
   div {
     .frontpage-text {
       @include display-flex;
-
       @include flex-direction(column);
-
       @include justify-content(center);
-
       h2,
       h3 {
         max-width: 450px;
       }
     }
   }
-
   color: $white;
   background-color: $darkblue;
-
   @include font-smoothing;
-
   &::before {
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'mobile';
     display: none;
   }
-
   @include MQ(L) {
     &::before {
       /* never visible - this is used in jQuery to check the current MQ */
@@ -107,21 +93,14 @@ body {
 
 .wcd-section {
   margin: 50px auto 110px;
-
   > div {
     text-align: center;
-
     @include display-flex;
-
     @include flex-direction(column);
-
     @include justify-content(center);
-
     @include align-items(center);
-
     position: relative;
   }
-
   img {
     padding-top: 70px;
     display: inline-block;
@@ -131,22 +110,18 @@ body {
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
   }
-
   span {
     display: block;
     text-align: center;
     bottom: -30px;
   }
-
   img:hover {
     -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
   }
-
   + div a.cta {
     margin: 40px;
     color: $blue;
     border: 2px solid $blue;
-
     &:hover {
       color: $yellow;
       border: 2px solid $yellow;
@@ -167,83 +142,66 @@ a {
   top: 0;
   width: 100%;
   z-index: 100000;
-
   @include transition(background-color 300ms);
-
   .logo.white {
     display: inline;
   }
-
   &.blueBg {
     background-color: $blue;
   }
-
   &.yellowBg {
     background-color: $yellow;
-
     .main-links {
       li {
         &.no a:hover {
           color: $darkblue;
         }
-
         &:hover:after,
         &.active:after {
           transform: scaleX(1);
           border-bottom: solid 2px $darkblue;
         }
-
         a {
           &:hover {
             color: $darkblue;
           }
         }
-
         &.active a {
           color: $darkblue;
         }
       }
     }
   }
-
   &.homepage {
     .no {
       display: inline-block;
     }
-
     .logo img {
       width: 250px;
     }
-
     .main-links {
       margin-right: 80px;
     }
   }
-
   &:not(.homepage) {
     .main-links {
       margin-top: 8px;
     }
   }
-
   .homepage {
     padding: 10px 10px 0 0;
-
     .logo {
       position: relative;
       top: 10px;
       left: 30px;
     }
-
     #menu {
       margin: 12px 10px 0 0;
     }
   }
-
   .main-links {
     display: none;
   }
-
   #menu {
     float: right;
     margin: 4px 10px 0 0;
@@ -252,22 +210,18 @@ a {
     font-size: 1.5em;
     font-weight: 300;
     letter-spacing: 0.02em;
-
     &:hover {
       cursor: pointer;
     }
-
     span,
     span:before,
     span:after {
       background: $white;
     }
   }
-
   &.blue {
     background-color: rgba(0, 129, 144, 0.8);
     border-bottom: none;
-
     #menu {
       span,
       span:before,
@@ -276,7 +230,6 @@ a {
       }
     }
   }
-
   .logo {
     font-family: $title-font;
     font-size: 30px;
@@ -287,12 +240,10 @@ a {
     position: absolute;
     top: 3px;
     vertical-align: bottom;
-
     img {
       width: 200px;
     }
   }
-
   .icon {
     margin-left: 20px;
     width: 198px;
@@ -309,9 +260,7 @@ a {
 
 .menu {
   display: block;
-
   $menu-width: 250px;
-
   > div {
     background-color: rgba(0, 129, 144, 0.8);
     position: fixed;
@@ -319,30 +268,22 @@ a {
     top: 40px;
     width: $menu-width !important;
     height: calc(100% - 40px);
-
     @include transition(-webkit-transform ease-in 300ms 20ms);
-
     @include transition(transform ease-in 300ms 20ms);
-
     &.homepage {
       top: 64px !important;
       height: calc(100% - 64px);
     }
-
     &.left {
       left: $menu-width * -1;
     }
-
     &.show.left {
       @include transform(translate3d($menu-width, 0, 0));
-
       overflow: auto;
     }
-
     &.right {
       right: $menu-width * -1;
     }
-
     &.show.right {
       @include transform(translate3d($menu-width * -1, 0, 0));
     }
@@ -353,71 +294,53 @@ a {
   ul {
     margin-top: 20px;
   }
-
   li {
     display: block;
-
     @include display-flex;
-
     @include justify-content(center);
-
     @include align-items(center);
-
     padding: .8em;
     text-align: center;
-
     a {
       @include link-hover;
-
       color: $white;
-
       &:hover {
         color: $darkblue;
       }
-
       &:after {
         border-bottom-color: #fff;
       }
-
       &.no a:hover {
         color: $darkblue;
       }
-
       &:hover:after {
         border-bottom-color: $darkblue;
       }
     }
   }
-
   .circles {
     position: absolute;
     bottom: 10px;
     text-align: center;
     width: 100%;
-
     > div {
       @include border-radius(50%);
-
       border: 1px solid $white;
       display: inline-block;
       height: 32px;
       text-align: center;
       width: 32px;
-
       + div {
         margin-left: 10px;
       }
-
       img {
         margin-top: 8px;
         vertical-align: top;
         width: 16px;
-
         &.linkedin {
           width: 13px;
         }
       }
-
       a {
         display: block;
         height: 32px;
@@ -430,32 +353,24 @@ a {
   from {
     background-position: 0 0;
   }
-
   to {
     background-position: -10000px 5000px;
   }
 }
 
-
 .page-title {
   @include display-flex;
-
   @include flex-direction(column);
-
   @include align-items(center);
-
   h2 {
     text-transform: uppercase;
   }
-
   .bottom-border {
     width: 50px;
     height: 3px;
-
     &.blue {
       background: $blue;
     }
-
     &.yellow {
       background: $yellow;
     }
@@ -464,54 +379,39 @@ a {
 
 .page-intro {
   margin-top: 45px;
-
   @include display-flex;
-
   @include flex-direction(column);
-
   @include align-items(center);
-
   text-align: center;
   max-width: 100vw;
   margin-bottom: 70px;
-
   h3 {
     margin-bottom: 25px;
-
     @include animation("fadeIn 2s");
-
     text-align: center;
     font-size: 4rem;
-
     &.intro-border {
       padding-bottom: 50px;
       margin-left: 10vw;
       margin-right: 10vw;
     }
   }
-
   p.lead {
     font-size: 2.5rem;
-
     &:nth-child(2) {
       @include animation("fadeIn 4s");
     }
-
     &:last-of-type {
       @include animation("fadeIn 5s");
     }
   }
-
   .bottom-border {
     @include animation("fadeIn 5s");
-
     width: 100px;
     height: 3px;
-
     &.blue {
       background: $blue;
     }
-
     &.yellow {
       background: $yellow;
     }
@@ -522,12 +422,10 @@ a {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
-
 
 .profile {
   background-position: 50%;
@@ -539,12 +437,10 @@ a {
 
 .friends-grid {
   margin: 0 auto 50px;
-
   h2 {
     text-align: center;
     margin-bottom: 50px;
   }
-
   img {
     max-width: 90%;
     margin: 0 auto 20px;
@@ -559,12 +455,10 @@ a {
 
 .services-wrap {
   margin-bottom: 30px;
-
   label {
     margin-top: 20px;
     padding: 4px 40px;
   }
-
   h3 {
     text-transform: uppercase;
     padding: 20px;
@@ -575,52 +469,41 @@ a {
     width: 90%;
     margin-left: 5%;
   }
-
   .services-wrap-image-box {
     display: flex;
     align-items: center;
     height: calc(100% - 56px);
   }
-
   .services-wrap-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
   }
-
   .col-sm-5 {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
-
   img {
     width: 100%;
     padding: 55px;
   }
-
   .service-description {
     p {
       margin: 0 25px 10px 25px;
     }
-
     &.blue {
       @include image-border;
-
       border-color: $blue;
       background-color: $blue;
     }
-
     &.yellow {
       @include image-border;
-
       border-color: $yellow;
       background-color: $yellow;
     }
   }
-
   .help-list {
     display: flex;
-
     ul:first-child {
       margin-left: 5%;
     }
@@ -630,36 +513,29 @@ a {
 // image and label borders color
 .yellow-border {
   @include image-border;
-
   border-color: $yellow;
 }
 
 .blue-border {
   @include image-border;
-
   border-color: $blue;
 }
 
 .team {
   @include display-flex;
-
   @include flex-direction(column);
-
   @include align-items(center);
 }
 
 label {
   @include label-border;
-
   margin-bottom: 0 !important;
   font-size: 2rem;
   position: relative;
   text-transform: uppercase;
-
   &.yellow-border {
     background-color: $yellow;
   }
-
   &.blue-border {
     background-color: $blue;
   }
@@ -672,10 +548,8 @@ label {
     padding-top: 50px;
     line-height: 1.6em;
     letter-spacing: 0.03em;
-
     div.connect {
       text-align: right;
-
       img {
         width: 28px;
       }
@@ -691,13 +565,11 @@ label {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .box {
     width: 100%;
     height: 267px;
     font-size: 2rem;
   }
-
   .latest-posts {
     text-align: center;
     padding: 0 0 30px 0;
@@ -727,15 +599,12 @@ label {
   background-size: cover;
   max-width: 100%;
   height: 250px;
-
   &.blue-border {
     border-color: $blue;
   }
-
   &.yellow-border {
     border-color: $yellow;
   }
-
   .blog-date {
     top: 30vh;
   }
@@ -745,7 +614,6 @@ label {
   h2 {
     background-color: transparent !important;
   }
-
   h3 {
     text-align: center;
     margin: 50px auto 30px;
@@ -758,7 +626,6 @@ label {
 .post {
   font-size: 1.5em;
   max-width: 100vw;
-
   h2 {
     font-style: bold;
     text-align: center;
@@ -767,9 +634,7 @@ label {
     width: 100%;
     margin-bottom: 40px;
   }
-
   p {}
-
   .twitter-tweet {
     margin: auto;
     padding-bottom: 40px;
@@ -791,7 +656,8 @@ ul.rrssb-buttons {
   font: {
     size: 15px;
     family: $primary-font;
-  };
+  }
+  ;
 }
 
 // project imgs
@@ -803,56 +669,43 @@ ul.rrssb-buttons {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .box {
     width: 100%;
     height: 267px;
     font-size: 2rem;
   }
-
   .project-image {
     width: 100%;
     height: 267px;
     position: absolute;
-
     @include transition(all 300ms ease-out);
-
     &.polimapper {
       display: none;
     }
-
     &.politics {
       display: none;
     }
   }
-
   .overbox {
     top: 6px;
     left: 6px;
     width: calc(100% - 12px);
     height: calc(100% - 12px);
-
     li {
       display: none;
     }
   }
-
   label {
     margin-bottom: 25px !important;
   }
-
   .tagline {
     @include display-flex;
-
     @include flex-direction(column);
-
     @include align-items(center);
-
     p {
       text-align: center;
     }
   }
-
   .techs {
     img {
       max-width: 110px;
@@ -860,35 +713,28 @@ ul.rrssb-buttons {
       padding-left: 10px;
     }
   }
-
   .quote-wrapper {
     margin-bottom: 40px;
-
     &.yellow {
       background-color: $yellow;
     }
-
     &.blue {
       background-color: $blue;
     }
-
     h3,
     h4 {
       padding: 0 100px 0 20px;
       font-size: 1.3em;
     }
-
     h4 {
       padding-bottom: 20px;
     }
-
     .cta {
       float: right;
       margin-top: -70px;
       margin-right: 20px;
     }
   }
-
   blockquote {
     line-height: 1.5em;
     font-size: 2.3em !important;
@@ -899,7 +745,6 @@ ul.rrssb-buttons {
     padding: 10px 0 0 20px;
     font-weight: 300;
   }
-
   blockquote.long {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -910,7 +755,6 @@ ul.rrssb-buttons {
     font-size: 1em;
     margin-top: 0;
   }
-
   blockquote::before {
     font-family: Georgia, serif;
     color: $white;
@@ -921,7 +765,6 @@ ul.rrssb-buttons {
     vertical-align: -0.45em;
     font-weight: 700;
   }
-
   blockquote::after {
     font-family: Georgia, serif;
     color: $white;
@@ -940,21 +783,17 @@ ul.rrssb-buttons {
     flex-direction: column;
     align-items: center;
   }
-
   .box {
     height: 235px;
-
     .overbox {
       height: 221px;
       margin-right: 4px;
     }
   }
-
   .project-image {
     max-height: 220px;
     width: 100%;
   }
-
   .techs {
     img {
       width: auto;
@@ -969,10 +808,8 @@ ul.rrssb-buttons {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-
   .project-image {
     position: absolute;
-
     @include transition(all 300ms ease-out);
   }
 }
@@ -981,7 +818,6 @@ ul.rrssb-buttons {
   &.blue-border {
     border-color: $blue;
   }
-
   &.yellow-border {
     border-color: $yellow;
   }
@@ -992,15 +828,11 @@ ul.rrssb-buttons {
     position: absolute;
     color: #fff;
     z-index: 100;
-
     @include transition(all 300ms ease-out);
-
     opacity: 0;
-
     &.blue {
       background-color: $blue;
     }
-
     &.yellow {
       background-color: $yellow;
     }
@@ -1016,7 +848,6 @@ ul.rrssb-buttons {
 
 .box .overtext {
   @include transition(all 300ms ease-out);
-
   transform: translateY(40px);
   -webkit-transform: translateY(40px);
 }
@@ -1040,51 +871,44 @@ ul.rrssb-buttons {
   width: 100%;
 }
 
+
 /* Workflow SVG */
 
 .workflow {
   h3 {
     text-align: center;
   }
-
   .desktop {
     display: none;
   }
-
   .mobile {
     display: block;
   }
-
   text-align: center;
-
   ul {
     text-align: left;
   }
-
   .how-we-work-point {
     width: 40%;
     display: inline-block;
     margin: 0 4%;
-
     h3 {
       text-align: left;
     }
   }
-
   .bottom-border {
     width: 100px;
     height: 3px;
     display: inline-block;
-
     &.blue {
       background: $blue;
     }
-
     &.yellow {
       background: $yellow;
     }
   }
 }
+
 
 /* --------------------------------
 
@@ -1106,9 +930,9 @@ Blinking stars
 .twinkling {
   background: transparent url(/img/twinkling.png) repeat top center;
   z-index: 0;
-
   @include animation(move-twink-back 200s linear infinite);
 }
+
 
 /* --------------------------------
 
@@ -1124,9 +948,8 @@ body[data-hijacking="on"] {
 
 .space-shuttle-pic {
   &.rhino {
-    @include animation(spaceShuttleFront-out 10s ease forwards);
-
-    animation-delay: 4s;
+    @include animation(spaceShuttleFront-out 8s ease forwards);
+    animation-delay: 2s;
   }
 }
 
@@ -1141,16 +964,13 @@ body[data-hijacking="on"] {
   0% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-600px) rotate(5deg);
   }
-
   100% {
     transform: translateY(0);
   }
 }
-
 
 .cd-section {
   .col-sm-6,
@@ -1159,68 +979,49 @@ body[data-hijacking="on"] {
     text-align: center;
     font-size: 2.5rem;
   }
-
   .col-sm-12 {
     @include display-flex;
-
     @include flex-direction(column);
-
     @include align-items(center);
   }
-
   @include MQ(L) {
     .col-sm-6 {
       line-height: 100vh;
       font-size: 2.5rem;
       font-weight: 300;
-
       &.space-shuttle-pic {
         padding-top: 0px;
-
         @include display-flex;
-
         @include justify-content(center);
-
         @include align-items(center);
-
         img {
           padding-top: 50px;
           -webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.8));
-
           @include transition(all 0.5s linear);
         }
-
         img:hover {
           -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
         }
       }
     }
   }
-
-
   @include transition(opacity 500ms ease);
-
   .row {
     @include transition(transform 500ms ease);
   }
-
   &.visible {
     opacity: 1;
-
     .row {
       transform: scale(1);
     }
   }
-
   &:not(.visible) {
     opacity: 0;
-
     &.up {
       .row {
         transform: scale(1.2);
       }
     }
-
     &.down {
       .row {
         transform: scale(0.8);
@@ -1235,23 +1036,18 @@ body[data-hijacking="on"] {
   }
 }
 
-
 .cd-section > div {
   @include MQ(L) {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
     /* Force Hardware Acceleration */
     @include transform(translateZ(0));
-
     @include backface-visibility(hidden);
-
     [data-hijacking="on"] & {
       position: absolute;
     }
-
     [data-animation="rotate"] & {
       @include transform-origin(center bottom);
     }
@@ -1262,27 +1058,21 @@ body[data-hijacking="on"] {
   //lateral navigation
   position: fixed;
   right: 18px;
-
   @include center(y);
-
   // see partials > _mixins.scss
   z-index: 1;
-
   li {
     text-align: right;
     list-style: none;
     clear: both;
     position: relative;
     overflow: hidden;
-
     &:first-of-type:before {
       content: none;
     }
-
     &:last-of-type:after {
       content: none;
     }
-
     &:after {
       width: 1px;
       height: 108%;
@@ -1292,7 +1082,6 @@ body[data-hijacking="on"] {
       right: 7.5px;
       top: 24px;
     }
-
     &:before {
       content: '';
       width: 1px;
@@ -1303,10 +1092,8 @@ body[data-hijacking="on"] {
       background-color: $blue;
     }
   }
-
   a {
     @include backface-visibility(hidden);
-
     //image replace
     overflow: hidden;
     text-indent: 100%;
@@ -1314,21 +1101,16 @@ body[data-hijacking="on"] {
     position: relative;
     z-index: 1111;
     float: right;
-
     span {
       display: block;
-
       @include transform(scale(0.6));
     }
-
     &:hover + span {
       @include transform(scale(1));
     }
-
     &:hover + .cd-label {
       opacity: 1;
     }
-
     &.highlite:after {
       content: "";
       background-color: $blue;
@@ -1340,7 +1122,6 @@ body[data-hijacking="on"] {
       border-radius: 50%;
     }
   }
-
   .cd-dot {
     display: block;
     top: 9px;
@@ -1351,9 +1132,7 @@ body[data-hijacking="on"] {
     -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
     -moz-transition: -moz-transform 0.2s, background-color 0.5s;
     transition: transform 0.2s, background-color 0.5s;
-
     @include transform-origin(50% 50%);
-
     &:hover:after {
       content: "";
       background-color: $blue;
@@ -1365,28 +1144,24 @@ body[data-hijacking="on"] {
       border-radius: 50%;
     }
   }
-
   .cd-label {
     position: relative;
     margin-right: 5px;
     padding: .4em .5em;
     color: $yellow;
     float: right;
-
     @include font-size(30px);
-
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
     transition: transform 0.2s, opacity 0.2s;
     opacity: 0;
-
     @include transform-origin(100% 50%);
   }
-
   @include MQ(L) {
     display: block;
   }
 }
+
 
 /* .......................
 
@@ -1395,22 +1170,16 @@ MENU BUTTON
 .......................... */
 
 $button-width: 32px;
-
 // The width of the button area
 $button-height: 32px;
-
 // The height of the button area
 $bar-thickness: 4px;
-
 // The thickness of the button bars
 $button-pad: 3px;
-
 // The left/right padding between button area and bars.
 $button-bar-space: 4px;
-
 // The spacing between button bars
 $button-transistion-duration: 0.3s;
-
 // The transition duration
 #menu {
   display: block;
@@ -1474,6 +1243,7 @@ $button-transistion-duration: 0.3s;
   transition: transform $button-transistion-duration;
 }
 
+
 /* active state, i.e. menu open */
 
 #menu.is-active {}
@@ -1508,13 +1278,11 @@ a.cta,
   display: inline-block;
   font-weight: bold;
   transition: all 1s ease-out;
-
   &:hover {
     text-decoration: none;
     color: $yellow;
     border: 2px solid $yellow;
   }
-
   &.blue:hover {
     text-decoration: none;
     color: $blue;
@@ -1532,10 +1300,12 @@ a.cta,
   background-color: transparent;
 }
 
+
 /*.button-wrap{
   width: 40%;
   margin: auto;
 }*/
+
 
 /* Bounce To Left */
 
@@ -1560,7 +1330,6 @@ a.cta,
   width: 8px;
   height: 8px;
   border-radius: 50%;
-
   @include animation(scrollSlide 3s infinite);
 }
 
@@ -1583,16 +1352,13 @@ a.cta,
   0% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(8px);
   }
-
   100% {
     transform: translateY(0px);
   }
 }
-
 
 @media only screen and (max-width: 1049px) {
   [data-hijacking="on"] .cd-section {
@@ -1608,73 +1374,56 @@ a.cta,
   .row {
     margin: 0;
   }
-
   .cd-vertical-nav,
   .scrollIconClass {
     display: none;
   }
-
   .cd-section:first-of-type {
     height: 100vh !important;
-
     .space-shuttle-pic {
       padding-top: 30%;
       height: 50vh;
-
       img {
         max-height: 100%;
       }
     }
   }
-
   .cd-section {
     .twinkling {
       display: none;
     }
-
     &:nth-of-type(2) {
       height: 460px !important;
     }
-
     &:nth-of-type(3) {
       height: 560px !important;
     }
-
     &:nth-of-type(4) {
       height: 500px !important;
     }
-
     &:nth-of-type(5) {
       height: 500px !important;
     }
-
     &:nth-of-type(6) {
       height: 500px !important;
     }
   }
-
   .cd-section .col-sm-6 {
     height: 30vh;
     text-align: center;
     font-size: 1.5rem;
-
     &.space-shuttle-pic {
       img {
         max-height: 100%;
       }
     }
-
     &.frontpage-text {
       padding: 10px;
-
       @include justify-content(flex-start);
-
       @include align-items(center);
-
       h2 {
         font-size: 30px;
       }
-
       h2,
       h3 {
         max-width: 80%;
@@ -1685,44 +1434,37 @@ a.cta,
 
 footer {
   @include display-flex;
-
   @include justify-content(center);
-
   @include align-items(center);
-
   margin-top: 50px;
   padding: .8em;
   text-align: center;
   background-color: $blue;
-
   a {
     @include link-hover;
-
     color: $white;
-
     &:hover {
       color: $darkblue;
     }
-
     &:after {
       border-bottom-color: #fff;
     }
-
     &.no a:hover {
       color: $darkblue;
     }
-
     &:hover:after {
       border-bottom-color: $darkblue;
     }
   }
 }
 
+
 /* .......................
 
 MEDIA QUERIES
 
 .......................... */
+
 
 /* XL screens */
 
@@ -1731,17 +1473,14 @@ MEDIA QUERIES
     width: 940px;
     margin-left: auto;
     margin-right: auto;
-
     .cta {
       margin-right: 100px !important;
     }
-
     h3,
     h4 {
       margin-left: 110px !important;
     }
   }
-
   blockquote {
     &.left-paragraph {
       margin-right: 350px !important;
@@ -1749,6 +1488,7 @@ MEDIA QUERIES
     }
   }
 }
+
 
 /* LARGE screens */
 
@@ -1758,106 +1498,82 @@ MEDIA QUERIES
       max-width: 70%;
     }
   }
-
   #menu {
     display: none !important;
   }
-
   .polimapper {
     display: block;
   }
-
   .polimapper2 {
     display: none !important;
   }
-
   .politics {
     display: block;
   }
-
   .politics2 {
     display: none !important;
   }
-
   .space-shuttle-outline {
     top: 35px;
     width: 104px;
     left: 87vw;
   }
-
   .headerShuttleMove {
     @include animation(headerShuttleMove 3s ease forwards);
   }
-
   @include keyframes(headerShuttleMove) {
     0% {
       transform: translateX(0);
     }
-
     50% {
       transform: translateX(-200px);
     }
-
     100% {
       transform: translateX(0);
     }
   }
-
-
   .profile-description {
     p {
       margin: 0 40px 0 40px;
     }
   }
-
   .profile {
     width: 550px;
   }
-
   .blog-post-wrap {
     > * {
       margin: 0 auto 20px;
     }
   }
-
   .single-blog-img {
     height: 500px;
   }
-
   .projects {
     .box {
       height: 350px;
-
       &.tall {
         height: 769px;
       }
-
       &.wide {
         width: 100%;
       }
-
       .project-image {
         height: 350px;
-
         &.tall {
           height: 769px;
         }
-
         &.wide {
           width: 100%;
         }
       }
-
       .tagline {
         font-size: 1.4em;
-
         &.wide {
           margin-left: 150px;
           margin-right: 150px;
         }
       }
     }
-
     .overbox {
       &.tall {
         top: 1%;
@@ -1867,7 +1583,6 @@ MEDIA QUERIES
       }
     }
   }
-
   .overbox {
     &.tall {
       top: 6px;
@@ -1875,53 +1590,41 @@ MEDIA QUERIES
       width: calc(100% - 12px);
       height: calc(100% - 12px);
     }
-
     ul {
       li {
         display: list-item !important;
       }
     }
-
     .techs {
       margin-top: 20px;
     }
   }
-
   .polimapper {
     display: block !important;
-
     .polimapper2 {
       display: none;
     }
   }
-
   .politics {
     display: block !important;
-
     .politics2 {
       display: none;
     }
   }
-
   .services-wrap {
     display: flex;
-
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
-
     img {
       margin-top: 25px;
       margin-bottom: 25px;
     }
-
     .service-description {
       margin-top: 56px;
-
       p {
         font-size: 2rem;
       }
-
       ul {
         font-size: 2rem;
         line-height: 35px;
@@ -1929,7 +1632,6 @@ MEDIA QUERIES
       }
     }
   }
-
   blockquote {
     &.left-paragraph {
       margin-right: 450px;
@@ -1937,44 +1639,35 @@ MEDIA QUERIES
       text-align: right;
     }
   }
-
   .projects .quote-wrapper {
     h3,
     h4 {
       margin-left: 170px;
     }
-
     .cta {
       margin-top: -80px;
       margin-right: 180px;
     }
   }
-
   .workflow {
     .desktop {
       display: block;
     }
-
     .mobile {
       display: none;
     }
   }
-
   .wcd-section {
     @include display-flex;
-
     @include justify-content(space-around);
-
     img {
       width: 18vw;
     }
   }
-
   .main-links {
     display: inline-block !important;
     float: right;
     margin-right: 75px;
-
     li {
       list-style-type: none;
       display: inline-block;
@@ -1983,7 +1676,6 @@ MEDIA QUERIES
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-
       &:after {
         display: block;
         content: '';
@@ -1994,45 +1686,36 @@ MEDIA QUERIES
         transform: scaleX(0);
         transition: transform .5s ease-in-out, border 1s ease-out;
       }
-
       &.no {
         display: none;
       }
-
       &.no:after {
         display: none;
       }
-
       &.no a:hover {
         color: $yellow;
       }
-
       &:hover:after {
         transform: scaleX(1);
       }
-
       &:hover:after,
       &.active:after {
         transform: scaleX(1);
         border-bottom: solid 2px $yellow;
       }
-
       a {
         color: #fff;
         transition: all 1s ease-out;
-
         &:hover {
           text-decoration: none;
           color: $yellow;
         }
       }
-
       &.active a {
         color: $yellow;
       }
     }
   }
-
   .menu {
     > div {
       &.homepage {
@@ -2043,32 +1726,28 @@ MEDIA QUERIES
   }
 }
 
+
 /* Tablet portrait screens */
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
   .space-shuttle-outline {
     left: 70vw;
   }
-
   .profile-description {
     margin-left: 50px;
     margin-right: 50px;
   }
-
   .profile {
     width: 450px;
   }
-
   .projects {
     .box {
       height: 356px;
       font-size: 2rem;
     }
-
     .project-image {
       height: 356px;
     }
-
     .overbox {
       top: 6px;
       left: 6px;
@@ -2076,108 +1755,84 @@ MEDIA QUERIES
       height: calc(100% - 12px);
     }
   }
-
   blockquote {
     &.left-paragraph {
       margin-right: 200px;
       margin-left: 100px;
     }
   }
-
   .projects .quote-wrapper {
     h3,
     h4 {
       margin-left: 100px;
     }
-
     .cta {
       margin-right: 50px;
     }
   }
-
   .services-wrap {
     display: flex;
-
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
-
     h3 {
       font-size: 13px;
     }
-
     .service-description {
       margin-top: 56px;
-
       p {
         margin: 0 5px 10px 5px;
       }
     }
   }
-
   .cd-vertical-nav,
   .scrollIconClass {
     display: none;
   }
-
   .cd-section:first-of-type {
     height: 100vh !important;
   }
-
   .space-shuttle-pic {
     margin-top: 50px;
     height: 300px !important;
   }
-
   .cd-section {
     .twinkling {
       display: none;
     }
-
     &:nth-of-type(2) {
       height: 460px !important;
     }
-
     &:nth-of-type(3) {
       height: 560px !important;
     }
-
     &:nth-of-type(4) {
       height: 500px !important;
     }
-
     &:nth-of-type(5) {
       height: 500px !important;
     }
-
     &:nth-of-type(6) {
       height: 500px !important;
     }
   }
-
   .cd-section .col-sm-6 {
     height: 30vh;
     text-align: center;
     font-size: 1.5rem;
-
     &.space-shuttle-pic {
       img {
         max-height: 300px;
       }
     }
-
     &.frontpage-text {
       margin-top: 30px;
       padding: 10px;
-
       @include justify-content(flex-start);
-
       @include align-items(center);
-
       h2 {
         font-size: 30px;
       }
-
       h2,
       h3 {
         max-width: 80%;
@@ -2186,15 +1841,14 @@ MEDIA QUERIES
   }
 }
 
+
 /* Tablet landscape screens */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .blog-img {}
-
   .projects .quote-wrapper {
     margin-right: 0;
   }
-
   blockquote {
     &.left-paragraph {
       text-align: right;
@@ -2202,25 +1856,20 @@ MEDIA QUERIES
       margin-left: 100px;
     }
   }
-
   .projects .quote-wrapper {
     h3,
     h4 {
       margin-left: 180px;
     }
-
     .cta {
       margin-right: 60px;
     }
   }
-
   .services-wrap {
     display: flex;
-
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
-
     .service-description {
       margin-top: 56px;
     }
@@ -2233,26 +1882,23 @@ MEDIA QUERIES
       width: 100%;
     }
   }
-
   .quote-wrapper {
     h3,
     h4 {
       margin-left: 120px;
     }
   }
-
   .services-wrap {
     display: flex;
-
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
-
     .service-description {
       margin-top: 56px;
     }
   }
 }
+
 
 /* END OF MEDIA QUERIES */
 
@@ -2260,18 +1906,15 @@ MEDIA QUERIES
   height: 400px;
   overflow: hidden;
   margin-bottom: 150px;
-
   img {
     height: 400px;
   }
-
   &:hover {
     .slick-next,
     .slick-prev {
       opacity: 1;
     }
   }
-
   .slick-next,
   .slick-prev {
     font-size: 0;
@@ -2294,10 +1937,8 @@ MEDIA QUERIES
     opacity: .5;
     transition: all 0.5 linear;
   }
-
   .slick-prev {
     left: 20px;
-
     &:before {
       content: '<';
       color: #fff;
@@ -2305,10 +1946,8 @@ MEDIA QUERIES
       font-weight: 700;
     }
   }
-
   .slick-next {
     right: 20px;
-
     &:before {
       content: '>';
       color: #fff;
