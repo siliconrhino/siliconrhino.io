@@ -135,12 +135,11 @@ jQuery(document).ready(function ($) {
 
     if (!visibleSection.is(':first-of-type')) {
       var newCurrentSection = visibleSection.prev('.cd-section');
-      var goto =
-        newCurrentSection[0].dataset.section;
-      var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
 
+      var goto = newCurrentSection[0].dataset.section;
+      var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
       highlite(current);
-      var newCurrentSection = sectionsAvailable.filter('.visible');
+
       shuttleAnimation(newCurrentSection);
 
       actual = actual - 1;
@@ -163,10 +162,8 @@ jQuery(document).ready(function ($) {
     if (!visibleSection.is(":last-of-type")) {
       var newCurrentSection = visibleSection.next('.cd-section');
 
-      var goto =
-        newCurrentSection[0].dataset.section;
+      var goto = newCurrentSection[0].dataset.section;
       var current = $(".cd-vertical-nav a[data-goto='" + goto + "']")[0];
-
       highlite(current);
 
       shuttleAnimation(newCurrentSection);
