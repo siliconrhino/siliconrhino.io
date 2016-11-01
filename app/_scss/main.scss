@@ -857,13 +857,17 @@ ul.rrssb-buttons {
   text-align: center;
   ul {
     text-align: left;
+    list-style-type: none;
+    margin-left: -4%;
   }
   .how-we-work-point {
-    width: 40%;
-    display: inline-block;
-    margin: 0 4%;
+    padding: 0 8%;
+    vertical-align: top;
     h3 {
       text-align: left;
+    }
+    p {
+      text-align: justify;
     }
   }
   .bottom-border {
