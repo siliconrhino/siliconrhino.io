@@ -84,6 +84,23 @@ body {
   }
 }
 
+
+ul.rhino-bullets {
+  font-size: 2rem;
+  line-height: 25px;
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    background: url(/img/ryan_horn_darkblue.png) no-repeat top left;
+    background-size: 19px 19px;
+    padding-left: 30px;
+    margin-top: 10px;
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+
 #section6 {
   h2 {
     margin-top: 120px !important;
@@ -1639,19 +1656,6 @@ MEDIA QUERIES
       margin-top: 56px;
       p {
         font-size: 2rem;
-      }
-      ul {
-        font-size: 2rem;
-        line-height: 25px;
-        list-style-type: none;
-        li{
-        background: url(/img/ryan_horn_darkblue.png) no-repeat top left;
-        background-size: 19px 19px;
-        padding-left: 30px;
-        margin-top: 10px;
-        text-align: left;
-        vertical-align: middle;
-        }
       }
     }
   }
