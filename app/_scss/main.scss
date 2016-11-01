@@ -1002,6 +1002,8 @@ body[data-hijacking="on"] {
   }
   &.visible {
     opacity: 1;
+    position: relative;
+    z-index: 1;
     .row {
       transform: scale(1);
     }
