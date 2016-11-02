@@ -895,6 +895,7 @@ ul.rrssb-buttons {
     }
     p {
       text-align: justify;
+      font-size: 16px;
     }
   }
   .bottom-border {
@@ -1383,6 +1384,12 @@ a.cta,
     position: fixed !important;
   }
 
+  .wcd-section{
+    div {
+     height: 40vh;
+    }
+  }
+
   .cd-vertical-nav,
   .scrollIconClass {
     display: none;
@@ -1775,6 +1782,12 @@ MEDIA QUERIES
 @media screen and (min-width: 600px) and (max-width: 767px) {
    .stars{
     position: fixed !important;
+  }
+
+  .wcd-section{
+    div {
+     height: 60vh;
+    }
   }
 
   .space-shuttle-outline {
