@@ -8,7 +8,7 @@ branches:
   - master
 before_install:
   - rvm use 2.2 --install --binary --fuzzy
-  - rvm --version
+  - ruby --version
 before_script:
   - git config --global user.name "Travis CI"
   - git config --global user.email "travis@siliconrhino.io"
