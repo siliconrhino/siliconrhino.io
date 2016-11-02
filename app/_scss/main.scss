@@ -561,6 +561,10 @@ label {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+
+    > div {
+      margin-top: 10px;
+    }
   }
   .box {
     width: 100%;
