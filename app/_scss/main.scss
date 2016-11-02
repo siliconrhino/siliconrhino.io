@@ -88,6 +88,12 @@ body {
   }
 }
 
+body.blog-page{
+  .blog-section{
+    height: 100vh;
+  }
+}
+
 
 ul.rhino-bullets {
   font-size: 2rem;
