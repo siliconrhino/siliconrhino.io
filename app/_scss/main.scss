@@ -997,29 +997,30 @@ body[data-hijacking="on"] {
         }
       }
     }
-  }
-  @include transition(opacity 500ms ease);
-  .row {
-    @include transition(transform 500ms ease);
-  }
-  &.visible {
-    opacity: 1;
-    position: relative;
-    z-index: 1;
+
+    @include transition(opacity 500ms ease);
     .row {
-      transform: scale(1);
+      @include transition(transform 500ms ease);
     }
-  }
-  &:not(.visible) {
-    opacity: 0;
-    &.up {
+    &.visible {
+      opacity: 1;
+      position: relative;
+      z-index: 1;
       .row {
-        transform: scale(1.2);
+        transform: scale(1);
       }
     }
-    &.down {
-      .row {
-        transform: scale(0.8);
+    &:not(.visible) {
+      opacity: 0;
+      &.up {
+        .row {
+          transform: scale(1.2);
+        }
+      }
+      &.down {
+        .row {
+          transform: scale(0.8);
+        }
       }
     }
   }
