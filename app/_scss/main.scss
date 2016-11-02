@@ -980,11 +980,11 @@ body[data-hijacking="on"] {
     height: 100vh;
     text-align: center;
     font-size: 2.5rem;
+    @include display-flex;
+    @include align-items(center);
   }
   .col-sm-12 {
-    @include display-flex;
     @include flex-direction(column);
-    @include align-items(center);
   }
   @include MQ(L) {
     .col-sm-6 {
