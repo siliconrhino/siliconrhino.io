@@ -320,7 +320,8 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/css/**/*.css',
             '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
             '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}',
-            '<%= yeoman.dist %>/*.{ico,png}'
+            '<%= yeoman.dist %>/*.{ico,png}',
+            '!<%= yeoman.dist %>/favicon.ico',
           ]
         }]
       }
