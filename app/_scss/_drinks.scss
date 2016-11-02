@@ -1,0 +1,187 @@
+body.drinks-page {
+  .header {
+    background-color: rgba(219, 181, 97, 1);
+  }
+
+  .backg-drinks {
+    @include background-cover();
+    min-width: 100% !important;
+    background-color: rgba(58,46,57,0.6);
+    height: calc(100vh - 70px);
+    background: url('/img/backgrounds/drinks.png') no-repeat center center;
+    margin-top: 70px;
+
+    .overlay {
+      background: transparent;
+      padding: 40px;
+      height: 100%;
+      @include display-flex();
+      @include flex-direction(column);
+      @include justify-content(flex-end);
+
+      h2 {
+        color: #F9D43A;
+        margin-bottom: 0;
+        font-weight: 100;
+        font-size: 40px;
+      }
+
+      a {
+        color: $yellow;
+      }
+    }
+  }
+
+  a.download {
+    margin: 0 20px;
+
+    img {
+      height: 50px;
+    }
+  }
+
+  .faqs {
+    h1, h2 {
+      color: $blue;
+    }
+
+    h2 {
+      margin-top: 60px;
+    }
+  }
+
+  .siliconrhino-brand {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  // SECTION STYLINGS
+  section {
+    margin: 0;
+
+    &.jumbotron:nth-child(even) {
+      background: $darkgray;
+    }
+
+    &.jumbotron:nth-child(odd) {
+      background: $gray;
+
+      a.btn {
+        background: $gray;
+      }
+    }
+
+    &.jumbotron.i.first p {
+      font-size: 22px;
+      line-height: 36px;
+    }
+
+    &.jumbotron.i:nth-child(odd) {
+      background: $gray;
+    }
+
+    &.jumbotron.i:nth-child(even) {
+      background: $darkgray;
+    }
+
+    &.jumbotron.w {
+      background-color: $white !important;
+      color: black;
+
+      button {
+        &:not(:hover) {
+          color: black;
+          border-color: black;
+        }
+      }
+
+      a.btn {
+        background-color: $white !important;
+      }
+    }
+    &.jumbotron.b {
+      background-color: $blue !important;
+      color: $white;
+
+      h2 {
+        color: $white;
+      }
+
+      a.btn {
+        background-color: $white !important;
+      }
+    }
+    &.jumbotron.grey {
+      background-color: $gray !important;
+
+      a.btn {
+        background-color: $gray !important;
+      }
+    }
+  }
+
+  section.jumbotron {
+    text-align: center;
+
+    p {
+      font-size: 18px;
+    }
+
+    p.lead {
+      font-size: 21px;
+    }
+
+    p.title {
+      color: $blue;
+      font-weight: lighter;
+      font-size: 32px;
+      line-height: 1.5em;
+      margin-top: 100px;
+    }
+
+    .faqs {
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  // Newsletter Sign Up
+  #mc_embed_signup {
+    text-align: center;
+    padding-bottom: 75px;
+
+    input.email {
+      height: 52px !important;
+      display: inline-block !important;
+      margin-right: 10px !important;
+      color: $blue !important;
+      border-radius: 0 !important;
+      font-family: $title-font !important;
+      font-size: 20px !important;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    input[type="submit"] {
+      margin: 25px 0 !important;
+
+      &:hover, &:focus, &:active {
+        color: #F39237 !important;
+      }
+    }
+
+    ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+      color: $blue !important;
+    }
+  }
+
+  .mixpanel-logo {
+    margin-top: 100px;
+    display: block;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
