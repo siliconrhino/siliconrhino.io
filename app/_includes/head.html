@@ -7,13 +7,13 @@
 
 <meta content="{{ site.name }}" property="og:site_name">
 {% if page.title %}
-  <title>{{page.title}} | silicon rhino: making ideas happen</title>
+  <title>{{page.title}} | silicon rhino: we help launch amazing companies</title>
   <meta content="{{ page.title }}" property="og:title">
   <meta name="twitter:title" content="{{ page.title }}">
 {% else %}
-  <title>silicon rhino: making ideas happen</title>
-  <meta property="og:title" content="silicon rhino: making ideas happen"/>
-  <meta name="twitter:title" content="silicon rhino: making ideas happen">
+  <title>silicon rhino: we help launch amazing companies</title>
+  <meta property="og:title" content="silicon rhino: we help launch amazing companies"/>
+  <meta name="twitter:title" content="silicon rhino: we help launch amazing companies">
 {% endif %}
 {% if page.title %}
   <meta content="article" property="og:type">
@@ -40,8 +40,8 @@
   <meta content="{{ page.imageUrl }}" property="og:image">
   <meta name="twitter:image" content="{{ page.imageUrl }}">
 {% else %}
-  <meta content="http://www.siliconrhino.io/img/whiteboard.b571.png" property="og:image">
-  <meta name="twitter:image" content="http://www.siliconrhino.io/img/whiteboard.b571.png">
+  <meta content="/img/backgrounds/main_image.2e4b.png" property="og:image">
+  <meta name="twitter:image" content="/img/backgrounds/main_image.2e4b.png">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
@@ -74,7 +74,14 @@
 <meta name="msapplication-TileColor" content="#008190">
 <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
 <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-<meta name="theme-color" content="#008190">
+{% if page.headBackground == 'yellowBg' %}
+  <meta name="theme-color" content="#F39237">
+{% elsif page.headBackground == 'homepage' %}
+  <meta name="theme-color" content="#0E1A35">
+{% else %}
+  <meta name="theme-color" content="#008190">
+{% endif %}
+<meta name="pinterest" content="nohover"></meta>
 
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="http://www.siliconrhino.io"/>
@@ -82,12 +89,12 @@
 <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
 <!-- build:css({app,.tmp}) /css/main.css -->
-<!-- Syntax highlighting CSS -->
-<link rel="stylesheet" href="/css/syntax.css">
-<link rel="stylesheet" href="/_bower_components/rrssb/css/rrssb.css">
 <!-- Custom CSS -->
 <link rel="stylesheet" href="/css/main.css">
+<!-- Syntax highlighting CSS -->
+<link rel="stylesheet" href="/_bower_components/rrssb/css/rrssb.css">
 <!-- endbuild -->
+<!-- Modernizr -->
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

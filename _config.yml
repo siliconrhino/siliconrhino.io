@@ -29,9 +29,13 @@ paginate_path: 'page:num'
 markdown: redcarpet
 #   extensions: ['fenced_code_blocks', 'smart']
 
-pygments: true
+highlighter: pygments
 
 relative_permalinks: false
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
 
 # Collections
 collections:

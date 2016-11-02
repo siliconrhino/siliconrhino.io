@@ -1,7 +1,9 @@
 ---
 layout: post
+headBackground: yellowBg
+topHeadingBg: subpage-topHeading yellow
 title: A year already?
-description: It feels like yesterday but we have been doing this for 12 months.
+description: It feels like yesterday but we have been doing this for 12 months..
 tags: ["startups", "silicon rhino"]
 categories : []
 imageUrl: 'http://www.siliconrhino.io/img/backgrounds/404.77e3.jpg'
@@ -24,48 +26,50 @@ It’s true we haven’t blogged much (at all) to explain what we’ve been up t
 
 We’ve met great entrepreneurs with even greater visions, and we are proud to have helped them achieve their goals through technology. Each one of them has taught us something, and hopefully we’ll be able to pass all this knowledge to all the founders we still have to work with. Last but not least are the people who decided to carry on working with us in this adventure, and we’ve embarked on some great projects together this last year.
 
-###Take a look at some of the projects we've worked on
+###Some of the projects we've worked on
 
-<section class="projects">
-  <div class="col-sm-6 col-md-6 project">
-    <div class="project-image-container">
-      <img class="project-image" src="/img/acre.png" alt="ACRE" title="ACRE">
+<section class="projects-blog">
+  <div class="container">
+  <div class="col-sm-4 col-md-4 project">
+  <div class="box blue-border">
+      <img class="project-image" src="/img/projects/acre-gray.png" alt="ACRE" title="ACRE">
+      <div class="overbox blue">
+      <div class="tagline overtext">Digital printing and framing like you have never seen it before</div>
+      </div>
     </div>
+    <label class="blue-border"><a href="https://www.acrepictures.com" target="_blank">ACRE</a></label>
+    
     <div class="project-details">
-      <h2><a href="https://www.acrepictures.com" target="_blank">ACRE</a></h2>
       <h4><a href="https://www.acrepictures.com" target="_blank">www.acrepictures.com</a></h4>
       <div class="techs">
-        <img src="/img/tech/html.png" alt="HTML 5" title="HTML 5">
-        <img src="/img/tech/sass.png" alt="SASS" title="SASS">
-        <img src="/img/tech/angular.png" alt="AngularJS" title="Angular JS">
-        <img src="/img/tech/aws.png" alt="AWS" title="AWS">
-        <img src="/img/tech/stripe.png" alt="Stripe" title="Stripe">
-      </div>
-       <p>Digital printing and framing like you have never seen it before</p>
-    </div>
-   
+        <img src="/img/tech/html.svg" alt="html" title="html">
+        <img src="/img/tech/sass.svg" alt="Sass" title="Sass">
+        <img src="/img/tech/angular.svg" alt="Angular JS" title="Angular JS">
+        <img src="/img/tech/aws.svg" alt="AWS" title="AWS">
+        <img src="/img/tech/stripe.svg" alt="Stripe" title="Stripe">
+      </div> 
+    </div> 
   </div>
-  <div class="col-sm-6 col-md-6 project">
-    <div class="project-image-container">
-      <a href="http://www.polimapper.co.uk/" target="_blank">
-        <img class="project-image polimapper" src="/img/projects/polimapper.png" alt="PoliMapper App" title="PoliMapper App">
-      </a>
+  <div class="col-sm-4 col-md-4 project">
+    <div class="box yellow-border">
+        <img class="project-image polimapper" src="/img/projects/polimapper-gray-s.png" alt="PoliMapper App" title="PoliMapper App">
+        <div class="overbox yellow">
+      <div class="tagline overtext">From idea to MVP, this data visualisation framework includes CMS, offline mode and just a bit of cutting edge front-end work.</div>
+      </div>
     </div>
+     <label class="yellow-border"><a href="http://www.polimapper.co.uk/" target="_blank">PoliMapper</a></label>
     <div class="project-details">
-      <h2><a href="http://www.polimapper.co.uk/" target="_blank">PoliMapper</a></h2>
       <h4><a href="http://www.polimapper.co.uk/" target="_blank">www.polimapper.co.uk</a></h4>
       <div class="techs">
-        <img src="/img/tech/html.png" alt="HTML 5" title="HTML 5">
-        <img src="/img/tech/sass.png" alt="SASS" title="SASS">
-        <img src="/img/tech/net.png" alt="Microsoft .NET" title="Microsoft .NET">
-        <img src="/img/tech/angular.png" alt="Angular JS" title="Angular JS">
-        <img src="/img/tech/aws.png" alt="AWS" title="AWS">
-        <img src="/img/tech/oauth.png" alt="Oauth 2.0" title="Oauth 2.0">
+        <img src="/img/tech/net.svg" alt=".NET" title=".NET">
+        <img src="/img/tech/angular.svg" alt="Angular JS" title="Angular JS">
+        <img src="/img/tech/aws.svg" alt="AWS" title="AWS">
+        <img src="/img/tech/oauth.svg" alt="Oauth 2.0" title="Oauth 2.0">
       </div>
-      <p>From idea to MVP, this data visualisation framework includes CMS, offline mode and just a bit of cutting edge front-end work.</p>
     </div>
   </div>
- </section>
+</div>
+</section>
 
 We started silicon rhino because we felt founders without technical skills deserved a good team which cared about their projects as their own, and we feel we have achieved that. We will make sure this continues to be our number 1  focus in the future.
 
@@ -76,7 +80,7 @@ The team is growing soon and we couldn’t be more excited. We are lucky to have
 
 We have also been working on our very first internal project, codename ‘Drinks’. It’s going slowly but surely, and we hope to have a beta for you as soon as possible!
 
-<button type="btn" class="join-waitlist">Join the waitlist</button>
+<div class="button-wrap"><button type="btn" class="join-waitlist">Download it now!</button></div>
 
 To all of you who have helped and supported us, we wouldn’t have made it here if it wasn’t for you. Thank you!
 
@@ -84,6 +88,8 @@ Here’s to the next 12 months.
 
 Roger & Phil
 
-![Cheers](http://media0.giphy.com/media/GCLlQnV7wzKLu/giphy.gif)
+
+<img class="cheers-gif" src="http://media0.giphy.com/media/GCLlQnV7wzKLu/giphy.gif"/>
+
 
 <!-- [get the PDF]({{ site.url }}/assets/mydoc.pdf). -->

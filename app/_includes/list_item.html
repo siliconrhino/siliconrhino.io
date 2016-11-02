@@ -1,15 +1,9 @@
-<div class="col-sm-6 list-item">
+
+<div class="col-sm-6">
+   <label class="blue-border">{{ post.title }}</label>
+  <div class="blue-border">
   <a href="{{ post.url }}">
-    <div class="list-item-image-container" style="background-image:url({{ post.imageUrl }});">
-      
-    </div>
-    <div class="list-item-details">
-      <h2>{{ post.title }}</h2>
-      <div class="techs">
-        {% for tag in post.tags %}
-          <img src="/img/tech/{{tag}}.png" alt="{{tag}}" title="{{tag}}">
-        {% endfor %}
-      </div>
-    </div>
+    <div class="blog-img" style="background-image:url({{ post.imageUrl }});"></div>
+</div>
   </a>
 </div>

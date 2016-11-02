@@ -57,8 +57,8 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         livereload: 35729,
-        // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
+        // change this to '0.0.0.0' to access the server from outside and to localhost for locally
+        hostname: '0.0.0.0'
       },
       livereload: {
         options: {
@@ -223,8 +223,9 @@ module.exports = function (grunt) {
         options: {
           collapseWhitespace: true,
           collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true
+          removeAttributeQuotes: false,
+          removeRedundantAttributes: true,
+          keepClosingSlash: true
         },
         files: [{
           expand: true,
@@ -319,7 +320,8 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/css/**/*.css',
             '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
             '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}',
-            '<%= yeoman.dist %>/*.{ico,png}'
+            '<%= yeoman.dist %>/*.{ico,png}',
+            '!<%= yeoman.dist %>/favicon.ico',
           ]
         }]
       }
@@ -428,6 +430,30 @@ module.exports = function (grunt) {
           }
         }
       }
+    },
+
+    // Upload to the test s3 bucket
+    aws_s3: {
+      options: {
+        region: 'eu-west-1',
+        params: {
+          // 10 minute
+          CacheControl: 'public, max-age=60',
+          Expires: new Date(Date.now())
+        }
+      },
+      test: {
+        options: {
+          bucket: 'siliconrhino-test-website',
+          awsProfile: 'siliconrhino-test',
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.dist %>',
+          src: ['**/*'],
+          dest: ''
+        }]
+      },
     }
   });
 
@@ -491,7 +517,14 @@ module.exports = function (grunt) {
     'test',
     'build',
     'buildcontrol'
-    ]);
+  ]);
+
+  grunt.registerTask('deploy-test', [
+    'check',
+    'test',
+    'build',
+    'aws_s3:test'
+  ]);
 
   grunt.registerTask('deploy-travis', [
     'check',
