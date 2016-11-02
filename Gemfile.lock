@@ -44,6 +44,8 @@ GEM
       toml (~> 0.1.0)
     jekyll-coffeescript (1.0.1)
       coffee-script (~> 2.2)
+    jekyll-redirect-from (0.11.0)
+      jekyll (>= 2.0)
     jekyll-sass-converter (1.3.0)
       sass (~> 3.2)
     kramdown (1.8.0)
@@ -83,5 +85,9 @@ PLATFORMS
 DEPENDENCIES
   compass (>= 0.12)
   jekyll (~> 2.0.0)
+  jekyll-redirect-from
   redcarpet
   scss-lint (~> 0.31.0)
+
+BUNDLED WITH
+   1.12.5
