@@ -950,7 +950,7 @@ body[data-hijacking="on"] {
 
 .space-shuttle-pic {
   &.rhino {
-    @include animation(spaceShuttleFront-out 8s ease forwards);
+    @include animation(spaceShuttleFront-out 7s ease forwards);
     animation-delay: 2s;
   }
 }
@@ -967,7 +967,7 @@ body[data-hijacking="on"] {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-600px) rotate(5deg);
+    transform: translateY(-730px) rotate(5deg);
   }
   100% {
     transform: translateY(0);
