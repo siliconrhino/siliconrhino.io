@@ -74,7 +74,13 @@
 <meta name="msapplication-TileColor" content="#008190">
 <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
 <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-<meta name="theme-color" content="#008190">
+{% if page.headBackground == 'yellowBg' %}
+  <meta name="theme-color" content="#F39237">
+{% elsif page.headBackground == 'homepage' %}
+  <meta name="theme-color" content="#0E1A35">
+{% else %}
+  <meta name="theme-color" content="#008190">
+{% endif %}
 <meta name="pinterest" content="nohover"></meta>
 
 <meta property="og:type" content="article"/>
