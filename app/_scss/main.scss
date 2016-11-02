@@ -1978,7 +1978,22 @@ MEDIA QUERIES
   }
 }
 
+@media screen and (max-width: 350px){
+  .box {
+    width: 100%;
+    height: 186px !important;
+    font-size: 2rem;
+  }
+  .project-image {
+    width: 100%;
+    height: 186px !important;;
+  }
 
+  .techs{
+    display: none;
+  }
+
+}
 /* END OF MEDIA QUERIES */
 
 .images-carousel {
