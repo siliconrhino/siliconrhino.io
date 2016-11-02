@@ -114,6 +114,7 @@ ul.rhino-bullets {
 
 .wcd-section {
   margin: 50px auto 110px;
+  padding-top: 0 !important;
   > div {
     text-align: center;
     @include display-flex;
@@ -1372,6 +1373,11 @@ a.cta,
   .row {
     margin: 0;
   }
+
+  .stars{
+    position: fixed !important;
+  }
+
   .cd-vertical-nav,
   .scrollIconClass {
     display: none;
