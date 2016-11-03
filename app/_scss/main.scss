@@ -278,7 +278,7 @@ a {
 }
 
 .space-shuttle-outline {
-  z-index: 1111111;
+  z-index: 1111111 !important;
   top: 48px;
   left: 2vw;
   position: fixed;
@@ -1803,7 +1803,7 @@ MEDIA QUERIES
   }
 
   .space-shuttle-outline {
-    z-index: 1111111;
+    z-index: 1111111 !important;
     left: 45vw;
     transform: rotateY(180deg);
   }
