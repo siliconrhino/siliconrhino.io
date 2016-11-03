@@ -1375,7 +1375,12 @@ a.cta,
 }
 
 @media only screen and (max-width: 415px) {
-  .row {
+  .logo {
+    img{
+    width: 200px;
+    }
+  }
+   .row {
     margin: 0;
   }
 
