@@ -7,7 +7,7 @@ name: siliconrhino.io
 description: "silicon rhino is the cto you don't have. We handle planning, architecture and implementation of your web and mobile development projects."
 author:
   name: Silicon Rhino
-  email: admin@siliconrhino.io
+  email: support@siliconrhino.io
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://siliconrhino.io" # the base hostname & protocol for your site
 
