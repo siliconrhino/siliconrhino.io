@@ -278,12 +278,7 @@ a {
 }
 
 .space-shuttle-outline {
-  z-index: 111111;
-  top: 48px;
-  left: 2vw;
-  position: fixed;
-  width: 80px;
-  transform: rotateY(180deg);
+  display: none;
 }
 
 
@@ -1380,7 +1375,12 @@ a.cta,
 }
 
 @media only screen and (max-width: 415px) {
-  .row {
+  .logo {
+    img{
+    width: 200px !important;
+    }
+  }
+   .row {
     margin: 0;
   }
 
@@ -1536,7 +1536,9 @@ MEDIA QUERIES
 @media screen and (min-width: 1199px) {
   .space-shuttle-outline {
     left: 90vw;
-    }
+    z-index: 1111111 !important;
+  }
+
   .quote-wrapper {
     width: 940px;
     margin-left: auto;
@@ -1561,6 +1563,14 @@ MEDIA QUERIES
 /* LARGE screens */
 
 @media screen and (min-width: 1025px) {
+   .space-shuttle-outline {
+    z-index: 1111111 !important;
+    display: inline-block;
+    position: fixed;
+    top: 40px;
+    width: 104px;
+    left: 87vw;
+  }
   .page-intro {
     p {
       max-width: 70%;
@@ -1580,12 +1590,6 @@ MEDIA QUERIES
   }
   .politics2 {
     display: none !important;
-  }
-  .space-shuttle-outline {
-    top: 40px;
-    width: 104px;
-    left: 87vw;
-    transform: none !important;
   }
   .headerShuttleMove {
     @include animation(headerShuttleMove 3s ease forwards);
@@ -1803,8 +1807,12 @@ MEDIA QUERIES
   }
 
   .space-shuttle-outline {
+    position: fixed;
+    z-index: 1111111 !important;
     left: 45vw;
-    transform: rotateY(180deg);
+    display: inline-block;
+    top: 40px;
+    width: 104px;
   }
   .profile-description {
     margin-left: 50px;
@@ -1917,8 +1925,16 @@ MEDIA QUERIES
 
 /* Tablet landscape screens */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .blog-img {}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .space-shuttle-outline {
+    position: fixed;
+    z-index: 1111111 !important;
+    left: calc(50% - 52px);
+    display: inline-block;
+    top: 40px;
+    width: 104px;
+  }
+
   .projects .quote-wrapper {
     margin-right: 0;
   }
