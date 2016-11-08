@@ -616,8 +616,48 @@ label {
     text-transform: uppercase;
     font-weight: bold;
     padding: 0;
+      }
+
+  a {
+      color: $white;
+      text-decoration: none;
+      list-style: none;
+      display: inline-block;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      transition: all 1s ease-out;
+      &:after {
+        display: block;
+        content: '';
+        border-bottom: solid 2px #fff;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+        border-bottom: solid 2px #fff;
+        transform: scaleX(0);
+        transition: transform .5s ease-in-out, border 1s ease-out;
+      &:hover {
+          color: $yellow;
+        }
+      }
+      &.no {
+        display: none;
+      }
+      &.no:after {
+        display: none;
+      }
+      &.no a:hover {
+        color: $yellow;
+      }
+      &:hover:after {
+        transform: scaleX(1);
+      }
+      &:hover:after,
+      &.active:after {
+        transform: scaleX(1);
+        border-bottom: solid 2px $yellow;
+      }
+    }
   }
-}
 
 .post {
   font-size: 1.5em;
@@ -651,6 +691,10 @@ label {
   width: 35px;
   padding: 5px;
   margin-bottom: 35px;
+}
+
+.rrssb-wrap{
+  margin-left: 60px;
 }
 
 ul.rrssb-buttons {
