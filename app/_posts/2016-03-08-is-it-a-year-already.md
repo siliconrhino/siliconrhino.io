@@ -29,7 +29,6 @@ It’s true we haven’t blogged much (at all) to explain what we’ve been up t
 We’ve met great entrepreneurs with even greater visions, and we are proud to have helped them achieve their goals through technology. Each one of them has taught us something, and hopefully we’ll be able to pass all this knowledge to all the founders we still have to work with. Last but not least are the people who decided to carry on working with us in this adventure, and we’ve embarked on some great projects together this last year.
 
 ###Some of the projects we've worked on
-<div class="bottom-border blue"></div>
 
 <section class="projects-blog">
   <div class="container">
@@ -77,7 +76,6 @@ We’ve met great entrepreneurs with even greater visions, and we are proud to h
 We started silicon rhino because we felt founders without technical skills deserved a good team which cared about their projects as their own, and we feel we have achieved that. We will make sure this continues to be our number 1  focus in the future.
 
 ###So, what’s next for the rhinos?
-<div class="bottom-border yellow"></div>
 
 The team is growing soon and we couldn’t be more excited. We are lucky to have the opportunity to work with really talented people, and we can’t wait to see what we can achieve together. We hope to find a place to call our own soon too, but always keeping our mantra “you can work from anywhere at anytime”.
 
