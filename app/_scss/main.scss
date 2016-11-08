@@ -313,14 +313,14 @@ a {
 
 .menu {
   ul {
-    margin-top: 10px;
+    margin-top: 5px;
   }
   li {
     display: block;
     @include display-flex;
     @include justify-content(center);
     @include align-items(center);
-    padding: .8em;
+    padding: .5em;
     text-align: center;
     a {
       @include link-hover;
