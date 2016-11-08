@@ -20,13 +20,12 @@ I am now almost halfway into my internship, and for the above mentioned project 
 ##While CSS and I are making good friends. JavaScript and I are another subject..
 <div class="bottom-border yellow"></div>
 
-CSS - Cruel Structureless Styling
+###CSS - Cruel Structureless Styling
 What I have learned lately is that CSS does definitely not stand for “Clear and Simple (way to) Style” your HTML document. CSS is all but simple. Like HTML and JavaScript have rules and structure, CSS is much more up to you. That sounds awesome, right? You make the rules kinda, but it actually makes it a lot more overwhelming, especially when you are new to coding - you just want simplicity and some sort of structure. 
 
 It’s not completely true that there’s no structure in CSS, I am over exaggerating now, but it’s so easy to get lost in what looked like a nice structure to begin with. For bigger projects, I think in the future it would be better to divide my CSS into several files, to maintain the overview, and SASS will be very helpful as well.
 
-SASS - So Awesome Styling Structure
-
+###SASS - So Awesome Styling Structure
 Is just great, makes your life so much easier, when you are working on bigger projects. In school we had a so called masterclass, which introduced you to SASS, and I remember I was thinking, it was a bit overkill to use this when you a making a simple portfolio. But of course it makes great sense - as your portfolio hopefully will evolve and expand and the you can easily reuse your code.
 
 You know it’s like your friends just become more and more beautiful the more and better you get to know them. That’s how I feel about coding in general.

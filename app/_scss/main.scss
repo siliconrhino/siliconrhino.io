@@ -356,6 +356,7 @@ a {
   @include align-items(center);
   h2 {
     text-transform: uppercase;
+    text-align: center;
   }
   .bottom-border {
     width: 50px;
@@ -677,6 +678,8 @@ label {
     width: 100px;
     height: 3px;
     display: block;
+    margin: auto;
+    margin-bottom: 15px;
     &.blue {
       background: $blue;
     }
