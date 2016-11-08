@@ -6,7 +6,7 @@ title: "The Struggle is Real: Episode 2"
 description: How I got lost in space 
 tags: ["startups", "silicon rhino"]
 categories : []
-imageUrl: 'http://www.siliconrhino.io/img/backgrounds/fie_blog_space.8a04.png'
+imageUrl: 'http://www.siliconrhino.io/img/backgrounds/fie_blog_space.d96d.png'
 published: true
 ---
 
@@ -21,6 +21,7 @@ I am now almost halfway into my internship, and for the above mentioned project 
 <div class="bottom-border yellow"></div>
 
 CSS - Cruel Structureless Styling
+
 What I have learned lately is that CSS does definitely not stand for “Clear and Simple (way to) Style” your HTML document. CSS is all but simple. Like HTML and JavaScript have rules and structure, CSS is much more up to you. That sounds awesome, right? You make the rules kinda, but it actually makes it a lot more overwhelming, especially when you are new to coding - you just want simplicity and some sort of structure. 
 
 It’s not completely true that there’s no structure in CSS, I am over exaggerating now, but it’s so easy to get lost in what looked like a nice structure to begin with. For bigger projects, I think in the future it would be better to divide my CSS into several files, to maintain the overview, and SASS will be very helpful as well.
