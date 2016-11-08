@@ -626,14 +626,23 @@ label {
     font-style: bold;
     text-align: center;
     background-color: $blue;
-    padding: 20px;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
-  p {}
   .twitter-tweet {
     margin: auto;
     padding-bottom: 40px;
+  }
+   .bottom-border {
+    width: 100px;
+    height: 3px;
+    display: block;
+    &.blue {
+      background: $blue;
+    }
+    &.yellow {
+      background: $yellow;
+    }
   }
 }
 
@@ -1615,6 +1624,10 @@ MEDIA QUERIES
     height: auto;
   }
   .blog-post-wrap {
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+
     > * {
       margin: 0 auto 20px;
     }

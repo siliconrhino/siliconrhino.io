@@ -14,7 +14,9 @@ When I decided to start my multimedia design course two years ago, I was strongl
 
 I immediately thought to myself, this is not something I would like to get involved with - this is pretty scary and maybe I will die!… but I didn’t of course. And then I realised after tasting and nipping to it a couple of times, that it gave me some sort of a satisfaction when I solved a coding obstacle. So I decided to give this coding thingy another chance and try not to get so frightened, and also because I want to prove, that you don’t have to have played World of Warcraft or other quite male dominated games, to create and develop awesome stuff.
 
+<div class="bottom-border yellow"></div>
 ##This target has led me to where I am now, in London doing an awesome internship with awesome guys
+<div class="bottom-border yellow"></div>
 
 About four weeks ago I arrived in London from Denmark to start my internship at Silicon Rhino, whom I came in contact with via LinkedIn and mutual connections. I have known for quite a while that I wanted to go back to London to do my internship, and maybe more than that, as this city is a great place to be in as so much stuff and events are happening within the tech world. I wanted to be in a smaller company and preferable newly started, as I see it as an opportunity to try out different stuff and gain skills within not just one very specific area. I haven’t yet regretted this wish.
 
