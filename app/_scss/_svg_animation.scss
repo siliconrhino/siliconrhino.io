@@ -334,5 +334,21 @@
   }
 }
 
+/*.arrow1{
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5;
+
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    animation: drawArroww 2s linear infinite;
+}
+
+@keyframes drawArroww {
+  to {
+    stroke-dashoffset: 400;
+  }
+}*/
+
 
 
