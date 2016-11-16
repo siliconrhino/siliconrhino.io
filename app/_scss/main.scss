@@ -89,6 +89,23 @@ body {
   }
 }
 
+.ctaContainer{
+  a{
+    font-size: 17px;
+    margin-left:calc(50% - 144px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+.ctaProcessPage{
+  a{
+  font-size: 17px;
+  margin-top: 45px;
+  margin-bottom: 35px;
+  }
+}
+
 
 ul.rhino-bullets {
   font-size: 2rem;
@@ -476,13 +493,18 @@ a {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
-  #bespokeSvg, #websiteSvg, #appSvg, #mvpSvg {
+  #bespokeSvg, #websiteSvg {
     width: 100%;
     padding: 55px;
   }
+  #appSvg, #mvpSvg{
+    width: 100%;
+    padding: 100px;
+  }
+
   .service-description {
     p {
-      margin: 0 25px 10px 25px;
+      font-size: 2rem;
     }
     &.blue {
       @include image-border;
@@ -726,6 +748,7 @@ ul.rrssb-buttons {
     font-size: 2rem;
   }
   .project-image {
+    padding: 20px;
     width: 100%;
     height: 267px;
     position: absolute;
@@ -1747,7 +1770,7 @@ MEDIA QUERIES
   }
   .services-wrap {
     display: flex;
-    &:nth-child(even) {
+    &:nth-of-type(even) {
       flex-direction: row-reverse;
     }
     img {
@@ -1757,7 +1780,7 @@ MEDIA QUERIES
     .service-description {
       margin-top: 56px;
       p {
-        font-size: 2rem;
+         margin: 0 25px 10px 25px;
       }
     }
   }
