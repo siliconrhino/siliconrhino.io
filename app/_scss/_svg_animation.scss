@@ -1,0 +1,338 @@
+
+#bespokeSvg{
+  .st7{
+ transform-origin: 50% 50%;
+  }
+  #bigWheel{
+    @include animation(rotateBigWheel 8s linear infinite);
+  }
+  @include keyframes(rotateBigWheel){
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #smallWheel{
+    @include animation(rotateSmallWheel 8s linear infinite);
+  }
+  @include keyframes(rotateSmallWheel){
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+#bespokeSvgFrontPage:hover{
+  @extend #bespokeSvg;
+}
+
+#websiteSvg{
+  .line1{
+  width: 0;
+  @include animation(draw1 1s linear forwards);
+  }
+  .line2{
+  width: 0;
+  @include animation(draw2 1s linear forwards 1s);
+  }
+  .line3{
+  width: 0;
+  @include animation(draw3 1.5s linear forwards 2s);
+  }
+  .line4{
+  width: 0;
+  @include animation(draw4 1.5s linear forwards 3.5s);
+  }
+  .line5{
+  width: 0;
+  @include animation(draw5 1.5s linear forwards 5s);
+  }
+  .line6{
+  width: 0;
+  @include animation(draw6 2s linear forwards 6.5s);
+  }
+  .line7{
+  width: 0;
+  @include animation(draw7 1.5s linear forwards 8.5s);
+  }
+  .line8{
+  width: 0;
+  @include animation(draw8 2s linear forwards 10s);
+  }
+  .line9{
+  width: 0;
+  @include animation(draw9 1s linear forwards 12s);
+  }
+  .line10{
+  width: 0;
+  @include animation(draw10 1.5s linear forwards 13s);
+  }
+  .line11{
+  width: 0;
+  @include animation(draw11 2s linear forwards 14.5s);
+  }
+  .line12{
+  width: 0;
+  @include animation(draw12 1.5s linear forwards 16.5s);
+  }
+  .line13{
+  width: 0;
+  @include animation(draw13 1s linear forwards 18s);
+  }
+  .line14{
+  width: 0;
+  @include animation(draw14 1s linear forwards 19s);
+  }
+  .line15{
+  width: 0;
+  @include animation(draw15 1.5s linear forwards 20s);
+  }
+  .line16{
+  width: 0;
+  @include animation(draw16 1.5s linear forwards 21.5s);
+  }
+  .line17{
+  width: 0;
+  @include animation(draw17 1.5s linear forwards 23s);
+  }
+  .line18{
+  width: 0;
+  @include animation(draw18 2s linear forwards 24.5s);
+  }
+  .line19{
+  width: 0;
+  @include animation(draw19 1.5s linear forwards 26.5s);
+  }
+  .line20{
+  width: 0;
+  @include animation(draw20 2s linear forwards 28s);
+  }
+  .line21{
+  width: 0;
+  @include animation(draw21 1s linear forwards 30s);
+  }
+  .line22{
+  width: 0;
+  @include animation(draw22 1.5s linear forwards 31s);
+  }
+  .line23{
+  width: 0;
+  @include animation(draw23 2s linear forwards 32.5s);
+  }
+  .line24{
+  width: 0;
+  @include animation(draw24 1.5s linear forwards 34.5s);
+  }
+}
+
+#websiteSvgFrontPage{
+ .line1,.line2,.line3,.line4,.line5,.line6,.line7,.line8,.line9,.line10,.line11,.line12,.line13,.line14,.line15,.line16,.line17,.line18,.line19,.line20,.line21,.line22,.line23,.line24{
+    opacity:0;
+    }
+  &:hover{  .line1,.line2,.line3,.line4,.line5,.line6,.line7,.line8,.line9,.line10,.line11,.line12,.line13,.line14,.line15,.line16,.line17,.line18,.line19,.line20,.line21,.line22,.line23,.line24{
+    opacity: 1;
+    }
+    @extend #websiteSvg;
+  }
+}
+@include keyframes(draw1) {
+  from {width:0;}
+  to {width:29.63px;}
+}
+@include keyframes(draw2) {
+  from {width:0;}
+  to {width:29.63px;}
+}
+@include keyframes(draw3) {
+  from {width:0;}
+  to {width:68.85px;}
+}
+@include keyframes(draw4) {
+  from {width:0;}
+  to {width:54.19px;}
+}
+@include keyframes(draw5) {
+  from {width:0;}
+  to {width:58.34px;}
+}
+@include keyframes(draw6) {
+  from {width:0;}
+  to {width:106.97px;}
+}
+@include keyframes(draw7) {
+  from {width:0;}
+  to {width:68.85px;}
+}
+@include keyframes(draw8) {
+  from {width:0;}
+  to {width:92.24px;}
+}
+@include keyframes(draw9) {
+  from {width:0;}
+  to {width:29.63px;}
+}
+@include keyframes(draw10) {
+  from {width:0;}
+  to {width:58.34px;}
+}
+@include keyframes(draw11) {
+  from {width:0;}
+  to {width:106.97px;}
+}
+@include keyframes(draw12) {
+  from {width:0;}
+  to {width:68.85px;}
+}
+@include keyframes(draw13) {
+  from {width:0;}
+  to {width:29.63px;}
+}
+@include keyframes(draw14) {
+  from {width:0;}
+  to {width:29.63px;}
+}
+@include keyframes(draw15) {
+  from {width:0;}
+  to {width:68.85px;}
+}
+@include keyframes(draw16) {
+  from {width:0;}
+  to {width:54.19px;}
+}
+@include keyframes(draw17) {
+  from {width:0;}
+  to {width:58.34px;}
+}
+@include keyframes(draw18) {
+  from {width:0;}
+  to {width:106.97px;}
+}
+@include keyframes(draw19) {
+  from {width:0;}
+  to {width:68.85px;}
+}
+@include keyframes(draw20) {
+  from {width:0;}
+  to {width:92.24px;}
+}
+@include keyframes(draw21) {
+  from {width:0;}
+  to {width:29.63px;}
+}
+@include keyframes(draw22) {
+  from {width:0;}
+  to {width:58.34px;}
+}
+@include keyframes(draw23) {
+  from {width:0;}
+  to {width:106.97px;}
+}
+@include keyframes(draw24) {
+  from {width:0;}
+  to {width:68.85px;}
+}
+
+#appSvg{
+  .swipeCircle{
+  animation: swipeRight 1.1s linear forwards, fadeOutSwipeSvg 0.5s ease-out forwards 1s;
+  }
+  .swipeContainer{
+  opacity: 0.1;
+  animation: fadeOutSwipeContainer 1s ease-out forwards 1.1s;
+  }
+  .touchCenterCircle{
+    opacity: 0;
+    animation: touchPulse 4s ease-out forwards 2s;
+  }
+  .touchMiddleCircle{
+    opacity: 0;
+    animation: touchPulseOuterCircles 3s ease-out forwards 3s;
+  }
+  .touchOutlerCircle{
+    opacity: 0;
+    animation: touchPulseOuterCircles 3s ease-out forwards 3.5s;
+  }
+}
+
+#appSvgFrontPage{
+  .swipeCircle,.swipeContainer,.touchCenterCircle,.touchMiddleCircle,.touchOutlerCircle{
+    opacity: 0;
+    }
+  &:hover{
+    .swipeCircle{
+      opacity:0.8;
+    }
+    .swipeContainer{
+      opacity: 0.1;
+    }
+    .touchCenterCircle{
+      opacity:0.79;
+    }
+    .touchMiddleCircle{
+      opacity: 0.32;
+    }
+    .touchOutlerCircle{
+    opacity: 0.32;
+    }
+  @extend #appSvg;
+  }
+}
+
+
+#mvpSvg{
+  .threadDraw{
+    fill: 0;
+    stroke: #F39237;
+    stroke-width: 5;
+    stroke-opacity: 0.6;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: drawThread 4s linear forwards, glowingThread 4s ease-out forwards 4s;
+  }
+}
+
+#mvpSvgFrontPage:hover{
+  @extend #mvpSvg;
+}
+
+@include keyframes(swipeRight) {
+ from {transform: translate(0);}
+  to {transform: translate(80px);}
+}
+
+@include keyframes(fadeOutSwipeSvg) {
+ from {opacity:1;}
+  to {opacity:0;}
+}
+
+@include keyframes(fadeOutSwipeContainer) {
+ from {opacity: 0.1;}
+  to {opacity:0;}
+}
+
+@include keyframes(touchPulse){
+      0%  {opacity: 0;}
+      50% {opacity: 1;}
+     100% {opacity: 0;}
+}
+
+@include keyframes(touchPulseOuterCircles){
+      0%  {opacity: 0;}
+      50% {opacity: 0.5;}
+     100% {opacity: 0;}
+}
+
+@keyframes glowingThread {
+      0%  {stroke-opacity:0.6;}
+      50% {stroke-opacity:0;}
+      75% {stroke-opacity:0.6;}
+      100% {stroke-opacity:0;}
+}
+
+@keyframes drawThread {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
