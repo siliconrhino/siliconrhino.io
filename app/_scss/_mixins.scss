@@ -25,6 +25,9 @@
     animation-iteration-count: $animation-iteration-count;
 }
 
+@mixin animation-delay($animation-delay) {
+    animation-delay: $animation-delay;
+}
 
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
