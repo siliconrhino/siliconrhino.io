@@ -11,6 +11,7 @@
 @import "_blog.scss";
 @import "_contact.scss";
 @import "_drinks.scss";
+@import "_svg_animation.scss";
 
 /* --------------------------------
 
@@ -128,14 +129,13 @@ ul.rhino-bullets {
     @include align-items(center);
     position: relative;
   }
-  img {
+  #mvpSvgFrontPage,
+  #bespokeSvgFrontPage,
+  #websiteSvgFrontPage,
+  #appSvgFrontPage{
     padding-top: 70px;
     display: inline-block;
     width: 30vw;
-    -webkit-filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.8));
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
   }
   span {
     display: block;
@@ -476,7 +476,7 @@ a {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
-  img {
+  #bespokeSvg, #websiteSvg, #appSvg, #mvpSvg {
     width: 100%;
     padding: 55px;
   }
@@ -1474,6 +1474,7 @@ a.cta,
     }
     &:nth-of-type(2) {
       height: 460px !important;
+      margin-top: 70px;
     }
     &:nth-of-type(3) {
       height: 560px !important;
@@ -1788,8 +1789,14 @@ MEDIA QUERIES
   .wcd-section {
     @include display-flex;
     @include justify-content(space-around);
-    img {
-      width: 18vw;
+  #mvpSvgFrontPage,
+  #bespokeSvgFrontPage,
+  #websiteSvgFrontPage,
+  #appSvgFrontPage {
+      width: 200px;
+  #Layer_1 {
+    max-height: 180px;
+      }
     }
   }
   .main-links {
@@ -1855,7 +1862,7 @@ MEDIA QUERIES
 
 /* Tablet portrait screens */
 
-@media screen and (min-width: 600px) and (max-width: 767px) {
+@media screen and (min-width: 567px) and (max-width: 767px) {
    .stars{
     position: fixed !important;
   }
