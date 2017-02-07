@@ -733,7 +733,17 @@ ul.rrssb-buttons {
   ;
 }
 
+
 // project imgs
+
+.coming-soon {
+  margin: auto;
+  position: absolute;
+  left: calc(50% - 66px);
+  bottom: calc(50% - 100px);
+  font-size: 20px;
+}
+
 .projects {
   .row {
     max-width: 1000px;
@@ -747,18 +757,24 @@ ul.rrssb-buttons {
     height: 267px;
     font-size: 2rem;
   }
-  .project-image {
-    padding: 20px;
-    width: 100%;
+
+  .image-wrapper{
     height: 267px;
-    position: absolute;
-    @include transition(all 300ms ease-out);
-    &.polimapper {
+    @include display-flex;
+    @include align-items(center);
+    &.tall {
       display: none;
     }
     &.politics {
       display: none;
     }
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    @include transition(all 300ms ease-out);
   }
   .overbox {
     top: 6px;
@@ -781,10 +797,12 @@ ul.rrssb-buttons {
     }
   }
   .techs {
+
     img {
-      max-width: 110px;
-      height: 40px;
+      max-width: auto;
+      height: 20px;
       padding-left: 10px;
+      margin-bottom: 10px;
     }
   }
   .quote-wrapper {
@@ -853,9 +871,9 @@ ul.rrssb-buttons {
 
 .projects-blog {
   .project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
   }
   .box {
     height: 235px;
@@ -871,7 +889,7 @@ ul.rrssb-buttons {
   .techs {
     img {
       width: auto;
-      height: 40px;
+      height: 20px;
       margin: 10px;
       margin-bottom: 50px;
     }
@@ -1714,10 +1732,12 @@ MEDIA QUERIES
       &.wide {
         width: 100%;
       }
-      .project-image {
+      .image-wrapper{
         height: 350px;
         &.tall {
           height: 769px;
+          @include display-flex;
+          @include align-items(center);
         }
         &.wide {
           width: 100%;
@@ -1758,16 +1778,16 @@ MEDIA QUERIES
   }
   .polimapper {
     display: block !important;
-    .polimapper2 {
+  }
+  .image-wrapper {
+    &.polimapper2 {
       display: none;
     }
   }
   .politics {
     display: block !important;
-    .politics2 {
-      display: none;
-    }
   }
+
   .services-wrap {
     display: flex;
     &:nth-of-type(even) {
@@ -1917,7 +1937,7 @@ MEDIA QUERIES
       height: 356px;
       font-size: 2rem;
     }
-    .project-image {
+    .image-wrapper {
       height: 356px;
     }
     .overbox {
@@ -2013,7 +2033,6 @@ MEDIA QUERIES
   }
 }
 
-
 /* Tablet landscape screens */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -2086,15 +2105,29 @@ MEDIA QUERIES
     font-size: 2rem;
   }
   .project-image {
+    padding: 20px !important;
     width: 100%;
-    height: 186px !important;;
+    height: 186px !important;
   }
 
   .techs{
     display: none;
   }
-
 }
+
+@media screen and (min-width: 450px) {
+  .project-image {
+    padding: 60px !important;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .project-image {
+    padding: 100px !important;
+  }
+}
+
+
 /* END OF MEDIA QUERIES */
 
 .images-carousel {
