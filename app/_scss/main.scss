@@ -742,6 +742,9 @@ ul.rrssb-buttons {
   left: calc(50% - 66px);
   bottom: calc(50% - 100px);
   font-size: 20px;
+  &.kontainers {
+  top: 3vh;
+  }
 }
 
 .projects {
