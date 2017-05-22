@@ -1,0 +1,23 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - apt-get update -y
+      - apt-get install -y software-properties-common
+      - apt-add-repository ppa:brightbox/ruby-ng
+      - apt-get update -y
+      - apt-get install -y ruby2.2 ruby2.2-dev
+      - npm install -g grunt-cli
+      - npm install -g bower
+      - gem install bundler
+      - npm install
+      - bundle install
+      - bower install --allow-root
+  build:
+    commands:
+      - echo Build started on `date`
+      - grunt deploy-test-ci
+  post_build:
+    commands:
+      - echo Build completed on `date`

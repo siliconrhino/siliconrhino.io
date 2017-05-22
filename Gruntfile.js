@@ -454,6 +454,17 @@ module.exports = function (grunt) {
           dest: ''
         }]
       },
+      'test-ci': {
+        options: {
+          bucket: 'siliconrhino-test-website',
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.dist %>',
+          src: ['**/*'],
+          dest: ''
+        }]
+      },
     }
   });
 
@@ -524,6 +535,13 @@ module.exports = function (grunt) {
     'test',
     'build',
     'aws_s3:test'
+  ]);
+
+  grunt.registerTask('deploy-test-ci', [
+    'check',
+    'test',
+    'build',
+    'aws_s3:test-ci'
   ]);
 
   grunt.registerTask('deploy-travis', [
