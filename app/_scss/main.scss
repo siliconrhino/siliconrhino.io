@@ -1722,7 +1722,8 @@ MEDIA QUERIES
   }
   .profile {
     width: 550px;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
   }
   .blog-post-wrap {
     margin-top: 20px;
@@ -1911,6 +1912,13 @@ MEDIA QUERIES
     > div {
         top: 81px !important;
         height: calc(100% - 81px);
+    }
+  }
+  .container {
+    &.about {
+      .row {
+        padding-bottom: 30px !important;
+      }
     }
   }
 }
