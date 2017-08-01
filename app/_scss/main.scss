@@ -438,11 +438,9 @@ a {
 }
 
 .profile {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 350px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .friends-grid {
@@ -560,7 +558,7 @@ label {
   .profile-description {
     text-align: left;
     font-size: 2.5rem;
-    padding-top: 50px;
+    padding-top: 30px;
     line-height: 1.6em;
     letter-spacing: 0.03em;
     div.connect {
@@ -1949,10 +1947,7 @@ MEDIA QUERIES
     margin-left: 50px;
     margin-right: 50px;
   }
-  .profile {
-    width: 450px;
-    height: auto
-  }
+
   .projects {
     .box {
       height: 356px;
@@ -2102,6 +2097,26 @@ MEDIA QUERIES
     font-size: 20px;
     &.kontainers {
     top: 3vh;
+    }
+  }
+  .team {
+    .profile {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .about {
+    .row {
+      margin-bottom: 30px;
+      .profile-description {
+
+      }
+    }
+    .row:nth-of-type(even){
+      @include display-flex;
+      @include flex-direction(row-reverse);
     }
   }
 }
