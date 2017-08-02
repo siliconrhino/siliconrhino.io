@@ -6,7 +6,7 @@ title: Who needs servers anyway?
 description: Sometimes, you simply don't need them..
 tags: ["aws", "silicon rhino"]
 categories : []
-imageUrl: 'http://www.siliconrhino.io/img/backgrounds/serverless.b0fd.jpg'
+imageUrl: 'http://www.siliconrhino.io/img/backgrounds/serverless.3b56.jpg'
 published: true
 ---
 

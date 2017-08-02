@@ -6,7 +6,7 @@ title: "The Struggle is Real: Episode 2"
 description: How I got lost in space 
 tags: ["startups", "silicon rhino"]
 categories : []
-imageUrl: 'http://www.siliconrhino.io/img/backgrounds/fie_blog_space.c2e0.png'
+imageUrl: 'http://www.siliconrhino.io/img/backgrounds/fie_blog_space.5649.png'
 published: true
 ---
 
