@@ -138,7 +138,7 @@ ul.rhino-bullets {
 }
 
 .wcd-section {
-  margin: 50px auto 110px;
+  margin: 50px auto;
   padding-top: 0 !important;
   > div {
     text-align: center;
@@ -152,7 +152,6 @@ ul.rhino-bullets {
   #bespokeSvgFrontPage,
   #websiteSvgFrontPage,
   #appSvgFrontPage{
-    padding-top: 70px;
     display: inline-block;
     width: 30vw;
   }
@@ -1853,14 +1852,14 @@ MEDIA QUERIES
   .wcd-section {
     @include display-flex;
     @include justify-content(space-around);
+    @include align-items(flex-start);
   #mvpSvgFrontPage,
   #bespokeSvgFrontPage,
   #websiteSvgFrontPage,
-  #appSvgFrontPage {
-      width: 200px;
+  #appSvgFrontPage,
   #Layer_1 {
-    max-height: 180px;
-      }
+      width: 200px;
+      height: 185px;
     }
   }
   .main-links {
@@ -2134,13 +2133,15 @@ MEDIA QUERIES
     top: 56px;
     bottom: 0;
   }
-  #bespokeSvg, #websiteSvg {
-    width: 100%;
-    padding: 55px !important;
-  }
-  #appSvg, #mvpSvg{
-    width: 100%;
-    padding: 100px !important;
+  .services-wrap {
+    #bespokeSvg, #websiteSvg {
+      width: 100%;
+      padding: 55px;
+    }
+    #appSvg, #mvpSvg{
+      width: 100%;
+      padding: 100px;
+    }
   }
 }
 
