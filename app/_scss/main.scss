@@ -92,7 +92,9 @@ body {
 .ctaContainer{
   a{
     font-size: 17px;
-    margin-left:calc(50% - 144px);
+    margin-left: calc(50% - 144px);
+    margin-left: -moz-calc(50% - 144px);
+    margin-left: -webkit-calc(50% - 144px);
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -309,6 +311,8 @@ a {
     z-index: 1000000;
     top: 70px !important;
     width: $menu-width !important;
+    height: -webkit-calc(100% - 70px);
+    height: -moz-calc(100% - 70px);
     height: calc(100% - 70px);
     @include transition(-webkit-transform ease-in 300ms 20ms);
     @include transition(transform ease-in 300ms 20ms);
@@ -478,9 +482,8 @@ a {
     margin-left: 5%;
   }
   .services-wrap-image-box {
-    display: flex;
-    align-items: center;
-    height: calc(100% - 56px);
+    @include display-flex;
+    @include align-items(center);
   }
   .services-wrap-content {
     padding: 20px;
@@ -490,14 +493,12 @@ a {
   .col-sm-5 {
     padding-right: 0 !important;
     padding-left: 0 !important;
+    position: relative;
   }
-  #bespokeSvg, #websiteSvg {
-    width: 100%;
-    padding: 55px;
-  }
+  #bespokeSvg, #websiteSvg,
   #appSvg, #mvpSvg{
     width: 100%;
-    padding: 100px;
+    padding: 10px;
   }
 
   .service-description {
@@ -738,7 +739,11 @@ ul.rrssb-buttons {
   margin: auto;
   position: absolute;
   left: calc(50% - 66px);
+  left: -webkit-calc(50% - 66px);
+  left: -moz-calc(50% - 66px);
   bottom: calc(50% - 120px);
+  bottom: -webkit-calc(50% - 120px);
+  bottom: -moz-calc(50% - 120px);
   font-size: 20px;
   &.kontainers {
   top: 3vh;
@@ -782,7 +787,11 @@ ul.rrssb-buttons {
     top: 6px;
     left: 6px;
     width: calc(100% - 12px);
+    width: -webkit-calc(100% - 12px);
+    width: -moz-calc(100% - 12px);
     height: calc(100% - 12px);
+    height: -webkit-calc(100% - 12px);
+    height: -moz-calc(100% - 12px);
     li {
       display: none;
     }
@@ -1801,9 +1810,9 @@ MEDIA QUERIES
   }
 
   .services-wrap {
-    display: flex;
+    @include display-flex;
     &:nth-of-type(even) {
-      flex-direction: row-reverse;
+      @include flex-direction(row-reverse);
     }
     img {
       margin-top: 25px;
@@ -2118,6 +2127,20 @@ MEDIA QUERIES
       @include display-flex;
       @include flex-direction(row-reverse);
     }
+  }
+  .services-wrap-image-box {
+    position: absolute;
+    width: 100%;
+    top: 56px;
+    bottom: 0;
+  }
+  #bespokeSvg, #websiteSvg {
+    width: 100%;
+    padding: 55px !important;
+  }
+  #appSvg, #mvpSvg{
+    width: 100%;
+    padding: 100px !important;
   }
 }
 
