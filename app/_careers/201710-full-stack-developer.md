@@ -58,4 +58,8 @@ sending your CV and examples of your work to jobs@siliconrhino.io.
 
 NO RECRUITERS (we won’t even bother replying)
 <p></p>
+
+##Want to work with us?
+get in touch
+<p></p>
 <p></p>
