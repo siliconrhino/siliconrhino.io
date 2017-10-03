@@ -1,0 +1,15 @@
+.blog-section.careers {
+    h2, h3 {
+        clear: both;
+        text-align: left;
+        display: inline-block;
+        margin: 30px 0 0;
+        width: auto;
+
+        & + p {
+            display: inline;
+        }
+    }
+
+
+}
