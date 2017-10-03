@@ -1,7 +1,7 @@
 ---
 layout: career
 title: Full Stack Developer
-imageUrl: '/img/backgrounds/space_shuttle_1.png'
+imageUrl: 'http://www.siliconrhino.io/img/backgrounds/space_shuttle_1.20a0.png'
 published: true
 ---
 
@@ -49,12 +49,12 @@ We specialise in scalable implementation and design/ux, while adding a wealth of
  - Terraform
 <p></p>
 
-##Salary expectations
-salary dependent upon experience
+##Salary
+dependent upon experience
 <p></p>
 
 ##Apply
-sending your CV and examples of your work to jobs@siliconrhino.io.
+by sending your CV and examples of your work to jobs@siliconrhino.io.
 
 NO RECRUITERS (we won’t even bother replying)
 <p></p>
