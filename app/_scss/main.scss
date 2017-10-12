@@ -445,6 +445,9 @@ a {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  &.nathan {
+    object-position: 20% 10%;
+  }
 }
 
 .friends-grid {
@@ -1728,7 +1731,7 @@ MEDIA QUERIES
     }
   }
   .profile {
-    width: 550px;
+    width: 485px;
     height: 400px;
     object-fit: cover;
   }
