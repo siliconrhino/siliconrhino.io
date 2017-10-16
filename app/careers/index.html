@@ -1,0 +1,38 @@
+---
+layout: subpage
+title: Careers
+headBackground: yellowBg
+bodyClass: blog-page
+---
+<section class="home-backg backg-projects">
+  <div class="subpage-topHeading">
+   <div class="page-title">
+    <h2>Careers</h2>
+    <div class="bottom-border yellow"></div>
+    </div>
+     <img class="space-shuttle-outline yellow" src="/img/backgrounds/shuttle-outline-yellow.svg" alt="space shuttle outline" />
+  </div>
+
+</section>
+
+<section class="blog-section careers">
+   <p class="col-sm-12 latest-posts"></p>
+  <div class="row">
+    {% for post in site.careers %}
+    {% include /list_item.html %}
+      {% endfor %}
+    </div>
+
+
+
+  <!--<h2>Interviews</h2>
+  {% for post in site.categories.foo %}
+    {% include /list_item.html %}
+  {% endfor %}
+
+  <h2>Case Studies</h2>
+  {% for post in site.categories.foo %}
+    {% include /list_item.html %}
+  {% endfor %}-->
+
+</section>

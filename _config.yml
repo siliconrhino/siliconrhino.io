@@ -42,3 +42,7 @@ collections:
   case-studies:
     output: true
     permalink: /case-study/:path/
+  careers:
+    output: true
+    permalink: /careers/:path/
+
