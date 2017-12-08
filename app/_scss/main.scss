@@ -777,6 +777,26 @@ ul.rrssb-buttons {
     &.politics {
       display: none;
     }
+    &.small {
+      .bestof-appstore {
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+        @include display-flex;
+        @include flex-direction(column);
+        @include align-items(flex-end);
+        text-transform: uppercase;
+        p {
+          font-weight: 600;
+          color: $yellow;
+          font-size: 12px;
+          margin-bottom: 0;
+        }
+        img {
+          margin-top: 10px;
+        }
+      }
+    }
   }
 
   .project-image {
@@ -1758,10 +1778,29 @@ MEDIA QUERIES
       }
       .image-wrapper{
         height: 350px;
+        &.small {
+          display: none;
+        }
         &.tall {
           height: 769px;
           @include display-flex;
           @include align-items(center);
+          .bestof-appstore {
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 143px);
+            @include display-flex;
+            @include flex-direction(column);
+            @include align-items(center);
+            text-transform: uppercase;
+            p {
+              font-weight: 600;
+              color: $yellow;
+              &:first-of-type{
+                margin-bottom: 0;
+              }
+            }
+          }
         }
         &.wide {
           width: 100%;
@@ -1781,6 +1820,23 @@ MEDIA QUERIES
         width: 97%;
         height: 98%;
         left: 1.5%;
+        .bestof-appstore {
+          position: absolute;
+          bottom: -225px;
+          left: calc(50% - 143px);
+          @include display-flex;
+          @include flex-direction(column);
+          @include align-items(center);
+          text-transform: uppercase;
+          p {
+            font-weight: 600;
+            color: $darkblue;
+            font-size: 16px;
+            &:first-of-type{
+              margin-bottom: 0;
+            }
+          }
+        }
       }
     }
   }
@@ -2122,9 +2178,6 @@ MEDIA QUERIES
   .about {
     .row {
       margin-bottom: 30px;
-      .profile-description {
-
-      }
     }
     .row:nth-of-type(even){
       @include display-flex;
@@ -2145,6 +2198,19 @@ MEDIA QUERIES
     #appSvg, #mvpSvg{
       width: 100%;
       padding: 100px;
+    }
+  }
+  .project-image {
+    &.falcon {
+       padding: 230px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-image  {
+    &.falcon {
+      padding: 140px !important;
     }
   }
 }
