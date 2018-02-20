@@ -55,7 +55,9 @@ We specialise in scalable implementation and design/ux, while adding a wealth of
   - Pension
   - 25 days holiday + bank holidays
   - Friday team lunches
-  - Awesome team
+  - Learn new technologies
+  - Great opportunities to grow, personally and professionally
+  - Awesome team and even better environment
   - Mario Kart 8 and console time championships
   - Bowling championships
   - After work beers... often
