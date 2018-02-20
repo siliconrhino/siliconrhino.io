@@ -50,8 +50,20 @@ We specialise in scalable implementation and design/ux, while adding a wealth of
  - Terraform
 <p></p>
 
-##Salary
-dependent upon experience
+##Benefits
+  - Competitive salary
+  - Pension
+  - 25 days holiday + bank holidays
+  - Friday team lunches
+  - Awesome team
+  - Mario Kart 8 and console time championships
+  - Bowling championships
+  - After work beers... often
+  - We also like going on company retreats from time to time
+  - A shiny new MacBook
+  - Flexible working hours and working from home days
+  - We also work on internal projects
+  - Work on some exciting apps, websites, APIs... you name it!
 <p></p>
 
 ##Apply
