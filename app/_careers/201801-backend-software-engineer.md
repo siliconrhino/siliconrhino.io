@@ -1,13 +1,13 @@
 ---
 layout: career
-title: Full Stack Developer
+title: Backend Software Engineer
 headBackground: yellowBg
-imageUrl: 'http://www.siliconrhino.io/img/backgrounds/space_shuttle_1.20a0.png'
+imageUrl: 'http://www.siliconrhino.io/img/backgrounds/blueprint-with-background@2x.e691.png'
 published: true
 ---
 
 ##We’re looking for
-a full-stack developer with good Javascript/Typescript and mobile dev experience, to work on all areas across several interesting projects.
+a back end software engineer with good Typescript and Node.js experience, to work on a range of interesting projects.
 <p></p>
 
 ##Silicon Rhino is
@@ -18,12 +18,13 @@ We specialise in scalable implementation and design/ux, while adding a wealth of
 
 ##A successful candidate should
 
- - Have 2+ years experience with Javascript technologies
- - Have experience working with browser, server, and database technologies
- - Be passionate about development and always strive to improve themselves and their work
- - Love to craft beautiful software (aesthetic or otherwise)
+ - Have 2+ years experience in engineering backend systems
+ - Have 2+ years experience with Typescript/Javascript
+ - Be passionate about the code they write
+ - Have a keen interest in scalability and project architecture
+ - Always strive to improve themselves and their work
+ - Love to tackle challenging problems
  - Be able to communicate well with team members and clients
- - Welcome a challenge
 
 <p></p>
 
@@ -33,21 +34,36 @@ We specialise in scalable implementation and design/ux, while adding a wealth of
  - We spend time learning for each project
  - We’re a fast growing and friendly team
  - We give back to the startup community by mentoring at several accelerators
- - We have weekly team lunches
+ - We have weekly team lunches (and gaming sessions!)
  - We are a social bunch - we enjoy team beers after work
- - A relaxed, friendly atmosphere
+ - We have a relaxed, friendly atmosphere
+
+<p></p>
+
+##Must haves
+
+ - Node.js
+ - Typescript
+ - AWS
 
 <p></p>
 
 ##Useful technologies
- - Javascript/Typescript
- - NodeJs
- - AngularJs 1 & 2+
- - Cordova
- - React/Native
- - AWS/Azure
+ - REST
+ - GraphQL
  - MongoDB
+ - DynamoDB
+ - Elasticsearch
+ - Redis
+ - Neo4j
+ - OAuth
+ - Microservices
+ - Serverless architecture
+ - Docker
  - Terraform
+ - .NET
+ - Azure
+ - Stripe
 <p></p>
 
 ##Benefits
