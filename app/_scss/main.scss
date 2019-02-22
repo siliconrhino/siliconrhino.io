@@ -121,9 +121,8 @@ ul.rhino-bullets {
   padding-left: 0;
 
   li {
-    background: url(/img/ryan_horn_darkblue.png) no-repeat top left;
-    background-size: 19px 19px;
-    padding-left: 30px;
+    background: url('/img/ryan-dark-blue.png') no-repeat center left;
+    padding-left: 35px;
     margin-top: 10px;
     text-align: left;
     vertical-align: middle;
@@ -752,6 +751,11 @@ ul.rrssb-buttons {
   bottom: -webkit-calc(50% - 120px);
   bottom: -moz-calc(50% - 120px);
   font-size: 20px;
+  &.in-beta {
+    left: calc(50% - 25px);
+    left: -webkit-calc(50% - 25px);
+    left: -moz-calc(50% - 25px);
+  }
   &.kontainers {
   top: 3vh;
   }
@@ -2172,6 +2176,9 @@ MEDIA QUERIES
     left: calc(50% - 66px);
     bottom: calc(50% - 150px);
     font-size: 20px;
+    &.in-beta {
+      left: calc(50% - 25px);
+    }
     &.kontainers {
     top: 3vh;
     }
@@ -2254,6 +2261,9 @@ MEDIA QUERIES
     left: calc(50% - 66px);
     bottom: calc(50% - 150px);
     font-size: 20px;
+    &.in-beta {
+      left: calc(50% - 25px);
+    }
     &.kontainers {
     top: 3vh;
     }
