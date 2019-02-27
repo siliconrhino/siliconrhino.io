@@ -1,16 +1,26 @@
 
-#bespokeSvg{
-  .st7{
- transform-origin: 50% 50%;
- -moz-transform-origin: 50% 50%;
- -ms-transform-origin:  50% 50%;
- -o-transform-origin: 50% 50%;
- -webkit-transform-origin:  50% 50%;
-
+  #smallWheel {
+    margin-left: auto;
+    .cls-1{
+      transform-origin: center;
+      -moz-transform-origin: center;
+      -ms-transform-origin: center;
+      -o-transform-origin: center;
+      -webkit-transform-origin: center;
+      stroke: #f39237 !important;
+    }
   }
   #bigWheel{
-    @include animation(rotateBigWheel 8s linear infinite);
+    .cls-1 {
+      transform-origin: center;
+      -moz-transform-origin: center;
+      -ms-transform-origin: center;
+      -o-transform-origin: center;
+      -webkit-transform-origin: center;
+      stroke: #f39237 !important;
+    }
   }
+#bespokeSvg{
   @include keyframes(rotateBigWheel){
     100% {
       transform: rotate(360deg);
@@ -20,8 +30,19 @@
       -o-transform: rotate(360deg);
     }
   }
+  #bigWheel {
+    width: 200px;
+    @include animation(rotateBigWheel 8s linear infinite);
+    svg {
+      height: 200px;
+    }
+  }
   #smallWheel{
+    width: 140px;
     @include animation(rotateSmallWheel 8s linear infinite);
+    svg {
+      height: 140px;
+    }
   }
   @include keyframes(rotateSmallWheel){
     100% {
@@ -31,8 +52,29 @@
   }
 }
 
+#bespokeSvgFrontPage {
+
+  #bigWheel {
+    width: 140px;
+    svg {
+      height: 100px;
+    }
+  }
+  #smallWheel {
+    width: 100px;
+    svg {
+      height: 70px;
+    }
+  }
+}
+
 #bespokeSvgFrontPage:hover{
-  @extend #bespokeSvg;
+  #bigWheel {
+    @include animation(rotateBigWheel 8s linear infinite);
+  }
+  #smallWheel {
+    @include animation(rotateSmallWheel 8s linear infinite);
+  }
 }
 
 #websiteSvg{
