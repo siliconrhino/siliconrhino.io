@@ -1039,15 +1039,18 @@ ul.rrssb-buttons {
     margin-left: -4%;
   }
   .how-we-work-point {
-    padding: 0 8%;
     vertical-align: top;
+    position: relative;
+    max-width: 470px;
+    z-index: 1;
     h3 {
       text-align: left;
     }
     p {
-      text-align: justify;
       font-size: 16px;
+      text-align: left;
     }
+
   }
   .bottom-border {
     width: 100px;
@@ -1060,7 +1063,96 @@ ul.rrssb-buttons {
       background: $yellow;
     }
   }
+  .during-dev-section {
+    background-color: #172441;
+    padding-top: 30px;
+    padding-bottom: 150px;
+    .how-we-work-point {
+      &:nth-of-type(1){
+        left: 20%;
+        top: -3%;
+        &:before {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: 140px;
+          width: 140px;
+          background-color: #0E1A35;
+          border-radius: 50%;
+          left: -45px;
+          @include animation(orbit-pulse 2.5s ease infinite);
+        }
+      }
+      &:nth-of-type(2){
+        left: 34%;
+        top: 22%;
+        &:before {
+          position: absolute;
+          z-index: -1;
+          content: '';
+          height: 90px;
+          width: 90px;
+          background-color: $darkblue;
+          border-radius: 50%;
+          left: -35px;
+          @include animation(orbit-pulse 2s 200ms  ease infinite);
+        }
+      }
+      &:nth-of-type(3){
+        left: 19%;
+        top: 30%;
+        &:before {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: 120px;
+          width: 120px;
+          background-color: $darkblue;
+          border-radius: 50%;
+          left: -45px;
+          @include animation(orbit-pulse 2s 500ms ease infinite);
+        }
+      }
+      &:nth-of-type(4){
+        left: 23%;
+        top: 62%;
+        &:before {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          height: 100px;
+          width: 100px;
+          background-color: $darkblue;
+          border-radius: 50%;
+          left: -15px;
+          @include animation(orbit-pulse 2s 300ms ease infinite);
+        }
+      }
+    }
+  }
+  .orbit-wrapper {
+    margin-top: 50px;
+    background-image: url('../img/backgrounds/orbit-background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    width: 1000px;
+  }
 }
+
+@include keyframes(orbit-pulse) {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 
 /* --------------------------------
