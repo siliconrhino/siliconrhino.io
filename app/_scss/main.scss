@@ -1041,7 +1041,6 @@ ul.rrssb-buttons {
   .how-we-work-point {
     vertical-align: top;
     position: relative;
-    max-width: 470px;
     z-index: 1;
     h3 {
       text-align: left;
@@ -1068,9 +1067,11 @@ ul.rrssb-buttons {
     padding-top: 30px;
     padding-bottom: 150px;
     .how-we-work-point {
+      margin-bottom: 30px;
+      width: 340px;
+      max-width: 470px;
       &:nth-of-type(1){
-        left: 20%;
-        top: -3%;
+        left: 10%;
         &:before {
           z-index: -1;
           position: absolute;
@@ -1079,13 +1080,12 @@ ul.rrssb-buttons {
           width: 140px;
           background-color: #0E1A35;
           border-radius: 50%;
-          left: -45px;
+          left: -25px;
           @include animation(orbit-pulse 2.5s ease infinite);
         }
       }
       &:nth-of-type(2){
-        left: 34%;
-        top: 22%;
+        left: 10%;
         &:before {
           position: absolute;
           z-index: -1;
@@ -1094,13 +1094,12 @@ ul.rrssb-buttons {
           width: 90px;
           background-color: $darkblue;
           border-radius: 50%;
-          left: -35px;
+          left: -10px;
           @include animation(orbit-pulse 2s 200ms  ease infinite);
         }
       }
       &:nth-of-type(3){
-        left: 19%;
-        top: 30%;
+        left: 10%;
         &:before {
           z-index: -1;
           position: absolute;
@@ -1109,13 +1108,12 @@ ul.rrssb-buttons {
           width: 120px;
           background-color: $darkblue;
           border-radius: 50%;
-          left: -45px;
+          left: -25px;
           @include animation(orbit-pulse 2s 500ms ease infinite);
         }
       }
       &:nth-of-type(4){
-        left: 23%;
-        top: 62%;
+        left: 10%;
         &:before {
           z-index: -1;
           position: absolute;
@@ -1130,14 +1128,40 @@ ul.rrssb-buttons {
       }
     }
   }
-  .orbit-wrapper {
-    margin-top: 50px;
-    background-image: url('../img/backgrounds/orbit-background.png');
+}
+.after-dev-section {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.after-dev-wrapper {
+  margin-top: 80px;
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(space-around);
+  .how-we-work-point {
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    margin-bottom: 30px;
+    p {
+      text-align: center;
+    }
+  }
+  .planet-graphic {
+    background-image: url('../img/graphics/planet.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 500px;
-    width: 1000px;
+    height: 200px;
+    width: 250px;
+  }
+  .broken-rocket-graphic {
+    background-image: url('../img/graphics/broken-rocket.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    width: 175px;
   }
 }
 
@@ -2321,6 +2345,15 @@ MEDIA QUERIES
       padding: 140px !important;
     }
   }
+  .after-dev-wrapper {
+    @include flex-direction(row);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    .how-we-work-point {
+      max-width: 470px;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
@@ -2360,6 +2393,50 @@ MEDIA QUERIES
     top: 3vh;
     }
   }
+  .workflow {
+    .during-dev-section {
+      .how-we-work-point {
+        width: 100%;
+        &:nth-of-type(1){
+          left: 20%;
+          top: -3%;
+          &:before {
+            left: -45px;
+          }
+        }
+        &:nth-of-type(2){
+          left: 34%;
+          top: 22%;
+          &:before {
+            left: -35px;
+          }
+        }
+        &:nth-of-type(3){
+          left: 19%;
+          top: 30%;
+          &:before {
+            left: -45px;
+          }
+        }
+        &:nth-of-type(4){
+          left: 23%;
+          top: 60%;
+          &:before {
+            left: -15px;
+          }
+        }
+      }
+    }
+    .orbit-wrapper {
+      margin-top: 50px;
+      background-image: url('../img/backgrounds/orbit-background.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 500px;
+      width: 1000px;
+    }
+  }
 }
 
 @media screen and (max-width: 350px){
@@ -2391,6 +2468,14 @@ MEDIA QUERIES
   }
 }
 
+@media screen and (min-width: 1500px) {
+  .workflow {
+    .orbit-wrapper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
 
 /* END OF MEDIA QUERIES */
 
