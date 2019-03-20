@@ -475,12 +475,6 @@ a {
   margin-bottom: 30px;
   position: relative;
 
-  &:hover {
-    .service-project {
-      z-index: 2;
-      opacity: 1;
-    }
-  }
   .service-project {
     transition: all 200ms;
     opacity: 0;
@@ -538,8 +532,11 @@ a {
         top: -30px;
       }
       &.mobile-app {
-        height: 285px;
-        width: 160px;
+        height: 265px;
+        width: 150px;
+        a {
+          left: calc(50% - 36.5px);
+        }
       }
     }
     &.cartap {
@@ -583,10 +580,22 @@ a {
       }
     }
     &.zoomdoc {
-
+      background-image: url('../img/project-highlights/zoomdoc.png');
+      height: 265px;
+      width: 150px;
+      a {
+        bottom: -30px;
+        left: calc(50% - 32.5px);
+      }
     }
     &.bubble {
-
+      background-image: url('../img/project-highlights/bubble.png');
+      height: 265px;
+      width: 150px;
+      a {
+        bottom: -30px;
+        left: calc(50% - 25px);
+      }
     }
   }
   label {
@@ -2468,6 +2477,14 @@ MEDIA QUERIES
     margin-right: auto;
     .how-we-work-point {
       max-width: 470px;
+    }
+  }
+  .services-wrap {
+    &:hover {
+      .service-project {
+        z-index: 2;
+        opacity: 1;
+      }
     }
   }
 }
