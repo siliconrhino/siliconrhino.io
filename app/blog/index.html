@@ -21,6 +21,10 @@ bodyClass: blog-page
 {% for post in site.posts %}
     {% include /list_item.html %}
       {% endfor %}
+
+      {% for post in site.case_studies %}
+    {% include /list_item.html %}
+      {% endfor %}
     </div>
 
 
