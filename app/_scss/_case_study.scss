@@ -1,15 +1,125 @@
 .casestudy {
   .case-study-before-fold {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 50px);
     padding: 70px 50px 0 50px;
   }
   h1 {
     text-transform: uppercase;
     font-size: 73px;
+    padding-top: 30px;
   }
   h2 {
     font-size: 26px;
     line-height: 37px;
     max-width: 620px;
+    margin-bottom: 30px;
+  }
+  .case-highlights {
+    position: relative;
+    width: 100vw;
+    padding: 0;
+    margin-left: -50px;
+    li {
+      list-style: none;
+      @include display-flex;
+      margin-bottom: 5px;
+      font-size: 22px;
+      span {
+        &:nth-child(odd){
+          display: block;
+          background-color: $darkbluestone;
+          width: 280px;
+          padding: 5px 5px 5px 50px;
+          color: $blue;
+          margin-right: 5px;
+          text-transform: uppercase;
+        }
+        &:nth-child(even){
+          display: block;
+          background-color: $darkbluewhale;
+          flex-grow: 1;
+          padding: 5px 5px 5px 15px;
+        }
+      }
+    }
+  }
+  .stage-wrapper {
+    background-image: url('../img/casestudy/bubble-kids.png');
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .polygon-cut {
+    background-color: $darkbluestone;
+    height: 150px;
+    display: block;
+  }
+  .polygon-wrapper {
+    &.before {
+      .polygon-cut {
+        &.top {
+          -webkit-clip-path: polygon(0 50%, 0% 100%, 100% 100%);
+          clip-path: polygon(0 50%, 0% 100%, 100% 100%);
+        }
+        &.bottom {
+          -webkit-clip-path: polygon(100% 0, 0 0, 100% 50%);
+          clip-path: polygon(100% 0, 0 0, 100% 50%);
+          margin-bottom: 100px;
+        }
+      }
+    }
+    &.after {
+      .polygon-cut {
+        &.top {
+          -webkit-clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+          clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+        }
+        &.bottom {
+          -webkit-clip-path: polygon(0 50%, 0 0%, 100% 0%);
+          clip-path: polygon(0 50%, 0 0%, 100% 0%);
+        }
+      }
+    }
+  }
+  .stage-item  {
+    height: 230px;
+    background-color: $darkbluestone;
+    @include display-flex;
+    @include justify-content(center);
+    > div {
+      max-width: 400px;
+      margin: 0 40px 0 40px;
+      z-index: 1;
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    &.first {
+      > div {
+        &:first-of-type {
+          margin-top: -25px;
+        }
+        &:last-of-type {
+          margin-top: 25px;
+        }
+      }
+    }
+    &.second {
+      > div {
+        &:first-of-type {
+          margin-top: 25px;
+        }
+        &:last-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+    h3 {
+      text-transform: uppercase;
+      color: $blue;
+    }
   }
 }
