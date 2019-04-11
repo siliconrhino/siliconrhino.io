@@ -122,4 +122,52 @@
       color: $blue;
     }
   }
+  .technology-wrapper {
+    height: 500px;
+    position: relative;
+  }
+  .rocket-wrapper {
+    background-image: url('../img/backgrounds/shuttle-outline-blue.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+    height: 230px;
+    width: 400px;
+    margin: auto;
+    position: absolute;
+    left: calc(50% - 200px);
+    bottom: 200px;
+  }
+  .technology-wrapper {
+    img {
+      height: 40px;
+      width: auto;
+      margin: 0 20px 0 20px;
+    }
+  }
+  .techologies {
+    @include display-flex;
+    @include justify-content(center);
+    &.before {
+
+    }
+    &.after {
+      height: 100%;
+      @include display-flex;
+      @include align-items(flex-end);
+      padding-bottom: 70px;
+    }
+  }
+  .tech-left {
+    @include display-flex;
+    @include justify-content(flex-end);
+    width: 50%;
+    margin-right: 40px;
+  }
+  .tech-right {
+    @include display-flex;
+    @include justify-content(flex-start);
+    width: 50%;
+    margin-left: 40px;
+  }
 }
