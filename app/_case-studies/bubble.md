@@ -93,3 +93,9 @@ headBackground: yellowBg
     <span class="number-info">Commits pushed</span>
   </div>
 </div>
+
+<div class="client-quote-wrapper">
+  <div class="client-quote">
+    <p>“We can not recommend Silicon Rhino highly enough.“</p>
+  </div>
+</div>

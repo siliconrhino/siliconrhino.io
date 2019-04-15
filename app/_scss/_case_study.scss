@@ -213,4 +213,16 @@
   .number-info {
     font-size: 14px;
   }
+  .client-quote-wrapper {
+    background-color: $blue;
+  }
+  .client-quote {
+    padding: 50px 0 50px 0;
+    max-width: 900px;
+    margin: auto;
+    p {
+      font-size: 45px;
+      text-align: center;
+    }
+  }
 }
