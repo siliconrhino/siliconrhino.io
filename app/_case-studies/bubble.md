@@ -61,17 +61,35 @@ headBackground: yellowBg
 <div class="technology-wrapper">
   <div class="techologies before">
     <div class="tech-left">
-      <img src="/img/tech/react.svg" alt="react" title="rect">
-      <img src="/img/tech/angular.svg" alt="Angular 2" title="Angular 2">
+      <img src="/img/tech/react.svg" alt="react" title="react"/>
+      <img src="/img/tech/angular.svg" alt="Angular 2" title="Angular 2"/>
     </div>
     <div class="tech-right">
-      <img src="/img/tech/mongodb.svg" alt="mongo db" title="mongo db">
-      <img src="/img/tech/nodejs.svg" alt="NodeJs" title="NodeJs">
+      <img src="/img/tech/cordova.svg" alt="cordova" title="cordova"/>
+      <img src="/img/tech/nodejs.svg" alt="NodeJs" title="NodeJs"/>
     </div>
   </div>
   <div class="rocket-wrapper"></div>
   <div class="techologies after">
-    <img src="/img/tech/neo4j.png" alt="Neo4j" title="Neo4j">
-    <img src="/img/tech/cordova.svg" alt="cordova" title="cordova">
+    <img src="/img/tech/neo4j.png" alt="Neo4j" title="Neo4j"/>
+    <img src="/img/tech/mongodb.svg" alt="mongo db" title="mongo db"/>
+  </div>
+</div>
+
+<div class="odometer-section">
+  <div class="odometer-wrapper">
+    <div class="odometer-icon"><i class="fal fa-coffee"></i></div>
+    <div id="odometerOne" class="odometer">0000</div>
+    <span class="number-info">Cups of coffee consumed</span>
+  </div>
+  <div class="odometer-wrapper">
+    <div class="odometer-icon"><i class="fal fa-code"></i></div>
+    <div id="odometerTwo" class="odometer">0000</div>
+    <span class="number-info">Lines of code written</span>
+  </div>
+  <div class="odometer-wrapper">
+    <div class="odometer-icon"><i class="fal fa-code-branch"></i></div>
+    <div id="odometerThree" class="odometer">0000</div>
+    <span class="number-info">Commits pushed</span>
   </div>
 </div>

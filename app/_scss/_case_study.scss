@@ -144,6 +144,7 @@
       width: auto;
       margin: 0 20px 0 20px;
     }
+    margin-bottom: 70px;
   }
   .techologies {
     @include display-flex;
@@ -169,5 +170,47 @@
     @include justify-content(flex-start);
     width: 50%;
     margin-left: 40px;
+  }
+  .odometer-icon {
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    height: 150px;
+    width: 150px;
+    background-color: $blue;
+    color: $darkblue;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    i {
+    font-size: 80px;
+    }
+  }
+  .odometer-section {
+    padding: 100px 0 100px 0;
+    @include display-flex;
+    @include justify-content(center);
+    background-color: $darkbluestone;
+  }
+  .odometer-wrapper {
+    margin: 0 40px 0 40px;
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    font-family: $text-font;
+  }
+  .odometer-digit {
+    font-size: 70px;
+    line-height: 70px;
+    font-family: $text-font;
+  }
+  .odometer {
+    margin-bottom: 10px;
+  }
+  .odometer-formatting-mark {
+    display: none;
+  }
+  .number-info {
+    font-size: 14px;
   }
 }

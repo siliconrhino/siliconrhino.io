@@ -60,5 +60,23 @@
 
 
     });
+
+  $(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if(height > 1700) {
+      $('#odometerOne')[0].innerHTML = 4556;
+      $('#odometerTwo')[0].innerHTML = 2999;
+      $('#odometerThree')[0].innerHTML = 3020;
+    }
+    if(height < 1700) {
+      $('#odometerOne')[0].innerHTML = 0000;
+      $('#odometerTwo')[0].innerHTML = 0000;
+      $('#odometerThree')[0].innerHTML = 0000;
+    }
+  });
+
+  $(window).scroll(function() {
+    console.log( $(this).scrollTop() );
+  });
 })(window.$);
 
