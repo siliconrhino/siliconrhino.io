@@ -1,3 +1,10 @@
+
+@mixin box-shadow($x: 1px, $y: 4px, $blur: 20px, $spread: 1px, $color: rgba(0, 0, 0, 0.1)) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+
 @mixin border-radius($radius) {
     border-radius: $radius;
 }

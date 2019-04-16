@@ -1,6 +1,7 @@
 .casestudy {
   .case-study-before-fold {
     height: calc(100vh - 50px);
+    max-height: 700px;
     padding: 70px 50px 0 50px;
   }
   h1 {
@@ -123,20 +124,25 @@
     }
   }
   .technology-wrapper {
-    height: 500px;
+    height: 700px;
     position: relative;
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      margin: -20px auto 80px auto;
+    }
   }
   .rocket-wrapper {
     background-image: url('../img/backgrounds/shuttle-outline-blue.svg');
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotate(90deg);
-    height: 230px;
-    width: 400px;
+    height: 290px;
+    width: 540px;
     margin: auto;
     position: absolute;
-    left: calc(50% - 200px);
-    bottom: 200px;
+    left: calc(50% - 275px);
+    bottom: 165px;
   }
   .technology-wrapper {
     img {
@@ -156,7 +162,7 @@
       height: 100%;
       @include display-flex;
       @include align-items(flex-end);
-      padding-bottom: 70px;
+      padding-bottom: 170px;
     }
   }
   .tech-left {
@@ -224,5 +230,87 @@
       font-size: 45px;
       text-align: center;
     }
+  }
+  .carousel {
+    width: 289.19px;
+    left: 15px;
+  }
+  .phone-wrapper {
+    background-image: url('../img/casestudy/phone-frame.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 524.25px;
+    width: 322.19px;
+    position: absolute;
+    z-index: 1;
+  }
+  .app-carousel {
+    position: absolute;
+    top: 115px;
+    bottom: 0;
+    right: 13%;
+    transform: rotate(3deg);
+  }
+  .carousel-inner {
+    top: 24px;
+  }
+  .carousel-indicators {
+    bottom: -76px;
+  }
+  .app-img {
+    height: 470.25px;
+    width: 263.19px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    &.first {
+      background-image: url('../img/casestudy/bubble-app-screen-1.png');
+    }
+    &.second {
+      background-image: url('../img/casestudy/bubble-app-screen-2.png');
+    }
+  }
+  .app-screen-shots {
+    padding: 100px 0 100px 0;
+    @include display-flex;
+    @include justify-content(center);
+  }
+  .app-screenshot {
+    height: 470.25px;
+    width: 263.19px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 40px 0 40px;
+    @include box-shadow;
+    &.first {
+      background-image: url('../img/casestudy/bubble-app-screen-1.png');
+      margin-top: 50px;
+      transform: rotate(-3deg);
+    }
+    &.second {
+      background-image: url('../img/casestudy/bubble-app-screen-2.png');
+    }
+    &.third {
+      background-image: url('../img/casestudy/bubble-app-screen-1.png');
+      margin-top: 50px;
+      transform: rotate(3deg);
+    }
+  }
+  .contact-cta {
+    background-color: $darkbluestone;
+    padding: 100px 20px 100px 20px;
+    text-align: center;
+    h2 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    a {
+      font-size: 20px;
+    }
+  }
+  footer {
+    margin-top: 0;
   }
 }

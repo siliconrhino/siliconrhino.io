@@ -16,6 +16,28 @@ headBackground: yellowBg
     <li><span>Website</span><span><a href="https://joinbubble.com/" target="_blank"></a>joinbubble.com</span></li>
     <li><span>Awards</span><span>Apple: Best of 2017</span></li>
   </ul>
+  <div class="app-carousel">
+    <div class="carousel-wrapper">
+    <div class="phone-wrapper">
+    </div>
+    <div id="carousel-app" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-app" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-app" data-slide-to="1"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="app-img first"></div>
+          </div>
+          <div class="item">
+            <div class="app-img second"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="stage-wrapper">
@@ -59,6 +81,7 @@ headBackground: yellowBg
 </div>
 
 <div class="technology-wrapper">
+  <h2>In this project we have worked with these technologies</h2>
   <div class="techologies before">
     <div class="tech-left">
       <img src="/img/tech/react.svg" alt="react" title="react"/>
@@ -98,4 +121,15 @@ headBackground: yellowBg
   <div class="client-quote">
     <p>“We can not recommend Silicon Rhino highly enough.“</p>
   </div>
+</div>
+
+<div class="app-screen-shots">
+  <div class="app-screenshot first"></div>
+  <div class="app-screenshot second"></div>
+  <div class="app-screenshot third"></div>
+</div>
+
+<div class="contact-cta">
+  <h2>Need a an app, website or something third?</h2>
+  <a class="cta" href="/contact">Get in touch</a>
 </div>
