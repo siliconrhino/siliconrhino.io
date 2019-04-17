@@ -1,8 +1,6 @@
 .casestudy {
   .case-study-before-fold {
-    height: calc(100vh - 50px);
-    max-height: 700px;
-    padding: 70px 50px 0 50px;
+    padding: 70px 20px 0 20px;
   }
   h1 {
     text-transform: uppercase;
@@ -19,7 +17,8 @@
     position: relative;
     width: 100vw;
     padding: 0;
-    margin-left: -50px;
+    margin-left: -20px;
+    margin-bottom: 30px;
     li {
       list-style: none;
       @include display-flex;
@@ -29,8 +28,8 @@
         &:nth-child(odd){
           display: block;
           background-color: $darkbluestone;
-          width: 280px;
-          padding: 5px 5px 5px 50px;
+          width: 155px;
+          padding: 5px 5px 5px 20px;
           color: $blue;
           margin-right: 5px;
           text-transform: uppercase;
@@ -148,7 +147,7 @@
     img {
       height: 40px;
       width: auto;
-      margin: 0 20px 0 20px;
+      margin: 0 10px 0 10px;
     }
     margin-bottom: 70px;
   }
@@ -166,13 +165,13 @@
     @include display-flex;
     @include justify-content(flex-end);
     width: 50%;
-    margin-right: 20px;
+    padding-right: 45px;
   }
   .tech-right {
     @include display-flex;
     @include justify-content(flex-start);
     width: 50%;
-    margin-left: 20px;
+    padding-left: 45px;
   }
   .odometer-icon {
     @include display-flex;
@@ -229,23 +228,20 @@
     }
   }
   .carousel {
-    width: 289.19px;
+    width: 227.19px;
     left: 15px;
   }
   .phone-wrapper {
     background-image: url('../img/casestudy/phone-frame.png');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 524.25px;
-    width: 322.19px;
+    height: 424.25px;
+    width: 260.19px;
     position: absolute;
     z-index: 1;
   }
   .app-carousel {
-    position: absolute;
-    top: 115px;
-    bottom: 0;
-    right: 13%;
+    right: 5%;
     transform: rotate(3deg);
   }
   .carousel-inner {
@@ -255,8 +251,8 @@
     bottom: -76px;
   }
   .app-img {
-    height: 470.25px;
-    width: 263.19px;
+    height: 371.25px;
+    width: 210.19px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -274,12 +270,12 @@
     @include justify-content(center);
   }
   .app-screenshot {
-    height: 470.25px;
+    height: 195px;
     width: 263.19px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0 40px 0 40px;
+    margin: 0 10px 0 10px;
     @include box-shadow;
     &.first {
       background-image: url('../img/casestudy/bubble-app-screen-1.png');
@@ -314,6 +310,22 @@
 
 @media screen and (min-width: 900px){
   .casestudy {
+    .case-study-before-fold {
+      padding: 70px 50px 0 50px;
+      max-height: 700px;
+      height: calc(100vh - 50px);
+    }
+    .case-highlights {
+      margin-left: -50px;
+      li {
+        span {
+          &:nth-child(odd) {
+            width: 280px;
+            padding: 5px 5px 5px 50px;
+          }
+        }
+      }
+    }
     .odometer-icon {
       height: 150px;
       width: 150px;
@@ -327,15 +339,43 @@
     .odometer-wrapper {
       margin: 0 40px 0 40px;
     }
-  }
-  .rocket-wrapper {
-    height: 290px;
-    width: 540px;
-  }
-  .tech-left {
-    margin-right: 40px;
-  }
-  .tech-right {
-    margin-left: 40px;
+    .rocket-wrapper {
+      height: 290px;
+      width: 540px;
+    }
+    .technology-wrapper {
+      img {
+        margin: 0 20px 0 20px;
+      }
+    }
+    .tech-left {
+      margin-right: 40px;
+    }
+    .tech-right {
+      margin-left: 40px;
+    }
+    .carousel {
+      width: 289.19px;
+    }
+    .app-carousel {
+      position: absolute;
+      top: 115px;
+      bottom: 0;
+      right: 13%;
+      transform: rotate(3deg);
+    }
+    .phone-wrapper {
+      height: 524.25px;
+      width: 322.19px;
+    }
+    .app-img {
+      height: 470.25px;
+      width: 263.19px;
+    }
+    .app-screenshot {
+      height: 470.25px;
+      width: 263.19px;
+      margin: 0 40px 0 40px;
+    }
   }
 }
