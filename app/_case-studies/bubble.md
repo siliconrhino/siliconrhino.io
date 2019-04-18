@@ -41,6 +41,7 @@ headBackground: yellowBg
 </div>
 
 <div class="stage-wrapper">
+  <div class="stage-bg-image"></div>
   <div class="polygon-wrapper before">
     <span class="polygon-cut top"></span>
     <div class="stage-item first">
