@@ -6,13 +6,7 @@
     <body class="{{page.bodyClass}}">
       {% include header.html %}
       {{ content }}
-
-      {% for post in site.technologies %}
-       {% include /technology_modal.html %}
-      {% endfor %}
       {% include footer.html %}
       {% include foot.html %}
-
-
     </body>
 </html>

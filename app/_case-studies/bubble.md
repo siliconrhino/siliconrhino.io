@@ -85,7 +85,9 @@ headBackground: yellowBg
   <h2>In this project we have worked with these technologies</h2>
   <div class="techologies before">
     <div class="tech-left">
-      <img src="/img/tech/react.svg" alt="react" title="react"/>
+      <div data-toggle="modal" data-target="#technologyModal">
+        <img src="/img/tech/react.svg" alt="react" title="react"/>
+      </div>
       <img src="/img/tech/angular.svg" alt="Angular 2" title="Angular 2"/>
     </div>
     <div class="tech-right">
