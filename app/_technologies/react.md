@@ -8,6 +8,7 @@ headBackground: yellowBg
 
 <div class="tech-item-wrapper" id="react-tech">
     <h1>
-        React
+      React
     </h1>
+    <p>Something about this technology</p>
 </div>

@@ -85,14 +85,16 @@ headBackground: yellowBg
   <h2>In this project we have worked with these technologies</h2>
   <div class="techologies before">
     <div class="tech-left">
-      <div data-toggle="modal" data-target="#technologyModal">
-        <img src="/img/tech/react.svg" alt="react" title="react"/>
+      <div class="tech-btn" data-toggle="modal" data-target="#reactModal">
+        <img class="tech-btn" src="/img/tech/react.svg" alt="react" title="react"/>
       </div>
-      <img src="/img/tech/angular.svg" alt="Angular 2" title="Angular 2"/>
+      <div class="tech-btn" data-toggle="modal" data-target="#angularModal">
+        <img class="tech-btn" src="/img/tech/angular.svg" alt="Angular 2" title="Angular 2"/>
+      </div>
     </div>
     <div class="tech-right">
-      <img src="/img/tech/cordova.svg" alt="cordova" title="cordova"/>
-      <img src="/img/tech/nodejs.svg" alt="NodeJs" title="NodeJs"/>
+      <img  src="/img/tech/cordova.svg" alt="cordova" title="cordova"/>
+      <img  src="/img/tech/nodejs.svg" alt="NodeJs" title="NodeJs"/>
     </div>
   </div>
   <div class="rocket-wrapper"></div>
@@ -135,4 +137,42 @@ headBackground: yellowBg
 <div class="contact-cta">
   <h2>Need a an app, website or something third?</h2>
   <a class="cta" href="/contact">Get in touch</a>
+</div>
+
+<div class="modal fade techmodal" id="reactModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">React</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       ..
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade techmodal" id="angularModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Angular</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       ..
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

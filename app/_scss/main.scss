@@ -971,12 +971,12 @@ ul.rrssb-buttons {
     }
   }
   .techs {
-
     img {
       max-width: auto;
       height: 20px;
       padding-left: 10px;
       margin-bottom: 10px;
+      cursor: pointer;
     }
   }
   .quote-wrapper {
@@ -1745,6 +1745,17 @@ a.cta,
   font-size: 10px;
   color: white;
   letter-spacing: 0.03em;
+}
+
+.techmodal {
+  .btn {
+    left: 0;
+    color: $darkblue;
+    border-color: $darkblue;
+  }
+  .modal-dialog {
+    margin-top: 10%;
+  }
 }
 
 @include keyframes(scrollSlide) {
