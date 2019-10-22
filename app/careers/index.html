@@ -6,41 +6,71 @@ bodyClass: blog-page
 ---
 <section class="home-backg backg-projects">
   <div class="subpage-topHeading">
-   <div class="page-title">
-    <h2>Careers</h2>
-    <div class="bottom-border yellow"></div>
+    <div class="page-title">
+      <h2>Careers</h2>
+      <div class="bottom-border yellow"></div>
     </div>
-     <img class="space-shuttle-outline yellow" src="/img/backgrounds/shuttle-outline-yellow.svg" alt="space shuttle outline" />
+    <img class="space-shuttle-outline yellow" src="/img/backgrounds/shuttle-outline-yellow.svg"
+      alt="space shuttle outline" />
   </div>
 
 </section>
 <section class="container about">
   <div class="col-sm-12 page-intro">
-    <p class="lead">What started as a very small startup development shop is fast becoming the go-to company for startups who want to take their technology offering to the next level</p>
+    <p class="lead">What started as a very small startup development shop is fast becoming the go-to company for
+      startups who want to take their technology offering to the next level</p>
 
-    <p class="lead">If you are looking to get involved in launching exciting products, learn something new everyday and have a lot of fun while doing it all, we want to hear from you.</p>
+    <p class="lead">If you are looking to get involved in launching exciting products, learn something new everyday and
+      have a lot of fun while doing it all, we want to hear from you.</p>
 
     <h2>Working at silicon rhino means:</h2>
-
-    <ul class="post benefits">
-      <li>Competitive salary</li>
-      <li>Pension</li>
-      <li>25 days holiday + bank holidays</li>
-      <li>Friday team lunches</li>
-      <li>Learn new technologies</li>
-      <li>Great opportunities to grow, personally and professionally</li>
-      <li>Awesome team and even better environment</li>
-      <li>Mario Kart 8 and console time championships</li>
-      <li>Bowling championships</li>
-      <li>After work beers... often</li>
-      <li>We also like going on company retreats from time to time</li>
-      <li>A shiny new MacBook</li>
-      <li>Flexible working hours and working from home days</li>
-      <li>We also work on internal projects</li>
-      <li>Work on some exciting apps, websites, APIs... you name it!</li>
-    </ul>
     <br />
-    <div class="bottom-border blue"></div>
+    <br />
+    <div class="careers-container">
+      <div class="col">
+        <label class="blue-border">The basics</label>
+        <div class="blue-border">
+          <ul class="career-benefits">
+            <li>Competitive salary</li>
+            <li>Flexible working hours</li>
+            <li>Work from home days</li>
+            <li>Pension</li>
+            <li>25 days holiday + bank holidays</li>
+            <li>A shiny new MacBook</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col">
+        <label class="yellow-border">Personal development</label>
+        <div class="yellow-border">
+          <ul class="career-benefits">
+            <li>Learn many exciting technologies to solve a variety of problems</li>
+            <li>Pitch and work on internal projects</li>
+            <li>Work with a range of applications, from mobile apps or websites to serverless back-end solutions</li>
+            <li>Solve problems for products in many different verticals, from finance to the music industry</li>
+            <li>Take ownership of projects from start to finish</li>
+            <li>Great opportunities to grow, personally and professionally</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col">
+        <label class="blue-border">Team life</label>
+        <div class="blue-border">
+          <ul class="career-benefits">
+            <li>Friday team lunches</li>
+            <li>Awesome team and even better environment</li>
+            <li>Mario Kart 8 and card games</li>
+            <li>After work beers</li>
+            <li>Bowling championships</li>
+            <li>We also like going on company retreats from time to time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br />
+
     <br /><br />
     <h2>Current Openings</h2>
   </div>
@@ -48,59 +78,59 @@ bodyClass: blog-page
 <section class="blog-section careers">
   <div class="row">
     {% for post in site.careers %}
-      {% include /list_item.html %}
+    {% include /list_item.html %}
     {% endfor %}
-    </div>
+  </div>
 </section>
 <section class="journey-gallery">
-    <br /><br /><br /><br />
-    <h2 class="center">A glimpse of the team life</h2>
-    <br /><br /><br /><br />
-    <div class="images-carousel">
-      <div>
-        <img src="/img/gallery/gallery5.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery3.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery14.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery15.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery11.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery12.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery13.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery16.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery17.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery1.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery6.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery7.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery8.jpeg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery9.jpg">
-      </div>
-      <div>
-        <img src="/img/gallery/gallery10.jpg">
-      </div>
+  <br /><br /><br /><br />
+  <h2 class="center">A glimpse of the team life</h2>
+  <br /><br /><br /><br />
+  <div class="images-carousel">
+    <div>
+      <img src="/img/gallery/gallery5.jpg">
     </div>
-  </section>
+    <div>
+      <img src="/img/gallery/gallery3.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery14.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery15.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery11.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery12.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery13.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery16.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery17.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery1.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery6.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery7.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery8.jpeg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery9.jpg">
+    </div>
+    <div>
+      <img src="/img/gallery/gallery10.jpg">
+    </div>
+  </div>
+</section>
