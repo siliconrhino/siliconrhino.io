@@ -21,3 +21,25 @@ ul.benefits {
   line-height: 35px;
   margin: 20px 0;
 }
+.careers-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;  
+}
+.career-benefits{
+    font-size: 2rem;
+    text-align: left;
+    height: 270px;
+    padding-top: 20px; 
+   
+}
+
+.col{
+width: 32%;
+text-align: left;
+
+}
+
+
+
