@@ -44,19 +44,19 @@ ul.benefits {
 	margin: 20px auto;
 }
 @include MQ(L) {
-		.careers-container{
-			 flex-direction: row;
-			 justify-content: space-evenly;
-		}
-		.career-benefits {
-			height: 300px;
-		}
-		.col{
+	.careers-container{
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	.career-benefits {
+		height: 300px;
+	}
+	.col{
 		width: 32% !important;
-		}
+	}
 }
 @include MQ(M) {
-		.col{
+	.col{
 		width: 50%;
-		}
+	}
 }
