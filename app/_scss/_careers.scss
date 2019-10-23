@@ -35,8 +35,8 @@ ul.benefits {
 .career-benefits {
   font-size: 2rem;
   text-align: left;
-  height: 300px;
   padding-top: 20px;
+  padding-bottom: 15px;
 }
 .col {
   width: 100%;
@@ -47,6 +47,9 @@ ul.benefits {
     .careers-container{
         flex-direction: row;
         justify-content: space-evenly;
+    }
+    .career-benefits {
+      height: 300px;
     }
     .col{
     width: 32% !important;
