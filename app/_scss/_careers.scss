@@ -1,3 +1,5 @@
+@import "_layout.scss";
+
 .blog-section.careers {
   h2,
   h3 {
@@ -40,4 +42,26 @@ ul.benefits {
 .col {
   width: 32%;
   text-align: left;
+}
+@include MQ(L) {
+    .careers-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .col{
+    width: 32% !important;
+    }
+}
+@include MQ(M) {
+    .career-benefits{
+        height: 280px; 
+    }
+    .col{
+    width: 50%;
+    }
+}
+@include MQ(S) {
+    .career-benefits{
+        height: 280px;
+    }
 }
