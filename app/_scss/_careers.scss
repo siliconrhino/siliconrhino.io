@@ -1,5 +1,4 @@
 @import "_layout.scss";
-
 .blog-section.careers {
   h2,
   h3 {
@@ -29,19 +28,20 @@ ul.benefits {
 }
 .careers-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
 .career-benefits {
   font-size: 2rem;
   text-align: left;
-  height: 270px;
+  height: 300px;
   padding-top: 20px;
 }
 .col {
-  width: 32%;
+  width: 100%;
   text-align: left;
+  margin: 20px auto;
 }
 @include MQ(L) {
     .careers-container{
@@ -53,15 +53,7 @@ ul.benefits {
     }
 }
 @include MQ(M) {
-    .career-benefits{
-        height: 280px; 
-    }
     .col{
     width: 50%;
-    }
-}
-@include MQ(S) {
-    .career-benefits{
-        height: 280px;
     }
 }
