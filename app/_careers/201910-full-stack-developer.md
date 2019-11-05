@@ -10,6 +10,9 @@ published: true
 a full-stack developer with good Javascript/Typescript and mobile dev experience, to work on all areas across several interesting projects.
 
 <p></p>
+You are the type of person that has curiosity driving them. A maker that loves problem solving and learning new things. You are diligent in your approach and enjoy helping others in achieving their goals. If that sounds like you, then you're the perfect fit for Silicon Rhino
+
+<p></p>
 
 ##Silicon Rhino is
 a startup & development studio focused on helping startups develop their products and internal systems. We work closely with founders and small teams, and get involved at the early stages of a project to help with requirements and prototyping. We are agile, and always looking for new and better ways to work and build software.
