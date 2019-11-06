@@ -2,7 +2,7 @@
 layout: career
 title: Full Stack Developer
 headBackground: yellowBg
-imageUrl: "http://www.siliconrhino.io/img/backgrounds/space_shuttle_1.20a0.png"
+imageUrl: "http://www.siliconrhino.io/img/backgrounds/office1.04e3.jpg"
 published: true
 ---
 
@@ -10,7 +10,7 @@ published: true
 a full-stack developer with good Javascript/Typescript and mobile dev experience, to work on all areas across several interesting projects.
 
 <p></p>
-You are the type of person that has curiosity driving them. A maker that loves problem solving and learning new things. You are diligent in your approach and enjoy helping others in achieving their goals. If that sounds like you, then you're the perfect fit for Silicon Rhino
+You are the type of person that has curiosity driving them. A maker that loves problem solving and learning new things. You are diligent in your approach and enjoy helping others in achieving their goals. If that sounds like you, then you're the perfect fit for Silicon Rhino.
 
 <p></p>
 
