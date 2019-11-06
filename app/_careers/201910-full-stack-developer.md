@@ -2,7 +2,7 @@
 layout: career
 title: Full Stack Developer
 headBackground: yellowBg
-imageUrl: "http://www.siliconrhino.io/img/backgrounds/office1.04e3.jpg"
+imageUrl: "http://www.siliconrhino.io/img/backgrounds/office1.d815.jpg"
 published: true
 ---
 
