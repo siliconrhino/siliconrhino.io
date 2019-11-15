@@ -25,7 +25,7 @@ We specialise in scalable implementation and design/ux, while adding a wealth of
 
 ##A successful candidate should
 
-- Have 4+ years experience in engineering front-end systems
+- Have 4+ years experience in engineering front-end applications
 - Have 4+ years experience with Typescript/Javascript
 - Be passionate about the code they write
 - Have a keen eye on design
