@@ -1,16 +1,18 @@
 ---
 layout: career
-title: Full Stack Engineer
+title: Front End Engineer
 headBackground: yellowBg
 imageUrl: "http://www.siliconrhino.io/img/backgrounds/office1.d815.jpg"
 published: true
 ---
 
 ##We’re looking for
-a full-stack developer with good Javascript/Typescript and mobile dev experience, to work on all areas across several interesting projects.
+We are looking for a motivated Front-End Engineer based in London who enjoys creating engaging UIs for consumer products. You will be joining our development for a full-time position with excellent opportunities for personal development.
 
 <p></p>
-You are the type of person that has curiosity driving them. A maker that loves problem solving and learning new things. You are diligent in your approach and enjoy helping others in achieving their goals. If that sounds like you, then you're the perfect fit for Silicon Rhino.
+You will have the opportunity to work with a variety of projects (from mobile apps to web dashboards) and technologies to implement UIs designed by our team.
+<p></p>
+You are the type of person that has curiosity driving them. A maker that loves problem solving and learning new things. You must have an eye for design and a drive to construct well engineered front end applications. If that sounds like you, then you're the perfect fit for Silicon Rhino.
 
 <p></p>
 
@@ -23,10 +25,12 @@ We specialise in scalable implementation and design/ux, while adding a wealth of
 
 ##A successful candidate should
 
-- Have 4+ years experience with Javascript technologies
-- Have experience working with browser, server, and database technologies
-- Be passionate about development and always strive to improve themselves and their work
-- Love to craft beautiful software (aesthetic or otherwise)
+- Have 4+ years experience in engineering front-end systems
+- Have 2+ years experience with Typescript/Javascript
+- Be passionate about the code they write
+- Have a keen eye on design
+- Always strive to improve themselves and their work
+- Love to tackle challenging problems
 - Be able to communicate well with team members and clients
 - Welcome a challenge
 
@@ -47,19 +51,16 @@ We specialise in scalable implementation and design/ux, while adding a wealth of
 ##Core technologies
 
 - Javascript/Typescript
-- NodeJs
 - ReactJS
 - React Native
-- Database experience (MySQL or MongoDB)
+- CSS
+- HTML5
   <p></p>
 
 ##Useful technologies
 
-- Azure
-- Terraform
-- Serverless (api gateway / lambda / azure functions)
-- Graph database (Neo4J)
-- Search index (ElasticSearch, Algolia, Solr...)
+- Adobe Creative suite
+- Prototyping tools
   <p></p>
 
 ##Benefits
