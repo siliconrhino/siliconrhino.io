@@ -28,7 +28,7 @@ We specialise in scalable implementation and design/ux, while adding a wealth of
 - Have 4+ years experience in engineering front-end applications
 - Have 4+ years experience with Typescript/Javascript
 - Be passionate about the code they write
-- Have a keen eye on design
+- Have a keen eye for design
 - Always strive to improve themselves and their work
 - Love to tackle challenging problems
 - Be able to communicate well with team members and clients
