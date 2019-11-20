@@ -7,7 +7,7 @@ published: true
 ---
 
 ##We’re looking for
-We are looking for a motivated Front-End Engineer based in London who enjoys creating engaging UIs for consumer products. You will be joining our development for a full-time position with excellent opportunities for personal development.
+a motivated Front-End Engineer based in London who enjoys creating engaging UIs for consumer products. You will be joining our development for a full-time position with excellent opportunities for personal development.
 
 <p></p>
 You will have the opportunity to work with a variety of projects (from mobile apps to web dashboards) and technologies to implement UIs designed by our team.
