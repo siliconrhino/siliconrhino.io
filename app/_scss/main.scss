@@ -14,6 +14,8 @@
 @import "_drinks.scss";
 @import "_svg_animation.scss";
 
+//font
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 /* --------------------------------
 
 Primary style
@@ -837,7 +839,13 @@ label {
     }
   }
 }
-
+.titleMobile {
+  visibility: collapse;
+  width: 0px;
+}
+.titleOther {
+  visibility: visible;
+}
 // SoMe icons
 .connect img {
   width: 35px;
@@ -1773,10 +1781,17 @@ a.cta,
 
   .wcd-section {
     div {
-      height: 40vh;
     }
   }
-
+  .titleOther {
+    visibility: hidden;
+    height: 0px;
+  }
+  .titleMobile {
+    visibility: visible;
+    width: 100%;
+    padding-bottom: 30px;
+  }
   .cd-vertical-nav,
   .scrollIconClass {
     display: none;
@@ -1938,6 +1953,11 @@ MEDIA QUERIES
       margin-right: 350px !important;
       margin-left: 110px !important;
     }
+  }
+  .projectTitle {
+    font-family: "Montserrat", sans-serif;
+    font-size: 100px;
+    justify-content: center;
   }
 }
 
