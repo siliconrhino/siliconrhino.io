@@ -51,7 +51,7 @@ body {
       font-size: 30px;
     }
   }
-  .subpage-topHeading {
+  .subpage-top-heading {
     margin-top: 0 !important;
     padding-top: 100px;
     padding-bottom: 10px;
@@ -870,7 +870,11 @@ ul.rrssb-buttons {
 }
 
 // project imgs
-
+.project-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+  justify-content: center;
+}
 .coming-soon {
   margin: auto;
   position: absolute;
@@ -941,7 +945,7 @@ ul.rrssb-buttons {
     left: 0;
     width: 100%;
     height: auto;
-    position: absolute;
+    position: relative !important;
     @include transition(all 300ms ease-out);
   }
   .overbox {

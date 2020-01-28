@@ -1,7 +1,7 @@
 ---
 layout: post
 headBackground: yellowBg
-topHeadingBg: subpage-topHeading yellow
+topHeadingBg: subpage-top-heading yellow
 title: "The Struggle is Real: Episode 1"
 description: How I ended up here 
 tags: ["startups", "silicon rhino"]

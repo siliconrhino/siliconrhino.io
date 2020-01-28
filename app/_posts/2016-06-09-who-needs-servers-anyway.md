@@ -1,7 +1,7 @@
 ---
 layout: post
 headBackground: yellowBg
-topHeadingBg: subpage-topHeading yellow
+topHeadingBg: subpage-top-heading yellow
 title: Who needs servers anyway?
 description: Sometimes, you simply don't need them..
 tags: ["aws", "silicon rhino"]
