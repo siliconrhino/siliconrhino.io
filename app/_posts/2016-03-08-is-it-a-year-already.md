@@ -1,7 +1,7 @@
 ---
 layout: post
 headBackground: yellowBg
-topHeadingBg: subpage-topHeading yellow
+topHeadingBg: subpage-top-heading yellow
 title: A year already?
 description: It feels like yesterday but we have been doing this for 12 months..
 tags: ["startups", "silicon rhino"]
