@@ -1759,6 +1759,14 @@ a.cta,
   }
 }
 
+ul.interviewerr {
+  flex-direction: row !important;
+  display: flex !important;
+  li {
+    padding-right: 10px !important;
+  }
+}
+
 @media only screen and (max-width: 1049px) {
   [data-hijacking="on"] .cd-section {
     visibility: visible;
