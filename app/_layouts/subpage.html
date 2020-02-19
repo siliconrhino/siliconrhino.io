@@ -4,7 +4,7 @@
     {% include head.html %}
   </head>
   <body class="{{page.bodyClass}}">
-    {% include header.html %} {{ content }} {% if page.hideFooter !='hide' %} {%
+    {% include header.html %} {{ content }} {% if page.hideFooter != true %} {%
     include footer.html %} {% endif %} {% include foot.html %}
   </body>
 </html>
