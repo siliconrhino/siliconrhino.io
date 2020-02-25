@@ -1049,6 +1049,10 @@ ul.rrssb-buttons {
   }
 }
 
+.portfolio {
+  min-height: 600px;
+}
+
 .project-details {
   a {
     &:hover {
@@ -1756,6 +1760,14 @@ a.cta,
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+ul.horizontal {
+  flex-direction: row !important;
+  display: flex !important;
+  li {
+    padding-right: 10px !important;
   }
 }
 
