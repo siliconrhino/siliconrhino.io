@@ -13,6 +13,7 @@
 @import "_careers.scss";
 @import "_drinks.scss";
 @import "_svg_animation.scss";
+@import "_projects.scss";
 
 //font
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
@@ -1996,8 +1997,13 @@ MEDIA QUERIES
   #menu {
     display: none !important;
   }
+  .small {
+    height: 350px !important;
+    width: 350px !important;
+  }
   .polimapper {
     display: block;
+    text-align: -webkit-center;
   }
   .polimapper2 {
     display: none !important;
