@@ -1,0 +1,55 @@
+<section class="home-backg backg-projects">
+  <div class="subpage-top-heading-left">
+    <div class="heading-left">
+      <h1>{{title}}</h1>
+    </div>
+    <img
+      class="space-shuttle-outline blue"
+      src="/img/backgrounds/shuttle-outline-blue.svg"
+      alt="space shuttle outline"
+    />
+    <div class="description-left">
+      <p>
+        {{description}}
+      </p>
+    </div>
+  </div>
+</section>
+<section>
+  {% for title in about_title %}
+  <div class="about-project">
+    <div class="about-title">{{ title }}</div>
+    <div class="about-info">{{about_desc[forloop.index0]}}</div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="phases-section">
+  <div class="project-phases top">
+    <div class="phases top">
+      <h1 class="green">Phase 1</h1>
+      <h3 class="green">{{phase1-heading}}</h3>
+      <p>{{phase1-desc}}</p>
+    </div>
+    <div class="phases top">
+      <h1 class="green">Phase 2</h1>
+      <h3 class="green">{{phase2-heading}}</h3>
+      <p>{{phase2-desc}}</p>
+    </div>
+  </div>
+
+  <div class="img-bubble"></div>
+
+  <div class="project-phases bottom">
+    <div class="phases bottom">
+      <h1 class="green">Phase 3</h1>
+      <h3 class="green">{{phase3-heading}}</h3>
+      <p>{{phase3-desc}}</p>
+    </div>
+    <div class="phases bottom">
+      <h1 class="green">Phase 4</h1>
+      <h3 class="green">{{phase4-heading}}</h3>
+      <p>{{phase4-desc}}</p>
+    </div>
+  </div>
+</section>

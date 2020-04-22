@@ -1,0 +1,73 @@
+.subpage-top-heading-left {
+  margin-top: 0 !important;
+  padding-top: 150px;
+  padding-bottom: 10px;
+  text-align: left;
+  padding-left: 40px;
+  width: 400px;
+}
+.heading-left {
+  font-size: 40px;
+  font-weight: bolder;
+}
+.description-left {
+  font-size: 18px;
+}
+.about-project {
+  display: flex;
+  margin-top: 10px;
+}
+.about-title {
+  background-color: #172646;
+  color: #008090;
+  font-size: 28px;
+  width: 250px;
+  text-align: left;
+  padding-left: 40px;
+}
+.about-info {
+  background-color: #212c4a;
+  margin-left: 10px;
+  padding-left: 20px;
+  font-size: 28px;
+  width: 100%;
+}
+.phases-section {
+  overflow-x: hidden;
+}
+.project-phases {
+  background-color: #212c4a;
+  display: flex;
+  height: 300px;
+  margin-left: -40px;
+  width: 110%;
+  &.top {
+    margin-top: 250px;
+    transform: rotate(3deg);
+  }
+  &.bottom {
+    transform: rotate(-3deg);
+    margin-bottom: 100px;
+    margin-top: -50px;
+  }
+}
+.phases {
+  padding-left: 200px;
+  padding-top: 60px;
+  width: 600px;
+  &.top {
+    transform: rotate(-3deg);
+  }
+  &.bottom {
+    transform: rotate(3deg);
+    float: right;
+  }
+}
+.green {
+  color: #008090;
+}
+.img-bubble {
+  background-color: red;
+  height: 500px;
+  margin-top: -50px;
+}
