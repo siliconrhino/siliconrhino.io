@@ -1,20 +1,23 @@
 .subpage-top-heading-left {
   margin-top: 0 !important;
-  padding-top: 200px;
+  padding-top: 150px;
   padding-bottom: 10px;
   text-align: left;
   padding-left: 40px;
   width: 450px;
 }
 .heading-left {
-  font-size: 70px;
+  font-size: 65px;
   text-transform: uppercase;
 }
 .description-left {
   font-size: 18px;
 }
 .about-project-section {
-  display: flex;
+  height: 300px;
+}
+.about-project-block {
+  //width: 100%;
 }
 .about-project {
   display: flex;
@@ -23,7 +26,7 @@
 .about-title {
   background-color: #172646;
   color: $blue;
-  font-size: 28px;
+  font-size: 24px;
   width: 250px;
   text-align: left;
   padding-left: 40px;
@@ -32,7 +35,7 @@
   background-color: #212c4a;
   margin-left: 10px;
   padding-left: 20px;
-  font-size: 28px;
+  font-size: 24px;
   width: 100%;
 }
 .phases-section {
@@ -45,7 +48,7 @@
   margin-left: -40px;
   width: 110%;
   &.top {
-    margin-top: 250px;
+    margin-top: 100px;
     transform: rotate(5deg);
   }
   &.bottom {
@@ -77,9 +80,16 @@
     font-size: 38px;
   }
 }
+.phase-desc {
+  padding-top: 30px;
+  font-size: 16px;
+  line-height: 18px;
+  width: 350px;
+}
 
 .img-bubble {
-  background-color: red;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   height: 500px;
   margin-top: -65px;
 }
@@ -91,20 +101,20 @@
 }
 .project-quote {
   display: flex;
-  padding: 80px 60px;
+  padding: 40px 10px;
 }
 .project-client {
   display: flex;
   width: 300px;
-  padding-top: 60px;
-  justify-content: flex-end;
+  padding-top: 70px;
+  padding-left: 50px;
+  //justify-content: flex-end;
 }
 
 .quote {
   width: 850px;
   padding-left: 100px;
-  font-weight: 800;
-  font-size: 48px;
+  font-size: 46px;
 }
 .client-img {
   height: 60px;
@@ -119,7 +129,7 @@
   padding-top: 5px;
 }
 .bold {
-  font-weight: 800;
+  font-weight: 700;
 }
 .client-title {
   font-size: 16px;
@@ -129,8 +139,10 @@
 .carousel-wrapper {
   height: 300px;
   position: relative;
-  width: 400px;
-  margin: 0 auto;
+  width: 350px;
+  background-color: transparent;
+  top: -265px;
+  left: 60%;
 }
 .carousel-item {
   position: absolute;
@@ -187,11 +199,11 @@
   background-size: cover;
 }
 .item-2 {
-  background: url("https://static.pexels.com/photos/6506/alcohol-bar-drinks-party-large.jpg");
+  //background: url("https://static.pexels.com/photos/6506/alcohol-bar-drinks-party-large.jpg");
   background-size: cover;
 }
 .item-3 {
-  background: url("https://static.pexels.com/photos/6529/lake-kajak-kayak-large.jpg");
+  //background: url("https://static.pexels.com/photos/6529/lake-kajak-kayak-large.jpg");
   background-size: cover;
 }
 

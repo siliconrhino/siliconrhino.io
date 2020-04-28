@@ -17,7 +17,7 @@
 </section>
 <section>
   <div class="about-project-section">
-    <div>
+    <div class="about-project-block">
       {% for title in about_title %}
     <div class="about-project bold">
     <div class="about-title">{{ title }}</div>
@@ -36,11 +36,13 @@
   </div>
 
   <div class="carousel-item item-2">
+     <img src="{{carousel-img1}}"/>
     <a class="arrow arrow-prev" href="#item-1"></a>
     <a class="arrow arrow-next" href="#item-3"></a>
   </div>
 
   <div class="carousel-item item-3">
+     <img src="{{carousel-img1}}"/>
     <a class="arrow arrow-prev" href="#item-2"></a>
     <a class="arrow arrow-next" href="#item-1"></a>
   </div>
@@ -56,37 +58,38 @@
       <span class="phase-info main green">Phase 1</span>
     </br>
       <span class="phase-info green">{{phase1-heading}}</span>
-      <p>{{phase1-desc}}</p>
+      <p class="phase-desc bold">{{phase1-desc}}</p>
     </div>
     <div class="phases-text top">
       <span class="phase-info main green">Phase 2</span>
       </br>
       <span class="phase-info green">{{phase2-heading}}</span>
-      <p>{{phase2-desc}}</p>
+      <p class="phase-desc bold">{{phase2-desc}}</p>
     </div>
   </div>
 
-  <div class="img-bubble"></div>
+  <div class="img-bubble" style="background-image: url({{phase-img}});">
+  </div>
 
   <div class="project-phases bottom">
     <div class="phases-text bottom">
       <span class="phase-info main green">Phase 3</span>
       </br>
       <span class="phase-info green">{{phase3-heading}}</span>
-      <p>{{phase3-desc}}</p>
+      <p class="phase-desc bold">{{phase3-desc}}</p>
     </div>
     <div class="phases-text bottom">
       <span class="phase-info main green">Phase 4</span>
       </br>
       <span class="phase-info green">{{phase4-heading}}</span>
-      <p>{{phase4-desc}}</p>
+      <p class="phase-desc bold">{{phase4-desc}}</p>
     </div>
   </div>
 </section>
 
 <section class="quote-section">
   <div class="project-quote">
-    <div class="quote">
+    <div class="quote bold">
       <span><i>{{quote}}</i></span>
     </div>
     <div class="project-client">
