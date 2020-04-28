@@ -2,15 +2,18 @@
 layout: subpage
 title: Bubble
 headBackground: blueBg
+bodyClass: project-page
 ---
 
+<!--Page heading section-->
 {% capture title %} BUBBLE {% endcapture %} {% capture description %} In early
 2017 we started working with bubble who just had launched their MVP a few months
-prior. {%endcapture%} {% assign
-about_title="Stage,Product,Platform,Website,Awards"|split: ',' %} {% assign
-about_desc="Start up,Marketplace,Mobile App,Bubble.com,Best of 2017
+prior. {%endcapture%}
+<!--About project section-->
+{% assign about_title="Stage,Product,Platform,Website,Awards"|split: ',' %} {%
+assign about_desc="Start up,Marketplace,Mobile App,Bubble.com,Best of 2017
 (Apple)"|split: ',' %}
-<!--Phase section-->
+<!--Project phase section-->
 <!--Phase headings-->
 {% capture phase1-heading %}Improving the user experience{% endcapture %} {%
 capture phase2-heading %}Optimising the back-end{% endcapture %} {% capture
