@@ -4,22 +4,35 @@ title: Bubble
 headBackground: blueBg
 ---
 
-{% capture title %} BUBBLE {% endcapture %} {% capture description %} Lorem
-ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum {%endcapture%}
-{% assign about_title="Stage,Product,Platform,Website,Awards"|split: ',' %} {%
-assign about_desc="Start up,Marketplace,Mobile App,Bubble.com,Best of 2017
-(Apple)"|split: ',' %} {% capture phase1-heading %}Improving the user
-experience{% endcapture %} {% capture phase2-heading %}Improving the user
-experience{% endcapture %} {% capture phase3-heading %}Improving the user
-experience{% endcapture %} {% capture phase4-heading %}Improving the user
-experience{% endcapture %} {% capture phase1-desc %}Lorem ipsum Lorem ipsum
+{% capture title %} BUBBLE {% endcapture %} {% capture description %} In early
+2017 we started working with bubble who just had launched their MVP a few months
+prior. {%endcapture%} {% assign
+about_title="Stage,Product,Platform,Website,Awards"|split: ',' %} {% assign
+about_desc="Start up,Marketplace,Mobile App,Bubble.com,Best of 2017
+(Apple)"|split: ',' %}
+<!--Phase section-->
+<!--Phase headings-->
+{% capture phase1-heading %}Improving the user experience{% endcapture %} {%
+capture phase2-heading %}Optimising the back-end{% endcapture %} {% capture
+phase3-heading %}Expanding the plateforms{% endcapture %} {% capture
+phase4-heading %}Get ready for growth{% endcapture %}
+<!--Phase descriptions-->
+{% capture phase1-desc %}Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+Lorem ipsum{% endcapture %} {% capture phase2-desc %}Lorem ipsum Lorem ipsum
 Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-ipsum Lorem ipsum Lorem ipsum Lorem ipsum{% endcapture %} {% capture phase2-desc
+ipsum Lorem ipsum Lorem ipsum Lorem ipsum{% endcapture %} {% capture phase3-desc
 %}Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
 ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum{% endcapture
-%} {% capture phase3-desc %}Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+%} {% capture phase4-desc %}Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
 Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-ipsum Lorem ipsum{% endcapture %} {% capture phase4-desc %}Lorem ipsum Lorem
-ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum{% endcapture %} {% include
-projects-template.html %}
+ipsum Lorem ipsum{% endcapture %}
+<!--Quote section-->
+{% capture quote %} " We cannot recommend Silicon Rhino highly enough. " {%
+endcapture %} {% capture client-img %}/img/clients/profile_default.png{%
+endcapture %} {% capture client-name %}Ari Last{% endcapture %} {% capture
+client-title %}Founder & CEO {% endcapture %}
+<!--Carousel Images-->
+{% capture carousel-img1 %}/img/clients/profile_default.png{% endcapture %}
+<!--Includes-->
+{% include projects-template.html %}
