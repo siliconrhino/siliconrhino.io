@@ -45,6 +45,12 @@ Vivamus in arcu velit. Nullam ut sem non mauris iaculis consectetur a vel
 massa.{% endcapture %}
 <!--Phase Image-->
 {% capture phase-img%}/img/clients/bubble-projects.jpg{%endcapture%}
+<!--Counter section-->
+{% assign
+counter_icon="/img/clients/profile_default.png,/img/clients/profile_default.png,/img/clients/profile_default.png"|split:
+',' %} {% assign counter_number="469,6980,558"|split: ',' %} {% assign
+counter_label="Cups of coffee consumed,Lines of code written,Commits
+pushed"|split: ',' %}
 <!--Quote section-->
 {% capture quote %} " We cannot recommend Silicon Rhino highly enough. " {%
 endcapture %} {% capture client-img %}/img/clients/profile_default.png{%

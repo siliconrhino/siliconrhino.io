@@ -87,7 +87,17 @@
     </div>
   </div>
 </section>
-
+<section>
+  <div class="counter">
+  {% for icon in counter_icon%}
+  <div class="counter-block" >
+    <img class="counter_icon" src="{{icon}}"/>
+    <span class="counter_number bold" >{{counter_number[forloop.index0]}}</span>
+    <span class="counter_label bold">{{counter_label[forloop.index0]}}</span>
+  </div>
+  {% endfor %}
+</div>
+</section>
 <section class="quote-section">
   <div class="project-quote">
     <div class="quote bold">
