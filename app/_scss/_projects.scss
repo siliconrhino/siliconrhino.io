@@ -36,9 +36,7 @@
   font-size: 24px;
   width: 100%;
 }
-.phases-section {
-  overflow: hidden;
-}
+
 .project-phases {
   background-color: #212c4a;
   display: flex;
@@ -99,7 +97,9 @@
 }
 .project-quote {
   display: flex;
+  //flex-direction: column;
   padding: 40px 10px;
+  padding-left: 50px;
 }
 .project-client {
   display: flex;
@@ -181,15 +181,12 @@
 .item-1 {
   z-index: 2;
   opacity: 1;
-  //background: url("https://static.pexels.com/photos/6526/sea-beach-holiday-vacation-large.jpg");
   background-size: cover;
 }
 .item-2 {
-  //background: url("https://static.pexels.com/photos/6506/alcohol-bar-drinks-party-large.jpg");
   background-size: cover;
 }
 .item-3 {
-  //background: url("https://static.pexels.com/photos/6529/lake-kajak-kayak-large.jpg");
   background-size: cover;
 }
 
@@ -212,15 +209,17 @@
     width: fit-content;
   }
   .about-project-section {
-    display: flex;
-    flex-direction: column;
+    height: min-content;
+  }
+  .subpage-top-heading-left {
+    width: 90%;
   }
   .carousel-wrapper {
-    height: 500px;
+    height: 300px;
     position: relative;
-    width: 350px;
+    width: 80%;
     background-color: transparent;
-    //margin: 0 auto;
+    margin: 0 auto;
     top: 0;
     left: 0;
   }
@@ -230,12 +229,13 @@
   }
   .project-phases {
     background-color: #212c4a;
-    display: inline-block;
-    height: 350px;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
     margin-left: 0px;
     width: 100%;
     &.top {
-      margin-top: 0px;
+      margin-top: 0;
       transform: none;
     }
     &.bottom {
@@ -245,29 +245,83 @@
     }
   }
   .phases-text {
-    padding-left: 200px;
-    padding-top: 60px;
-    width: 100%;
+    padding: 40px;
+    //padding-top: 60px;
+    width: 85%;
     &.top {
       transform: none;
     }
     &.bottom {
       transform: none;
-      float: right;
     }
   }
   .img-bubble {
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 500px;
+    background-size: 120% 300px;
+    margin-left: -20%;
+    height: 300px;
     margin-top: 0;
+  }
+
+  .project-quote {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .quote {
+    width: 100%;
+    padding-left: 40px;
+    font-size: 26px;
+  }
+  .quote-section {
+    margin-top: 0;
+    //height: 300px;
+    color: white;
+    background-color: $blue;
+  }
+  .project-client {
+    padding-top: 30px;
+    padding-left: 60%;
+    width: 100%;
+    float: right;
+  }
+  .client-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  .client-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 0;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .client-title {
+    font-size: 14px;
   }
 }
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .project-page {
+    width: fit-content;
+  }
+  .about-project-section {
+    height: min-content;
+  }
+  .subpage-top-heading-left {
+    width: 90%;
+  }
   .carousel-wrapper {
     height: 300px;
     position: relative;
-    width: 350px;
+    width: 80%;
     background-color: transparent;
     margin: 0 auto;
     top: 0;
@@ -277,82 +331,193 @@
     background-size: 10px;
     background-position: 10px 50%;
   }
-}
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-  .carousel-wrapper {
-    height: 300px;
-    position: relative;
-    width: 350px;
-    background-color: transparent;
-    margin: 0 auto;
-    top: 0;
-    left: 0;
-  }
-  .arrow {
-    background-size: 10px;
-    background-position: 10px 50%;
-  }
-  .project-phases {
-    background-color: #212c4a;
-    //display: flex;
-    height: 350px;
-    //margin-left: -40px;
-    width: 110%;
-    &.top {
-      margin-top: 100px;
-      //transform: rotate(5deg);
-    }
-    &.bottom {
-      //transform: rotate(-5deg);
-      margin-bottom: 100px;
-      //margin-top: -65px;
-    }
-  }
-  .phases-text {
-    padding-left: 200px;
-    padding-top: 60px;
-    width: 600px;
-    &.top {
-      // transform: rotate(-5deg);
-    }
-    &.bottom {
-      // transform: rotate(5deg);
-      float: right;
-    }
-  }
-}
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-  .carousel-wrapper {
-    top: -265px;
-    left: 60%;
-  }
-
   .project-phases {
     background-color: #212c4a;
     display: flex;
-    height: 350px;
-    margin-left: -40px;
-    width: 110%;
+    flex-direction: column;
+    height: max-content;
+    margin-left: 0px;
+    width: 100%;
     &.top {
-      margin-top: 100px;
-      transform: rotate(5deg);
+      margin-top: 0;
+      transform: none;
     }
     &.bottom {
-      transform: rotate(-5deg);
-      margin-bottom: 100px;
-      margin-top: -65px;
+      transform: none;
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
   .phases-text {
-    padding-left: 200px;
-    padding-top: 60px;
-    width: 600px;
+    padding: 40px;
+    //padding-top: 60px;
+    width: 85%;
     &.top {
-      transform: rotate(-5deg);
+      transform: none;
     }
     &.bottom {
-      transform: rotate(5deg);
-      float: right;
+      transform: none;
     }
+  }
+  .img-bubble {
+    background-repeat: no-repeat;
+    background-size: 120% 300px;
+    margin-left: -20%;
+    height: 300px;
+    margin-top: 0;
+  }
+
+  .project-quote {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .quote {
+    width: 100%;
+    padding-left: 40px;
+    font-size: 26px;
+  }
+  .quote-section {
+    margin-top: 0;
+    //height: 300px;
+    color: white;
+    background-color: $blue;
+  }
+  .project-client {
+    padding-top: 30px;
+    padding-left: 60%;
+    width: 100%;
+    float: right;
+  }
+  .client-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  .client-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 0;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .client-title {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .project-page {
+    width: fit-content;
+  }
+  .about-project-section {
+    height: min-content;
+  }
+  .subpage-top-heading-left {
+    width: 90%;
+  }
+  .carousel-wrapper {
+    height: 300px;
+    position: relative;
+    width: 80%;
+    background-color: transparent;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+  }
+  .arrow {
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+  .project-phases {
+    background-color: #212c4a;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    margin-left: 0px;
+    width: 100%;
+    &.top {
+      margin-top: 0;
+      transform: none;
+    }
+    &.bottom {
+      transform: none;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+  .phases-text {
+    padding: 40px;
+    //padding-top: 60px;
+    width: 85%;
+    &.top {
+      transform: none;
+    }
+    &.bottom {
+      transform: none;
+    }
+  }
+  .img-bubble {
+    background-repeat: no-repeat;
+    background-size: 120% 300px;
+    margin-left: -20%;
+    height: 300px;
+    margin-top: 0;
+  }
+
+  .project-quote {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .quote {
+    width: 100%;
+    padding-left: 40px;
+    font-size: 26px;
+  }
+  .quote-section {
+    margin-top: 0;
+    //height: 300px;
+    color: white;
+    background-color: $blue;
+  }
+  .project-client {
+    padding-top: 30px;
+    padding-left: 60%;
+    width: 100%;
+    float: right;
+  }
+  .client-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  .client-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 0;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .client-title {
+    font-size: 14px;
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+  .phases-section {
+    overflow: hidden;
   }
 }
