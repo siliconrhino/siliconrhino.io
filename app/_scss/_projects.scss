@@ -56,7 +56,7 @@
 .phases-text {
   padding-left: 200px;
   padding-top: 60px;
-  width: 600px;
+  width: 700px;
   &.top {
     transform: rotate(-5deg);
   }
@@ -80,7 +80,7 @@
   padding-top: 30px;
   font-size: 16px;
   line-height: 18px;
-  width: 350px;
+  width: 400px;
 }
 
 .img-bubble {
@@ -151,6 +151,7 @@
   padding: 25px 50px;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+  text-align: center;
 }
 .arrow {
   border: solid white;
@@ -224,7 +225,7 @@
 }
 
 .counter_label {
-  padding: 10px;
+  padding: 0;
   font-size: 24px;
   margin-right: auto;
   margin-left: auto;
@@ -232,6 +233,11 @@
 .counter_number {
   padding-top: 50px;
   font-size: 70px;
+  line-height: 70px;
+}
+.carousel-img {
+  width: 250px;
+  height: 250px;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -337,6 +343,15 @@
   .client-title {
     font-size: 14px;
   }
+  .counter {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .counter-block {
+    width: 100%;
+    padding-bottom: 80px;
+  }
 }
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
   .project-page {
@@ -441,6 +456,15 @@
   .client-title {
     font-size: 14px;
   }
+  .counter {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .counter-block {
+    width: 100%;
+    padding-bottom: 80px;
+  }
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .project-page {
@@ -544,6 +568,15 @@
   }
   .client-title {
     font-size: 14px;
+  }
+  .counter {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .counter-block {
+    width: 100%;
+    padding-bottom: 80px;
   }
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
