@@ -13,7 +13,7 @@
 @import "_careers.scss";
 @import "_drinks.scss";
 @import "_svg_animation.scss";
-@import "_projects.scss";
+//@import "_projects.scss";
 
 //font
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
@@ -1999,7 +1999,7 @@ MEDIA QUERIES
   }
   .small {
     height: 350px !important;
-    width: 350px !important;
+    width: 400px !important;
   }
   .polimapper {
     display: block;
