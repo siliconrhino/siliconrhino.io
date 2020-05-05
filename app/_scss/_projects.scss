@@ -135,14 +135,14 @@
 
 //carousel
 .carousel-wrapper {
-  height: 300px;
+  height: min-content;
   position: relative;
-  width: 350px;
+  width: 300px;
   background-color: transparent;
-  top: -265px;
   left: 60%;
 }
 .carousel-item {
+  height: min-content;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -152,6 +152,10 @@
   opacity: 0;
   transition: all 0.5s ease-in-out;
   text-align: center;
+}
+.carousel-img {
+  width: 200px;
+  height: auto;
 }
 .arrow {
   border: solid white;
@@ -234,10 +238,6 @@
   padding-top: 50px;
   font-size: 70px;
   line-height: 70px;
-}
-.carousel-img {
-  width: 250px;
-  height: 250px;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
