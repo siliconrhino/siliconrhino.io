@@ -13,6 +13,7 @@
 @import "_careers.scss";
 @import "_drinks.scss";
 @import "_svg_animation.scss";
+//@import "_projects.scss";
 
 //font
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
@@ -93,6 +94,10 @@ body {
 
 .center {
   text-align: center;
+}
+.padding {
+  padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 .ctaContainer {
@@ -1998,9 +2003,11 @@ MEDIA QUERIES
   }
   .polimapper {
     display: block;
-  }
-  .polimapper2 {
-    display: none !important;
+    text-align: -webkit-center;
+    &.small {
+      height: 350px;
+      width: 400px;
+    }
   }
   .politics {
     display: block;
