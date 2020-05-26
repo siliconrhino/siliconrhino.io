@@ -2001,16 +2001,13 @@ MEDIA QUERIES
   #menu {
     display: none !important;
   }
-  .small {
-    height: 350px !important;
-    width: 400px !important;
-  }
   .polimapper {
     display: block;
     text-align: -webkit-center;
-  }
-  .polimapper2 {
-    display: none !important;
+    &.small {
+      height: 350px;
+      width: 400px;
+    }
   }
   .politics {
     display: block;
