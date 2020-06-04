@@ -573,7 +573,7 @@ a {
       }
     }
     &.live-uti-free {
-      background-image: url("../img/project-highlights/lliveutifree.f26c.png");
+      background-image: url("../img/project-highlights/liveutifree.f26c.png");
       height: 230px;
       width: 445px;
       margin-top: 30px;
@@ -883,9 +883,9 @@ ul.rrssb-buttons {
 .coming-soon {
   margin: auto;
   position: absolute;
-  left: calc(50% - 66px);
-  left: -webkit-calc(50% - 66px);
-  left: -moz-calc(50% - 66px);
+  left: calc(50% - 50px);
+  left: -webkit-calc(50% - 50px);
+  left: -moz-calc(50% - 50px);
   bottom: calc(50% - 120px);
   bottom: -webkit-calc(50% - 120px);
   bottom: -moz-calc(50% - 120px);
@@ -1055,7 +1055,7 @@ ul.rrssb-buttons {
 }
 
 .portfolio {
-  min-height: 600px;
+  min-height: 68vh;
 }
 
 .project-details {
@@ -1389,6 +1389,7 @@ body[data-hijacking="on"] {
   }
   .col-sm-12 {
     @include flex-direction(column);
+    @include justify-content(center);
   }
   @include MQ(L) {
     .col-sm-6 {
@@ -1801,8 +1802,6 @@ ul.horizontal {
   }
 
   .wcd-section {
-    div {
-    }
   }
   .title-other {
     visibility: hidden;
@@ -1837,7 +1836,7 @@ ul.horizontal {
       display: none;
     }
     &:nth-of-type(2) {
-      height: 460px !important;
+      height: 500px !important;
       margin-top: 70px;
     }
     &:nth-of-type(3) {
@@ -2443,7 +2442,7 @@ MEDIA QUERIES
   .coming-soon {
     margin: auto;
     position: absolute;
-    left: calc(50% - 66px);
+    left: calc(50% - 50px);
     bottom: calc(50% - 150px);
     font-size: 20px;
     &.in-beta {
@@ -2547,7 +2546,7 @@ MEDIA QUERIES
   .coming-soon {
     margin: auto;
     position: absolute;
-    left: calc(50% - 66px);
+    left: calc(50% - 50px);
     bottom: calc(50% - 150px);
     font-size: 20px;
     &.in-beta {
