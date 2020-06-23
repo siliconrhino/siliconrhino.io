@@ -6,7 +6,7 @@ title: "Intern to Dev: Episode 1"
 description: Where my journey began
 tags: ["startups", "silicon rhino"]
 categories: []
-imageUrl: "/img/backgrounds/intern-to-dev.png"
+imageUrl: "/img/backgrounds/intern-to-dev.7b52.png"
 published: true
 ---
 
