@@ -367,6 +367,9 @@ a {
     }
   }
 }
+.menu > .homepage > ul {
+  padding-left: 0px;
+}
 
 @include keyframes(move-twink-back) {
   from {
