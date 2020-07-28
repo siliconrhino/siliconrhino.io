@@ -1,0 +1,46 @@
+---
+layout: subpage
+title: Interviewerr
+headBackground: blueBg
+bodyClass: project-page
+---
+
+<!--Page heading section-->
+{% capture title %} Interviewerr {% endcapture %} {% capture description %}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+{%endcapture%}
+<!--About project section-->
+{% assign about_title="Stage,Product,Platform,Website"|split: ',' %} {% assign
+about_desc="MVP,Marketplace,Web App,interviewerr.com"|split: ',' %}
+<!--Features section-->
+{% capture feature-title1 %}Pin Your Notes To Audio In Real Time{% endcapture %}
+{% capture feature-title2 %}Create Your Script & Insert Questions{% endcapture
+%} {% capture feature-title3 %}Tag And Code Insights On The Go{% endcapture %}
+{% capture feature-title4 %}Reinforce Your Findings{% endcapture %} {% capture
+feature-description1 %}Notes typed during interview recordings are automatically
+pinned to the audio location, for faster and more precise data review.{%
+endcapture %} {% capture feature-description2 %}Set up and edit your interview
+script, easily insert question markers in the interview timeline at the moment
+you ask them, and go back at any time to view.{% endcapture %} {% capture
+feature-description3 %}Create and insert new tags as you need them and simplify
+the post-interview coding process. Filtering by tag is available during and
+after recording.{% endcapture %} {% capture feature-description4 %}Export your
+insights and audio files to demonstrate tangible connections between your data
+and your conclusions.{% endcapture %}
+<!--Project phase section-->
+
+<!--Counter section-->
+{% assign
+counter_icon="/img/clients/profile_default.png,/img/clients/profile_default.png,/img/clients/profile_default.png"|split:
+',' %} {% assign counter_number="469,6980,558"|split: ',' %} {% assign
+counter_label="Cups of coffee consumed,Lines of code written,Commits
+pushed"|split: ',' %}
+
+<!--Carousel Images-->
+{% capture carousel-img1 %}/img/clients/bubble-screenshot1.png{% endcapture %}
+<!--Carousel position style-->
+{% capture carousel-position %}top: -320px;{% endcapture %}
+<!--Includes-->
+{% include case-study.html %}

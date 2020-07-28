@@ -1,0 +1,130 @@
+<div class="case-study">
+  <section class="home-backg backg-projects">
+    <div class="subpage-top-heading-left">
+      <div class="heading-left bold">
+        <span>{{title}}</span>
+      </div>
+      <img
+        class="space-shuttle-outline blue"
+        src="/img/backgrounds/shuttle-outline-blue.svg"
+        alt="space shuttle outline"
+      />
+      <div class="description-left bold">
+        <p>
+          {{description}}
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="about-project-section">
+      <div class="about-project-block">
+        {% for title in about_title %}
+        <div class="about-project bold">
+          <div class="about-title">{{ title }}</div>
+          <div class="about-info">{{about_desc[forloop.index0]}}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="carousel-wrapper">
+        <span id="item-1"></span>
+        <span id="item-2"></span>
+        <span id="item-3"></span>
+        <div class="carousel-item item-1">
+          <img class="carousel-img" src="{{carousel-img1}}" />
+          <a class="arrow arrow-prev" href="#item-3"></a>
+          <a class="arrow arrow-next" href="#item-2"></a>
+        </div>
+
+        <div class="carousel-item item-2">
+          <img src="{{carousel-img1}}" />
+          <a class="arrow arrow-prev" href="#item-1"></a>
+          <a class="arrow arrow-next" href="#item-3"></a>
+        </div>
+
+        <div class="carousel-item item-3">
+          <img src="{{carousel-img1}}" />
+          <a class="arrow arrow-prev" href="#item-2"></a>
+          <a class="arrow arrow-next" href="#item-1"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="features-heading"><span>Features</span></div>
+    <div class="feature">
+      <div class="feature-text">
+        <span class="feature-title">{{feature-title1}}</span
+        ><span>{{feature-description1}}</span>
+      </div>
+      <div class="feature-image">
+        <img src="../img/case-studies/feature1.png" />
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <span class="feature-title">{{feature-title2}}</span
+        ><span>{{feature-description2}}</span>
+      </div>
+      <div class="feature-image">
+        <img src="../img/case-studies/feature2.png" />
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-text">
+        <span class="feature-title">{{feature-title3}}</span
+        ><span>{{feature-description3}}</span>
+      </div>
+      <div class="feature-image">
+        <img src="../img/case-studies/feature3.png" />
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-text">
+        <span class="feature-title">{{feature-title4}}</span
+        ><span>{{feature-description4}}</span>
+      </div>
+      <div class="feature-image">
+        <img src="../img/case-studies/feature4.png" />
+      </div>
+    </div>
+  </section>
+
+  <section class="phases-section">
+    <div class="project-phases top">
+      <div class="logo"><img src="../img/case-studies/interviewerr.png" /></div>
+      <div class="project-info">
+        <div class="feature-text information">
+          <span class="feature-title information"
+            >Streamline Your Interview Process</span
+          >
+          <span
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</span
+          >
+          <div class="case-study-cta"><a>Find out more</a></div>
+        </div>
+        <div class="info-image">
+          <img src="../img/case-studies/feature4.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="counter">
+      {% for icon in counter_icon%}
+      <div class="counter-block">
+        <img class="counter_icon" src="{{icon}}" />
+        <span class="counter_number bold"
+          >{{counter_number[forloop.index0]}}</span
+        >
+        <span class="counter_label bold"
+          >{{counter_label[forloop.index0]}}</span
+        >
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
