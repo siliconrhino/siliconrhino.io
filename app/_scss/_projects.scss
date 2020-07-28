@@ -40,7 +40,7 @@
 .project-phases {
   background-color: #212c4a;
   display: flex;
-  height: 350px;
+  height: 40vh;
   margin-left: -40px;
   width: 110%;
   &.top {
@@ -86,7 +86,7 @@
 .img-bubble {
   background-repeat: no-repeat;
   background-size: 100% auto;
-  height: 500px;
+  height: 60vh;
   margin-top: -65px;
 }
 .quote-section {
@@ -137,9 +137,12 @@
 .carousel-wrapper {
   height: min-content;
   position: relative;
-  width: 300px;
+  width: 244px;
   background-color: transparent;
   left: 60%;
+  > img.phone-img {
+    z-index: 100;
+  }
 }
 .carousel-item {
   height: min-content;
@@ -148,13 +151,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 25px 50px;
+  padding: 15px 18px;
   opacity: 0;
   transition: all 0.5s ease-in-out;
   text-align: center;
 }
 .carousel-img {
-  width: 200px;
+  width: 210px;
   height: auto;
 }
 .arrow {
