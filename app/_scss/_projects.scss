@@ -40,9 +40,12 @@
 .project-phases {
   background-color: #212c4a;
   display: flex;
+  flex-direction: row;
   height: 40vh;
   margin-left: -40px;
   width: 110%;
+  align-items: center;
+
   &.top {
     margin-top: 100px;
     transform: rotate(5deg);
@@ -54,15 +57,18 @@
   }
 }
 .phases-text {
-  padding-left: 200px;
-  padding-top: 60px;
-  width: 700px;
+  width: 50vw;
   &.top {
     transform: rotate(-5deg);
+    padding-bottom: 50px;
   }
   &.bottom {
     transform: rotate(5deg);
+    padding-top: 50px;
     float: right;
+  }
+  &.first {
+    margin-left: 140px;
   }
 }
 .green {
@@ -80,7 +86,7 @@
   padding-top: 30px;
   font-size: 16px;
   line-height: 18px;
-  width: 400px;
+  width: 35vw;
 }
 
 .img-bubble {
@@ -97,20 +103,20 @@
 }
 .project-quote {
   display: flex;
-  //flex-direction: column;
+  flex-direction: row;
   padding: 40px 10px;
   padding-left: 50px;
 }
 .project-client {
   display: flex;
-  width: 300px;
-  padding-top: 70px;
-  padding-left: 50px;
+  width: 35vw;
+  padding-top: 10vh;
+  padding-left: 10vw;
   //justify-content: flex-end;
 }
 
 .quote {
-  width: 850px;
+  width: 65vw;
   padding-left: 100px;
   font-size: 46px;
 }
@@ -151,13 +157,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 15px 18px;
+  padding: 16px 17px;
   opacity: 0;
   transition: all 0.5s ease-in-out;
   text-align: center;
 }
 .carousel-img {
-  width: 210px;
+  width: 212px;
   height: auto;
 }
 .arrow {
@@ -214,8 +220,8 @@
 .counter {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 .counter-block {
   display: flex;
@@ -241,6 +247,68 @@
   padding-top: 50px;
   font-size: 70px;
   line-height: 70px;
+}
+.project-image-wrapper {
+  padding-top: 10vh;
+
+  padding-bottom: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.project-image {
+  width: 10vw;
+  height: 37vh;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.project-heading {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  padding-top: 100px;
+  &.left {
+    text-align: left;
+  }
+}
+.project-description {
+  padding-top: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 18px;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-weight: 700;
+  &.left {
+    text-align: left;
+    > p {
+      padding-bottom: 20px;
+    }
+  }
+}
+.info-wrapper {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #172646;
+  overflow-x: hidden;
+}
+.laptop-image {
+  width: 60vw;
+  height: auto;
+}
+.cta-button {
+  background-color: $blue;
+  padding: 10px 45px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.info-text {
+  padding-left: 140px;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -582,8 +650,17 @@
     padding-bottom: 80px;
   }
 }
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .phases-section {
     overflow: hidden;
+  }
+  .img-bubble {
+    height: 60vh;
+    margin-top: -95px;
+  }
+  .project-phases {
+    &.bottom {
+      margin-top: -95px;
+    }
   }
 }
