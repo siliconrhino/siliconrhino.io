@@ -600,6 +600,26 @@ a {
         left: calc(50% - 25px);
       }
     }
+    &.yoppie {
+      background-image: url("../img/project-highlights/liveutifree.f26c.png");
+      height: 230px;
+      width: 445px;
+      margin-top: 30px;
+      a {
+        right: 0;
+        top: -30px;
+      }
+    }
+    &.hoo {
+      background-image: url("../img/project-highlights/liveutifree.f26c.png");
+      height: 230px;
+      width: 445px;
+      margin-top: 30px;
+      a {
+        right: 0;
+        top: -30px;
+      }
+    }
   }
   label {
     margin-top: 20px;
