@@ -67,9 +67,6 @@
     padding-top: 50px;
     float: right;
   }
-  &.first {
-    margin-left: 140px;
-  }
 }
 .green {
   color: $blue;
@@ -86,9 +83,7 @@
   padding-top: 30px;
   font-size: 16px;
   line-height: 18px;
-  width: 35vw;
 }
-
 .img-bubble {
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -313,22 +308,43 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   .project-page {
-    width: fit-content;
+    width: min-content;
   }
   .about-project-section {
     height: min-content;
   }
   .subpage-top-heading-left {
-    width: 90%;
+    width: 100%;
   }
+  .description-left {
+    width: fit-content;
+  }
+  // .carousel-wrapper {
+  //   height: 300px;
+  //   position: relative;
+  //   width: 80%;
+  //   background-color: transparent;
+  //   margin: 0 auto;
+  //   top: 0;
+  //   left: 0;
+  // }
   .carousel-wrapper {
-    height: 300px;
+    height: min-content;
     position: relative;
-    width: 80%;
+    width: 244px;
     background-color: transparent;
     margin: 0 auto;
-    top: 0;
+    top: 10vh;
     left: 0;
+    padding-bottom: 20vh;
+    > img.phone-img {
+      z-index: 100;
+    }
+  }
+
+  .carousel-img {
+    width: 212px;
+    height: auto;
   }
   .arrow {
     background-size: 10px;
@@ -362,12 +378,70 @@
       transform: none;
     }
   }
+  .phase-info {
+    font-size: 32px;
+    &.main {
+      font-size: 40px;
+    }
+  }
+  .phase-desc {
+    width: 100%;
+    font-size: 28px;
+    line-height: 32px;
+  }
   .img-bubble {
     background-repeat: no-repeat;
     background-size: 120% 300px;
     margin-left: -20%;
     height: 300px;
     margin-top: 0;
+  }
+  .project-description {
+    line-height: 28px;
+    font-size: 24px;
+    width: 90%;
+  }
+  .project-image-wrapper {
+    flex-direction: column;
+    > div {
+      margin: 5vh auto;
+      width: 244px;
+      height: 500px;
+      border-radius: 15px;
+    }
+  }
+
+  .info-wrapper {
+    flex-direction: column;
+  }
+  .info-text {
+    padding-left: 40px;
+  }
+  .project-description {
+    &.left {
+      padding-top: 20px;
+
+      line-height: 20px;
+      font-size: 18px;
+      width: 80vw;
+      margin-left: 0;
+      display: block;
+      font-weight: 700;
+    }
+  }
+  .project-heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    padding-top: 100px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .laptop-image {
+    padding-top: 10vh;
+    width: 100vw;
+    height: auto;
   }
 
   .project-quote {
@@ -581,12 +655,21 @@
     padding: 40px;
     //padding-top: 60px;
     width: 85%;
+    &.first {
+      margin-left: 0px;
+    }
     &.top {
       transform: none;
     }
     &.bottom {
       transform: none;
     }
+  }
+  p.phase-desc {
+    padding-top: 30px;
+    font-size: 16px;
+    line-height: 18px;
+    width: 100vw;
   }
   .img-bubble {
     background-repeat: no-repeat;
@@ -662,5 +745,34 @@
     &.bottom {
       margin-top: -95px;
     }
+  }
+  .carousel-wrapper {
+    height: min-content;
+    position: relative;
+    width: 244px;
+    background-color: transparent;
+    left: 60%;
+    top: -45vh;
+    > img.phone-img {
+      z-index: 100;
+    }
+  }
+  .phases-text {
+    width: 50vw;
+    &.top {
+      transform: rotate(-5deg);
+      padding-bottom: 50px;
+    }
+    &.bottom {
+      transform: rotate(5deg);
+      padding-top: 50px;
+      float: right;
+    }
+    &.first {
+      margin-left: 140px;
+    }
+  }
+  .phase-desc {
+    width: 35vw;
   }
 }
