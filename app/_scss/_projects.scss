@@ -143,6 +143,7 @@
   left: 60%;
   > img.phone-img {
     z-index: 100;
+    position: absolute;
   }
 }
 .carousel-item {
@@ -160,6 +161,7 @@
 .carousel-img {
   width: 212px;
   height: auto;
+  position: relative;
 }
 .arrow {
   border: solid white;
@@ -336,7 +338,7 @@
     margin: 0 auto;
     top: 10vh;
     left: 0;
-    padding-bottom: 20vh;
+    padding-bottom: 100vh;
     > img.phone-img {
       z-index: 100;
     }
@@ -370,7 +372,7 @@
   .phases-text {
     padding: 40px;
     //padding-top: 60px;
-    width: 85%;
+    width: 100%;
     &.top {
       transform: none;
     }
@@ -379,15 +381,16 @@
     }
   }
   .phase-info {
-    font-size: 32px;
+    font-size: 28px;
     &.main {
-      font-size: 40px;
+      font-size: 38px;
     }
   }
   .phase-desc {
+    padding-top: 20px;
     width: 100%;
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 30px;
   }
   .img-bubble {
     background-repeat: no-repeat;
@@ -440,7 +443,7 @@
   }
   .laptop-image {
     padding-top: 10vh;
-    width: 100vw;
+    width: 100%;
     height: auto;
   }
 
@@ -733,7 +736,23 @@
     padding-bottom: 80px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 813px) and (max-width: 1024px) {
+  .carousel-wrapper {
+    height: min-content;
+    position: relative;
+    width: 244px;
+    background-color: transparent;
+    margin: 0 auto;
+    top: 10vh;
+    left: 0;
+    padding-bottom: 20vh;
+    > img.phone-img {
+      z-index: 100;
+      position: absolute;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
   .phases-section {
     overflow: hidden;
   }
@@ -755,6 +774,7 @@
     top: -45vh;
     > img.phone-img {
       z-index: 100;
+      position: absolute;
     }
   }
   .phases-text {
