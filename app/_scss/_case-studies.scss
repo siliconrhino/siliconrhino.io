@@ -72,8 +72,17 @@
   position: relative;
   width: 350px;
   background-color: transparent;
-  top: -265px;
-  left: 60%;
+
+  text-align: center;
+  > img.phone-img {
+    z-index: 100;
+    width: 320px;
+  }
+}
+.carousel-img {
+  width: 312px;
+  height: auto;
+  position: relative;
 }
 .carousel-item {
   position: absolute;
@@ -269,20 +278,19 @@
   .carousel-wrapper {
     height: min-content;
     position: relative;
-    width: 244px;
+    width: 320px;
     background-color: transparent;
-    margin: 0 auto;
-    top: 10vh;
-    left: 0;
-    padding-bottom: 20vh;
+    margin: 50px auto 0px;
     > img.phone-img {
       z-index: 100;
     }
   }
 
   .carousel-img {
-    width: 212px;
-    height: auto;
+    width: 240px;
+    height: 150px;
+    margin-top: -8px;
+    margin-left: -10px;
   }
   .features-heading {
     margin-top: 50vh;
@@ -345,6 +353,89 @@
   }
 }
 @media only screen and (min-width: 813px) and (max-width: 1024px) {
+  .case-study-page {
+    width: fit-content;
+  }
+  .description-left {
+    font-size: 18px;
+    width: 100%;
+  }
+  .carousel-wrapper {
+    height: min-content;
+    position: relative;
+    width: 320px;
+    background-color: transparent;
+    margin: 50px auto 0px;
+    > img.phone-img {
+      z-index: 100;
+    }
+  }
+
+  .carousel-img {
+    width: 240px;
+    height: 150px;
+    margin-top: -8px;
+    margin-left: -10px;
+  }
+  .features-heading {
+    margin-top: 50vh;
+  }
+  .feature {
+    height: auto;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    text-align: center;
+  }
+  .feature-text {
+    width: 100%;
+  }
+  .feature-image {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+    > img {
+      width: 90%;
+    }
+  }
+  .project-phases {
+    margin-left: -10%;
+    width: 120%;
+  }
+  .project-info {
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-5deg);
+    align-items: center;
+    margin-top: 5vh;
+    padding-bottom: 15vh;
+  }
+  .feature-text {
+    &.information {
+      padding-left: 10%;
+      padding-bottom: 10vh;
+      width: 90%;
+    }
+  }
+  .logo {
+    margin-left: -10%;
+  }
+  .info-image > img {
+    width: 100%;
+  }
+  .counter {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .counter-block {
+    width: 100%;
+    padding-bottom: 80px;
+  }
 }
 @media only screen and (min-width: 1025px) {
   .subpage-top-heading-left {
@@ -403,10 +494,13 @@
   .carousel-wrapper {
     height: 300px;
     position: relative;
-    width: 350px;
+    width: 400px;
     background-color: transparent;
-    top: -265px;
+    margin-top: -12%;
     left: 60%;
+    > img.phone-img {
+      width: 400px;
+    }
   }
   .carousel-item {
     position: absolute;
@@ -502,8 +596,9 @@
     line-height: 70px;
   }
   .carousel-img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 200px;
+    top: -10px;
   }
   //new
   .feature {
