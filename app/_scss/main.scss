@@ -310,7 +310,7 @@ a {
 
 .menu {
   display: block;
-  $menu-width: 250px;
+  $menu-width: 100%;
   > div {
     background-color: rgba(0, 129, 144, 0.8);
     position: fixed;
@@ -369,6 +369,7 @@ a {
 }
 .menu > .homepage > ul {
   padding-left: 0px;
+  font-size: 24px;
 }
 
 @include keyframes(move-twink-back) {
