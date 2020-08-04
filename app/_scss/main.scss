@@ -1780,7 +1780,7 @@ ul.horizontal {
     padding-right: 10px !important;
   }
 }
-#button {
+#toTopButton {
   display: inline-block;
   background-color: #008190;
   width: 50px;
@@ -1796,7 +1796,7 @@ ul.horizontal {
   z-index: 1000;
   text-decoration: none;
 }
-#button::after {
+#toTopButton::after {
   content: "\f077";
   font-family: FontAwesome;
   font-weight: normal;
@@ -1806,7 +1806,7 @@ ul.horizontal {
   color: #fff;
 }
 
-#button.show {
+#toTopButton.show {
   opacity: 0.6;
   visibility: visible;
 }
@@ -2674,7 +2674,7 @@ MEDIA QUERIES
   .project-image {
     padding: 100px !important;
   }
-  #button {
+  #toTopButton {
     margin: 30px;
   }
 }

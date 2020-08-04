@@ -1,4 +1,4 @@
-var btn = document.getElementById("button");
+var btn = document.getElementById("toTopButton");
 window.addEventListener("scroll", showbtn);
 
 function showbtn() {
@@ -8,10 +8,11 @@ function showbtn() {
     btn.classList.remove("show");
   }
 }
-
-btn.onclick = function () {
-  myFunction();
-};
+if (btn) {
+  btn.onclick = function () {
+    myFunction();
+  };
+}
 
 function myFunction() {
   window.scroll({ top: 0, left: 0, behavior: "smooth" });
