@@ -1,5 +1,4 @@
 var btn = document.getElementById("toTopButton");
-window.addEventListener("scroll", showbtn);
 
 function showbtn() {
   if (window.scrollY > 300) {
@@ -8,12 +7,13 @@ function showbtn() {
     btn.classList.remove("show");
   }
 }
+
+function myFunction() {
+  window.scroll({ top: 0, left: 0, behavior: "smooth" });
+}
 if (btn) {
   btn.onclick = function () {
     myFunction();
   };
 }
-
-function myFunction() {
-  window.scroll({ top: 0, left: 0, behavior: "smooth" });
-}
+window.addEventListener("scroll", showbtn);
