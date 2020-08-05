@@ -29,7 +29,7 @@ let startX = window.scrollX || window.pageXOffset,
             }
             window.scrollTo(newX, newY);
         }, 1000 / 60);
-};
+}
 
 function scrollFunction() {
     if ('scrollBehavior' in document.documentElement.style) { //Checks if browser supports scroll function
