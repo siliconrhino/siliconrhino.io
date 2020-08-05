@@ -1780,6 +1780,36 @@ ul.horizontal {
     padding-right: 10px !important;
   }
 }
+#toTopButton {
+  display: inline-block;
+  background-color: #008190;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 15px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: visible;
+  z-index: 1000;
+  text-decoration: none;
+}
+#toTopButton::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 45px;
+  color: #fff;
+}
+
+#toTopButton.show {
+  opacity: 0.6;
+  visibility: visible;
+}
 
 @media only screen and (max-width: 1049px) {
   [data-hijacking="on"] .cd-section {
@@ -2643,6 +2673,9 @@ MEDIA QUERIES
 @media screen and (min-width: 600px) and (max-width: 767px) {
   .project-image {
     padding: 100px !important;
+  }
+  #toTopButton {
+    margin: 30px;
   }
 }
 
