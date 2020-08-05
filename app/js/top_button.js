@@ -7,22 +7,8 @@ function showbtn() {
     btn.classList.remove('show');
   }
 }
-
-function scrollFunction() {
-    if ('scrollBehavior' in document.documentElement.style) { //Checks if browser supports scroll function
-        window.scroll({
-            top : 0,
-            left : 0,
-            behavior : 'smooth'
-        });
-    } else {
-        smoothScrollTo(0, 0, 1000);
-    }
-}
-
-
-window.smoothScrollTo = function(endX, endY, duration) {
-        let startX = window.scrollX || window.pageXOffset,
+function smoothScrollTo(endX, endY, duration){
+let startX = window.scrollX || window.pageXOffset,
         startY = window.scrollY || window.pageYOffset,
         distanceX = endX - startX,
         distanceY = endY - startY,
@@ -42,8 +28,20 @@ window.smoothScrollTo = function(endX, endY, duration) {
                 window.clearInterval(timer);
             }
             window.scrollTo(newX, newY);
-        }, 1000 / 60); // 60 fps
-    };
+        }, 1000 / 60);
+};
+
+function scrollFunction() {
+    if ('scrollBehavior' in document.documentElement.style) { //Checks if browser supports scroll function
+        window.scroll({
+            top : 0,
+            left : 0,
+            behavior : 'smooth'
+        });
+    } else {
+        smoothScrollTo(0, 0, 1000);
+    }
+}
 
 if (btn) {
   btn.onclick = function () {
