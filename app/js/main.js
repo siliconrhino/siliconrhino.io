@@ -63,36 +63,18 @@
 })(window.$);
 
 
+
+
 function scroll_Function() {
-  var carousel = document.getElementsByClassName("carousel-item");
   var team = document.getElementById("team-carousel");
-  var image = document.getElementsByClassName("item-image");
 
 
   if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
 
-    for (var key in carousel) {
-      var element = carousel[key];
-      if (element.classList !== undefined) element.classList.add("minimize");
-    }
-    for (var key in image) {
-      var element = image[key];
-      if (element.classList !== undefined) element.classList.add("minimize");
-    }
+
     team.classList.add("minimize");
   } else {
-    for (var key in carousel) {
-      var element = carousel[key];
-      if (element.classList !== undefined) element.classList.remove("minimize");
-
-      team.classList.remove("minimize");
-    }
-    for (var key in image) {
-      var element = image[key];
-      if (element.classList !== undefined) element.classList.remove("minimize");
-    }
-
-
+    team.classList.remove("minimize");
   }
 }
 window.addEventListener('scroll', scroll_Function);
