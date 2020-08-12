@@ -1,0 +1,260 @@
+//team carousel
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 0.6;}
+}
+.carousel-wrap {
+  margin: 30px 0px 90px;
+  position: sticky;
+  height: 340px;
+  &:hover{
+    .carousel__button--next, .carousel__button--prev{
+      animation: fadeIn 1s forwards;
+    }
+  }
+  .carousel{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  overflow-x: scroll;
+  scrollbar-color: none;
+  margin: 0 5%;
+  overflow-y: hidden;
+  }
+  .carousel::-webkit-scrollbar {
+  display: none;
+}
+  .carousel-item{
+  position: static;
+  z-index: 100;
+  width: 250px;
+  height: 300px;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  >a{
+  text-decoration: none;
+  &:hover{
+    color: white;
+  }
+  }
+  .item-name{
+padding-top: 4px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.item-image{
+width: 250px;
+  height: 250px;
+  background-size: cover ;
+}
+   &:hover{
+  transform: scale(1.2);
+  opacity: 1;
+  margin-left: 80px;
+  margin-right: 80px;
+
+  }}
+  .carousel__button--next{
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 45%;
+  right:20px;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  transform: translate(-50%, -50%) rotate(135deg);
+  opacity: 0;
+  }
+  .carousel__button--prev{
+  left:0;
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 45%;
+  left: 30px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: translate(-50%, -50%) rotate(135deg);
+  opacity: 0;
+  }
+}
+.carousel-wrap.minimize {
+ top: 70px;
+  position: fixed;
+  height: 150px;
+  background: $darkblue;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  justify-content: center;
+  .carousel{
+    justify-content: center;
+    padding-top: 25px;
+  }
+  .carousel-item{
+  width: 120px;
+  height: 120px;
+  margin-top: auto;
+  margin-bottom: auto;
+  &:hover{
+  transform: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+  .item-name{
+    padding-top: 10px;
+  font-size: 14px;
+  }
+  .item-image{
+max-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin:auto;
+}}
+  .carousel__button--next,.carousel__button--prev{
+display: none;
+  }
+  }
+
+  .item-image{
+  &.roger{
+background-image: url("/img/team/roger.jpg");
+  }
+  &.phil{
+    background-image: url("/img/team/phil.jpg");
+  }
+  &.mark{
+background-image: url("/img/team/mark.jpg");
+  }
+  &.anthony{
+    background-image: url("/img/team/anthony.jpg");
+  }
+  &.jamie{
+    background-image: url("/img/team/JamieOlivier.jpg");
+  }
+  &.andrew{
+    background-image: url("/img/team/andrew.jpg");
+  }
+   &.ray{
+    background-image: url("/img/team/ray.jpg");
+  }
+  &.simon{
+    background-image: url("/img/team/simon.jpg");
+  }
+
+}
+.about{
+.extra-height{
+  margin-top: 10px;
+  }
+}
+.about{
+  &.minimize{
+.extra-height{
+  height:220px;
+}
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 812px){
+  .carousel-wrap {
+  margin: 0px 0px 30px;
+  position: sticky;
+  height: 340px;
+  .carousel{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  overflow-x: scroll;
+  scrollbar-color: none;
+  margin: 0 5%;
+
+  }
+  .carousel::-webkit-scrollbar {
+  display: none;
+}
+  .carousel-item{
+  position: static;
+  z-index: 100;
+  width: 250px;
+  height: 300px;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  >a{
+  text-decoration: none;
+  &:hover{
+    color: white;
+  }
+  }
+  .item-name{
+padding-top: 4px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.item-image{
+width: 250px;
+  height: 250px;
+  background-size: cover ;
+}
+  }
+  .carousel__button--next{
+  display: none;
+  }
+  .carousel__button--prev{
+  display: none;
+  }
+}
+.carousel-wrap.minimize {
+ top: 70px;
+  position: fixed;
+  height: 150px;
+  background: $darkblue;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  justify-content: center;
+  .carousel{
+    justify-content: left;
+    padding-top: 25px;
+  }
+  .carousel-item{
+  width: 120px;
+  height: 120px;
+  margin-top: auto;
+  margin-bottom: auto;
+  &:hover{
+  transform: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+  .item-name{
+    padding-top: 10px;
+  font-size: 14px;
+  }
+  .item-image{
+max-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin:auto;
+}}
+  .carousel__button--next,.carousel__button--prev{
+display: none;
+  }
+
+}
+.about{
+  &.minimize{
+.extra-height{
+  height:500px;
+}
+  }
+}}

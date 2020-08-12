@@ -67,15 +67,27 @@
 
 function scroll_Function() {
   var team = document.getElementById("team-carousel");
+  var about = document.getElementById("about");
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if (document.body.scrollTop > 1140 || document.documentElement.scrollTop > 1140) {
+      team.classList.add("minimize");
+      about.classList.add("minimize")
 
-
-  if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
-
-
-    team.classList.add("minimize");
+    } else {
+      team.classList.remove("minimize");
+      about.classList.remove("minimize")
+    }
   } else {
-    team.classList.remove("minimize");
+    if (document.body.scrollTop > 505 || document.documentElement.scrollTop > 505) {
+      team.classList.add("minimize");
+      about.classList.add("minimize")
+
+    } else {
+      team.classList.remove("minimize");
+      about.classList.remove("minimize")
+    }
   }
+
 }
 window.addEventListener('scroll', scroll_Function);
 
