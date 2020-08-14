@@ -4,9 +4,10 @@
   to {opacity: 0.6;}
 }
 .carousel-wrap {
-  margin: 30px 0px 90px;
+  margin: 30px 0px 180px;
   position: sticky;
   height: 340px;
+  padding-bottom: 100px;
   &:hover{
     .carousel__button--next, .carousel__button--prev{
       animation: fadeIn 1s forwards;
@@ -36,9 +37,9 @@
   justify-content: center;
   >a{
   text-decoration: none;
-  &:hover{
-    color: white;
   }
+  >a:hover, a:focus{
+    color: white;
   }
   .item-name{
 padding-top: 4px;
@@ -107,6 +108,12 @@ width: 250px;
   margin-left: 10px;
   margin-right: 10px;
   }
+  >a{
+  text-decoration: none;
+  }
+  >a:hover, a:focus{
+    color: white;
+  }
   .item-name{
     padding-top: 10px;
   font-size: 14px;
@@ -151,14 +158,17 @@ background-image: url("/img/team/mark.jpg");
 }
 .about{
 .extra-height{
-  margin-top: 10px;
+ #roger{
+  padding-top: 100px;
+}
   }
 }
 .about{
   &.minimize{
-.extra-height{
-  height:220px;
+#roger{
+  padding-top: 200px;
 }
+
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 812px){

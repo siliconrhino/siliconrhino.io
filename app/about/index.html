@@ -45,49 +45,49 @@ headBackground: blueBg
   <div id="team-carousel" class="carousel-wrap">
     <div id="carousel" class="carousel">
     <div class="carousel-item" >
-      <a href="#" onclick="scrollToTeam()">
+      <a href="#" onclick="$(window).scrollTop($('#roger').offset().top - 600); return false;">
       <div class="item-image roger"></div>
       <div class="item-name" ><span>Roger Planes</span></div>
       </a>
     </div>
     <div class="carousel-item">
-      <a href="#" onclick="scrollToTeam()">
+     <a href="#" onclick="$(window).scrollTop($('#phil').offset().top - 600); return false;">
        <div class="item-image phil"></div>
        <div class="item-name" ><span>Phil Hardy</span></div>
        </a>
     </div>
     <div class="carousel-item">
-      <a href="#mark">
+      <a href="#" onclick="$(window).scrollTop($('#mark').offset().top - 600); return false;">
         <div class="item-image mark"></div>
         <div class="item-name" ><span>Mark Hartley</span></div>
         </a>
     </div>
     <div class="carousel-item">
-      <a href="#ant">
+      <a href="#" onclick="$(window).scrollTop($('#ant').offset().top - 600); return false;">
        <div class="item-image anthony"></div>
        <div class="item-name" ><span>Anthony Hinchliff</span></div>
        </a>
     </div>
       <div class="carousel-item">
-        <a href="#jamie">
+       <a href="#" onclick="$(window).scrollTop($('#jamie').offset().top - 600); return false;">
       <div class="item-image jamie"></div>
       <div class="item-name" ><span>Jamie Olivier</span></div>
       </a>
     </div>
     <div class="carousel-item">
-      <a href="#andrew">
+      <a href="#" onclick="$(window).scrollTop($('#andrew').offset().top - 600); return false;">
        <div class="item-image andrew"></div>
        <div class="item-name" ><span>Andrew Jobert</span></div>
        </a>
     </div>
     <div class="carousel-item">
-      <a href="#simon">
+     <a href="#" onclick="$(window).scrollTop($('#simon').offset().top - 600); return false;">
         <div class="item-image simon"></div>
         <div class="item-name" ><span>Simon Filtness</span></div>
         </a>
     </div>
     <div class="carousel-item">
-      <a href="#ray">
+     <a href="#" onclick="$(window).scrollTop($('#ray').offset().top - 600); return false;">
        <div class="item-image ray"></div>
        <div class="item-name" ><span>Ramon Polidura</span></div>
        </a>
@@ -189,7 +189,7 @@ headBackground: blueBg
     </div>
   </div>
 
-  <div class="row">
+  <div id="mark" class="row">
     <div class="col-sm-6 team">
       <label class="profile-name blue-border">Mark Hartley</label>
       <div class="blue-border">
@@ -235,7 +235,7 @@ headBackground: blueBg
     </div>
   </div>
 
-  <div class="row">
+  <div id="ant" class="row">
     <div class="col-sm-6 team">
       <label class="profile-name yellow-border">Anthony Hinchliff</label>
       <div class="yellow-border">
@@ -274,7 +274,7 @@ headBackground: blueBg
     </div>
   </div>
 
-  <div class="row">
+  <div id="jamie" class="row">
     <div class="col-sm-6 team">
       <label class="profile-name blue-border">Jamie Olivier</label>
       <div class="blue-border">
@@ -322,7 +322,7 @@ headBackground: blueBg
     </div>
   </div>
 
-  <div class="row">
+  <div id="andrew" class="row">
     <div class="col-sm-6 team">
       <label class="profile-name yellow-border">Andrew Joubert</label>
       <div class="yellow-border">
@@ -368,7 +368,7 @@ headBackground: blueBg
     </div>
   </div>
 
-  <div class="row">
+  <div id="simon" class="row">
     <div class="col-sm-6 team">
       <label class="profile-name blue-border">Simon Filtness</label>
       <div class="blue-border">
@@ -410,7 +410,7 @@ headBackground: blueBg
     </div>
   </div>
 
-   <div class="row">
+   <div id="ray" class="row">
     <div class="col-sm-6 team">
       <label class="profile-name yellow-border">Ramon Polidura</label>
       <div class="yellow-border">

@@ -21,11 +21,17 @@ function findPos(obj) {
     return [curtop];
   }
 }
-var phil = document.getElementById("phil").offsetTop;
-function scrollToTeam() {
-  console.log(phil);
+/* var carousel_element = document.getElementById("team-carousel");
+var minimize = carousel_element.classList.contains("minimize");
+function clickRoger() {
+  console.log(minimize)
+  if (minimize) {
+    $(window).scrollTop($('#roger').offset().top - 600);
+  } else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    $(window).scrollTop($('#roger').offset().top - 600);
+  } else {
+    $(window).scrollTop($('#roger').offset().top - 600);
+  }
 
-  window.scrollTo({ top: phil - 70, behavior: 'smooth' });
-  ;
-}
+}; */
 
