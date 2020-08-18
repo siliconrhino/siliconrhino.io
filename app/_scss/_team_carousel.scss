@@ -175,7 +175,7 @@ background-image: url("/img/team/mark.jpg");
   .carousel-wrap {
   margin: 0px 0px 30px;
   position: sticky;
-  height: 340px;
+  height: 250px;
   .carousel{
   width: 90%;
   display: flex;
@@ -193,8 +193,6 @@ background-image: url("/img/team/mark.jpg");
   .carousel-item{
   position: static;
   z-index: 100;
-  width: 250px;
-  height: 300px;
   margin: 10px;
   text-align: center;
   justify-content: center;
@@ -210,9 +208,10 @@ padding-top: 4px;
   text-transform: uppercase;
 }
 .item-image{
-width: 250px;
-  height: 250px;
   background-size: cover ;
+   width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
   }
   .carousel__button--next{
