@@ -78,7 +78,7 @@ function scroll_Function() {
       about.classList.remove("minimize")
     }
   } else {
-    if (document.body.scrollTop > 505 || document.documentElement.scrollTop > 505) {
+    if (document.body.scrollTop > 480 || document.documentElement.scrollTop > 480) {
       team.classList.add("minimize");
       about.classList.add("minimize")
 

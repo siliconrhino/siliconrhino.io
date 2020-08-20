@@ -21,17 +21,34 @@ function findPos(obj) {
     return [curtop];
   }
 }
-/* var carousel_element = document.getElementById("team-carousel");
-var minimize = carousel_element.classList.contains("minimize");
-function clickRoger() {
-  console.log(minimize)
-  if (minimize) {
-    $(window).scrollTop($('#roger').offset().top - 600);
-  } else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    $(window).scrollTop($('#roger').offset().top - 600);
-  } else {
-    $(window).scrollTop($('#roger').offset().top - 600);
-  }
+var carousel_wrap = document.getElementById("team-carousel");
+carousel_wrap.addEventListener("click", function (event) {
+  const person = event.target;
+  var minimised = carousel_wrap.classList.contains('minimize')
+  console.log(person.dataset.name);
 
-}; */
+  var personpos = document.querySelector('#' + person.dataset.name);
+  const rect = personpos.getBoundingClientRect() // get rects(width, height, top, etc)
+  const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    console.log("in mobile");
+    window.scroll({
+      top: rect.top + rect.height / 2 - viewHeight / 2
+
+    });
+  } else if (minimised) {
+    console.log("minimized");
+    window.scroll({
+      top: rect.top + rect.height / 2 - viewHeight / 2
+
+    });
+  } else {
+    console.log("normal");
+    window.scroll({
+      top: rect.top + rect.height / 2 - viewHeight / 2 - 450
+
+    });
+  }
+});
 
