@@ -152,7 +152,7 @@ background-image: url("/img/team/mark.jpg");
     background-image: url("/img/team/ray.jpg");
   }
   &.simon{
-    background-image: url("/img/team/simon.jpg");
+    background-image: url("/img/team/simon2.jpg");
   }
 
 }
@@ -209,10 +209,15 @@ padding-top: 4px;
 }
 .item-image{
   background-size: cover ;
-   width: 150px;
-  height: 150px;
+   width: 120px;
+  height: 120px;
   border-radius: 50%;
 }
+  &:hover{
+  transform: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  }
   }
   .carousel__button--next{
   display: none;
@@ -240,11 +245,7 @@ padding-top: 4px;
   height: 120px;
   margin-top: auto;
   margin-bottom: auto;
-  &:hover{
-  transform: none;
-  margin-left: 10px;
-  margin-right: 10px;
-  }
+
   .item-name{
     padding-top: 10px;
   font-size: 14px;
