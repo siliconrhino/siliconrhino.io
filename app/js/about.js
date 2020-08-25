@@ -1,14 +1,14 @@
-var next = document.getElementById("next");
-var previous = document.getElementById("previous");
-var carouselScroll = document.getElementById("carousel");
+var next = document.getElementById('next');
+var previous = document.getElementById('previous');
+var carouselScroll = document.getElementById('carousel');
 
 if (next) {
-  next.addEventListener("click", () => {
+  next.addEventListener('click', () => {
     carouselScroll.scrollBy(280, 0);
   });
 }
 if (previous) {
-  previous.addEventListener("click", () => {
+  previous.addEventListener('click', () => {
     carouselScroll.scrollBy(-280, 0);
   });
 }
@@ -21,14 +21,14 @@ function findPos(obj) {
     return [curtop];
   }
 }
-var carousel_wrap = document.getElementById("team-carousel");
-carousel_wrap.addEventListener("click", function (event) {
+var carousel_wrap = document.getElementById('team-carousel');
+carousel_wrap.addEventListener('click', function (event) {
   const person = event.target;
-  var minimised = carousel_wrap.classList.contains("minimize");
+  var minimised = carousel_wrap.classList.contains('minimize');
   console.log(person.dataset.name);
 
-  var personpos = document.querySelector("#" + person.dataset.name);
-  const topPos = personpos.getBoundingClientRect().top + window.pageYOffset
+  var personpos = document.querySelector('#' + person.dataset.name);
+  const topPos = personpos.getBoundingClientRect().top + window.pageYOffset;
   var scrollBehavior;
   if ('scrollBehavior' in document.documentElement.style) {
     scrollBehavior = true;
@@ -41,11 +41,11 @@ carousel_wrap.addEventListener("click", function (event) {
       navigator.userAgent
     ) && minimised
   ) {
-    console.log("in mobile & minimised");
+
     if (scrollBehavior) {
       window.scrollTo({
         top: topPos - 250,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     } else {
       smoothScrollTo(0, topPos - 250, 1000);
@@ -53,31 +53,28 @@ carousel_wrap.addEventListener("click", function (event) {
   } else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
     navigator.userAgent
   )) {
-    console.log("in mobile ");
     if (scrollBehavior) {
       window.scrollTo({
         top: topPos - 300,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     } else {
       smoothScrollTo(0, topPos - 300, 1000);
     }
   } else if (minimised) {
-    console.log("minimized ");
     if (scrollBehavior) {
       window.scrollTo({
         top: topPos - 280,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     } else {
       smoothScrollTo(0, topPos - 280, 1000);
     }
   } else {
-    console.log("normal");
     if (scrollBehavior) {
       window.scrollTo({
         top: topPos - 600,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     } else {
       smoothScrollTo(0, topPos - 600, 1000);
