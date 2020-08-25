@@ -69,7 +69,7 @@ function scroll_Function() {
   var team = document.getElementById("team-carousel");
   var about = document.getElementById("about");
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    if (document.body.scrollTop > 1140 || document.documentElement.scrollTop > 1140) {
+    if (document.body.scrollTop > 1040 || document.documentElement.scrollTop > 1040) {
       team.classList.add("minimize");
       about.classList.add("minimize")
 

@@ -28,33 +28,61 @@ carousel_wrap.addEventListener("click", function (event) {
   console.log(person.dataset.name);
 
   var personpos = document.querySelector("#" + person.dataset.name);
-  const rect = personpos.getBoundingClientRect(); // get rects(width, height, top, etc)
-  const viewHeight = Math.max(
-    document.documentElement.clientHeight,
-    window.innerHeight || 0
-  );
-
+  const topPos = personpos.getBoundingClientRect().top + window.pageYOffset
+  var scrollBehavior;
+  if ('scrollBehavior' in document.documentElement.style) {
+    scrollBehavior = true;
+  } else {
+    scrollBehavior = false;
+  }
   event.preventDefault();
-
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
-    )
+    ) && minimised
   ) {
-    console.log("in mobile");
-    const scrollTop = rect.top + rect.height / 2 - viewHeight / 2;
-    window.scrollTo({
-      top: scrollTop,
-    });
+    console.log("in mobile & minimised");
+    if (scrollBehavior) {
+      window.scrollTo({
+        top: topPos - 250,
+        behavior: "smooth"
+      });
+    } else {
+      smoothScrollTo(0, topPos - 250, 1000);
+    }
+  } else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )) {
+    console.log("in mobile ");
+    if (scrollBehavior) {
+      window.scrollTo({
+        top: topPos - 300,
+        behavior: "smooth"
+      });
+    } else {
+      smoothScrollTo(0, topPos - 300, 1000);
+    }
   } else if (minimised) {
-    console.log("minimized");
-    window.scrollTo({
-      top: rect.top + rect.height / 2 - viewHeight / 2,
-    });
+    console.log("minimized ");
+    if (scrollBehavior) {
+      window.scrollTo({
+        top: topPos - 280,
+        behavior: "smooth"
+      });
+    } else {
+      smoothScrollTo(0, topPos - 280, 1000);
+    }
   } else {
     console.log("normal");
-    window.scrollTo({
-      top: rect.top + rect.height / 2 - viewHeight / 2 - 450,
-    });
+    if (scrollBehavior) {
+      window.scrollTo({
+        top: topPos - 600,
+        behavior: "smooth"
+      });
+    } else {
+      smoothScrollTo(0, topPos - 600, 1000);
+    }
   }
 });
+
+
