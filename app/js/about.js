@@ -25,7 +25,7 @@ var carousel_wrap = document.getElementById('team-carousel');
 carousel_wrap.addEventListener('click', function (event) {
   const person = event.target;
   var minimised = carousel_wrap.classList.contains('minimize');
-  console.log(person.dataset.name);
+
 
   var personpos = document.querySelector('#' + person.dataset.name);
   const topPos = personpos.getBoundingClientRect().top + window.pageYOffset;
