@@ -13,6 +13,7 @@
 @import "_careers.scss";
 @import "_drinks.scss";
 @import "_svg_animation.scss";
+@import "_team_carousel.scss";
 //@import "_projects.scss";
 
 //font
@@ -2513,6 +2514,7 @@ MEDIA QUERIES
       @include display-flex;
       @include flex-direction(row-reverse);
     }
+
   }
   .services-wrap-image-box {
     position: absolute;
@@ -2745,3 +2747,6 @@ MEDIA QUERIES
     }
   }
 }
+
+
+
