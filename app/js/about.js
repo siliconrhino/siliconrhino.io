@@ -1,3 +1,4 @@
+import { smoothScrollTo } from './top_button.js';
 var next = document.getElementById('next');
 var previous = document.getElementById('previous');
 var carouselScroll = document.getElementById('carousel');
