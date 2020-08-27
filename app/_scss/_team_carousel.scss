@@ -1,8 +1,8 @@
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 0.6;}
+  from {opacity: 0; }
+  to {opacity: 0.6; }
 }
-@keyframes enlarge{
+@keyframes enlarge {
   from {transform: none; margin-left: 10px;
   margin-right: 10px;}
   to {transform: scale(1.2); margin-left: 40px;
@@ -13,166 +13,12 @@
   position: sticky;
   height: 340px;
   padding-bottom: 100px;
-  &:hover{
-    .carousel__button--next, .carousel__button--prev{
+  &:hover {
+    .carousel__button--next, .carousel__button--prev {
       animation: fadeIn 1s forwards;
     }
   }
-.carousel{
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-  justify-content: left;
-  overflow-x: scroll;
-  scrollbar-color: none;
-  margin: 0 5%;
-  overflow-y: hidden;
-  }
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-.carousel-item{
-  position: static;
-  z-index: 100;
-  width: 250px;
-  height: 300px;
-  margin: 10px;
-  text-align: center;
-  justify-content: center;
-  >a{
-  text-decoration: none;
-  }
-  >a:hover, a:focus{
-    color: white;
-  }
-  .item-name{
-  padding-top: 4px;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-.item-image{
-  width: 250px;
-  height: 250px;
-  background-size: cover ;
-  }
-  &:hover{
-  animation: enlarge 1s forwards;
-  opacity: 1;
-  }
-}
-.carousel__button--next{
-  content: " ";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 45%;
-  right:20px;
-  border-left: 2px solid white;
-  border-top: 2px solid white;
-  transform: translate(-50%, -50%) rotate(135deg);
-  opacity: 0;
-}
-.carousel__button--prev{
-  left:0;
-  content: " ";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 45%;
-  left: 30px;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
-  transform: translate(-50%, -50%) rotate(135deg);
-  opacity: 0;
-}
-}
-.carousel-wrap.minimize {
-  top: 70px;
-  position: fixed;
-  height: 150px;
-  background: $darkblue;
-  z-index: 100;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  justify-content: center;
-  .carousel{
-    justify-content: center;
-    padding-top: 25px;
-  }
-  .carousel-item{
-    width: 120px;
-    height: 120px;
-    margin-top: auto;
-    margin-bottom: auto;
-    &:hover{
-      animation: none;
-      margin-left: 10px;
-      margin-right: 10px;
-  }
-    >a{
-      text-decoration: none;
-    }
-    >a:hover, a:focus{
-      color: white;
-    }
-    .item-name{
-      padding-top: 10px;
-      font-size: 14px;
-    }
-    .item-image{
-      max-width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      margin:auto;
-    }
-}
-  .carousel__button--next,.carousel__button--prev{
-  display: none;
-  }
-}
-
-.item-image{
-  &.roger{
-    background-image: url("/img/team/roger.jpg");
-  }
-  &.phil{
-    background-image: url("/img/team/phil.jpg");
-  }
-  &.mark{
-    background-image: url("/img/team/mark.jpg");
-  }
-  &.anthony{
-    background-image: url("/img/team/anthony.jpg");
-  }
-  &.jamie{
-    background-image: url("/img/team/JamieOlivier.jpg");
-  }
-  &.andrew{
-    background-image: url("/img/team/andrew.jpg");
-  }
-   &.ray{
-    background-image: url("/img/team/ray.jpg");
-  }
-  &.simon{
-    background-image: url("/img/team/simon2.jpg");
-  }
-}
-
-.about{
-  &.minimize{
-    #roger{
-      padding-top: 200px;
-    }
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 812px){
-.carousel-wrap {
-  margin: 0px 0px 30px;
-  position: sticky;
-  height: 250px;
-  .carousel{
+  .carousel {
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -181,44 +27,64 @@
     overflow-x: scroll;
     scrollbar-color: none;
     margin: 0 5%;
+    overflow-y: hidden;
   }
   .carousel::-webkit-scrollbar {
     display: none;
   }
-  .carousel-item{
+  .carousel-item {
     position: static;
     z-index: 100;
+    width: 250px;
+    height: 300px;
     margin: 10px;
     text-align: center;
     justify-content: center;
-    >a{
-      text-decoration: none;
-      &:hover{
-        color: white;
-      }
+    >a {
+    text-decoration: none;
     }
-    .item-name{
-      padding-top: 4px;
-      font-size: 16px;
-      text-transform: uppercase;
+    >a:hover, a:focus {
+      color: white;
     }
-    .item-image{
-      background-size: cover ;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+    .item-name {
+    padding-top: 4px;
+    font-size: 18px;
+    text-transform: uppercase;
   }
-    &:hover{
-      animation: none;
-      margin-left: 10px;
-      margin-right: 10px;
+  .item-image {
+    width: 250px;
+    height: 250px;
+    background-size: cover ;
+    }
+    &:hover {
+    animation: enlarge 1s forwards;
+    opacity: 1;
     }
   }
-  .carousel__button--next{
-    display: none;
+  .carousel__button--next {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 45%;
+    right:20px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    transform: translate(-50%, -50%) rotate(135deg);
+    opacity: 0;
   }
-  .carousel__button--prev{
-    display: none;
+  .carousel__button--prev {
+    left:0;
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 45%;
+    left: 30px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: translate(-50%, -50%) rotate(135deg);
+    opacity: 0;
   }
 }
 .carousel-wrap.minimize {
@@ -232,34 +98,168 @@
   margin: 0;
   justify-content: center;
   .carousel{
-    justify-content: left;
+    justify-content: center;
     padding-top: 25px;
   }
-  .carousel-item{
+  .carousel-item {
     width: 120px;
     height: 120px;
     margin-top: auto;
     margin-bottom: auto;
-    .item-name{
+    &:hover {
+      animation: none;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+    >a {
+      text-decoration: none;
+    }
+    >a:hover, a:focus {
+      color: white;
+    }
+    .item-name {
       padding-top: 10px;
       font-size: 14px;
     }
-    .item-image{
+    .item-image {
       max-width: 60px;
       height: 60px;
       border-radius: 50%;
       margin:auto;
     }
-  }
-  .carousel__button--next,.carousel__button--prev{
-    display: none;
+}
+  .carousel__button--next,.carousel__button--prev {
+  display: none;
   }
 }
-.about{
-  &.minimize{
-    #roger{
-      padding-top: 330px;
+
+.item-image {
+  &.roger {
+    background-image: url("/img/team/roger.jpg");
+  }
+  &.phil {
+    background-image: url("/img/team/phil.jpg");
+  }
+  &.mark {
+    background-image: url("/img/team/mark.jpg");
+  }
+  &.anthony {
+    background-image: url("/img/team/anthony.jpg");
+  }
+  &.jamie {
+    background-image: url("/img/team/JamieOlivier.jpg");
+  }
+  &.andrew {
+    background-image: url("/img/team/andrew.jpg");
+  }
+   &.ray {
+    background-image: url("/img/team/ray.jpg");
+  }
+  &.simon {
+    background-image: url("/img/team/simon2.jpg");
+  }
+}
+
+.about {
+  &.minimize {
+    #roger {
+      padding-top: 200px;
     }
   }
 }
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+  .carousel-wrap {
+    margin: 0px 0px 30px;
+    position: sticky;
+    height: 250px;
+    .carousel {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      align-items: left;
+      justify-content: left;
+      overflow-x: scroll;
+      scrollbar-color: none;
+      margin: 0 5%;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-item {
+      position: static;
+      z-index: 100;
+      margin: 10px;
+      text-align: center;
+      justify-content: center;
+      >a {
+        text-decoration: none;
+        &:hover {
+          color: white;
+        }
+      }
+      .item-name {
+        padding-top: 4px;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .item-image {
+        background-size: cover ;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+      &:hover {
+        animation: none;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+    .carousel__button--next {
+      display: none;
+    }
+    .carousel__button--prev {
+      display: none;
+    }
+  }
+  .carousel-wrap.minimize {
+    top: 70px;
+    position: fixed;
+    height: 150px;
+    background: $darkblue;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    justify-content: center;
+    .carousel {
+      justify-content: left;
+      padding-top: 25px;
+    }
+    .carousel-item {
+      width: 120px;
+      height: 120px;
+      margin-top: auto;
+      margin-bottom: auto;
+      .item-name {
+        padding-top: 10px;
+        font-size: 14px;
+      }
+      .item-image {
+        max-width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin:auto;
+      }
+    }
+    .carousel__button--next,.carousel__button--prev {
+      display: none;
+    }
+  }
+  .about {
+    &.minimize {
+      #roger {
+        padding-top: 330px;
+      }
+    }
+  }
 }
