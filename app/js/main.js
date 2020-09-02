@@ -35,6 +35,7 @@
       $('.menu > .right').toggleClass('show');
       $('.header').toggleClass('blue');
     });
+
     //if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
     //  $('.header').addClass('white');
     //}
@@ -61,7 +62,24 @@
 
   });
 })(window.$);
+//new
+$('.drawer-toggle').click(function (e) {
+  $('.drawer').toggleClass('active');
+  e.preventDefault();
+});
+document.onkeydown = function (evt) {
+  evt = evt || window.event;
+  if (evt.keyCode === 27) {
+    $('.drawer').toggleClass('active');
+  }
+};
 
+$('#menu-toggle').click(function (e) {
+  $(this).toggleClass('open');
+  $('.drawer').toggleClass('active');
+  e.preventDefault();
+});
+//new
 function scroll_Function() {
   var team = document.getElementById('team-carousel');
   var about = document.getElementById('about');
