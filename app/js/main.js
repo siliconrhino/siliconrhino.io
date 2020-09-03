@@ -32,6 +32,7 @@
     });
     $('#menu').click(function () {
       $('#menu').toggleClass('is-active');
+      $('#logo').toggleClass('is-active');
       $('.menu > .right').toggleClass('show');
       $('.header').toggleClass('blue');
     });
