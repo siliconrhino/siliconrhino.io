@@ -33,6 +33,7 @@
     $('#menu').click(function () {
       $('#menu').toggleClass('is-active');
       $('#logo').toggleClass('is-active');
+      $('#space-shuttle').addClass('hide');
       $('.menu > .right').toggleClass('show');
       $('.header').toggleClass('blue');
     });
