@@ -368,7 +368,7 @@ a {
         color: $darkblue;
       }
       &:hover:after {
-        border-bottom-color: $darkblue;
+        border-bottom-color: $darkblue
       }
     }
   }
@@ -387,8 +387,8 @@ a {
   >.cta{
     position: fixed;
     position: absolute;
-    top:17px;
-    right:150px;
+    top: 18px;
+    right: 10%;
   }
   >div{
     height: 100%;
@@ -429,21 +429,50 @@ button.drawer-toggle{
 }
 .main-menu > div > ul {
   padding-left: 200px;
-  padding-top:150px;
+  padding-top:80px;
   font-size: 30px;
+  display: table;
+  width: 600px;
   >li{
-     display: block;
-     padding-bottom: 20px;
-     font-size: 40px;
+     font-size: 35px;
+     display: table;
+     position: relative;
+      padding: 25px 0 10px;
+     >a{
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.15s ease-in;
+     }
+     >a:hover{
+      color:$darkblue;
+      //font-weight: 700;
+     }
+     >a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: $darkblue;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+}
+>a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
   }
 }
 
 #menu-toggle {
   width:100px;
   height:100px;
-  position: absolute;
-  top:-15px;
-  right:10px;
+  position: fixed;
+  top: -15px;
+  right: -10px;
   cursor:pointer;
   background: none;
   #hamburger {
@@ -528,6 +557,11 @@ button.drawer-toggle{
         transition-delay:.275s;
       }
     }
+  }
+}
+#space-shuttle{
+  &.hide{
+    display: none;
   }
 }
 
