@@ -33,7 +33,6 @@
     $('#menu').click(function () {
       $('#menu').toggleClass('is-active');
       $('#logo').toggleClass('is-active');
-      $('#space-shuttle').addClass('hide');
       $('.menu > .right').toggleClass('show');
       $('.header').toggleClass('blue');
     });
@@ -64,7 +63,7 @@
 
   });
 })(window.$);
-//new
+
 $('.drawer-toggle').click(function (e) {
   $('.drawer').toggleClass('active');
   e.preventDefault();
@@ -79,6 +78,6 @@ document.onkeydown = function (evt) {
 $('#menu-toggle').click(function (e) {
   $(this).toggleClass('open');
   $('.drawer').toggleClass('active');
+  $('#space-shuttle').toggleClass('hide');
   e.preventDefault();
 });
-//new
