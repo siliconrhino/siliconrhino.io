@@ -262,7 +262,6 @@ a {
     right: 10px;
     position: fixed;
     z-index: 100000000;
-    //float: right;
     margin: 4px 10px 0 0;
     color: $white;
     font-family: $primary-font;
@@ -320,10 +319,7 @@ a {
     background-color: rgba(0, 129, 144, 1);
     position: fixed;
     z-index: 10000;
-   // top: 70px !important;
     width: $menu-width !important;
-    //height: -webkit-calc(100% - 70px);
-    //height: -moz-calc(100% - 70px);
     height: 100%;
     @include transition(-webkit-transform ease-in 300ms 20ms);
     @include transition(transform ease-in 300ms 20ms);
@@ -351,10 +347,7 @@ a {
   li {
     display: block;
     @include display-flex;
-   // @include justify-content(center);
-   // @include align-items(center);
     padding: 0.5em;
-    //text-align: center;
     a {
       @include link-hover;
       color: $white;
@@ -377,26 +370,26 @@ a {
   padding-left: 60px;
   font-size: 30px;
 }
-#main-menu{
+#main-menu {
   position: absolute;
-  top:5px;
+  top: 5px;
   right:10px;
 }
-.main-menu{
+.main-menu {
   display: block;
-  >.cta{
+  >.cta {
     position: fixed;
     position: absolute;
     top: 18px;
     right: 10%;
   }
-  >div{
+  >div {
     height: 100%;
     background-color: rgba(0, 129, 144, 1);
     position: fixed;
   }
 }
-button.drawer-toggle{
+button.drawer-toggle {
   font-size: 30px;
   color: black;
 }
@@ -433,21 +426,20 @@ button.drawer-toggle{
   font-size: 30px;
   display: table;
   width: 600px;
-  >li{
-     font-size: 35px;
-     display: table;
-     position: relative;
-      padding: 25px 0 10px;
-     >a{
+  >li {
+    font-size: 35px;
+    display: table;
+    position: relative;
+    padding: 25px 0 10px;
+    >a {
       text-decoration: none;
       display: inline-block;
       transition: color 0.15s ease-in;
-     }
-     >a:hover{
+    }
+    >a:hover {
       color:$darkblue;
-      //font-weight: 700;
-     }
-     >a:after {
+    }
+    >a:after {
       background: none repeat scroll 0 0 transparent;
       bottom: 0;
       content: "";
@@ -458,12 +450,11 @@ button.drawer-toggle{
       background: $darkblue;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
-}
->a:hover:after {
-  width: 100%;
-  left: 0;
-}
-
+    }
+    >a:hover:after {
+      width: 100%;
+      left: 0;
+    }
   }
 }
 
@@ -488,13 +479,13 @@ button.drawer-toggle{
       top:24px;
       left:20px;
       margin:10px 0;
-      &:nth-child(1){
+      &:nth-child(1) {
         transition-delay:.5s;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         transition-delay:.625s;
       }
-      &:nth-child(3){
+      &:nth-child(3) {
         transition-delay:.75s;
       }
     }
@@ -504,12 +495,12 @@ button.drawer-toggle{
     height:100%;
     width:100%;
     transform:rotate(45deg);
-    span{
+    span {
       width:50px;
       height:6px;
       display:block;
       background:white;
-      &:nth-child(1){
+      &:nth-child(1) {
         height:0%;
         width:6px;
         position:absolute;
@@ -517,7 +508,7 @@ button.drawer-toggle{
         left:48px;
         transition-delay:0s;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         width:0%;
         height:6px;
         position:absolute;
@@ -533,34 +524,34 @@ button.drawer-toggle{
   #hamburger {
     span {
       width:0%;
-      &:nth-child(1){
+      &:nth-child(1) {
         transition-delay:0s;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         transition-delay:.125s;
       }
-      &:nth-child(3){
+      &:nth-child(3) {
         transition-delay:.25s;
       }
     }
   }
   #cross {
     span {
-      &:nth-child(1){
+      &:nth-child(1) {
         height:60%;
         transition-delay:.625s;
       }
     }
     span {
-      &:nth-child(2){
+      &:nth-child(2) {
         width:60%;
         transition-delay:.275s;
       }
     }
   }
 }
-#space-shuttle{
-  &.hide{
+#space-shuttle {
+  &.hide {
     display: none;
   }
 }
@@ -2742,7 +2733,7 @@ MEDIA QUERIES
   .menu > .homepage > ul {
     padding-left: 100px;
     margin-top: 100px;
-    >li{
+    >li {
       font-size: 50px;
     }
   }
@@ -2798,7 +2789,7 @@ MEDIA QUERIES
   .menu > .homepage > ul {
     padding-left: 100px;
     margin-top: 100px;
-    >li{
+    >li {
       font-size: 50px;
     }
   }
