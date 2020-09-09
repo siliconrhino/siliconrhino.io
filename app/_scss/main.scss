@@ -93,7 +93,6 @@ body {
   }
 }
 
-
 .center {
   text-align: center;
 }
@@ -362,7 +361,7 @@ a {
         color: $darkblue;
       }
       &:hover:after {
-        border-bottom-color: $darkblue
+        border-bottom-color: $darkblue;
       }
     }
   }
@@ -374,17 +373,17 @@ a {
 #main-menu {
   position: absolute;
   top: 5px;
-  right:10px;
+  right: 10px;
 }
 .main-menu {
   display: block;
-  >.cta {
+  > .cta {
     position: fixed;
     position: absolute;
     top: 18px;
     right: 10%;
   }
-  >div {
+  > div {
     height: 100%;
     background-color: rgba(0, 129, 144, 1);
     position: fixed;
@@ -398,9 +397,9 @@ button.drawer-toggle {
   position: absolute;
   right: 0;
   bottom: 0;
-  left:0;
-  width:100%;
-  height:100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: white;
 
   -webkit-transform: translate3d(0, -100%, 0);
@@ -408,39 +407,39 @@ button.drawer-toggle {
   -o-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 
-  -webkit-transition:-webkit-transform 0.5s linear;
-  -moz-transition:-moz-transform 0.5s linear;
-  -o-transition:-o-transform 0.5s linear;
-  transition:transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -moz-transition: -moz-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  transition: transform 0.5s linear;
 }
 
 .drawer.active {
-  top:0;
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  -o-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .main-menu > div > ul {
   padding-left: 200px;
-  padding-top:80px;
+  padding-top: 80px;
   font-size: 30px;
   display: table;
   width: 600px;
-  >li {
+  > li {
     font-size: 35px;
     display: table;
     position: relative;
     padding: 25px 0 10px;
-    >a {
+    > a {
       text-decoration: none;
       display: inline-block;
       transition: color 0.15s ease-in;
     }
-    >a:hover {
-      color:$darkblue;
+    > a:hover {
+      color: $darkblue;
     }
-    >a:after {
+    > a:after {
       background: none repeat scroll 0 0 transparent;
       bottom: 0;
       content: "";
@@ -452,7 +451,7 @@ button.drawer-toggle {
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }
-    >a:hover:after {
+    > a:hover:after {
       width: 100%;
       left: 0;
     }
@@ -460,62 +459,62 @@ button.drawer-toggle {
 }
 
 #menu-toggle {
-  width:100px;
-  height:100px;
+  width: 100px;
+  height: 100px;
   position: fixed;
   top: -15px;
   right: -10px;
-  cursor:pointer;
+  cursor: pointer;
   background: none;
   #hamburger {
-    position:absolute;
-    height:100%;
-    width:100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
     span {
-      display:block;
-      background:white;
-      width:50px;
-      height:6px;
-      position:relative;
-      top:24px;
-      left:20px;
-      margin:10px 0;
+      display: block;
+      background: white;
+      width: 50px;
+      height: 6px;
+      position: relative;
+      top: 24px;
+      left: 20px;
+      margin: 10px 0;
       &:nth-child(1) {
-        transition-delay:.5s;
+        transition-delay: 0.5s;
       }
       &:nth-child(2) {
-        transition-delay:.625s;
+        transition-delay: 0.625s;
       }
       &:nth-child(3) {
-        transition-delay:.75s;
+        transition-delay: 0.75s;
       }
     }
   }
   #cross {
-    position:absolute;
-    height:100%;
-    width:100%;
-    transform:rotate(45deg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(45deg);
     span {
-      width:50px;
-      height:6px;
-      display:block;
-      background:white;
+      width: 50px;
+      height: 6px;
+      display: block;
+      background: white;
       &:nth-child(1) {
-        height:0%;
-        width:6px;
-        position:absolute;
-        top:20%;
-        left:48px;
-        transition-delay:0s;
+        height: 0%;
+        width: 6px;
+        position: absolute;
+        top: 20%;
+        left: 48px;
+        transition-delay: 0s;
       }
       &:nth-child(2) {
-        width:0%;
-        height:6px;
-        position:absolute;
-        left:20%;
-        top:48px;
-        transition-delay:.1s;
+        width: 0%;
+        height: 6px;
+        position: absolute;
+        left: 20%;
+        top: 48px;
+        transition-delay: 0.05s;
       }
     }
   }
@@ -524,29 +523,29 @@ button.drawer-toggle {
 #menu-toggle.open {
   #hamburger {
     span {
-      width:0%;
+      width: 0%;
       &:nth-child(1) {
-        transition-delay:0s;
+        transition-delay: 0s;
       }
       &:nth-child(2) {
-        transition-delay:.125s;
+        transition-delay: 0.125s;
       }
       &:nth-child(3) {
-        transition-delay:.25s;
+        transition-delay: 0.25s;
       }
     }
   }
   #cross {
     span {
       &:nth-child(1) {
-        height:60%;
-        transition-delay:.625s;
+        height: 60%;
+        transition-delay: 0.625s;
       }
     }
     span {
       &:nth-child(2) {
-        width:60%;
-        transition-delay:.275s;
+        width: 60%;
+        transition-delay: 0.8s;
       }
     }
   }
@@ -1847,11 +1846,9 @@ $button-transistion-duration: 0.3s;
 
 #menu.is-active {
   display: block;
-
 }
 #logo.is-active {
   display: none;
-
 }
 
 #menu.is-active span {
@@ -2010,7 +2007,7 @@ ul.horizontal {
     height: 100vh;
     opacity: 1;
   }
-  .main-menu{
+  .main-menu {
     display: none;
   }
 }
@@ -2735,7 +2732,7 @@ MEDIA QUERIES
   .menu > .homepage > ul {
     padding-left: 100px;
     margin-top: 100px;
-    >li {
+    > li {
       font-size: 50px;
     }
   }
@@ -2791,7 +2788,7 @@ MEDIA QUERIES
   .menu > .homepage > ul {
     padding-left: 100px;
     margin-top: 100px;
-    >li {
+    > li {
       font-size: 50px;
     }
   }
