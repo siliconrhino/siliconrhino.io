@@ -87,9 +87,6 @@ function scroll_Function() {
     if (document.body.scrollTop > 1040 || document.documentElement.scrollTop > 1040) {
       team.classList.add('minimize');
       about.classList.add('minimize');
-
-
-
     } else {
       team.classList.remove('minimize');
       about.classList.remove('minimize');
