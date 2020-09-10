@@ -77,8 +77,10 @@ document.onkeydown = function (evt) {
 $('#menu-toggle').click(function (e) {
   $(this).toggleClass('open');
   $('.drawer').toggleClass('active');
+  $('#space-shuttle').toggleClass('hide');
   e.preventDefault();
 });
+
 
 function scroll_Function() {
   var team = document.getElementById('team-carousel');
@@ -103,36 +105,4 @@ function scroll_Function() {
   }
 };
 
-$('#menu-toggle').click(function (e) {
-  $(this).toggleClass('open');
-  $('.drawer').toggleClass('active');
-  $('#space-shuttle').toggleClass('hide');
-  e.preventDefault();
-});
-//new
-function scroll_Function() {
-  var team = document.getElementById('team-carousel');
-  var about = document.getElementById('about');
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    if (document.body.scrollTop > 1040 || document.documentElement.scrollTop > 1040) {
-      team.classList.add('minimize');
-      about.classList.add('minimize');
-
-    } else {
-      team.classList.remove('minimize');
-      about.classList.remove('minimize');
-    }
-  } else {
-    if (document.body.scrollTop > 480 || document.documentElement.scrollTop > 480) {
-      team.classList.add('minimize');
-      about.classList.add('minimize');
-
-    } else {
-      team.classList.remove('minimize');
-      about.classList.remove('minimize');
-    }
-  }
-
-}
-window.addEventListener('scroll', scroll_Function);
 
