@@ -103,6 +103,6 @@ function scroll_Function() {
       about.classList.remove('minimize');
     }
   }
-};
+}
 
 
