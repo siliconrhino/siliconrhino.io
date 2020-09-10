@@ -77,8 +77,10 @@ document.onkeydown = function (evt) {
 $('#menu-toggle').click(function (e) {
   $(this).toggleClass('open');
   $('.drawer').toggleClass('active');
+  $('#space-shuttle').toggleClass('hide');
   e.preventDefault();
 });
+
 
 function scroll_Function() {
   var team = document.getElementById('team-carousel');
@@ -103,9 +105,4 @@ function scroll_Function() {
   }
 };
 
-$('#menu-toggle').click(function (e) {
-  $(this).toggleClass('open');
-  $('.drawer').toggleClass('active');
-  $('#space-shuttle').toggleClass('hide');
-  e.preventDefault();
-});
+
