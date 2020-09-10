@@ -32,9 +32,11 @@
     });
     $('#menu').click(function () {
       $('#menu').toggleClass('is-active');
+      $('#logo').toggleClass('is-active');
       $('.menu > .right').toggleClass('show');
       $('.header').toggleClass('blue');
     });
+
     //if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
     //  $('.header').addClass('white');
     //}
@@ -62,6 +64,24 @@
   });
 })(window.$);
 
+$('.drawer-toggle').click(function (e) {
+  $('.drawer').toggleClass('active');
+  e.preventDefault();
+});
+document.onkeydown = function (evt) {
+  evt = evt || window.event;
+  if (evt.keyCode === 27) {
+    $('.drawer').toggleClass('active');
+  }
+};
+$('#menu-toggle').click(function (e) {
+  $(this).toggleClass('open');
+  $('.drawer').toggleClass('active');
+  $('#space-shuttle').toggleClass('hide');
+  e.preventDefault();
+});
+
+
 function scroll_Function() {
   var team = document.getElementById('team-carousel');
   var about = document.getElementById('about');
@@ -69,7 +89,6 @@ function scroll_Function() {
     if (document.body.scrollTop > 1040 || document.documentElement.scrollTop > 1040) {
       team.classList.add('minimize');
       about.classList.add('minimize');
-
     } else {
       team.classList.remove('minimize');
       about.classList.remove('minimize');
@@ -84,7 +103,6 @@ function scroll_Function() {
       about.classList.remove('minimize');
     }
   }
-
 }
-window.addEventListener('scroll', scroll_Function);
+
 

@@ -258,7 +258,10 @@ a {
     display: none;
   }
   #menu {
-    float: right;
+    top: 10px;
+    right: 10px;
+    position: fixed;
+    z-index: 1000;
     margin: 4px 10px 0 0;
     color: $white;
     font-family: $primary-font;
@@ -313,14 +316,11 @@ a {
   display: block;
   $menu-width: 100%;
   > div {
-    background-color: rgba(0, 129, 144, 0.8);
+    background-color: rgb(0, 129, 144);
     position: fixed;
-    z-index: 1000000;
-    top: 70px !important;
+    z-index: 10000;
     width: $menu-width !important;
-    height: -webkit-calc(100% - 70px);
-    height: -moz-calc(100% - 70px);
-    height: calc(100% - 70px);
+    height: 100%;
     @include transition(-webkit-transform ease-in 300ms 20ms);
     @include transition(transform ease-in 300ms 20ms);
     &.left {
@@ -340,16 +340,14 @@ a {
 }
 
 .menu {
+  @include justify-content(center);
   ul {
-    margin-top: 5px;
+    margin-top: calc((100% - 250px));
   }
   li {
     display: block;
     @include display-flex;
-    @include justify-content(center);
-    @include align-items(center);
     padding: 0.5em;
-    text-align: center;
     a {
       @include link-hover;
       color: $white;
@@ -369,8 +367,186 @@ a {
   }
 }
 .menu > .homepage > ul {
-  padding-left: 0px;
-  font-size: 24px;
+  padding-left: 60px;
+  font-size: 30px;
+}
+#main-menu {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.main-menu {
+  display: block;
+  > .cta {
+    position: absolute;
+    top: 18px;
+    right: 10%;
+  }
+  > div {
+    height: 100%;
+    background-color: rgb(0, 129, 144);
+    position: fixed;
+  }
+}
+button.drawer-toggle {
+  font-size: 30px;
+  color: black;
+}
+.drawer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+  -webkit-transform: translate3d(0, -100%, 0);
+  -moz-transform: translate3d(0, -100%, 0);
+  -o-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -moz-transition: -moz-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  transition: transform 0.5s linear;
+}
+
+.drawer.active {
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.menu-list {
+  padding-left: 200px;
+  padding-top: 80px;
+  font-size: 30px;
+  display: table;
+  width: 600px;
+  > li {
+    font-size: 35px;
+    display: table;
+    position: relative;
+    padding: 25px 0 10px;
+    > a {
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.15s ease-in;
+    }
+    > a:hover {
+      color: $darkblue;
+    }
+    > a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background-color: $darkblue;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    > a:hover:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+#menu-toggle {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: -15px;
+  right: -10px;
+  cursor: pointer;
+  background: none;
+  .hamburger {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    span {
+      display: block;
+      background: white;
+      width: 50px;
+      height: 6px;
+      position: relative;
+      top: 24px;
+      left: 20px;
+      margin: 10px 0;
+    }
+    .hamburger-first {
+      transition-delay: 0.5s;
+    }
+    .hamburger-middle {
+      transition-delay: 0.625s;
+    }
+    .hamburger-bottom {
+      transition-delay: 0.75s;
+    }
+  }
+  .cross {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(45deg);
+    span {
+      width: 50px;
+      height: 6px;
+      display: block;
+      background: white;
+    }
+    .cross-first {
+      height: 0%;
+      width: 6px;
+      position: absolute;
+      top: 20%;
+      left: 48px;
+      transition-delay: 0s;
+    }
+    .cross-second {
+      width: 0%;
+      height: 6px;
+      position: absolute;
+      left: 20%;
+      top: 48px;
+      transition-delay: 0.05s;
+    }
+  }
+}
+
+#menu-toggle.open {
+  .hamburger {
+    span {
+      width: 0%;
+    }
+    .hamburger-first {
+      transition-delay: 0s;
+    }
+    .hamburger-middle {
+      transition-delay: 0.125s;
+    }
+    .hamburger-bottom {
+      transition-delay: 0.25s;
+    }
+  }
+  .cross {
+    .cross-first {
+      height: 60%;
+      transition-delay: 0.625s;
+    }
+    .cross-second {
+      width: 60%;
+      transition-delay: 0.8s;
+    }
+  }
+}
+.hide {
+  display: none;
 }
 
 @include keyframes(move-twink-back) {
@@ -1662,6 +1838,10 @@ $button-transistion-duration: 0.3s;
 /* active state, i.e. menu open */
 
 #menu.is-active {
+  display: block;
+}
+#logo.is-active {
+  display: none;
 }
 
 #menu.is-active span {
@@ -1819,6 +1999,9 @@ ul.horizontal {
     width: 100%;
     height: 100vh;
     opacity: 1;
+  }
+  .main-menu {
+    display: none;
   }
 }
 
@@ -2514,7 +2697,6 @@ MEDIA QUERIES
       @include display-flex;
       @include flex-direction(row-reverse);
     }
-
   }
   .services-wrap-image-box {
     position: absolute;
@@ -2537,6 +2719,13 @@ MEDIA QUERIES
   .project-image {
     &.falcon {
       padding: 230px !important;
+    }
+  }
+  .menu > .homepage > ul {
+    padding-left: 100px;
+    margin-top: 100px;
+    > li {
+      font-size: 50px;
     }
   }
 }
@@ -2585,6 +2774,14 @@ MEDIA QUERIES
     }
     .service-description {
       margin-top: 56px;
+    }
+  }
+
+  .menu > .homepage > ul {
+    padding-left: 100px;
+    margin-top: 100px;
+    > li {
+      font-size: 50px;
     }
   }
 }
@@ -2747,6 +2944,3 @@ MEDIA QUERIES
     }
   }
 }
-
-
-
