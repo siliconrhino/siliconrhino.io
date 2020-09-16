@@ -7,7 +7,7 @@ function showbtn() {
     btn.classList.remove('show');
   }
 }
-/* function smoothScrollTo(endX, endY, duration) {
+function smoothScrollTo(endX, endY, duration) {
   var startX = window.scrollX || window.pageXOffset,
     startY = window.scrollY || window.pageYOffset,
     distanceX = endX - startX,
@@ -20,9 +20,8 @@ function showbtn() {
       return distance / 2 * time * time * time * time + from;
     } else {
       return -distance / 2 * ((time -= 2) * time * time * time - 2) + from;
-    };
-  }
-
+    }
+  };
 
   var timer = window.setInterval(function () {
     var time = new Date().getTime() - startTime,
@@ -33,9 +32,9 @@ function showbtn() {
     }
     window.scrollTo(newX, newY);
   }, 1000 / 60);
-} */
+}
 
-/* function scrollFunction() {
+function scrollFunction() {
   if ('scrollBehavior' in document.documentElement.style) { //Checks if browser supports scroll function
     window.scroll({
       top: 0,
@@ -46,15 +45,10 @@ function showbtn() {
     smoothScrollTo(0, 0, 1000);
   }
 }
- */
+
 if (btn) {
   btn.onclick = function () {
-    //scrollFunction();
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
+    scrollFunction();
   };
 }
 window.addEventListener('scroll', showbtn);
