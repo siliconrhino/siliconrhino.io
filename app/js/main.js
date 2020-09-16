@@ -104,5 +104,5 @@ function scroll_Function() {
     }
   }
 }
-
+window.addEventListener('scroll', scroll_Function);
 
