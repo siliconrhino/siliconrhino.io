@@ -2,25 +2,30 @@ var next = document.getElementById('next');
 var previous = document.getElementById('previous');
 var carouselScroll = document.getElementById('carousel');
 
+function clickNext() {
+  carouselScroll.scrollBy(280, 0);
+}
+function clickPrevious() {
+  carouselScroll.scrollBy(-280, 0);
+}
 if (next) {
-  next.addEventListener('click', () => {
-    carouselScroll.scrollBy(280, 0);
-  });
+  next.addEventListener('click', clickNext);
 }
 if (previous) {
-  previous.addEventListener('click', () => {
-    carouselScroll.scrollBy(-280, 0);
-  });
+  previous.addEventListener('click', clickPrevious);
 }
+
+
 function findPos(obj) {
   var curtop = 0;
   if (obj.offsetParent) {
     do {
       curtop += obj.offsetTop;
     } while ((obj = obj.offsetParent));
-    return [curtop];
+    return curtop;
   }
 }
+
 var carousel_wrap = document.getElementById('team-carousel');
 carousel_wrap.addEventListener('click', function (event) {
   const person = event.target;
