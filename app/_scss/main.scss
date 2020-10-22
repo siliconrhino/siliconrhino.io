@@ -1124,15 +1124,22 @@ ul.rrssb-buttons {
           margin-top: 10px;
         }
       }
+      > img {
+        margin-top: -100px;
+        width: 90%;
+        left: 5%;
+      }
     }
   }
-
   .project-image {
     left: 0;
     width: 100%;
     height: auto;
     position: relative !important;
     @include transition(all 300ms ease-out);
+    &.hoo {
+      width: 60%;
+    }
   }
   .overbox {
     top: 6px;
