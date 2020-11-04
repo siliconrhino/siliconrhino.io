@@ -22,7 +22,6 @@
   margin: 30px 0px 180px;
   position: sticky;
   height: 340px;
-  padding-bottom: 100px;
   &:hover {
     .carousel__button--next,
     .carousel__button--prev {
@@ -39,6 +38,7 @@
     scrollbar-color: none;
     margin: 0 5%;
     overflow-y: hidden;
+    height: 135px;
   }
   .carousel::-webkit-scrollbar {
     display: none;
@@ -102,7 +102,7 @@
 .carousel-wrap.minimize {
   top: 70px;
   position: fixed;
-  height: 150px;
+  height: 135px;
   background: $darkblue;
   z-index: 100;
   width: 100%;
@@ -111,11 +111,10 @@
   justify-content: center;
   .carousel {
     justify-content: center;
-    padding-top: 25px;
   }
   .carousel-item {
     width: 120px;
-    height: 120px;
+    height: 85px;
     margin-top: auto;
     margin-bottom: auto;
     &:hover {
