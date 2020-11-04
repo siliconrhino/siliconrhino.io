@@ -1,12 +1,22 @@
 @keyframes fadeIn {
-  from {opacity: 0; }
-  to {opacity: 0.6; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
 }
 @keyframes enlarge {
-  from {transform: none; margin-left: 10px;
-  margin-right: 10px;}
-  to {transform: scale(1.2); margin-left: 40px;
-  margin-right: 40px;};
+  from {
+    transform: none;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  to {
+    transform: scale(1.2);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 .carousel-wrap {
   margin: 30px 0px 180px;
@@ -14,7 +24,8 @@
   height: 340px;
   padding-bottom: 100px;
   &:hover {
-    .carousel__button--next, .carousel__button--prev {
+    .carousel__button--next,
+    .carousel__button--prev {
       animation: fadeIn 1s forwards;
     }
   }
@@ -40,25 +51,26 @@
     margin: 10px;
     text-align: center;
     justify-content: center;
-    >a {
-    text-decoration: none;
+    > a {
+      text-decoration: none;
     }
-    >a:hover, a:focus {
+    > a:hover,
+    a:focus {
       color: white;
     }
     .item-name {
-    padding-top: 4px;
-    font-size: 18px;
-    text-transform: uppercase;
-  }
-  .item-image {
-    width: 250px;
-    height: 250px;
-    background-size: cover ;
+      padding-top: 4px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    .item-image {
+      width: 250px;
+      height: 250px;
+      background-size: cover;
     }
     &:hover {
-    animation: enlarge 1s forwards;
-    opacity: 1;
+      animation: enlarge 1s forwards;
+      opacity: 1;
     }
   }
   .carousel__button--next {
@@ -67,14 +79,14 @@
     width: 10px;
     height: 10px;
     top: 45%;
-    right:20px;
+    right: 20px;
     border-left: 2px solid white;
     border-top: 2px solid white;
     transform: translate(-50%, -50%) rotate(135deg);
     opacity: 0;
   }
   .carousel__button--prev {
-    left:0;
+    left: 0;
     content: " ";
     position: absolute;
     width: 10px;
@@ -97,7 +109,7 @@
   text-align: center;
   margin: 0;
   justify-content: center;
-  .carousel{
+  .carousel {
     justify-content: center;
     padding-top: 25px;
   }
@@ -110,11 +122,12 @@
       animation: none;
       margin-left: 10px;
       margin-right: 10px;
-  }
-    >a {
+    }
+    > a {
       text-decoration: none;
     }
-    >a:hover, a:focus {
+    > a:hover,
+    a:focus {
       color: white;
     }
     .item-name {
@@ -125,11 +138,12 @@
       max-width: 60px;
       height: 60px;
       border-radius: 50%;
-      margin:auto;
+      margin: auto;
     }
-}
-  .carousel__button--next,.carousel__button--prev {
-  display: none;
+  }
+  .carousel__button--next,
+  .carousel__button--prev {
+    display: none;
   }
 }
 
@@ -143,20 +157,20 @@
   &.mark {
     background-image: url("/img/team/mark.jpg");
   }
-  &.anthony {
-    background-image: url("/img/team/anthony.jpg");
-  }
   &.jamie {
     background-image: url("/img/team/JamieOlivier.jpg");
   }
   &.andrew {
     background-image: url("/img/team/andrew.jpg");
   }
-   &.ray {
+  &.ray {
     background-image: url("/img/team/ray.jpg");
   }
   &.simon {
     background-image: url("/img/team/simon2.jpg");
+  }
+  &.jeff {
+    background-image: url("/img/team/jeff.png");
   }
 }
 
@@ -191,7 +205,7 @@
       margin: 10px;
       text-align: center;
       justify-content: center;
-      >a {
+      > a {
         text-decoration: none;
         &:hover {
           color: white;
@@ -203,11 +217,11 @@
         text-transform: uppercase;
       }
       .item-image {
-        background-size: cover ;
+        background-size: cover;
         width: 120px;
         height: 120px;
         border-radius: 50%;
-    }
+      }
       &:hover {
         animation: none;
         margin-left: 10px;
@@ -248,10 +262,11 @@
         max-width: 60px;
         height: 60px;
         border-radius: 50%;
-        margin:auto;
+        margin: auto;
       }
     }
-    .carousel__button--next,.carousel__button--prev {
+    .carousel__button--next,
+    .carousel__button--prev {
       display: none;
     }
   }
