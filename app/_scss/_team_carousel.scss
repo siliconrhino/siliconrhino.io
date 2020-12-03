@@ -38,7 +38,6 @@
     scrollbar-color: none;
     margin: 0 5%;
     overflow-y: hidden;
-    height: 135px;
   }
   .carousel::-webkit-scrollbar {
     display: none;
@@ -111,6 +110,7 @@
   justify-content: center;
   .carousel {
     justify-content: center;
+    height: 135px;
   }
   .carousel-item {
     width: 120px;
